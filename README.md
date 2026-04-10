@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="assets/social-preview.png" alt="Anti-Gravity OS — The Operating System for AI-Powered Engineering" width="100%" />
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/badge/Files-77+-blueviolet?style=for-the-badge" alt="77+ Files" />
   <img src="https://img.shields.io/badge/Skills-15-blue?style=for-the-badge" alt="15 Skills" />
   <img src="https://img.shields.io/badge/Workflows-13-green?style=for-the-badge" alt="13 Workflows" />
@@ -66,6 +70,43 @@ AI:   *reads your stack-context → knows you use Next.js 15 App Router*
 ```
 
 **Same AI. Same IDE. Completely different output.**
+
+---
+
+## 🧩 How It Works
+
+<p align="center">
+  <img src="assets/architecture-flow.png" alt="Anti-Gravity OS Architecture Flow" width="85%" />
+</p>
+
+```
+┌─────────────┐
+│   YOU type   │  "Build me a login page"
+│   a request  │
+└──────┬──────┘
+       ▼
+┌──────────────────────────────────────────────┐
+│              ANTI-GRAVITY OS                 │
+│                                              │
+│  1. CONTEXT     → reads your stack, arch,    │
+│                   standards — knows YOUR env │
+│                                              │
+│  2. SKILLS      → loads coding + security    │
+│                   expertise for this task    │
+│                                              │
+│  3. WORKFLOW    → follows /build-feature     │
+│                   plan → code → test → ship  │
+│                                              │
+│  4. MEMORY      → checks past decisions,    │
+│                   avoids repeated mistakes   │
+└──────┬──────┘
+       ▼
+┌─────────────┐
+│  PRECISE,    │  Code that matches your stack,
+│  CONTEXTUAL  │  follows your patterns, and
+│  OUTPUT      │  handles edge cases.
+└─────────────┘
+```
 
 ---
 
