@@ -311,6 +311,10 @@ When implementing code, inspect these lenses explicitly before and during implem
 
 ### Phase 6: Verify
 
+- **MANDATORY: Show a structural data-flow trace before declaring done.**
+  Follow the data from origin → through every transformation layer → to final consumer.
+  Example: "Color injected at line X → sanitizeCandleBar at line Y returns {time, open, high, low, close, color, borderColor, wickColor} → series.update() at line Z receives all fields. Confirmed."
+  **If a parallel function exists (e.g., sanitizeTickPoint ↔ sanitizeCandleBar, pushCandle ↔ updateLiveCandle), verify BOTH.**
 - Mentally test the happy path end to end
 - Check edge cases: null, empty, malformed, extremely large, concurrent
 - Check each external dependency: what if it fails? Times out? Returns unexpected data?
