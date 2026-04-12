@@ -4,7 +4,13 @@ description: The systematic sequence for reviewing code — evaluating correctne
 
 # WORKFLOW: REVIEW CODE (MASTER UI)
 
-> **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full technical review methodology, security checklists, and maintainability criteria, the Agent MUST load and follow the [SOURCE FILE](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-review-code.md).
+> **[CONTEXT AMNESIA FAILSAFE]**
+> YOU MUST USE TOOL CALLS TO READ THE FULL SOURCE FILE IN `global/workflows/` AND THE REQUIRED SKILLS/CONTEXTS BEFORE EXECUTING THIS.
+> PROVE YOU HAVE DONE THIS IN A `<thought_process>` BLOCK.
+>
+
+
+> **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full technical review methodology, security checklists, and maintainability criteria, the Agent MUST load and follow the [SOURCE FILE](global/workflows/workflow-review-code.md).
 
 ## WHAT THIS WORKFLOW DOES
 
@@ -16,7 +22,7 @@ Ensures code reviews are structured, objective, and focus on high-impact risks l
 
 ### 1. Load Full Instructions
 
-- [ ] **Load Source [REQUIRED]:** [workflow-review-code.md](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-review-code.md) (Follow all 8 steps).
+- [ ] **Load Source [REQUIRED]:** [workflow-review-code.md](global/workflows/workflow-review-code.md) (Follow all 8 steps).
 
 ### 2. Load Core Contexts & Skills (Always)
 

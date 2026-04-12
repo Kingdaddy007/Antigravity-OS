@@ -4,7 +4,13 @@ description: The systematic sequence for making architectural decisions — from
 
 # WORKFLOW: PLAN ARCHITECTURE (MASTER UI)
 
-> **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full 15,000-character logic, Evaluation Matrix protocols, and ADR (Architecture Decision Record) structure, the Agent MUST load and follow the [SOURCE FILE](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-plan-architecture.md).
+> **[CONTEXT AMNESIA FAILSAFE]**
+> YOU MUST USE TOOL CALLS TO READ THE FULL SOURCE FILE IN `global/workflows/` AND THE REQUIRED SKILLS/CONTEXTS BEFORE EXECUTING THIS.
+> PROVE YOU HAVE DONE THIS IN A `<thought_process>` BLOCK.
+>
+
+
+> **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full 15,000-character logic, Evaluation Matrix protocols, and ADR (Architecture Decision Record) structure, the Agent MUST load and follow the [SOURCE FILE](global/workflows/workflow-plan-architecture.md).
 
 ## WHAT THIS WORKFLOW DOES
 
@@ -16,7 +22,7 @@ Ensures architectural decisions are made deliberately, not by default. It forces
 
 ### 1. Load Full Instructions
 
-- [ ] **Load Source [REQUIRED]:** [workflow-plan-architecture.md](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-plan-architecture.md) (Follow all 7 steps).
+- [ ] **Load Source [REQUIRED]:** [workflow-plan-architecture.md](global/workflows/workflow-plan-architecture.md) (Follow all 7 steps).
 
 ### 2. Load Core Contexts & Skills (Always)
 

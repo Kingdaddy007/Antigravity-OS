@@ -108,6 +108,10 @@ Do NOT immediately review line-by-line in a vacuum. Instead:
 
 ---
 
+### MANDATORY STOP-AND-VERIFY GATE
+> **[CONTEXT AMNESIA FAILSAFE]**
+> Do NOT proceed to Step 1 until you have verified in your `<thought_process>` that all required context files and skill files have been read using tool calls. You must state: "I have read X, Y, Z files and I am ready to begin."
+
 ## EXECUTION SEQUENCE
 
 ---
@@ -386,7 +390,7 @@ State the minimum changes needed for approval when not ready. Do not leave the a
 
 #### Load Template (Step 8)
 
-- [REQUIRED] Load [code-review-report.md](file:///C:/Users/Oviks/.gemini/antigravity/global_templates/code-review-report.md)
+- [REQUIRED] Load [code-review-report.md](global/templates/code-review-report.md)
 - Follow the structure and guidance in the template exactly to deliver the code review findings.
 
 #### Tone Rules (Step 8)

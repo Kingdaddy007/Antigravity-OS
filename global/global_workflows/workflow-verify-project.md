@@ -4,7 +4,13 @@ description: The systematic sequence for running automated project verification 
 
 # WORKFLOW: VERIFY PROJECT (MASTER)
 
-> **IMPORTANT [REQUIRED]:** This workflow runs the Antigravity Gold verification scripts against the current project. The scripts are located in `C:\Users\Oviks\.gemini\antigravity\scripts\`.
+> **[CONTEXT AMNESIA FAILSAFE]**
+> YOU MUST USE TOOL CALLS TO READ THE FULL SOURCE FILE IN `global/workflows/` AND THE REQUIRED SKILLS/CONTEXTS BEFORE EXECUTING THIS.
+> PROVE YOU HAVE DONE THIS IN A `<thought_process>` BLOCK.
+>
+
+
+> **IMPORTANT [REQUIRED]:** This workflow runs the Antigravity Gold verification scripts against the current project. The scripts are located in `global/scripts/`.
 
 ## WHAT THIS WORKFLOW DOES
 
@@ -32,7 +38,7 @@ Runs automated quality checks against the project to catch security issues, code
 ### Quick Check (Most Common)
 
 ```bash
-python C:\Users\Oviks\.gemini\antigravity\scripts\verify.py <project_path>
+python global/scripts/verify.py <project_path>
 ```
 
 This runs all 4 checks in priority order:
@@ -44,16 +50,16 @@ This runs all 4 checks in priority order:
 ### Targeted Check
 
 ```bash
-python C:\Users\Oviks\.gemini\antigravity\scripts\verify.py <project_path> --only security
-python C:\Users\Oviks\.gemini\antigravity\scripts\verify.py <project_path> --only quality
-python C:\Users\Oviks\.gemini\antigravity\scripts\verify.py <project_path> --only accessibility
-python C:\Users\Oviks\.gemini\antigravity\scripts\verify.py <project_path> --only performance
+python global/scripts/verify.py <project_path> --only security
+python global/scripts/verify.py <project_path> --only quality
+python global/scripts/verify.py <project_path> --only accessibility
+python global/scripts/verify.py <project_path> --only performance
 ```
 
 ### Skip Specific Checks
 
 ```bash
-python C:\Users\Oviks\.gemini\antigravity\scripts\verify.py <project_path> --skip performance
+python global/scripts/verify.py <project_path> --skip performance
 ```
 
 ---

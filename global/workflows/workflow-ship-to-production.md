@@ -121,6 +121,10 @@ Before choosing rollout strategy, classify the release:
 
 ***
 
+### MANDATORY STOP-AND-VERIFY GATE
+> **[CONTEXT AMNESIA FAILSAFE]**
+> Do NOT proceed to Step 1 until you have verified in your `<thought_process>` that all required context files and skill files have been read using tool calls. You must state: "I have read X, Y, Z files and I am ready to begin."
+
 ## EXECUTION SEQUENCE
 
 ***

@@ -45,17 +45,17 @@ intelligence into repeatable action.
 
 | # | File | Trigger | Key Discipline Enforced |
 | :--- | :--- | :--- | :--- |
-| 1 | [workflow-build-feature.md](file:///C:/Users/Oviks/.gemini/antigravity/global_workflows/workflow-build-feature.md) | "Build", "implement", "add feature" | Problem definition before coding |
-| 2 | [workflow-debug-issue.md](file:///C:/Users/Oviks/.gemini/antigravity/global_workflows/workflow-debug-issue.md) | "Fix", "broken", "error", "bug" | Evidence before code changes |
-| 3 | [workflow-review-code.md](file:///C:/Users/Oviks/.gemini/antigravity/global_workflows/workflow-review-code.md) | "Review", "check", "audit" | Structured evaluation by severity |
-| 4 | [workflow-design-ui.md](file:///C:/Users/Oviks/.gemini/antigravity/global_workflows/workflow-design-ui.md) | "UI", "design", "component", "page" | State coverage before implementation |
-| 5 | [workflow-security-audit.md](file:///C:/Users/Oviks/.gemini/antigravity/global_workflows/workflow-security-audit.md) | "Security audit", "vulnerability check" | STRIDE across trust boundaries |
-| 6 | [workflow-plan-architecture.md](file:///C:/Users/Oviks/.gemini/antigravity/global_workflows/workflow-plan-architecture.md) | "How should I structure", "architecture" | Requirements before solutions, 3+ options |
-| 7 | [workflow-refactor-module.md](file:///C:/Users/Oviks/.gemini/antigravity/global_workflows/workflow-refactor-module.md) | "Refactor", "clean up", "tech debt" | Tests before structural changes |
-| 8 | [workflow-design-api.md](file:///C:/Users/Oviks/.gemini/antigravity/global_workflows/workflow-design-api.md) | "Create endpoint", "API design" | Contract before implementation |
-| 9 | [workflow-optimize-performance.md](file:///C:/Users/Oviks/.gemini/antigravity/global_workflows/workflow-optimize-performance.md) | "Slow", "optimize", "performance" | Measurement before optimization |
-| 10 | [workflow-ship-to-production.md](file:///C:/Users/Oviks/.gemini/antigravity/global_workflows/workflow-ship-to-production.md) | "Deploy", "ship", "release" | Verification before and monitoring after |
-| 11 | [workflow-project-inception.md](file:///C:/Users/Oviks/.gemini/antigravity/global_workflows/workflow-project-inception.md) | "Idea", "start project", "plan" | Problem definition before feature planning |
+| 1 | [workflow-build-feature.md](global/global_workflows/workflow-build-feature.md) | "Build", "implement", "add feature" | Problem definition before coding |
+| 2 | [workflow-debug-issue.md](global/global_workflows/workflow-debug-issue.md) | "Fix", "broken", "error", "bug" | Evidence before code changes |
+| 3 | [workflow-review-code.md](global/global_workflows/workflow-review-code.md) | "Review", "check", "audit" | Structured evaluation by severity |
+| 4 | [workflow-design-ui.md](global/global_workflows/workflow-design-ui.md) | "UI", "design", "component", "page" | State coverage before implementation |
+| 5 | [workflow-security-audit.md](global/global_workflows/workflow-security-audit.md) | "Security audit", "vulnerability check" | STRIDE across trust boundaries |
+| 6 | [workflow-plan-architecture.md](global/global_workflows/workflow-plan-architecture.md) | "How should I structure", "architecture" | Requirements before solutions, 3+ options |
+| 7 | [workflow-refactor-module.md](global/global_workflows/workflow-refactor-module.md) | "Refactor", "clean up", "tech debt" | Tests before structural changes |
+| 8 | [workflow-design-api.md](global/global_workflows/workflow-design-api.md) | "Create endpoint", "API design" | Contract before implementation |
+| 9 | [workflow-optimize-performance.md](global/global_workflows/workflow-optimize-performance.md) | "Slow", "optimize", "performance" | Measurement before optimization |
+| 10 | [workflow-ship-to-production.md](global/global_workflows/workflow-ship-to-production.md) | "Deploy", "ship", "release" | Verification before and monitoring after |
+| 11 | [workflow-project-inception.md](global/global_workflows/workflow-project-inception.md) | "Idea", "start project", "plan" | Problem definition before feature planning |
 
 ***
 

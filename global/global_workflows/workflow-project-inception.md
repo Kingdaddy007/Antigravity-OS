@@ -4,7 +4,13 @@ description: The systematic sequence for taking a raw idea and turning it into a
 
 # WORKFLOW: PROJECT INCEPTION (MASTER)
 
-> **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full detailed logic, instructions, and implementation phases, the Agent MUST load and follow the [SOURCE FILE](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-project-inception.md).
+> **[CONTEXT AMNESIA FAILSAFE]**
+> YOU MUST USE TOOL CALLS TO READ THE FULL SOURCE FILE IN `global/workflows/` AND THE REQUIRED SKILLS/CONTEXTS BEFORE EXECUTING THIS.
+> PROVE YOU HAVE DONE THIS IN A `<thought_process>` BLOCK.
+>
+
+
+> **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full detailed logic, instructions, and implementation phases, the Agent MUST load and follow the [SOURCE FILE](global/workflows/workflow-project-inception.md).
 
 ## WHAT THIS WORKFLOW DOES
 
@@ -16,7 +22,7 @@ This workflow transforms a raw idea into a buildable plan. It acts as the "produ
 
 ### 1. Load Full Instructions
 
-- [ ] **Load Source [REQUIRED]:** [workflow-project-inception.md](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-project-inception.md) (Follow all 6 phases).
+- [ ] **Load Source [REQUIRED]:** [workflow-project-inception.md](global/workflows/workflow-project-inception.md) (Follow all 6 phases).
 
 ### 2. Load Core Contexts & Skills (Always)
 
