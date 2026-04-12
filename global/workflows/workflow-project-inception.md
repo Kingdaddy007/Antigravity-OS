@@ -97,7 +97,7 @@ the plan.
 - `.agents/memory/mistakes-to-avoid.md` — Project-specific mistakes and prevention rules
 - `.agents/memory/postmortems.md` — Project-specific incident records
 
-These files follow the same format as the global templates in `antigravity/memory/` but store ONLY project-specific entries. Cross-project lessons go to the global memory.
+These files follow the same format as the global templates in `global/memory/` but store ONLY project-specific entries. Cross-project lessons go to the global memory.
 
 ### Contexts to Load
 
@@ -117,6 +117,10 @@ These files follow the same format as the global templates in `antigravity/memor
 | `project-planning-rubric.md` | After Phase 5 — evaluating planning quality before starting to build |
 
 ---
+
+### MANDATORY STOP-AND-VERIFY GATE
+> **[CONTEXT AMNESIA FAILSAFE]**
+> Do NOT proceed to Step 1 until you have verified in your `<thought_process>` that all required context files and skill files have been read using tool calls. You must state: "I have read X, Y, Z files and I am ready to begin."
 
 ## EXECUTION SEQUENCE
 
@@ -261,7 +265,7 @@ Do not design the architecture or visual identity before you know how the user a
 
 **Write these into the context file:**
 
-- Create `contexts/app-flow.md` using the Gold v1.0 template from `C:\Users\Oviks\.gemini\antigravity\contexts\app-flow.md`
+- Create `contexts/app-flow.md` using the Gold v1.0 template from `global/contexts\app-flow.md`
 
 **Gate:** Before designing the architecture or visual UI, confirm the user journey makes sense. Are there any dead ends? Are error states handled?
 
@@ -333,7 +337,7 @@ Translate into CSS custom properties (hex values).
 
 **Write these into the context file:**
 
-- Create `contexts/visual-identity.md` using the Gold v1.0 template from `C:\Users\Oviks\.gemini\antigravity\contexts\visual-identity.md`
+- Create `contexts/visual-identity.md` using the Gold v1.0 template from `global/contexts\visual-identity.md`
 
 **Gate:** Before moving to architecture — confirm the visual direction feels right for the target user and business context. A trading tool should not look like a social app. A luxury marketplace should not look like a SaaS dashboard.
 
@@ -413,10 +417,10 @@ project/
 
 **Create workspace memory files (MANDATORY):**
 
-- Create `.agents/memory/decisions-log.md` — copy header + entry format from global `antigravity/memory/decisions-log.md`, leave ENTRIES section empty
-- Create `.agents/memory/common-patterns.md` — copy header + entry format from global `antigravity/memory/common-patterns.md`, leave ENTRIES section empty
-- Create `.agents/memory/mistakes-to-avoid.md` — copy header + entry format from global `antigravity/memory/mistakes-to-avoid.md`, leave ENTRIES section empty
-- Create `.agents/memory/postmortems.md` — copy header + entry format from global `antigravity/memory/postmortems.md`, leave ENTRIES section empty
+- Create `.agents/memory/decisions-log.md` — copy header + entry format from global `global/memory/decisions-log.md`, leave ENTRIES section empty
+- Create `.agents/memory/common-patterns.md` — copy header + entry format from global `global/memory/common-patterns.md`, leave ENTRIES section empty
+- Create `.agents/memory/mistakes-to-avoid.md` — copy header + entry format from global `global/memory/mistakes-to-avoid.md`, leave ENTRIES section empty
+- Create `.agents/memory/postmortems.md` — copy header + entry format from global `global/memory/postmortems.md`, leave ENTRIES section empty
 
 Log the first decision entry immediately: the tech stack choice from Step 1 of this phase.
 
@@ -605,7 +609,7 @@ Hand off to the engineering workflows:
 - Save project-specific decisions to `.agents/memory/decisions-log.md` (workspace)
 - Save project-specific patterns to `.agents/memory/common-patterns.md` (workspace)
 - Save project-specific mistakes to `.agents/memory/mistakes-to-avoid.md` (workspace)
-- Save cross-project lessons (tooling, process, AI config) to global `antigravity/memory/` ONLY
+- Save cross-project lessons (tooling, process, AI config) to global `global/memory/` ONLY
 - After project ships: review workspace memory and promote any cross-project lessons to global memory
 
 ---

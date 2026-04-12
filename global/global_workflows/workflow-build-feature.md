@@ -4,7 +4,13 @@ description: The complete step-by-step sequence for transforming feature request
 
 # WORKFLOW: BUILD FEATURE (MASTER)
 
-> **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full 21,000-character logic, instructions, and implementation stages, the Agent MUST load and follow the [SOURCE FILE](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-build-feature.md).
+> **[CONTEXT AMNESIA FAILSAFE]**
+> YOU MUST USE TOOL CALLS TO READ THE FULL SOURCE FILE IN `global/workflows/` AND THE REQUIRED SKILLS/CONTEXTS BEFORE EXECUTING THIS.
+> PROVE YOU HAVE DONE THIS IN A `<thought_process>` BLOCK.
+>
+
+
+> **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full 21,000-character logic, instructions, and implementation stages, the Agent MUST load and follow the [SOURCE FILE](global/workflows/workflow-build-feature.md).
 
 ## WHAT THIS WORKFLOW DOES
 
@@ -16,7 +22,7 @@ Chains Architect, Developer, and Reviewer modes to prevent coding before underst
 
 ### 1. Load Full Instructions
 
-- [ ] **Load Source [REQUIRED]:** [workflow-build-feature.md](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-build-feature.md) (Follow all 11 steps).
+- [ ] **Load Source [REQUIRED]:** [workflow-build-feature.md](global/workflows/workflow-build-feature.md) (Follow all 11 steps).
 
 ### 2. Load Core Contexts & Skills (Always)
 

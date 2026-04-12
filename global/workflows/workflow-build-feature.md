@@ -120,6 +120,10 @@ Do NOT stop automatically. Instead:
 
 ---
 
+### MANDATORY STOP-AND-VERIFY GATE
+> **[CONTEXT AMNESIA FAILSAFE]**
+> Do NOT proceed to Step 1 until you have verified in your `<thought_process>` that all required context files and skill files have been read using tool calls. You must state: "I have read X, Y, Z files and I am ready to begin."
+
 ## EXECUTION SEQUENCE
 
 ---
@@ -130,7 +134,7 @@ Do NOT stop automatically. Instead:
 
 #### Load Template (Step 1)
 
-- [REQUIRED] Load [feature-plan.md](file:///C:/Users/Oviks/.gemini/antigravity/global_templates/feature-plan.md)
+- [REQUIRED] Load [feature-plan.md](global/templates/feature-plan.md)
 - Follow the structure and guidance in the template to scope and plan the feature before implementation.
 
 #### Action: Define Objective (Step 1)
@@ -176,9 +180,9 @@ Ask if needed: "What specific user problem does this solve?"
 6. Identify project-level constraints that shape the build
 7. Note whether the feature touches security, performance, data, or UX-sensitive surfaces
 8. **CHECK MEMORY (MANDATORY — workspace first, then global):**
-   - Scan `.agents/memory/decisions-log.md` then `antigravity/memory/decisions-log.md` — has a related decision been made before?
-   - Scan `.agents/memory/common-patterns.md` then `antigravity/memory/common-patterns.md` — does a proven pattern exist?
-   - Scan `.agents/memory/mistakes-to-avoid.md` then `antigravity/memory/mistakes-to-avoid.md` — have we hit traps in this area?
+   - Scan `.agents/memory/decisions-log.md` then `global/memory/decisions-log.md` — has a related decision been made before?
+   - Scan `.agents/memory/common-patterns.md` then `global/memory/common-patterns.md` — does a proven pattern exist?
+   - Scan `.agents/memory/mistakes-to-avoid.md` then `global/memory/mistakes-to-avoid.md` — have we hit traps in this area?
 
 #### Output: Context Frame (Step 2)
 
@@ -506,7 +510,7 @@ Do NOT call the feature done because the happy path worked once. Adjacent behavi
 
 #### Memory Capture Checklist (MANDATORY — do not skip)
 
-Ask these 4 questions before closing. Write to **workspace memory** (`.agents/memory/`) for project-specific entries. Write to **global memory** (`antigravity/memory/`) ONLY for cross-project lessons (tooling, process, AI config).
+Ask these 4 questions before closing. Write to **workspace memory** (`.agents/memory/`) for project-specific entries. Write to **global memory** (`global/memory/`) ONLY for cross-project lessons (tooling, process, AI config).
 
 - [ ] **Decisions:** Were any Type 1/1.5 architectural or technology decisions made? → Log to `.agents/memory/decisions-log.md`
 - [ ] **Patterns:** Did a reusable solution pattern emerge that applies beyond this feature? → Log to `.agents/memory/common-patterns.md`

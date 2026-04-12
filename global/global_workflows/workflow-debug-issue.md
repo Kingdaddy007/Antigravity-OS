@@ -4,7 +4,13 @@ description: The systematic sequence for diagnosing and fixing bugs — from sym
 
 # WORKFLOW: DEBUG ISSUE (MASTER UI)
 
-> **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full 12,000-character logic, evidence-gathering steps, and regression prevention strategies, the Agent MUST load and follow the [SOURCE FILE](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-debug-issue.md).
+> **[CONTEXT AMNESIA FAILSAFE]**
+> YOU MUST USE TOOL CALLS TO READ THE FULL SOURCE FILE IN `global/workflows/` AND THE REQUIRED SKILLS/CONTEXTS BEFORE EXECUTING THIS.
+> PROVE YOU HAVE DONE THIS IN A `<thought_process>` BLOCK.
+>
+
+
+> **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full 12,000-character logic, evidence-gathering steps, and regression prevention strategies, the Agent MUST load and follow the [SOURCE FILE](global/workflows/workflow-debug-issue.md).
 
 ## WHAT THIS WORKFLOW DOES
 
@@ -16,7 +22,7 @@ Prevents "shotgun debugging" by enforcing evidence-based diagnosis. It ensures t
 
 ### 1. Load Full Instructions
 
-- [ ] **Load Source [REQUIRED]:** [workflow-debug-issue.md](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-debug-issue.md) (Follow all 8 steps).
+- [ ] **Load Source [REQUIRED]:** [workflow-debug-issue.md](global/workflows/workflow-debug-issue.md) (Follow all 8 steps).
 
 ### 2. Load Core Contexts & Skills (Always)
 

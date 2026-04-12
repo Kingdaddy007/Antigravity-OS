@@ -4,7 +4,13 @@ description: The systematic sequence for designing and implementing user interfa
 
 # WORKFLOW: DESIGN UI (MASTER UI)
 
-> **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full 15,000-character logic, state maps, and accessibility non-negotiables, the Agent MUST load and follow the [SOURCE FILE](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-design-ui.md).
+> **[CONTEXT AMNESIA FAILSAFE]**
+> YOU MUST USE TOOL CALLS TO READ THE FULL SOURCE FILE IN `global/workflows/` AND THE REQUIRED SKILLS/CONTEXTS BEFORE EXECUTING THIS.
+> PROVE YOU HAVE DONE THIS IN A `<thought_process>` BLOCK.
+>
+
+
+> **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full 15,000-character logic, state maps, and accessibility non-negotiables, the Agent MUST load and follow the [SOURCE FILE](global/workflows/workflow-design-ui.md).
 
 ## WHAT THIS WORKFLOW DOES
 
@@ -16,7 +22,7 @@ Ensures UI work starts with the user goal, not the components. It forces full st
 
 ### 1. Load Full Instructions
 
-- [ ] **Load Source [REQUIRED]:** [workflow-design-ui.md](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-design-ui.md) (Follow all 8 steps).
+- [ ] **Load Source [REQUIRED]:** [workflow-design-ui.md](global/workflows/workflow-design-ui.md) (Follow all 8 steps).
 
 ### 2. Load Core Contexts & Skills (Always)
 

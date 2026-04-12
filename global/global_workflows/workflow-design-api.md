@@ -4,7 +4,13 @@ description: The systematic sequence for designing API endpoints and contracts â
 
 # WORKFLOW: DESIGN API (MASTER UI)
 
-> **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full 15,000-character logic, Error Taxonomy tables, and Server Action vs API Route decision matrices, the Agent MUST load and follow the [SOURCE FILE](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-design-api.md).
+> **[CONTEXT AMNESIA FAILSAFE]**
+> YOU MUST USE TOOL CALLS TO READ THE FULL SOURCE FILE IN `global/workflows/` AND THE REQUIRED SKILLS/CONTEXTS BEFORE EXECUTING THIS.
+> PROVE YOU HAVE DONE THIS IN A `<thought_process>` BLOCK.
+>
+
+
+> **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full 15,000-character logic, Error Taxonomy tables, and Server Action vs API Route decision matrices, the Agent MUST load and follow the [SOURCE FILE](global/workflows/workflow-design-api.md).
 
 ## WHAT THIS WORKFLOW DOES
 
@@ -16,7 +22,7 @@ Enforces a **Contract-First** discipline. It ensures APIs are designed for the c
 
 ### 1. Load Full Instructions
 
-- [ ] **Load Source [REQUIRED]:** [workflow-design-api.md](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-design-api.md) (Follow all 8 steps).
+- [ ] **Load Source [REQUIRED]:** [workflow-design-api.md](global/workflows/workflow-design-api.md) (Follow all 8 steps).
 
 ### 2. Load Core Contexts & Skills (Always)
 

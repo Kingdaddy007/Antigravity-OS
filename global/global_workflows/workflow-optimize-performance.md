@@ -4,7 +4,13 @@ description: The systematic sequence for identifying and resolving performance b
 
 # WORKFLOW: OPTIMIZE PERFORMANCE (MASTER UI)
 
-> **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full 15,000-character logic, profiling protocols, and optimization decision matrices, the Agent MUST load and follow the [SOURCE FILE](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-optimize-performance.md).
+> **[CONTEXT AMNESIA FAILSAFE]**
+> YOU MUST USE TOOL CALLS TO READ THE FULL SOURCE FILE IN `global/workflows/` AND THE REQUIRED SKILLS/CONTEXTS BEFORE EXECUTING THIS.
+> PROVE YOU HAVE DONE THIS IN A `<thought_process>` BLOCK.
+>
+
+
+> **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full 15,000-character logic, profiling protocols, and optimization decision matrices, the Agent MUST load and follow the [SOURCE FILE](global/workflows/workflow-optimize-performance.md).
 
 ## WHAT THIS WORKFLOW DOES
 
@@ -27,7 +33,7 @@ This workflow ensures performance work starts with measurement, not intuition. I
 
 ### 1. Load Full Instructions
 
-- [ ] **Load Source [REQUIRED]:** [workflow-optimize-performance.md](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-optimize-performance.md) (Follow all 7 steps).
+- [ ] **Load Source [REQUIRED]:** [workflow-optimize-performance.md](global/workflows/workflow-optimize-performance.md) (Follow all 7 steps).
 
 ### 2. Load Core Contexts & Skills (Always)
 

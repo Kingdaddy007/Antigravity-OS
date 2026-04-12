@@ -120,6 +120,10 @@ Do NOT jump straight into boxes and arrows. Instead:
 
 ---
 
+### MANDATORY STOP-AND-VERIFY GATE
+> **[CONTEXT AMNESIA FAILSAFE]**
+> Do NOT proceed to Step 1 until you have verified in your `<thought_process>` that all required context files and skill files have been read using tool calls. You must state: "I have read X, Y, Z files and I am ready to begin."
+
 ## EXECUTION SEQUENCE
 
 ---
@@ -375,7 +379,7 @@ If boundaries are still fuzzy after this step, implementation will invent the re
 
 #### Load Template (Step 6)
 
-- [REQUIRED] Load [architecture-decision-record.md](file:///C:/Users/Oviks/.gemini/antigravity/global_templates/architecture-decision-record.md)
+- [REQUIRED] Load [architecture-decision-record.md](global/templates/architecture-decision-record.md)
 - Follow the structure and guidance in the template exactly to record the decision.
 
 #### Post-ADR Actions (Step 6)

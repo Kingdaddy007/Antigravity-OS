@@ -121,6 +121,10 @@ Do NOT jump straight to a fix. Instead:
 
 ---
 
+### MANDATORY STOP-AND-VERIFY GATE
+> **[CONTEXT AMNESIA FAILSAFE]**
+> Do NOT proceed to Step 1 until you have verified in your `<thought_process>` that all required context files and skill files have been read using tool calls. You must state: "I have read X, Y, Z files and I am ready to begin."
+
 ## EXECUTION SEQUENCE
 
 ---
@@ -156,9 +160,9 @@ Do NOT jump straight to a fix. Instead:
    - Distinguish emergency containment from root-cause resolution
 
 5. **CHECK MEMORY (MANDATORY — workspace first, then global):**
-   - Scan `.agents/memory/mistakes-to-avoid.md` then `antigravity/memory/mistakes-to-avoid.md` — has this bug type been seen before?
-   - Scan `.agents/memory/common-patterns.md` then `antigravity/memory/common-patterns.md` — does a proven fix pattern exist?
-   - Scan `.agents/memory/postmortems.md` then `antigravity/memory/postmortems.md` — is this related to a past incident?
+   - Scan `.agents/memory/mistakes-to-avoid.md` then `global/memory/mistakes-to-avoid.md` — has this bug type been seen before?
+   - Scan `.agents/memory/common-patterns.md` then `global/memory/common-patterns.md` — does a proven fix pattern exist?
+   - Scan `.agents/memory/postmortems.md` then `global/memory/postmortems.md` — is this related to a past incident?
 
 #### Output (Step 1)
 
@@ -430,7 +434,7 @@ Do not treat "it stopped happening once" as sufficient proof for meaningful issu
 
 #### Load Template (Step 7)
 
-- [REQUIRED] Load [debug-report.md](file:///C:/Users/Oviks/.gemini/antigravity/global_templates/debug-report.md)
+- [REQUIRED] Load [debug-report.md](global/templates/debug-report.md)
 - Follow the structure and guidance in the template exactly to record the bug investigation.
 
 ---
