@@ -1,17 +1,15 @@
-<p align="center">
-  <img src="assets/social-preview.png" alt="Anti-Gravity OS — The Operating System for AI-Powered Engineering" width="100%" />
-</p>
+# Anti-Gravity OS
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Files-77+-blueviolet?style=for-the-badge" alt="77+ Files" />
-  <img src="https://img.shields.io/badge/Skills-15-blue?style=for-the-badge" alt="15 Skills" />
-  <img src="https://img.shields.io/badge/Workflows-13-green?style=for-the-badge" alt="13 Workflows" />
-  <img src="https://img.shields.io/badge/IDE_Support-6+-orange?style=for-the-badge" alt="6+ IDEs" />
-</p>
+![Anti-Gravity OS — The Operating System for AI-Powered Engineering](assets/social-preview.png)
 
-#  Anti-Gravity OS
+![77+ Files](https://img.shields.io/badge/Files-77+-blueviolet?style=for-the-badge)
+![15 Skills](https://img.shields.io/badge/Skills-15-blue?style=for-the-badge)
+![13 Workflows](https://img.shields.io/badge/Workflows-13-green?style=for-the-badge)
+![6+ IDEs](https://img.shields.io/badge/IDE_Support-6+-orange?style=for-the-badge)
 
-### The operating system for AI-powered engineering.
+
+
+## The operating system for AI-powered engineering
 
 > Most people paste a prompt into their IDE and call it a day.
 > Anti-Gravity OS gives your AI a **brain**, a **memory**, and a **discipline system** — so it thinks like a senior engineer, not a chatbot.
@@ -23,6 +21,7 @@
 You're using AI coding tools at **maybe 10%** of their capacity.
 
 Here's what most developers do:
+
 - Open IDE → select model → type request → copy-paste result
 - No persistent context — the AI forgets everything between sessions
 - No standards — it writes code differently every time
@@ -38,7 +37,7 @@ Anti-Gravity OS is a **77-file intelligence architecture** that transforms any A
 It's not a prompt. It's not a `.cursorrules` file. It's a complete system:
 
 | Layer | What It Does | Files |
-|:---|:---|:---:|
+| :--- | :--- | :---: |
 | 🧠 **Core** | Defines how the AI thinks, reasons, and communicates | 9 |
 | ⚡ **Skills** | Domain expertise loaded before each task type | 15 |
 | 🔄 **Workflows** | Step-by-step execution triggered by `/` slash commands | 13 |
@@ -52,15 +51,17 @@ It's not a prompt. It's not a `.cursorrules` file. It's a complete system:
 
 ## 🔥 What Changes After You Install This
 
-### Before Anti-Gravity OS:
-```
+### Before Anti-Gravity OS
+
+```text
 You:  "Build me a login page"
 AI:   *generic React component with no error handling, 
        wrong framework version, no tests*
 ```
 
-### After Anti-Gravity OS:
-```
+### After Anti-Gravity OS
+
+```text
 You:  "Build me a login page"
 AI:   *reads your stack-context → knows you use Next.js 15 App Router*
       *reads coding-standards → follows YOUR naming conventions*  
@@ -75,11 +76,9 @@ AI:   *reads your stack-context → knows you use Next.js 15 App Router*
 
 ## 🧩 How It Works
 
-<p align="center">
-  <img src="assets/architecture-flow.png" alt="Anti-Gravity OS Architecture Flow" width="85%" />
-</p>
+![Anti-Gravity OS Architecture Flow](assets/architecture-flow.png)
 
-```
+```text
 ┌─────────────┐
 │   YOU type   │  "Build me a login page"
 │   a request  │
@@ -115,7 +114,7 @@ AI:   *reads your stack-context → knows you use Next.js 15 App Router*
 After installation, type `/` in your IDE to trigger structured workflows:
 
 | Command | What It Does |
-|:---|:---|
+| :--- | :--- |
 | `/workflow-build-feature` | Plan → code → test → ship — end to end |
 | `/workflow-debug-issue` | Symptoms → root cause → verified fix |
 | `/workflow-design-ui` | User goals → components → states → accessibility |
@@ -139,7 +138,7 @@ After installation, type `/` in your IDE to trigger structured workflows:
 The AI loads **domain-specific expertise** before each task — not all 15 at once, just the 1-2 that matter:
 
 | You're doing... | AI loads... |
-|:---|:---|
+| :--- | :--- |
 | Writing code | `skill-coding` — patterns, error handling, naming |
 | Debugging | `skill-debugging` — systematic root-cause analysis |
 | Designing architecture | `skill-architecture` — boundaries, tradeoffs, ADRs |
@@ -165,7 +164,7 @@ The AI loads **domain-specific expertise** before each task — not all 15 at on
 Your AI gives you generic answers because it knows nothing about YOUR project. Context files fix that:
 
 | File | What You Fill In | What Changes |
-|:---|:---|:---|
+| :--- | :--- |:---|
 | `stack-context.md` | Your languages, frameworks, versions | AI stops suggesting wrong libraries |
 | `coding-standards.md` | Your naming, patterns, principles | AI matches your existing codebase |
 | `architecture-context.md` | How your system is structured | AI respects your boundaries |
@@ -183,11 +182,12 @@ Your AI gives you generic answers because it knows nothing about YOUR project. C
 Most AI tools forget everything when you close the window. Anti-Gravity OS doesn't.
 
 | Memory File | What Gets Captured |
-|:---|:---|
+| :--- | :--- |
 | `decisions-log.md` | Architecture and strategy decisions made during work |
 | `common-patterns.md` | Patterns that worked well — reuse instead of reinvent |
 | `mistakes-to-avoid.md` | Bugs and anti-patterns — never repeat them |
 | `postmortems.md` | Post-ship analysis — what went wrong and why |
+
 
 The AI writes to memory automatically after significant sessions. Next session, it reads before starting.
 
@@ -195,19 +195,22 @@ The AI writes to memory automatically after significant sessions. Next session, 
 
 ## 🔧 Quick Start
 
-**1. Clone**
+### 1. Clone
+
 ```bash
 git clone https://github.com/Kingdaddy007/Antigravity-OS.git
 cd Antigravity-OS
 ```
 
-**2. Tell your AI to read the setup guide**
-```
+### 2. Tell your AI to read the setup guide
+
+```text
 "Read SETUP.md and help me install Anti-Gravity OS"
 ```
 The AI will ask which IDE you use and walk you through everything.
 
-**3. Or run the installer directly**
+### 3. Or run the installer directly
+
 ```powershell
 # Windows
 .\install.ps1
@@ -217,6 +220,7 @@ chmod +x install.sh && ./install.sh
 ```
 
 The installer handles:
+
 - ✅ Detecting your IDE
 - ✅ Copying workspace files (rules + slash commands)
 - ✅ Installing global brain (skills, contexts, workflows)
@@ -239,7 +243,7 @@ The installer handles:
 
 ## 🏗️ Architecture
 
-```
+```text
 Antigravity-OS/
 ├── SETUP.md                    ← AI reads this first (setup guide)
 ├── install.ps1                 ← Windows installer
@@ -261,7 +265,7 @@ Antigravity-OS/
 ## 🔌 How Is This Different from `.cursorrules`?
 
 | Feature | `.cursorrules` / Prompt Files | Anti-Gravity OS |
-|:---|:---|:---|
+| :--- | :--- |:---|
 | Structure | Single flat file | 77-file layered architecture |
 | Skills | None — one prompt does everything | 15 domain-specific skill files |
 | Workflows | None — AI wings it | 13 step-by-step execution guides |
@@ -279,7 +283,7 @@ Antigravity-OS/
 Specialized skill + context + workflow bundles for specific domains:
 
 | Pack | What's Included |
-|:---|:---|
+| :--- | :--- |
 | 🌐 **Web3 / Blockchain** | Solidity skill, smart contract workflows, security audit for DeFi |
 | 🏢 **SaaS Boilerplate** | Multi-tenant architecture, billing context, auth workflows |
 | 📱 **Mobile (React Native)** | Navigation patterns, native module context, app store workflows |
@@ -321,7 +325,6 @@ MIT — use it, fork it, build on it, make it yours.
 
 ---
 
-<p align="center">
-  <strong>Anti-Gravity OS</strong><br/>
-  <em>Stop using your AI at 10%. Give it an operating system.</em>
-</p>
+**Anti-Gravity OS**
+
+*Stop using your AI at 10%. Give it an operating system.*
