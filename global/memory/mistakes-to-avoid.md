@@ -102,11 +102,11 @@ Tags: #auth #database #deployment #testing #scope-creep #performance
 
 ### Data Integrity
 <!-- Entries tagged: #data-integrity #timestamp #candles #database #migration -->
-- [2026-03-27] Candle Jump Bug From Epoch Format Mismatch — mixed seconds/milliseconds
+- (none yet)
 
 ### UI / Frontend Bugs
 <!-- Entries tagged: #lwc #crash #split-view #rendering #css -->
-- [2026-04-05] Zombie Series Crash on Split-View Timeframe Switch — stale series references
+- (none yet)
 
 ### Architecture / Design Decisions
 <!-- Entries tagged: #architecture #refactor #structure #module -->
@@ -126,7 +126,7 @@ Tags: #auth #database #deployment #testing #scope-creep #performance
 
 ### Tooling / Process
 <!-- Entries tagged: #tooling #python #process #npm #config -->
-- [undated] NotebookLM MCP Server Module Name Mismatch — package≠module name
+- (none yet)
 
 ### Performance
 <!-- Entries tagged: #performance #memory #cpu #bottleneck -->
@@ -223,118 +223,4 @@ Tags: #auth #security #authorization #data-leakage
 ## ENTRIES
 
 <!-- Append new entries below this line. Most recent at the top. -->
-2026-04-05 — Zombie Series Crash on Split-View Timeframe Switch
-
-Category
-Coding / UI
-
-What Happened
-Switching timeframes in split-view mode caused chart crashes. Old series objects remained attached to the chart after a new series was created for the new timeframe. LWC threw errors when data updates hit the stale (zombie) series references.
-
-Impact
-Terminal crashes during active trading analysis. Required page refresh to recover. Lost tick buffer history each time.
-
-Root Cause
-The `switchTimeframe()` method created new series without first removing the old ones. The old series references persisted in the slot's state object and continued receiving data updates from the tick pipeline, causing LWC to throw "series was removed" errors.
-
-Warning Signs
-
-- Console errors mentioning series that should no longer exist
-- Chart slots showing mixed data from two timeframes
-- Crashes only occurring during timeframe switching, not on initial load
-
-How It Was Fixed
-Added explicit `chart.removeSeries(oldSeries)` before creating new series. Updated the slot state to null out old series references immediately upon removal. Added a guard in the tick pipeline to skip updates if series reference is null.
-
-How to Prevent Recurrence
-
-- Always remove old series before creating new ones — treat series lifecycle as create/destroy, never reuse
-- Add null guards in any data pipeline that writes to series references
-- Test timeframe switching explicitly — it is a different code path from initial creation
-
-The Lesson
-When replacing a visual component backed by a library, always clean up the old instance BEFORE creating the new one. The library holds internal state that becomes toxic if the old instance receives updates.
-
-Related Files / Areas
-- client/js/core/App.js (ChartSlot.switchTimeframe)
-- memory/decisions-log.md
-
-Tags: #coding #lwc #crash #split-view
-
----
-
-2026-03-27 — Candle Jump Bug From Epoch Format Mismatch
-
-Category
-Coding / Data Integrity
-
-What Happened
-Candles appeared to "jump" — showing impossibly large price movements between adjacent candles. The chart looked broken with massive gaps and spikes that did not correspond to real price action.
-
-Impact
-Charts were unreliable for analysis. Multiple hours debugging across server and client before root cause was identified.
-
-Root Cause
-The Deriv API returns tick epochs in seconds, but some client-side processing paths were treating them as milliseconds (or vice versa). When a candle time bucket was calculated with the wrong unit, ticks were assigned to the wrong candle, producing artificial jumps.
-
-Warning Signs
-
-- Candle OHLC values that don't make physical sense (e.g., 10x normal range)
-- Candle timestamps that are 1000x too large or too small
-- Charts that look correct initially but break after a specific timeframe switch
-
-How It Was Fixed
-Standardized all timestamp handling to seconds-epoch throughout the entire pipeline. Added `sanitizeCandleBar()` validation that rejects candles with time values above a reasonable threshold (indicating milliseconds were passed instead of seconds).
-
-How to Prevent Recurrence
-
-- ALL timestamps in the pipeline must be in seconds-epoch — never milliseconds
-- The boundary guard wrapper (sanitizeCandleBar) catches this class of error automatically
-- When integrating any new data source, verify its epoch format before connecting to the pipeline
-
-The Lesson
-Pick ONE timestamp format for the entire system and enforce it at every boundary. Mixed formats are invisible until they produce catastrophic visual bugs.
-
-Related Files / Areas
-- server/candleAggregator.js
-- client/js/core/App.js (sanitizeCandleBar)
-
-Tags: #coding #data-integrity #timestamp #candles
-
----
-
-
-
-Category
-Process / Tooling
-
-What Happened
-The system prompt used `notebooklm_mcp_server` as the module name in `mcp_config.json`, assuming it matched the pip package name exactly. This caused a connection failure.
-
-Impact
-Approximately 30 minutes of troubleshooting and user confusion before the correct module path was identified.
-
-Root Cause
-Assuming package-to-module parity without verifying the `site-packages` structure or using `pip show -f`. 
-
-Warning Signs
-
-- [ ] "No module named X" error when running a tool via `python -m`.
-- [ ] Package name contains hyphens (`notebooklm-mcp-server`) while modules usually use underscores.
-
-How It Was Fixed
-Audited the `site-packages` folder using `run_command` and identified `notebooklm_mcp` as the base folder and `server.py` as the entry point. Updated config to `notebooklm_mcp.server`.
-
-How to Prevent Recurrence
-
-- Always run `pip show -f <package>` to verify the actual module names before updating `mcp_config.json`.
-- Test the module invocation manually using `python -m <module> --help` before committing to the config file.
-
-The Lesson
-Never assume the module name matches the package name. Verify the entry point in the environment before configuration.
-
-Related Files / Areas
-memory/decisions-log.md
-mcp_config.json
-
-Tags: #tooling #python #process
+<!-- Append new entries below this line. Most recent at the top. -->

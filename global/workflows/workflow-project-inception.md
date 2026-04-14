@@ -97,7 +97,8 @@ the plan.
 - `.agents/memory/mistakes-to-avoid.md` — Project-specific mistakes and prevention rules
 - `.agents/memory/postmortems.md` — Project-specific incident records
 
-These files follow the same format as the global templates in `antigravity/memory/` but store ONLY project-specific entries. Cross-project lessons go to the global memory.
+> [!IMPORTANT]
+> **MEMORY SCOPING RULE:** These files follow the same format as the global templates in `antigravity/memory/` but MUST store ONLY project-specific entries. Cross-project/system-level lessons go to the global memory. Refer to the **CRITICAL Memory Scoping Rule** in `GEMINI.md` for enforcement.
 
 ### Contexts to Load
 
@@ -261,7 +262,7 @@ Do not design the architecture or visual identity before you know how the user a
 
 **Write these into the context file:**
 
-- Create `contexts/app-flow.md` using the Gold v1.0 template from `C:\Users\Oviks\.gemini\antigravity\contexts\app-flow.md`
+- Create `contexts/app-flow.md` using the Gold v1.0 template from `{{GLOBAL_CONFIG_URI}}/antigravity/contexts/app-flow.md`
 
 **Gate:** Before designing the architecture or visual UI, confirm the user journey makes sense. Are there any dead ends? Are error states handled?
 
@@ -333,7 +334,7 @@ Translate into CSS custom properties (hex values).
 
 **Write these into the context file:**
 
-- Create `contexts/visual-identity.md` using the Gold v1.0 template from `C:\Users\Oviks\.gemini\antigravity\contexts\visual-identity.md`
+- Create `contexts/visual-identity.md` using the Gold v1.0 template from `{{GLOBAL_CONFIG_URI}}/antigravity/contexts/visual-identity.md`
 
 **Gate:** Before moving to architecture — confirm the visual direction feels right for the target user and business context. A trading tool should not look like a social app. A luxury marketplace should not look like a SaaS dashboard.
 
@@ -417,6 +418,9 @@ project/
 - Create `.agents/memory/common-patterns.md` — copy header + entry format from global `antigravity/memory/common-patterns.md`, leave ENTRIES section empty
 - Create `.agents/memory/mistakes-to-avoid.md` — copy header + entry format from global `antigravity/memory/mistakes-to-avoid.md`, leave ENTRIES section empty
 - Create `.agents/memory/postmortems.md` — copy header + entry format from global `antigravity/memory/postmortems.md`, leave ENTRIES section empty
+
+> [!CAUTION]
+> Failure to create these files will lead to global memory contamination. You MUST follow the **Memory Scoping Rule** (GEMINI.md) and isolate all project knowledge here.
 
 Log the first decision entry immediately: the tech stack choice from Step 1 of this phase.
 
@@ -600,12 +604,13 @@ Hand off to the engineering workflows:
 5. Check off items in the Definition of Done as they're completed
 6. When 80% done: Anti-Gravity shifts to finishing mode — resist scope creep, push to ship
 
-**Memory Integration (Workspace First, Global Second):**
+**Memory Integration (MANDATORY LOCAL SCOPING):**
 
 - Save project-specific decisions to `.agents/memory/decisions-log.md` (workspace)
 - Save project-specific patterns to `.agents/memory/common-patterns.md` (workspace)
 - Save project-specific mistakes to `.agents/memory/mistakes-to-avoid.md` (workspace)
 - Save cross-project lessons (tooling, process, AI config) to global `antigravity/memory/` ONLY
+- **STRICT RULE:** Use local workspace memory for ALL project-specific tracking. Refer to `GEMINI.md` for enforcement.
 - After project ships: review workspace memory and promote any cross-project lessons to global memory
 
 ---
