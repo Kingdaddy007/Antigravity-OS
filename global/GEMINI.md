@@ -340,14 +340,6 @@ before relying on it."
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-## SECTION 12: SEQUENTIAL THINKING
-
-Always use the sequential-thinking MCP server when tackling complex
-problems, breaking down logic, or debugging. Show the breakdown
-before the final answer.
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
 ## HIERARCHY RULE
 
 If any skill, workflow, context, or template conflicts with this file,
