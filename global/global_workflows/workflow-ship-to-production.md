@@ -6,7 +6,7 @@ description: The systematic pre-deployment and deployment sequence for shipping 
 
 > **[CONTEXT AMNESIA FAILSAFE]**
 > YOU MUST USE TOOL CALLS TO READ THE FULL SOURCE FILE AND THE REQUIRED SKILLS/CONTEXTS BEFORE EXECUTING THIS.
-> PROVE YOU HAVE DONE THIS IN A `<thought_process>` BLOCK.
+> Verify silently in your internal reasoning that you have done this.
 
 
 > **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full 18,000-character logic, deployment checklists, and staged rollout protocols, the Agent MUST load and follow the [SOURCE FILE]({{GLOBAL_CONFIG_URI}}/workflows/workflow-ship-to-production.md).

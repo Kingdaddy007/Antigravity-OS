@@ -1,132 +1,96 @@
 # WORKFLOW: PROJECT INCEPTION
 
-**Version:** Gold v1.0
-**Layer:** 8 — Execution Workflow
-**Tier:** 2 — Loaded by task
-**File:** workflows/workflow-project-inception.md
-**Purpose:** The systematic sequence for taking a raw idea and turning it
-          into a structured, sequenced, executable project plan — the
-          bridge between "I have an idea" and "let's start building."
-**Loaded When:** Starting a new project, hackathon, competition, side project,
-              or any initiative that begins with an idea and needs a plan.
-**Inherits From:** execution-workflow.md (8-phase universal process)
-**Note:** This workflow is the PRODUCT MANAGER function. It happens BEFORE
-       any engineering work begins. Its output IS the engineering plan.
+**Version:** Gold v1.2
+**Layer:** Execution workflow
+**Tier:** 2 - loaded by task
+**Purpose:** Turn a raw idea into a buildable plan, initialize runtime context, and set up local project memory before implementation begins.
 
 ---
 
 ## WHAT THIS WORKFLOW DOES
 
-This workflow transforms a raw idea into a buildable plan. It is the
-"product manager" that Anti-Gravity needs before it can be the
-"senior engineer."
+This workflow is the bridge between:
 
-The output of this workflow is:
+- "I have an idea"
+- and
+- "We have a scoped project, runtime context files, local memory, and a build sequence"
 
-1. A clear problem definition
-2. A defined target user and their job
-3. A feature breakdown
-4. A prioritized MVP scope
-5. A technical architecture
-6. A sequenced build plan (phase by phase or day by day)
-7. A definition of "done" (what does shipped look like?)
+Its outputs are:
 
-After this workflow completes, every subsequent step uses the other
-workflows (build-feature, design-api, design-ui, etc.) to execute
-the plan.
+1. a clear problem definition
+2. a target user and job-to-be-done
+3. a scoped MVP with explicit non-goals
+4. a technical direction
+5. a sequenced build plan
+6. runtime-ready context files in `contexts/`
+7. initialized workspace memory files in `.agents/memory/`
 
 ---
 
-## THE GAP THIS FILLS
+## WHEN TO USE IT
 
-| Without This Workflow | With This Workflow |
-| :--- | :--- |
-| "I have an idea, let me start coding" | "I have an idea, let me define what I'm building first" |
-| Features discovered mid-build | Features mapped upfront, prioritized, sequenced |
-| Architecture emerges accidentally | Architecture designed deliberately |
-| No definition of done | Clear shipping criteria |
-| Scope grows endlessly | Scope bounded with Phase 1 / Phase 2 separation |
-| 80% built, never finished | Clear path to "version 1 is DONE" |
+Use this workflow when:
 
----
+- starting a new product, tool, side project, or hackathon build
+- turning a rough idea into a plan
+- creating the first project context for a workspace
 
-## ACTIVATION
+Do not use it when:
 
-### Use When
-
-- "I have an idea for an app/tool/website"
-- "I want to build [something new]"
-- "Let's start a new project"
-- "I'm entering a hackathon — help me plan"
-- "I want to turn this idea into something real"
-- Starting any initiative from scratch
-
-### Do NOT Use When
-
-- Adding a feature to an existing project → use `workflow-build-feature.md`
-- The project plan already exists and you're executing → use the relevant execution workflow
-- Evaluating whether an idea is worth pursuing → use Research Mode + `skill-product-thinking`
+- adding a feature to an existing project
+- debugging an existing system
+- reviewing an already-planned build
 
 ---
 
 ## REQUIRED FILES
 
-### Skills to Load
+### Primary skills
 
-| Priority | Skill | Why |
-| :--- | :--- | :--- |
-| Primary | `skill-product-thinking` | Problem definition, scoping, prioritization |
-| Primary | `skill-architecture` | Technical structure and system design |
-| Conditional | `skill-ui-ux` | If the product has a user interface |
-| Conditional | `skill-database` | If the product involves data storage |
-| Conditional | `skill-api-design` | If the product involves APIs |
+- `skill-product-thinking`
+- `skill-architecture`
 
-### Context Files This Workflow Creates
+### Conditional skills
 
-- `contexts/app-flow.md` (Phase 2A)
-- `contexts/stack-context.md` (Phase 3)
-- `contexts/architecture-context.md` (Phase 3)
-- `contexts/database-context.md` (Phase 3)
-- `contexts/project-context.md` (Phase 3)
-- `contexts/visual-identity.md` (Phase 3A — UI projects only)
+- `skill-ui-ux` if the project has a real user interface
+- `skill-database` if the project has persistence or a meaningful data model
+- `skill-api-design` if the project exposes or consumes APIs
 
-### Workspace Memory Files This Workflow Creates (Phase 3)
+### Templates this workflow should use
 
-- `.agents/memory/decisions-log.md` — Project-specific architectural and technology decisions
-- `.agents/memory/common-patterns.md` — Project-specific reusable patterns
-- `.agents/memory/mistakes-to-avoid.md` — Project-specific mistakes and prevention rules
-- `.agents/memory/postmortems.md` — Project-specific incident records
+- `global_templates/project-context-template.md`
+- `global_templates/stack-context-template.md`
+- `global_templates/coding-standards-template.md` when conventions are already clear
+- `project-brief.md` when producing a formal project brief
+
+### Runtime context files this workflow creates or initializes
+
+- `contexts/project-context.md`
+- `contexts/stack-context.md`
+- `contexts/architecture-context.md`
+- `contexts/database-context.md` if relevant
+- `contexts/app-flow.md` if the product has real user journeys
+- `contexts/visual-identity.md` if the product has a meaningful UI direction
+- `contexts/coding-standards.md` if project-specific conventions are known
+
+### Workspace memory files this workflow initializes
+
+- `.agents/memory/decisions-log.md`
+- `.agents/memory/common-patterns.md`
+- `.agents/memory/mistakes-to-avoid.md`
+- `.agents/memory/postmortems.md`
 
 > [!IMPORTANT]
-> **MEMORY SCOPING RULE:** These files follow the same format as the global templates in `antigravity/memory/` but MUST store ONLY project-specific entries. Cross-project/system-level lessons go to the global memory. Refer to the **CRITICAL Memory Scoping Rule** in `GEMINI.md` for enforcement.
-
-### Contexts to Load
-
-- Start FRESH — this workflow CREATES the context files
-- Load `business-priorities.md` if this is for an existing organization
-
-### Templates to Load (during output)
-
-| Template | When |
-| :--- | :--- |
-| `project-brief.md` | Phase 5 — compiling the project brief |
-
-### Rubrics to Load (during evaluation)
-
-| Rubric | When |
-| :--- | :--- |
-| `project-planning-rubric.md` | After Phase 5 — evaluating planning quality before starting to build |
+> The files in `contexts/` are **runtime truth**, not authoring templates.
+> Use templates to scaffold them, then save concise project truth into the runtime files.
 
 ---
 
 ## EXECUTION SEQUENCE
 
-### PHASE 1: DISCOVER THE PROBLEM (10-15 minutes)
+### PHASE 1: DISCOVER THE PROBLEM
 
-#### Mode: Research + Product Thinking (Discovery)
-
-Do NOT let the user skip this phase. The #1 cause of failed projects
-is building a solution before understanding the problem.
+Do not let the user skip this phase. The number one cause of failed projects is building a solution before understanding the problem.
 
 #### Step 1: Extract the idea
 
@@ -139,47 +103,56 @@ Ask the user to explain their idea in plain language. Listen for:
 
 #### Step 2: Define the problem
 
-Restate the idea as a PROBLEM STATEMENT:
+Restate the idea as a problem statement:
+
+```
 [Target user] struggles with [specific problem] because [root cause].
 Currently they [current workaround], which is [why it's inadequate].
+```
 
 #### Step 3: Define the user
 
 Create a brief user profile:
+
+```
 PRIMARY USER: [Who]
 CONTEXT: [When/where they encounter the problem]
 CURRENT BEHAVIOR: [What they do today]
 DESIRED OUTCOME: [What they wish they could do]
 TECHNICAL COMFORT: [Low / Medium / High]
+```
 
-#### Step 4: Define the Job-to-be-Done
+#### Step 4: Define the job-to-be-done
 
+```
 When [situation], [user] wants to [motivation] so that they can [outcome].
+```
 
 #### Step 5: Define success
 
+```
 This project succeeds when [measurable outcome].
 MVP is "done" when [specific criteria].
+```
 
-#### Phase 1 Output
+#### Phase 1 output
 
-- Problem statement, user profile, JTBD, success definition.
+- problem statement
+- user profile
+- JTBD
+- success definition
 
-**Gate:** Do NOT proceed until the problem is clearly stated and the user agrees: "Yes, that's exactly what I'm trying to solve."
+Gate:
+
+- do not continue until the problem statement feels accurate and the user agrees it captures the real problem
 
 ---
 
-### PHASE 2: DEFINE THE SOLUTION (15-20 minutes)
-
-#### Mode: Architect + Product Thinking (Scoping)
+### PHASE 2: DEFINE THE MVP
 
 #### Step 1: Brainstorm features
 
-List EVERYTHING the product could do. Don't filter yet. Generate 10-20 capabilities:
-
-- [Feature]
-- [Feature]
-- [Feature]
+List everything the product could do. Do not filter yet. Generate 10-20 capabilities.
 
 #### Step 2: Categorize and prioritize
 
@@ -187,7 +160,7 @@ Sort every feature into:
 
 | Category | Rule | Features |
 | :--- | :--- | :--- |
-| **🔴 Core (Must Have)** | Without this, the product doesn't solve the problem | [list] |
+| **🔴 Core (Must Have)** | Without this, the product does not solve the problem | [list] |
 | **🟡 Important (Should Have)** | Makes the product significantly better but not essential for v1 | [list] |
 | **🟢 Nice-to-Have (Could Have)** | Would be great but can wait for v2 | [list] |
 | **⚫ Out of Scope (Won't Have)** | Deliberately excluded | [list] |
@@ -196,104 +169,163 @@ Sort every feature into:
 
 The MVP is ONLY the 🔴 Core features. Nothing else.
 
-Ask the "20% question": "If we could only build 20% of this, which
-20% delivers the core value?" That's the MVP.
+Ask the "20% question": "If we could only build 20% of this, which 20% delivers the core value?" That is the MVP.
 
+```
 MVP SCOPE:
-
 - [Core feature 1]
 - [Core feature 2]
 - [Core feature 3]
-- [Core feature 4]
 
 EXPLICITLY NOT IN MVP:
-
 - [Everything else — listed to prevent scope creep]
+```
 
 #### Step 4: Define what "shipped" looks like
 
+```
 VERSION 1 IS DONE WHEN:
-
 - [ ] [Core feature 1] works end to end
 - [ ] [Core feature 2] works end to end
 - [ ] [Core feature 3] works end to end
 - [ ] User can [complete the primary job] without assistance
 - [ ] Deployed to [target environment]
-- [ ] [Any competition-specific requirements met]
+```
 
-#### Phase 2 Output
+#### Phase 2 output
 
-- Feature list (prioritized), MVP scope, definition of done.
+- prioritized feature list
+- MVP scope
+- explicit non-goals
+- definition of done
 
-**Gate:** User confirms: "Yes, this MVP scope is what I want to build first."
+Gate:
+
+- do not proceed with an unbounded feature list
+- user confirms: "Yes, this MVP scope is what I want to build first."
 
 ---
 
-### PHASE 2A: MAP THE APP FLOW (20-30 minutes)
+### PHASE 2A: MAP THE APP FLOW
 
-#### Mode: Product Designer / UX
+Use when:
 
-**Skip this phase ONLY if the product has no user journeys** (e.g., a simple background cron script).
-For any product with users (even CLI tools), this phase is MANDATORY. 
+- the product has users, screens, states, routes, or task flows
 
-Do not design the architecture or visual identity before you know how the user actually moves through the system.
+Skip only if the product has no user journeys (e.g., a pure background script).
 
 #### Step 1: Define the primary user journeys
 
-- For each main user type, map their "golden path" — the main thing they do.
-- List every step from their entry point to job completion, including what they do and where they go next.
+For each main user type, map their "golden path" — the main thing they do. List every step from entry point to job completion.
 
 #### Step 2: Define secondary and error flows
 
-- Map secondary tasks (profile management, settings, etc.).
-- Define how global errors (network failure, auth expiry) are handled.
-- Define flow-specific error recoveries.
+- Map secondary tasks (profile management, settings, etc.)
+- Define how global errors (network failure, auth expiry) are handled
+- Define flow-specific error recoveries
 
 #### Step 3: Map navigation and transitions
 
-- Define the global navigation.
-- Ensure every transition between screens is explicit (including loading states and redirects).
+- Define the global navigation
+- Ensure every transition between screens is explicit (including loading states and redirects)
 
-#### Phase 2A Output
+Output:
 
-- A complete journey map for all user types
-- Error recovery paths
-- Screen inventory
+- `contexts/app-flow.md` as the live runtime truth for user flows
 
-**Write these into the context file:**
+Authoring rule:
 
-- Create `contexts/app-flow.md` using the Gold v1.0 template from `{{GLOBAL_CONFIG_URI}}/antigravity/contexts/app-flow.md`
+- use scaffolding if needed, but save `app-flow.md` as a live context file, not as a template exercise
 
-**Gate:** Before designing the architecture or visual UI, confirm the user journey makes sense. Are there any dead ends? Are error states handled?
+Gate:
+
+- before designing architecture or visual UI, confirm the user journey makes sense — are there dead ends? Are error states handled?
 
 ---
 
-### PHASE 3A: DEFINE THE VISUAL IDENTITY (15-20 minutes)
+### PHASE 3: DEFINE THE TECHNICAL DIRECTION
 
-#### Mode: Designer (Visual Direction)
+#### Step 1: Choose the tech stack
 
-**Skip this phase ONLY if the product has zero user interface** (e.g., a pure CLI tool or backend-only API).
-For every product with a UI — web app, mobile app, dashboard, landing page — this phase is MANDATORY.
+Based on the user's existing skills, project requirements, timeline constraints, and deployment target.
 
-> **RECOMMENDED:** Before defining the visual identity in text, use
-> `workflow-visual-brainstorm.md` to generate a visual preview (Path A: HTML
-> preview for quick color/typography decisions, or Path B: Google Stitch
-> brief for full-page mockups). Making the design direction visible
-> BEFORE writing it down prevents "that's not what I imagined" moments.
-> Load the `visual-brainstorming` skill for execution guidance.
+```
+TECH STACK:
+- Frontend: [framework]
+- Backend: [framework/approach]
+- Database: [engine]
+- Auth: [approach]
+- Hosting: [provider]
+- Deployment: [approach]
+```
 
-This is the "design document" that gets fed to the AI so it knows exactly what the product should look like. Without this, every AI-generated UI will look generic and disconnected from the product's identity.
+#### Step 2: Design the data model
+
+- What entities exist?
+- What are the relationships?
+
+```
+ENTITIES:
+- [Entity 1]: [key fields]
+- [Entity 2]: [key fields]
+- [Entity 3]: [key fields]
+
+RELATIONSHIPS:
+- [Entity 1] has many [Entity 2]
+- [Entity 2] belongs to [Entity 1]
+```
+
+#### Step 3: Define the API shape (if applicable)
+
+- What endpoints are needed?
+- What are the primary CRUD operations?
+
+#### Step 4: Define the folder structure
+
+Based on the stack and patterns:
+
+```
+project/
+├── [folder structure]
+```
+
+#### Step 5: Identify the riskiest technical decision
+
+- What is the one technical choice that, if wrong, would cost the most to fix?
+- How can we validate it early?
+
+#### Phase 3 output
+
+- stack decision
+- data model
+- API shape
+- folder structure
+- riskiest technical decision and validation plan
+
+Gate:
+
+- if the stack or architecture choice is still highly unstable, name the uncertainty explicitly before moving on
+
+---
+
+### PHASE 3A: DEFINE THE VISUAL IDENTITY
+
+Use when:
+
+- the product has a meaningful user interface
+
+> **Recommended:** Before defining the visual identity in text, consider using `workflow-visual-brainstorm.md` to generate a visual preview. Making the design direction visible before writing it down prevents "that's not what I imagined" moments.
 
 #### Step 1: Define the visual vibe
 
-Answer in plain language:
 - What should users FEEL when they first see this product? (e.g., "premium", "calm", "powerful", "playful")
-- Name 3–5 reference products or websites that capture the aesthetic. For each, note WHAT specifically to borrow.
+- Name 3-5 reference products or websites that capture the aesthetic. For each, note WHAT specifically to borrow.
 - List what this product should NOT look like (prevents aesthetic drift).
 
 #### Step 2: Choose the color direction
 
 Define the core color roles:
+
 - Background family (primary canvas + elevated surfaces)
 - Primary text colors (headline, body, muted)
 - Accent / brand color (CTAs, highlights, active states)
@@ -306,7 +338,7 @@ Translate into CSS custom properties (hex values).
 
 - Select a display font for headlines (and explain why — what feeling it creates)
 - Select a body font for all readable content
-- Define a basic type scale: display, heading 1–3, body, caption, label
+- Define a basic type scale: display, heading 1-3, body, caption, label
 - Define mobile adjustments for the largest sizes
 
 #### Step 4: Define spacing, radius, and motion
@@ -323,120 +355,80 @@ Translate into CSS custom properties (hex values).
 - Input field + focus state
 - Any signature visual technique (glassmorphism, gradient overlay, etc.)
 
-#### Phase 3A Output
+Output:
 
-- Visual direction (vibe, mood references, what it is NOT)
-- Color tokens (CSS custom properties)
-- Typography scale
-- Spacing and radius tokens
-- Motion scale
-- Baseline component CSS patterns
+- `contexts/visual-identity.md` as the live runtime truth for the product's visual identity
 
-**Write these into the context file:**
+Authoring rule:
 
-- Create `contexts/visual-identity.md` using the Gold v1.0 template from `{{GLOBAL_CONFIG_URI}}/antigravity/contexts/visual-identity.md`
+- use brainstorming or reference material if needed, but save the final file as current truth
 
-**Gate:** Before moving to architecture — confirm the visual direction feels right for the target user and business context. A trading tool should not look like a social app. A luxury marketplace should not look like a SaaS dashboard.
+Gate:
+
+- before moving to architecture, confirm the visual direction feels right for the target user and business context. A trading tool should not look like a social app. A luxury marketplace should not look like a SaaS dashboard.
 
 ---
 
-### PHASE 3: DESIGN THE ARCHITECTURE (20-30 minutes)
+### PHASE 4: CREATE RUNTIME CONTEXTS
 
-#### Mode: Architect (Structural Design)
+Goal:
 
-Load `skill-architecture`. Follow `workflow-plan-architecture.md` in abbreviated form.
+- turn the planning work into runtime-ready context files
+- make sure the next workflow has real project truth to work from
 
-#### Step 1: Choose the tech stack
+Required writes:
 
-Based on:
+- create `contexts/project-context.md` using `global_templates/project-context-template.md` as scaffolding
+- create `contexts/stack-context.md` using `global_templates/stack-context-template.md` as scaffolding
+- create `contexts/architecture-context.md`
+- create `contexts/database-context.md` if relevant
+- initialize `contexts/coding-standards.md` if concrete conventions are already known, using `global_templates/coding-standards-template.md`
+- verify that `contexts/app-flow.md` exists if Phase 2A applied
+- verify that `contexts/visual-identity.md` exists if Phase 3A applied
 
-- User's existing skills and comfort
-- Project requirements
-- Timeline constraints
-- Deploy target (Vercel, Netlify, VPS, etc.)
-- Competition requirements (if applicable)
+Context-writing rule:
 
-Output a stack decision:
-TECH STACK:
+- runtime contexts should be concise, factual, and updateable
+- longer fill guidance belongs in `global_templates/`
 
-- Frontend: [framework]
-- Backend: [framework/approach]
-- Database: [engine]
-- Auth: [approach]
-- Hosting: [provider]
-- Deployment: [approach]
+---
 
-#### Step 2: Design the data model
+### PHASE 5: INITIALIZE WORKSPACE MEMORY
 
-- What entities exist?
-- What are the relationships?
-- Draw a simple ERD or table list
+Goal:
 
-ENTITIES:
+- prevent project knowledge from leaking into global memory
+- create a local continuity layer before implementation begins
 
-- [Entity 1]: [key fields]
-- [Entity 2]: [key fields]
-- [Entity 3]: [key fields]
+Required writes:
 
-RELATIONSHIPS:
-
-- [Entity 1] has many [Entity 2]
-- [Entity 2] belongs to [Entity 1]
-
-#### Step 3: Define the API shape (if applicable)
-
-- What endpoints are needed?
-- What are the primary CRUD operations?
-
-#### Step 4: Define the folder structure
-
-Based on the stack and patterns:
-project/
-├── [folder structure]
-
-#### Step 5: Identify the riskiest technical decision
-
-- What is the one technical choice that, if wrong, would cost the most to fix?
-- How can we validate it early?
-
-#### Phase 3 Output
-
-- Stack, data model, API shape, folder structure, key technical decisions.
-
-**Write these into context files:**
-
-- Create `contexts/stack-context.md`
-- Create `contexts/architecture-context.md`
-- Create `contexts/database-context.md`
-- Create `contexts/project-context.md`
-- Verify `contexts/app-flow.md` was created in Phase 2A
-- Verify `contexts/visual-identity.md` was created in Phase 3A (UI projects only)
-
-**Create workspace memory files (MANDATORY):**
-
-- Create `.agents/memory/decisions-log.md` — copy header + entry format from global `antigravity/memory/decisions-log.md`, leave ENTRIES section empty
-- Create `.agents/memory/common-patterns.md` — copy header + entry format from global `antigravity/memory/common-patterns.md`, leave ENTRIES section empty
-- Create `.agents/memory/mistakes-to-avoid.md` — copy header + entry format from global `antigravity/memory/mistakes-to-avoid.md`, leave ENTRIES section empty
-- Create `.agents/memory/postmortems.md` — copy header + entry format from global `antigravity/memory/postmortems.md`, leave ENTRIES section empty
+- create `.agents/memory/decisions-log.md`
+- create `.agents/memory/common-patterns.md`
+- create `.agents/memory/mistakes-to-avoid.md`
+- create `.agents/memory/postmortems.md`
 
 > [!CAUTION]
-> Failure to create these files will lead to global memory contamination. You MUST follow the **Memory Scoping Rule** (GEMINI.md) and isolate all project knowledge here.
+> Failure to create these files will lead to global memory contamination. Project-specific lessons MUST go local first. Global memory is reserved for cross-project or Anti-Gravity-level lessons.
 
-Log the first decision entry immediately: the tech stack choice from Step 1 of this phase.
+First entry:
+
+- log the initial stack and architecture choice in local `decisions-log.md`
 
 ---
 
-### PHASE 4: CREATE THE BUILD SEQUENCE (15-20 minutes)
+### PHASE 6: CREATE THE BUILD SEQUENCE
 
-#### Mode: Architect + Product Thinking (Sequencing)
+Goal:
 
-This is the execution plan. It turns the MVP features into an ordered
-sequence of buildable steps.
+- turn the MVP into a practical implementation order
+- expose dependencies and critical path
+- make the first execution workflow obvious
 
-#### The Universal Build Order
+#### Universal build order
 
 For most web applications, the build order is:
 
+```
 STEP 1: PROJECT SETUP (Foundation)
 ├── Initialize project with chosen stack
 ├── Set up folder structure
@@ -465,7 +457,7 @@ STEP 4: CORE FEATURE 1 — Backend (Most Important Feature)
 
 STEP 5: CORE FEATURE 1 — Frontend
 ├── Pages and components
-├── Data fetching (React Query / SWR / etc.)
+├── Data fetching
 ├── All states: loading, empty, error, success
 ├── Forms and interactions
 └── Verify: feature works end-to-end in browser
@@ -500,100 +492,36 @@ STEP 10: DEPLOY
 ├── Configure environment variables
 ├── Deploy
 ├── Smoke test on production
-├── Submit (if competition)
 └── Verify: live and working
+```
 
-#### For Time-Constrained Projects (Hackathon)
+Output:
 
-Map the steps to available time:
-DAY-BY-DAY PLAN (4-day competition example):
-
-DAY 1 (June 28):
-Morning: Steps 1-2 (Setup + Database)
-Afternoon: Step 3 (Auth)
-Evening: Step 4 (Core Feature 1 — Backend)
-
-DAY 2 (June 29):
-Morning: Step 5 (Core Feature 1 — Frontend)
-Afternoon: Step 6 (Core Feature 2)
-Evening: Step 7 (Core Feature 3)
-
-DAY 3 (June 30):
-Morning: Step 8 (Integration + Polish)
-Afternoon: Step 9 (Testing + Hardening)
-Evening: Bug fixes and final polish
-
-DAY 4 (July 1):
-Morning: Step 10 (Deploy)
-Afternoon: Final testing on production
-Evening: Submit + Documentation
-
-#### Risk Mitigation for Time-Constrained Projects
-
-- **Deploy early (Day 2).** Don't wait until Day 4. Deploy a skeleton on Day 1-2 so deployment issues are discovered early.
-- **Commit to GitHub frequently.** Every completed step = a commit.
-- **Cut scope, not quality.** If behind schedule, move features to "Nice-to-Have" — don't ship broken features.
-- **One feature at a time.** Complete Feature 1 fully before starting Feature 2. Half-built features are worthless.
-
-#### Phase 4 Output
-
-- Numbered build sequence with verification points. Time-mapped if deadline exists.
+- sequenced implementation plan
+- optional day-by-day version for hackathons or time-boxed builds
 
 ---
 
-### PHASE 5: CREATE THE PROJECT BRIEF (Summary Document)
+### PHASE 7: PACKAGE THE NORTH STAR
 
-#### Mode: Communicate (Consolidation)
+Goal:
 
-Compile everything from Phases 1-4 into a single reference document:
-PROJECT BRIEF: [Project Name]
+- capture the result in a form that is reusable by later workflows
 
-**Problem**
-[Problem statement from Phase 1]
+Outputs:
 
-**User**
-[User profile from Phase 1]
+- concise project brief
+- MVP scope
+- build sequence
+- initialized runtime contexts
+- initialized local memory
 
-**Solution**
-[What we're building — one paragraph]
+Optional:
 
-**MVP Scope**
-[Core features only — from Phase 2]
+- load `project-brief.md` if a formal brief is useful
+- apply the project planning rubric during critique if the project is high-stakes or especially fuzzy
 
-**Out of Scope**
-[Explicitly excluded — from Phase 2]
-
-**Definition of Done**
-[What "shipped" looks like — from Phase 2]
-
-**Tech Stack**
-[From Phase 3]
-
-**Data Model**
-[From Phase 3]
-
-**Build Sequence**
-[Numbered steps from Phase 4]
-
-**Timeline**
-[Day-by-day plan if time-constrained — from Phase 4]
-
-**Key Risks**
-[Riskiest technical decisions and assumptions]
-
-Save this as a reference document in the project.
-
-**Quality Check:** Load `rubrics/project-planning-rubric.md` and evaluate
-the brief against all 8 dimensions. If any dimension is Failing,
-address it before proceeding to Phase 6 (Execution).
-
-**This document becomes the project's north star.** When scope creep threatens, refer back to it. When the build stalls, check which step you're on. When motivation dips, look at the Definition of Done and see how close you are.
-
----
-
-### PHASE 6: BEGIN EXECUTION
-
-#### Mode: Switch to Builder (Execution)
+#### Execution handoff
 
 Hand off to the engineering workflows:
 
@@ -601,23 +529,14 @@ Hand off to the engineering workflows:
 2. Use `workflow-build-feature.md` for each feature
 3. Use the relevant skill files for each step
 4. Commit after each completed step
-5. Check off items in the Definition of Done as they're completed
-6. When 80% done: Anti-Gravity shifts to finishing mode — resist scope creep, push to ship
-
-**Memory Integration (MANDATORY LOCAL SCOPING):**
-
-- Save project-specific decisions to `.agents/memory/decisions-log.md` (workspace)
-- Save project-specific patterns to `.agents/memory/common-patterns.md` (workspace)
-- Save project-specific mistakes to `.agents/memory/mistakes-to-avoid.md` (workspace)
-- Save cross-project lessons (tooling, process, AI config) to global `antigravity/memory/` ONLY
-- **STRICT RULE:** Use local workspace memory for ALL project-specific tracking. Refer to `GEMINI.md` for enforcement.
-- After project ships: review workspace memory and promote any cross-project lessons to global memory
+5. Check off items in the Definition of Done as they are completed
+6. When nearing completion: shift to finishing mode — resist scope creep, prioritize stability, and push to ship.
 
 ---
 
-## QUALITY GATE CHECKLIST
+## QUALITY GATES
 
-Before leaving this workflow and starting execution:
+Before calling project inception complete, verify:
 
 - [ ] Problem clearly defined (user confirmed)
 - [ ] Target user identified
@@ -625,39 +544,28 @@ Before leaving this workflow and starting execution:
 - [ ] MVP scope is ONLY Core features
 - [ ] Definition of done is specific and checkable
 - [ ] App flow mapped (user journeys, error states, transitions) — `app-flow.md` created
-- [ ] Visual identity defined (vibe, colors, typography, motion) — `visual-identity.md` created
+- [ ] Visual identity defined (vibe, colors, typography, motion) — `visual-identity.md` created (if UI project)
 - [ ] Tech stack chosen
 - [ ] Data model designed
 - [ ] Build sequence numbered and ordered
 - [ ] Time mapped (if deadline exists)
 - [ ] Risk identified
 - [ ] Context files created or updated
+- [ ] Workspace memory initialized
 - [ ] Project brief document compiled
+- [ ] The next execution workflow is obvious
 
 ---
 
-## ANTI-PATTERNS THIS WORKFLOW PREVENTS
+## RECOVERY RULES
 
-| Anti-Pattern | How This Workflow Prevents It |
-| :--- | :--- |
-| "Let me just start coding" | Phase 1 forces problem definition first |
-| Endless feature creep | Phase 2 separates Core from Nice-to-Have |
-| No definition of done | Phase 2 defines explicit shipping criteria |
-| Architecture by accident | Phase 3 designs structure deliberately |
-| Random build order | Phase 4 sequences steps logically |
-| Building for 3 months, never shipping | Definition of Done + push-to-finish behavior |
-| Hackathon panic on Day 3 | Phase 4 time-maps everything, deploy early |
+- If the idea keeps growing, return to MVP scope and re-lock the non-goals.
+- If the stack is too uncertain, document assumptions and the validation plan instead of pretending certainty.
+- If context files become essays, move the scaffolding back into `global_templates/` and keep the runtime files factual.
+- If project-specific knowledge starts heading toward global memory, stop and reroute it to workspace memory.
 
 ---
 
-## FOR HACKATHONS AND COMPETITIONS
+## FINAL RULE
 
-Additional rules when time is constrained:
-
-1. **Phase 1-4 of this workflow should take 2-3 hours MAX.** Don't over-plan. Plan enough to start.
-2. **Deploy a skeleton on Day 1.** Not Day 4. Day 1.
-3. **Commit every 30-60 minutes.** Frequent commits to GitHub.
-4. **If behind schedule by >4 hours:** immediately cut one Core feature to Important. Ship fewer features that WORK.
-5. **No premature optimization.** It works > it's fast > it's pretty. In that order.
-6. **Last 20% of time = polish + deploy + test.** Not new features.
-7. **README matters.** Judges read the README. Write it well.
+This workflow does not just plan the project. It creates the runtime truth and local memory the rest of Anti-Gravity depends on.

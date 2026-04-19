@@ -6,7 +6,7 @@ description: The complete step-by-step sequence for transforming feature request
 
 > **[CONTEXT AMNESIA FAILSAFE]**
 > YOU MUST USE TOOL CALLS TO READ THE FULL SOURCE FILE AND THE REQUIRED SKILLS/CONTEXTS BEFORE EXECUTING THIS.
-> PROVE YOU HAVE DONE THIS IN A `<thought_process>` BLOCK.
+> Verify silently in your internal reasoning that you have done this.
 
 
 > **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full 21,000-character logic, instructions, and implementation stages, the Agent MUST load and follow the [SOURCE FILE]({{GLOBAL_CONFIG_URI}}/workflows/workflow-build-feature.md).

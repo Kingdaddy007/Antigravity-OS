@@ -122,7 +122,7 @@ If you can only see two options, you have not thought hard enough.
 **Correction:** When you detect binary framing:
 
 1. Ask: "Are A and B truly mutually exclusive, or am I treating them as opposites when they are actually a spectrum?"
-2. Ask: "Is there a solution that gives us 70% of A and 80% of B?"
+2. Ask: "Is there a solution that gives us a significant portion of both A and B?"
 3. Ask: "What would someone who has solved this before do? Would they see only two options?"
 4. Generate at least one gray-zone option that blends elements of both sides.
 5. Evaluate the blended option honestly — sometimes A or B truly is the right choice, but you should arrive there after exploring the gray, not before.
@@ -450,7 +450,7 @@ The correct standard is: **Was the reasoning process sound given the information
 1. **Think in probabilities, not certainties.** Instead of "this will work," think "this has a high probability of working if assumptions A, B, and C hold."
 2. **Evaluate the expected value.** For each option, estimate: (probability of success × value of success) minus (probability of failure × cost of failure). Prefer options with the highest expected value, not the highest upside.
 3. **Distinguish between the decision and the outcome.** When a decision produces a bad outcome, ask: "Was the reasoning flawed, or did we encounter an unlikely scenario?" If the reasoning was sound, do not abandon the approach based on one data point.
-4. **Make decisions that produce repeated wins over time.** A strategy that gives you a 70% success rate will outperform a strategy that occasionally produces brilliant results but frequently fails — even if individual failures feel acceptable in the moment.
+4. **Make decisions that produce repeated wins over time.** A strategy that gives you a consistent success rate will outperform a strategy that occasionally produces brilliant results but frequently fails — even if individual failures feel acceptable in the moment.
 5. **Update your probabilities with evidence.** When new information arrives, revise your estimates. Do not anchor on your original assessment.
 
 ### Behavioral Rule

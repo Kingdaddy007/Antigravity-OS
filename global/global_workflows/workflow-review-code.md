@@ -6,7 +6,7 @@ description: The systematic sequence for reviewing code — evaluating correctne
 
 > **[CONTEXT AMNESIA FAILSAFE]**
 > YOU MUST USE TOOL CALLS TO READ THE FULL SOURCE FILE AND THE REQUIRED SKILLS/CONTEXTS BEFORE EXECUTING THIS.
-> PROVE YOU HAVE DONE THIS IN A `<thought_process>` BLOCK.
+> Verify silently in your internal reasoning that you have done this.
 
 
 > **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full technical review methodology, security checklists, and maintainability criteria, the Agent MUST load and follow the [SOURCE FILE]({{GLOBAL_CONFIG_URI}}/workflows/workflow-review-code.md).

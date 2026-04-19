@@ -126,7 +126,30 @@ Do NOT stop automatically. Instead:
 
 ### MANDATORY STOP-AND-VERIFY GATE
 > **[CONTEXT AMNESIA FAILSAFE]**
-> Do NOT proceed to Step 1 until you have verified in your `<thought_process>` that all required context files and skill files have been read using tool calls. You must state: "I have read X, Y, Z files and I am ready to begin."
+> Do NOT proceed to Step 1 until you have SILENTLY verified that all required context files and skill files have been read using tool calls.
+
+### STEP 0 — WORKSPACE ISOLATION (MANDATORY)
+
+**Goal:** Create a clean, isolated workspace before writing any implementation code.
+
+Before writing any implementation code:
+
+1. Create a new git branch from the current clean state:
+   `git checkout -b feature/<short-name>`
+   Or, if the IDE supports it, create a git worktree:
+   `git worktree add ../feature-<short-name> -b feature/<short-name>`
+
+2. Run the project's test suite / build command to verify a clean baseline.
+   If the baseline is red (pre-existing failures), STOP and report to the user.
+   Do NOT proceed with implementation on a broken baseline unless the user explicitly overrides.
+
+3. All implementation work happens on this branch/worktree.
+   The main working tree stays untouched until merge.
+
+This step is non-negotiable. If the adapter or environment does not support
+worktrees, use a standard branch. If git is not initialized, initialize it first.
+
+---
 
 ### STEP 1 — DEFINE THE FEATURE OBJECTIVE
 
@@ -342,6 +365,34 @@ If there is no credible verification path, reduce scope or redesign before build
 
 ---
 
+### MICRO-TASK RULE (MANDATORY)
+
+Every implementation plan produced at Step 5/6 MUST be broken into tasks that take 2-5 minutes each.
+
+Each task must specify:
+
+- **Exact files** to create or modify
+- **The specific change** (what code to write, what to add/remove)
+- **Verification command** (test to run, build to check, output to confirm)
+- **Completion evidence** (what "done" looks like — a passing test, a screenshot, a log line)
+
+Tasks that are vague ("set up the component"), unbounded ("implement the feature"),
+or missing verification steps are rejected. Rewrite them.
+
+Why: Smaller tasks reduce hallucination, make rollbacks trivial, and give the user
+constant progress visibility.
+
+#### Automatic Dispatch Trigger
+
+If the resulting micro-task list has MORE THAN 3 tasks, you MUST proactively offer to use the Task Dispatch workflow.
+
+State to the user:
+> "We have [N] tasks here. To protect our context window and prevent hallucination, I recommend we dispatch the isolated tasks (like [Task X] and [Task Y]) to separate chat windows using `/workflow-task-dispatch`. Should I generate the Task Briefs for you?"
+
+Do NOT automatically start executing a massive sequence without offering this choice.
+
+---
+
 ### STEP 7 — IMPLEMENT
 
 **Goal:** Build the feature cleanly, correctly, and in the right mode.
@@ -452,6 +503,43 @@ Not yet verified:
 #### Gate: Readiness
 
 Do NOT call the feature done because the happy path worked once. Adjacent behavior, failure paths, and rollout risk all count.
+
+#### Verification Evidence Gate (MANDATORY)
+
+No task or workflow can be declared complete without verification evidence.
+
+Acceptable evidence (at least one required):
+
+- A test that was red, then green after the change
+- A build/lint command that passes
+- A command output showing the expected behavior
+- A screenshot or log demonstrating the fix
+- A structural verification trace (data flow from origin to consumer)
+
+"I believe it works" is NOT evidence. "It should work" is NOT evidence.
+Run the verification. Show the output. Then declare done.
+
+---
+
+### STEP 9A — MERGE REVIEW GATE (MANDATORY)
+
+**Goal:** Two-stage self-review before branch finalization or task sequence completion.
+
+#### Stage 1: Spec Compliance
+
+- Does the implementation match what was asked for?
+- Are there missing requirements?
+- Is there scope creep (things built that weren't requested)?
+
+#### Stage 2: Code Quality
+
+- Error handling on foreseeable failures?
+- Security basics addressed?
+- Naming and patterns consistent with project standards?
+- No dead code, no commented-out blocks, no TODOs without tickets?
+
+If either stage has blocking issues, fix them before declaring complete.
+Report the review results to the user with a summary.
 
 ---
 

@@ -2,8 +2,8 @@ import fs from 'fs';
 import path from 'path';
 
 const TARGET_DIRS = [
-  'c:\\Users\\Oviks\\antigravitygold',
-  'c:\\Users\\Oviks\\.antigravity'
+  '{{USER_HOME_PATH}}\\antigravitygold',
+  '{{USER_HOME_PATH}}\\.antigravity'
 ];
 
 const IGNORE_DIRS = ['node_modules', '.git', '.gemini', '.next', 'dist', 'build', 'brain', '.vscode', 'extensions'];

@@ -175,6 +175,20 @@ When writing or structuring code, evaluate decisions against these priorities in
 
 ***
 
+## EXECUTION DISCIPLINE
+
+When implementing any feature, fix, or refactor:
+
+1. **Isolate first.** Create a branch before writing code.
+2. **Plan in micro-tasks.** Each task: 2-5 minutes, exact files, verification step.
+3. **Verify before completing.** Show evidence. No exceptions.
+4. **Review before finishing.** Spec compliance, then code quality.
+
+These rules are inherited from the build-feature workflow and apply
+to ALL coding work, not just feature builds.
+
+***
+
 ## CODING LENSES
 
 When implementing code, inspect these lenses explicitly before and during implementation:

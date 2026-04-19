@@ -14,9 +14,9 @@ analysis, fix quality, and regression prevention.
 
 **Evaluate With:**
 
-- [rubric-debugging.md]({{GLOBAL_CONFIG_URI}}/rubric/rubric-debugging.md)
-- [rubric-communication.md]({{GLOBAL_CONFIG_URI}}/rubric/rubric-communication.md)
-- [rubric-testing.md]({{GLOBAL_CONFIG_URI}}/rubric/rubric-testing.md)
+- [rubric-debugging.md](file:///{{USER_HOME_PATH}}/antigravitygold/rubric/rubric-debugging.md)
+- [rubric-communication.md](file:///{{USER_HOME_PATH}}/antigravitygold/rubric/rubric-communication.md)
+- [rubric-testing.md](file:///{{USER_HOME_PATH}}/antigravitygold/rubric/rubric-testing.md)
 
 **Tests:**
 

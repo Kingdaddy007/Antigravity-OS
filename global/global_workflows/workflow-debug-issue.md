@@ -6,7 +6,7 @@ description: The systematic sequence for diagnosing and fixing bugs — from sym
 
 > **[CONTEXT AMNESIA FAILSAFE]**
 > YOU MUST USE TOOL CALLS TO READ THE FULL SOURCE FILE AND THE REQUIRED SKILLS/CONTEXTS BEFORE EXECUTING THIS.
-> PROVE YOU HAVE DONE THIS IN A `<thought_process>` BLOCK.
+> Verify silently in your internal reasoning that you have done this.
 
 
 > **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full 12,000-character logic, evidence-gathering steps, and regression prevention strategies, the Agent MUST load and follow the [SOURCE FILE]({{GLOBAL_CONFIG_URI}}/workflows/workflow-debug-issue.md).

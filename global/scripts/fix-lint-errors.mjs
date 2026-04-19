@@ -15,8 +15,8 @@ import path from 'path';
 const DRY_RUN = process.argv.includes('--dry-run');
 
 const TARGET_DIRS = [
-  'c:\\Users\\Oviks\\antigravitygold',
-  'c:\\Users\\Oviks\\.antigravity'
+  '{{USER_HOME_PATH}}\\antigravitygold',
+  '{{USER_HOME_PATH}}\\.antigravity'
 ];
 
 const IGNORE_DIRS = [
@@ -211,7 +211,7 @@ function processFile(filePath) {
       totalMD024 += md024Fixes;
       fixedFiles++;
 
-      const shortPath = filePath.replace('c:\\Users\\Oviks\\', '');
+      const shortPath = filePath.replace('{{USER_HOME_PATH}}\\', '');
       console.log(`FIXED: ${shortPath}`);
       if (md025Fixes) console.log(`  MD025: ${md025Fixes} secondary H1s → bold`);
       if (md060Fixes) console.log(`  MD060: ${md060Fixes} table separators spaced`);
