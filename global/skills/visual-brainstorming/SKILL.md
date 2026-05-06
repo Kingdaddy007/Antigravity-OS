@@ -78,19 +78,22 @@ This skill offers two execution paths based on the situation. Anti-Gravity shoul
 
 ### Path A: Direct HTML Preview (Quick & Built-In)
 
-**When to use:**
+### When to use
+
 - Quick visual comparisons (color palettes, typography, spacing)
 - Simple layout decisions (sidebar vs top-nav, grid arrangements)
 - Design token previews (seeing CSS custom properties rendered live)
 - The user wants to iterate fast without leaving the IDE
 
-**What it produces:**
+### What it produces
+
 - A single self-contained HTML file with inline CSS
 - Saved to the conversation artifacts directory
 - Opened in the browser for immediate viewing
 - Disposable — not production code, not kept after the session
 
-**Quality bar:**
+### Quality bar
+
 - The preview must look polished enough to evaluate design direction — not pixel-perfect, but not ugly
 - Must render correctly in a modern browser
 - Must be a single file (no external dependencies, no CDN links)
@@ -100,55 +103,66 @@ This skill offers two execution paths based on the situation. Anti-Gravity shoul
 
 ### Path B: Google Stitch Design Brief (High-Fidelity Mockups)
 
-**When to use:**
+### When to use
+
 - Full page layouts with multiple components
 - Complex UI patterns (dashboards, data tables, multi-step forms)
 - The user wants production-quality visual fidelity before building
 - Exploring multiple design directions simultaneously
 - The user's visual identity context file already exists and should be referenced
 
-**What it produces:**
+### What it produces
+
 - A structured design brief document that the user takes to Google Stitch (stitch.google.com)
 - The brief includes: visual direction, component requirements, layout structure, color tokens, typography choices, mood references, and anti-references
 - Optionally, a copy of the relevant design context files formatted for Stitch input
 
-**Design Brief Structure:**
+### Design Brief Structure
 
 ```markdown
+
 # Design Brief: [Screen/Component Name]
 
 ## Visual Direction
+
 - **Mood:** [e.g., "Premium, dark, data-dense like Bloomberg terminal"]
 - **References:** [2-3 products/sites to draw from, with WHAT to borrow]
 - **Anti-references:** [What it should NOT look like]
 
 ## Layout Structure
+
 - [Description of layout: sidebar + main, full-width, split-panel, etc.]
 - [Primary content area purpose]
 - [Secondary/navigation area purpose]
 
 ## Components Needed
+
 1. [Component] — [purpose, states, key interactions]
 2. [Component] — [purpose, states, key interactions]
 3. [Component] — [purpose, states, key interactions]
 
 ## Color Palette
+
 - Background: [hex values]
-- Text: [hex values]  
+- Text: [hex values]
 - Accent: [hex values]
 - Feedback: [success/warning/error hex values]
 
 ## Typography
+
 - Headlines: [font family, weight]
 - Body: [font family, weight]
 - Data/Mono: [font family, weight]
 
 ## Specific Requirements
+
 - [Any constraints, responsive needs, accessibility notes]
 
 ## Context Files to Attach
+
 - visual-identity.md (if exists)
 - design-system.md (if exists)
+
 ```
 
 ---
@@ -170,6 +184,7 @@ This skill offers two execution paths based on the situation. Anti-Gravity shoul
 ### When to Suggest BOTH
 
 If the user is at Phase 3A of project inception (Visual Identity), suggest:
+
 1. **Path A first** — Generate a quick HTML preview of color palette + typography + basic component patterns
 2. **Path B second** — Once the visual direction is locked, generate a Stitch brief for the first major screen layout
 
@@ -180,6 +195,7 @@ If the user is at Phase 3A of project inception (Visual Identity), suggest:
 ### Step 1: Clarify What Needs Visualization
 
 Before generating anything, ask:
+
 - What are we trying to decide? (color direction, layout, component patterns, full page?)
 - Is there an existing visual-identity.md or design-system.md to build from?
 - Are there reference products or sites that capture the desired aesthetic?
@@ -208,6 +224,7 @@ Based on the answers, recommend Path A or Path B. Explain the tradeoff in one se
 ### Step 4: Export Design Decisions
 
 Regardless of which path was used, the final output should include:
+
 - Updated `contexts/visual-identity.md` with concrete CSS custom properties
 - A clear design direction statement (1-2 sentences)
 - Any component patterns that were decided during the preview
@@ -219,6 +236,7 @@ Regardless of which path was used, the final output should include:
 ### Color Palette Preview
 
 When generating a color palette preview, include:
+
 - Background swatches (large blocks showing surface colors)
 - Text on background (readability check)
 - Accent color applications (buttons, links, hover states)
@@ -228,6 +246,7 @@ When generating a color palette preview, include:
 ### Typography Preview
 
 When generating a typography preview, include:
+
 - Headline hierarchy (H1 through H3 at minimum)
 - Body text paragraph with real content (not lorem ipsum — use product-relevant text)
 - Label and caption sizes
@@ -237,6 +256,7 @@ When generating a typography preview, include:
 ### Layout Preview
 
 When generating a layout preview, include:
+
 - A simple wireframe showing content zones (header, sidebar, main, footer)
 - Labeled regions ("Navigation", "Primary Content", "Data Panel")
 - Approximate proportions (use CSS grid or flexbox)
@@ -245,6 +265,7 @@ When generating a layout preview, include:
 ### Component Pattern Preview
 
 When generating component previews, include:
+
 - Primary button + hover state
 - Secondary/ghost button
 - Card component with title, content, and action

@@ -216,11 +216,14 @@ Data flow: [how data moves through the system]
 Integration points: [external connections and failure behavior]
 
 Primary tensions:
+
 - [tension 1]
 - [tension 2]
 
 Hard-to-reverse choices:
+
 - [list]
+
 ```
 
 #### Gate (Step 2)
@@ -282,20 +285,20 @@ Option C: [name]
 
 #### Evaluation Matrix (Step 4)
 
-| Criterion | Weight | Option A | Option B | Option C |
-| :--- | :--- | :--- | :--- | :--- |
-| Meets functional requirements | High | ✅/⚠️/❌ | ✅/⚠️/❌ | ✅/⚠️/❌ |
-| Meets performance requirements | Med | | | |
-| Team expertise fit | High | | | |
-| Implementation cost | Med | | | |
-| Operational complexity | Med | | | |
-| Migration risk | High | | | |
-| Reversibility | High | | | |
-| Infrastructure cost | Med | | | |
-| Time to implement | Med | | | |
-| Scale path clarity | Med | | | |
-| Security posture | High | | | |
-| Failure blast radius | High | | | |
+| Criterion                      | Weight | Option A | Option B | Option C |
+| :----------------------------- | :----- | :------- | :------- | :------- |
+| Meets functional requirements  | High   | ✅/⚠️/❌ | ✅/⚠️/❌ | ✅/⚠️/❌ |
+| Meets performance requirements | Med    |          |          |          |
+| Team expertise fit             | High   |          |          |          |
+| Implementation cost            | Med    |          |          |          |
+| Operational complexity         | Med    |          |          |          |
+| Migration risk                 | High   |          |          |          |
+| Reversibility                  | High   |          |          |          |
+| Infrastructure cost            | Med    |          |          |          |
+| Time to implement              | Med    |          |          |          |
+| Scale path clarity             | Med    |          |          |          |
+| Security posture               | High   |          |          |          |
+| Failure blast radius           | High   |          |          |          |
 
 #### Analysis Frameworks (Step 4)
 
@@ -348,18 +351,22 @@ Tradeoffs accepted: [what is being sacrificed]
 Recommended shape: [description]
 
 Major boundaries:
+
 - [boundary 1: what lives here, what does not]
 - [boundary 2]
 
 Interaction model:
+
 - [how parts communicate]
 - [data ownership rules]
 - [integration failure behavior]
 
 Operational implications:
+
 - [deployment]
 - [observability]
 - [rollback]
+
 ```
 
 #### Gate (Step 5)
@@ -375,7 +382,7 @@ If boundaries are still fuzzy after this step, implementation will invent the re
 
 #### Load Template (Step 6)
 
-- [REQUIRED] Load [architecture-decision-record.md]({{GLOBAL_CONFIG_URI}}/global_templates/architecture-decision-record.md)
+- [REQUIRED] Load [architecture-decision-record.md](file:///C:/Users/Oviks/.gemini/antigravity/global_templates/architecture-decision-record.md)
 - Follow the structure and guidance in the template exactly to record the decision.
 
 #### Post-ADR Actions (Step 6)
@@ -504,5 +511,3 @@ An architecture that looks elegant on a diagram but fails the 2 AM test, cannot 
 | Version | Date | Changes |
 | :--- | :--- | :--- |
 | Gold v1.1 | Initial | Established the systematic sequence for making architectural decisions |
-
-

@@ -15,7 +15,8 @@
 ## WHAT THIS WORKFLOW DOES
 
 This workflow enforces the cardinal rule of performance engineering:
-**MEASURE FIRST. OPTIMIZE SECOND.**
+
+### MEASURE FIRST. OPTIMIZE SECOND.
 
 Without this workflow, developers optimize code that is not the bottleneck, add caching before understanding why queries are slow, and introduce complexity for unmeasurable improvements.
 
@@ -123,11 +124,11 @@ Do NOT jump straight into tuning. Instead:
 
 1. **Quantify the gap:**
 
-   | Metric | Value |
-   | :--- | :--- |
-   | **Current** | [measured value] |
-   | **Target** | [required value] |
-   | **Gap** | [difference] |
+| Metric | Value |
+| :--- | :--- |
+| **Current** | [measured value] |
+| **Target** | [required value] |
+| **Gap** | [difference] |
 
 1. **Assess impact:**
    - How many users are affected?
@@ -226,7 +227,7 @@ If the bottleneck is still a guess, go back and gather stronger measurement. Nev
 **Mode:** Performance
 **Goal:** Produce multiple serious improvement paths targeted at the identified bottleneck.
 
-**Only optimize the bottleneck. Nothing else.**
+### Only optimize the bottleneck. Nothing else.
 
 #### Database Optimization Options
 

@@ -163,7 +163,7 @@ API type decision: [Server Action / API Route and reason]
 **Mode:** Architect
 **Goal:** Define the exact API contract before writing any implementation. The contract IS the specification.
 
-**Contract-first. Always.**
+### Contract-first. Always.
 
 **Gate:** Review the contract with the consumer BEFORE implementing.
 
@@ -366,21 +366,27 @@ Compatibility strategy: [additive / versioned]
 #### Delivery Structure (Step 8)
 
 ```markdown
+
 ## API Endpoint Summary
 
 ### Endpoint
+
 [METHOD] [URL]
 
 ### Request/Response
+
 [Schemas with examples]
 
 ### Auth & Permissions
+
 [Roles and Ownership rules]
 
 ### Side Effects & Flow
+
 [Pipeline and secondary consequences]
 
 ### Compatibility
+
 [Additive rules and breaking risk areas]
 ```
 

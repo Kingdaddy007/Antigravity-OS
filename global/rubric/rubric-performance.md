@@ -157,16 +157,15 @@ without measurement is not strong performance work.
 
 | Dimension | Score | Notes |
 | :--- | :--- | :--- |
-| Problem Quantification / Metric Clarity | | |
-| Bottleneck Identification / Critical Path | | |
-| Optimization Targeting / Relevance | | |
-| Measurement Rigor / Evidence Quality | | |
-| Tradeoff Awareness / Complexity Cost | | |
-| Regression Safety / Correctness | | |
-| Stopping Discipline / Proportionality | | |
-| System-Level Awareness | | |
-| Sustainability of the Gain | | |
-
+| Problem Quantification / Metric Clarity |||
+| Bottleneck Identification / Critical Path |||
+| Optimization Targeting / Relevance |||
+| Measurement Rigor / Evidence Quality |||
+| Tradeoff Awareness / Complexity Cost |||
+| Regression Safety / Correctness |||
+| Stopping Discipline / Proportionality |||
+| System-Level Awareness |||
+| Sustainability of the Gain |||
 ***
 
 ## DELIVERY DECISION

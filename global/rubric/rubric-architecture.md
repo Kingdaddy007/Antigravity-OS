@@ -17,8 +17,10 @@ your work against each dimension below. Score each dimension.
 
 - If **Requirements Clarity** scores **Failing** — STOP. Define
   requirements before designing architecture.
+
 - If **Team Fit** scores **Needs Work** or below — reassess. An
   architecture the team cannot maintain will fail in operation.
+
 - If **3 or more dimensions** score **Failing** — the architecture
   needs fundamental rework before committing.
 
@@ -169,17 +171,16 @@ not merely diagrammable or sophisticated to describe.
 
 | Dimension | Score | Notes |
 | :--- | :--- | :--- |
-| Requirements Clarity / Problem Fit | | |
-| Boundary Clarity and Ownership | | |
-| Data Ownership / Source of Truth | | |
-| Options Evaluation | | |
-| Tradeoff Transparency | | |
-| Failure Mode Analysis | | |
-| Simplicity / Complexity Discipline | | |
-| Team Fit / Operational Realism | | |
-| Reversibility / Evolvability | | |
-| Implementation Guidance Quality | | |
-
+| Requirements Clarity / Problem Fit |||
+| Boundary Clarity and Ownership |||
+| Data Ownership / Source of Truth |||
+| Options Evaluation |||
+| Tradeoff Transparency |||
+| Failure Mode Analysis |||
+| Simplicity / Complexity Discipline |||
+| Team Fit / Operational Realism |||
+| Reversibility / Evolvability |||
+| Implementation Guidance Quality |||
 ***
 
 ## DELIVERY DECISION

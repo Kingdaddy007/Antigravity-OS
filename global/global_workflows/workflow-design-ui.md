@@ -6,10 +6,9 @@ description: The systematic sequence for designing and implementing user interfa
 
 > **[CONTEXT AMNESIA FAILSAFE]**
 > YOU MUST USE TOOL CALLS TO READ THE FULL SOURCE FILE AND THE REQUIRED SKILLS/CONTEXTS BEFORE EXECUTING THIS.
-> PROVE YOU HAVE DONE THIS IN A `<thought_process>` BLOCK.
+> Verify silently in your internal reasoning that you have done this.
 
-
-> **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full 15,000-character logic, state maps, and accessibility non-negotiables, the Agent MUST load and follow the [SOURCE FILE]({{GLOBAL_CONFIG_URI}}/workflows/workflow-design-ui.md).
+> **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full 15,000-character logic, state maps, and accessibility non-negotiables, the Agent MUST load and follow the [SOURCE FILE](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-design-ui.md).
 
 ## WHAT THIS WORKFLOW DOES
 
@@ -21,7 +20,7 @@ Ensures UI work starts with the user goal, not the components. It forces full st
 
 ### 1. Load Full Instructions
 
-- [ ] **Load Source [REQUIRED]:** [workflow-design-ui.md]({{GLOBAL_CONFIG_URI}}/workflows/workflow-design-ui.md) (Follow all 8 steps).
+- [ ] **Load Source [REQUIRED]:** [workflow-design-ui.md](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-design-ui.md) (Follow all 8 steps).
 
 ### 2. Load Core Contexts & Skills (Always)
 
@@ -62,5 +61,3 @@ Ensures UI work starts with the user goal, not the components. It forces full st
 - **G4 (System):** Do not invent new patterns where the Design System serves the need.
 
 > **Final Instruction:** Every detail of the Gold v1.1 design process is preserved in the Source file. Read it now.
-
-

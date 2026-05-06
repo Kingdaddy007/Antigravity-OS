@@ -6,10 +6,9 @@ description: The systematic sequence for improving code structure without changi
 
 > **[CONTEXT AMNESIA FAILSAFE]**
 > YOU MUST USE TOOL CALLS TO READ THE FULL SOURCE FILE AND THE REQUIRED SKILLS/CONTEXTS BEFORE EXECUTING THIS.
-> PROVE YOU HAVE DONE THIS IN A `<thought_process>` BLOCK.
+> Verify silently in your internal reasoning that you have done this.
 
-
-> **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full 15,000-character logic, characterization test protocols, and scope creep prevention rules, the Agent MUST load and follow the [SOURCE FILE]({{GLOBAL_CONFIG_URI}}/workflows/workflow-refactor-module.md).
+> **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full 15,000-character logic, characterization test protocols, and scope creep prevention rules, the Agent MUST load and follow the [SOURCE FILE](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-refactor-module.md).
 
 ## WHAT THIS WORKFLOW DOES
 
@@ -21,7 +20,7 @@ Ensures refactoring is safe, scoped, and valuable. It enforces the discipline of
 
 ### 1. Load Full Instructions
 
-- [ ] **Load Source [REQUIRED]:** [workflow-refactor-module.md]({{GLOBAL_CONFIG_URI}}/workflows/workflow-refactor-module.md) (Follow all 6 steps).
+- [ ] **Load Source [REQUIRED]:** [workflow-refactor-module.md](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-refactor-module.md) (Follow all 6 steps).
 
 ### 2. Load Core Contexts & Skills (Always)
 
@@ -61,5 +60,3 @@ Ensures refactoring is safe, scoped, and valuable. It enforces the discipline of
 - **G4 (Leverage):** Does this change make the NEXT feature cheaper to build?
 
 > **Final Instruction:** Every detail of the Gold v1.1 refactoring process is preserved in the Source file. Read it now.
-
-

@@ -237,7 +237,7 @@ Correctness uncertainty takes priority over all other review concerns. Do not al
 **Mode:** Security
 **Goal:** Identify security vulnerabilities.
 
-**This step is NEVER skipped — not even for small changes.**
+### This step is NEVER skipped — not even for small changes
 
 #### Input Validation (Step 4)
 
@@ -386,7 +386,7 @@ State the minimum changes needed for approval when not ready. Do not leave the a
 
 #### Load Template (Step 8)
 
-- [REQUIRED] Load [code-review-report.md]({{GLOBAL_CONFIG_URI}}/global_templates/code-review-report.md)
+- [REQUIRED] Load [code-review-report.md](file:///C:/Users/Oviks/.gemini/antigravity/global_templates/code-review-report.md)
 - Follow the structure and guidance in the template exactly to deliver the code review findings.
 
 #### Tone Rules (Step 8)
@@ -509,5 +509,3 @@ Do not review to demonstrate thoroughness. Review to make the codebase better.
 | Version | Date | Changes |
 | :--- | :--- | :--- |
 | Gold v1.1 | Initial | Established the systematic sequence for reviewing code |
-
-

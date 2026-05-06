@@ -166,17 +166,16 @@ functional, but professionally responsible.
 
 | Dimension | Score | Notes |
 | :--- | :--- | :--- |
-| Correctness | | |
-| Readability | | |
-| Maintainability | | |
-| Responsibility Separation | | |
-| Scope Discipline | | |
-| Error Handling | | |
-| Testability | | |
-| Architectural Fit / Convention | | |
-| Security Awareness | | |
-| Performance Appropriateness | | |
-
+| Correctness |||
+| Readability |||
+| Maintainability |||
+| Responsibility Separation |||
+| Scope Discipline |||
+| Error Handling |||
+| Testability |||
+| Architectural Fit / Convention |||
+| Security Awareness |||
+| Performance Appropriateness |||
 ***
 
 ## DELIVERY DECISION
@@ -248,6 +247,7 @@ Before closing this review, ask:
 - Would another engineer trust this code enough to inherit it?
 - Does this code solve the problem without introducing
   avoidable long-term cost?
+
 - If this is merged, what is most likely to hurt us later?
 - Is this code correct, clear, safe, and maintainable enough
   to build on?

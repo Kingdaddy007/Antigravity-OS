@@ -17,8 +17,10 @@ evaluate your work against each dimension below. Score each dimension.
 
 - If **any dimension** scores **Failing** — BLOCK delivery.
   Security failures are never acceptable for delivery.
+
 - If **Authorization or Input Validation** scores **Needs Work** —
   fix before delivery. These are the most common exploit vectors.
+
 - If **Secret Management** scores **Failing** — take IMMEDIATE action.
   Secrets may already be compromised.
 
@@ -196,19 +198,18 @@ exposure is reduced, and misuse is hard.
 
 | Dimension | Score | Notes |
 | :--- | :--- | :--- |
-| Trust Boundary Clarity / Asset ID | | |
-| Authentication | | |
-| Authorization / Privilege Discipline | | |
-| Input Validation / Output Safety | | |
-| Sensitive Data / Data Protection | | |
-| Secret / Credential Management | | |
-| Blast Radius / Failure Safety | | |
-| Security Headers / Configuration | | |
-| Dependency Security | | |
-| Auditability / Observability | | |
-| Abuse / Misuse Thinking | | |
-| Mitigation Quality / Proportionality | | |
-
+| Trust Boundary Clarity / Asset ID |||
+| Authentication |||
+| Authorization / Privilege Discipline |||
+| Input Validation / Output Safety |||
+| Sensitive Data / Data Protection |||
+| Secret / Credential Management |||
+| Blast Radius / Failure Safety |||
+| Security Headers / Configuration |||
+| Dependency Security |||
+| Auditability / Observability |||
+| Abuse / Misuse Thinking |||
+| Mitigation Quality / Proportionality |||
 ***
 
 ## DELIVERY DECISION

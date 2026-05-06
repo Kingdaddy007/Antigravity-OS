@@ -218,11 +218,14 @@ For Each Trust Boundary, Document:
 
 ```text
 Trust boundaries:
+
 - [boundary 1]: [data flow, direction, current protection]
 - [boundary 2]: [data flow, direction, current protection]
 
 Sensitive assets / operations:
+
 - [list]
+
 ```
 
 #### Gate (Step 2)
@@ -380,12 +383,15 @@ State blocking versus advisory clearly. Do not leave the owner guessing which fi
 #### Report Structure (Step 6)
 
 ```markdown
+
 ## Security Audit Report
 
 ### Scope
+
 [What was audited, at what depth, and why]
 
 ### Summary
+
 - Critical findings: [count]
 - High findings: [count]
 - Medium findings: [count]
@@ -395,6 +401,7 @@ State blocking versus advisory clearly. Do not leave the owner guessing which fi
 ---
 
 ### Trust Boundary Map
+
 [Diagram or description of trust boundaries analyzed]
 
 ---
@@ -402,40 +409,49 @@ State blocking versus advisory clearly. Do not leave the owner guessing which fi
 ### Findings by Severity
 
 #### 🔴 Critical
+
 [Each finding: description, attack scenario, evidence, recommendation]
 
 #### 🟠 High
+
 [Each finding]
 
 #### 🟡 Medium
+
 [Each finding]
 
 #### 🟢 Low / 💬 Informational
+
 [Each finding]
 
 ---
 
 ### Positive Observations
+
 [Security measures that are working well — acknowledge what is right]
 
 ---
 
 ### Gaps Relative to Security Baselines
+
 [Areas where current implementation does not meet security-baselines.md expectations]
 
 ---
 
 ### Remediation Plan (Prioritized)
+
 1. [Most urgent action]
 2. [Second most urgent]
 3. [...]
 
 ### Blocking Issues for Approval
+
 [State exactly what must change before this is acceptable]
 
 ---
 
 ### Follow-Up
+
 [When should the next audit occur?]
 [What areas need deeper investigation?]
 [What monitoring or observability should be added?]

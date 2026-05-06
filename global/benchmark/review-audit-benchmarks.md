@@ -12,14 +12,14 @@ This file contains repeatable test scenarios for evaluating Anti-Gravity's
 code review quality — finding real issues, prioritizing correctly, and
 providing actionable feedback.
 
-**Evaluate With:**
+### Evaluate With
 
-- [rubric-communication.md]({{GLOBAL_CONFIG_URI}}/rubric/rubric-communication.md)
-- [rubric-code-quality.md]({{GLOBAL_CONFIG_URI}}/rubric/rubric-code-quality.md)
-- [rubric-security.md]({{GLOBAL_CONFIG_URI}}/rubric/rubric-security.md)
-- [rubric-testing.md]({{GLOBAL_CONFIG_URI}}/rubric/rubric-testing.md)
+- [rubric-communication.md](file:///c:/Users/Oviks/antigravitygold/rubric/rubric-communication.md)
+- [rubric-code-quality.md](file:///c:/Users/Oviks/antigravitygold/rubric/rubric-code-quality.md)
+- [rubric-security.md](file:///c:/Users/Oviks/antigravitygold/rubric/rubric-security.md)
+- [rubric-testing.md](file:///c:/Users/Oviks/antigravitygold/rubric/rubric-testing.md)
 
-**Tests:**
+### Tests
 
 - `skill-review-audit.md`
 - `workflow-review-code.md`

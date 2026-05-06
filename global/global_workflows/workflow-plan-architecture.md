@@ -6,10 +6,9 @@ description: The systematic sequence for making architectural decisions — from
 
 > **[CONTEXT AMNESIA FAILSAFE]**
 > YOU MUST USE TOOL CALLS TO READ THE FULL SOURCE FILE AND THE REQUIRED SKILLS/CONTEXTS BEFORE EXECUTING THIS.
-> PROVE YOU HAVE DONE THIS IN A `<thought_process>` BLOCK.
+> Verify silently in your internal reasoning that you have done this.
 
-
-> **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full 15,000-character logic, Evaluation Matrix protocols, and ADR (Architecture Decision Record) structure, the Agent MUST load and follow the [SOURCE FILE]({{GLOBAL_CONFIG_URI}}/workflows/workflow-plan-architecture.md).
+> **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full 15,000-character logic, Evaluation Matrix protocols, and ADR (Architecture Decision Record) structure, the Agent MUST load and follow the [SOURCE FILE](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-plan-architecture.md).
 
 ## WHAT THIS WORKFLOW DOES
 
@@ -21,7 +20,7 @@ Ensures architectural decisions are made deliberately, not by default. It forces
 
 ### 1. Load Full Instructions
 
-- [ ] **Load Source [REQUIRED]:** [workflow-plan-architecture.md]({{GLOBAL_CONFIG_URI}}/workflows/workflow-plan-architecture.md) (Follow all 7 steps).
+- [ ] **Load Source [REQUIRED]:** [workflow-plan-architecture.md](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-plan-architecture.md) (Follow all 7 steps).
 
 ### 2. Load Core Contexts & Skills (Always)
 
@@ -62,5 +61,3 @@ Ensures architectural decisions are made deliberately, not by default. It forces
 - **G4 (Boundaries):** Architecture is not aspiration; boundaries must be explicit.
 
 > **Final Instruction:** Every detail of the Gold v1.1 architectural process is preserved in the Source file. Read it now.
-
-

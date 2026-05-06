@@ -64,22 +64,26 @@ The context file templates frequently arrive with metadata formatted as H1 tags 
 
 ### 2. Fix Table Separators (MD060)
 
-The context templates use compressed table alignment pipes without proper whitespace (e.g., `|--------|-------|`). The markdown linter requires spaces around the pipes for aligned column styles.
+| The context templates use compressed table alignment pipes without proper whitespace (e.g., `| -------- | ------- |`). The markdown linter requires spaces around the pipes for aligned column styles. |
 
-**Action:** Replace tight table separators with standard spaced separators (`| --- |`). Do this for EVERY table in the file.
+| **Action:** Replace tight table separators with standard spaced separators (`| --- |`). Do this for EVERY table in the file. |
 
 *From:*
 
 ```markdown
+
 | Metric | Current Value | Target | Why It Matters |
 | --- | --- | --- | --- |
+
 ```
 
 *To:*
 
 ```markdown
+
 | Metric | Current Value | Target | Why It Matters |
 | --- | --- | --- | --- |
+
 ```
 
 ### 3. Fix Duplicate Headings (MD024)
@@ -91,23 +95,32 @@ Context templates strategically repeat section headings like `### Guidance for A
 *From:*
 
 ```markdown
+
 ## FRONTEND STACK
+
 ...
+
 ### Guidance for Anti-Gravity
+
 ```
 
 *To:*
 
 ```markdown
+
 ## FRONTEND STACK (SKILL: CONTEXT FORMATTING)
+
 ...
+
 ### Guidance for Anti-Gravity (Frontend)
+
 ```
 
 ***
 
 ## EXECUTION STANDARDS
 
-1. **Do not alter the primary content.** Only touch the formatting tags (`#`, `|---`, and heading names).
+| 1. **Do not alter the primary content.** Only touch the formatting tags (`#`, `|---`, and heading names). |
+
 2. **Execute in one pass.** Group all replacements into a single `multi_replace_file_content` tool call containing multiple `ReplacementChunks` whenever possible to save time.
 3. **Double-check uniqueness.** Before suffixing, ensure the new chosen heading name is globally unique in the file to properly satisfy MD024.

@@ -17,8 +17,10 @@ each dimension below. Score each dimension.
 
 - If **Accessibility** scores **Failing** — fix before delivery.
   This is a quality requirement, not optional.
+
 - If **State Coverage** scores **Needs Work** — implement missing
   states before delivery. Users will hit them.
+
 - If **3 or more dimensions** score **Needs Work** — consider
   whether this meets the quality bar for your users.
 
@@ -157,16 +159,15 @@ usable — not just visually acceptable or polished.
 
 | Dimension | Score | Notes |
 | :--- | :--- | :--- |
-| User Goal Clarity | | |
-| State Coverage | | |
-| Accessibility | | |
-| Responsive Design / Context Fit | | |
-| Interaction Feedback | | |
-| Visual Consistency | | |
-| Error Experience / Recovery | | |
-| Cognitive Load / Information Hierarchy | | |
-| Practicality / Implementation Readiness | | |
-
+| User Goal Clarity |||
+| State Coverage |||
+| Accessibility |||
+| Responsive Design / Context Fit |||
+| Interaction Feedback |||
+| Visual Consistency |||
+| Error Experience / Recovery |||
+| Cognitive Load / Information Hierarchy |||
+| Practicality / Implementation Readiness |||
 ***
 
 ## DELIVERY DECISION

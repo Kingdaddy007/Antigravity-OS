@@ -6,10 +6,9 @@ description: The systematic sequence for diagnosing and fixing bugs — from sym
 
 > **[CONTEXT AMNESIA FAILSAFE]**
 > YOU MUST USE TOOL CALLS TO READ THE FULL SOURCE FILE AND THE REQUIRED SKILLS/CONTEXTS BEFORE EXECUTING THIS.
-> PROVE YOU HAVE DONE THIS IN A `<thought_process>` BLOCK.
+> Verify silently in your internal reasoning that you have done this.
 
-
-> **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full 12,000-character logic, evidence-gathering steps, and regression prevention strategies, the Agent MUST load and follow the [SOURCE FILE]({{GLOBAL_CONFIG_URI}}/workflows/workflow-debug-issue.md).
+> **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full 12,000-character logic, evidence-gathering steps, and regression prevention strategies, the Agent MUST load and follow the [SOURCE FILE](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-debug-issue.md).
 
 ## WHAT THIS WORKFLOW DOES
 
@@ -21,7 +20,7 @@ Prevents "shotgun debugging" by enforcing evidence-based diagnosis. It ensures t
 
 ### 1. Load Full Instructions
 
-- [ ] **Load Source [REQUIRED]:** [workflow-debug-issue.md]({{GLOBAL_CONFIG_URI}}/workflows/workflow-debug-issue.md) (Follow all 8 steps).
+- [ ] **Load Source [REQUIRED]:** [workflow-debug-issue.md](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-debug-issue.md) (Follow all 8 steps).
 
 ### 2. Load Core Contexts & Skills (Always)
 
@@ -63,5 +62,3 @@ Prevents "shotgun debugging" by enforcing evidence-based diagnosis. It ensures t
 - **G4 (Recurrence):** Every bug fix must include a regression test and long-term guardrail.
 
 > **Final Instruction:** Every detail of the Gold v1.1 debugging process is preserved in the Source file. Read it now.
-
-

@@ -171,17 +171,16 @@ the rollout is controlled, and failure is survivable.
 
 | Dimension | Score | Notes |
 | :--- | :--- | :--- |
-| Functional Completeness / Scope Clarity | | |
-| Code Quality | | |
-| Test Coverage / Verification Confidence | | |
-| Security Posture / Sensitivity Awareness | | |
-| Performance Acceptability | | |
-| User Experience Readiness | | |
-| Data Integrity / Migration Safety | | |
-| Operational Readiness / Rollback Readiness | | |
-| Documentation and Communication | | |
-| Risk Assessment / Blast Radius | | |
-
+| Functional Completeness / Scope Clarity |||
+| Code Quality |||
+| Test Coverage / Verification Confidence |||
+| Security Posture / Sensitivity Awareness |||
+| Performance Acceptability |||
+| User Experience Readiness |||
+| Data Integrity / Migration Safety |||
+| Operational Readiness / Rollback Readiness |||
+| Documentation and Communication |||
+| Risk Assessment / Blast Radius |||
 ***
 
 ## RELEASE DECISION FRAMEWORK

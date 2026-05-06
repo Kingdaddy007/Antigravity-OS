@@ -151,9 +151,9 @@ Do NOT begin by moving files and renaming at random. Instead:
 | Business logic is correct, structure is messy | ✅ | |
 | Fundamental design is wrong | | ✅ |
 | Test coverage exists or can be added | ✅ | |
-| No tests exist and behavior is undocumented | Caution | |
+| No tests exist and behavior is undocumented | Caution ||
 | Module is small and bounded | ✅ | |
-| Module is large with deep dependencies | | Consider Strangler Fig |
+| Module is large with deep dependencies || Consider Strangler Fig |
 
 #### Output (Step 1)
 
@@ -262,6 +262,7 @@ Behavior preserved: [specific list]
 ```text
 Primary refactor strategy: [choice and reason]
 Staged plan:
+
   1. [step]
   2. [step]
 Time box: [X hours]
@@ -345,25 +346,32 @@ If the module is not meaningfully easier to work in, it may not have earned its 
 #### Delivery Structure (Step 6)
 
 ```markdown
+
 ## Refactoring Summary
 
 ### What Was Refactored
+
 [Module affected]
 
 ### Why
+
 [Specific problems from Step 1]
 
 ### What Changed — Structure
+
 [List of extractions, moves, renames, simplifications]
 
 ### What Did NOT Change — Behavior
+
 [Explicit behavioral contracts preserved]
 
 ### Quality Improvements
+
 - Before: [problem]
 - After: [improvement]
 
 ### Remaining Debt
+
 [What was NOT addressed and why]
 ```
 

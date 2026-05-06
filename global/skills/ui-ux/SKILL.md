@@ -1,432 +1,305 @@
 ---
 name: UI/UX & DESIGN THINKING
-description: Domain knowledge for UI/UX & DESIGN THINKING
+description: >
+  Use this skill when designing or evaluating user interfaces, user flows,
+  or frontend experiences. Activated when designing a new screen, component,
+  or user flow; writing frontend implementation code (React, Vue, HTML/CSS);
+  defining how an application handles loading, error, or empty states;
+  restructuring navigation or information architecture; evaluating
+  accessibility; or deciding how a backend error should be communicated to
+  the user. Also activated when writing or reviewing any CSS, choosing fonts,
+  picking colors, defining motion, or building responsive layouts. Examples:
+  "design this flow", "how should this form work?", "what should the empty
+  state look like?", "the UI is confusing", "make this more user-friendly",
+  "write the frontend for X", "build this page", "make this look better".
+  Do NOT use for pure backend implementation (use coding skill) or
+  architecture decisions (use architecture skill).
 ---
 
-# SKILL: UI/UX & DESIGN THINKING
+# UI/UX & DESIGN THINKING
 
-**Version:** Gold v1.1 (Upgraded — UI/UX Lenses, Authority Statement, Behavioral Sections Aâ€“D, Before-Finalizing Re-check, Final Rule, UI/UX Heuristics, Component-Centric anti-pattern added)
+Unified design intelligence. Covers UX foundations, visual craft, motion, accessibility, and execution standards. This skill activates automatically on every frontend task — you do not need to invoke it explicitly.
 
-**Type:** Specialized Skill Domain
+For structured deep-dives (formal audits, critiques, polish passes), use the `/workflow-impeccable-*` workflows. This skill provides the passive intelligence that runs underneath.
 
-**Tier:** 2 — Loaded by task (when Designer Mode is active, or building frontend in Builder Mode)
+---
 
-**File:** skills/skill-ui-ux.md
+## LAYER 1: UX FOUNDATIONS
 
-**Inherits From:** anti-gravity-core.md, system-thinking.md, expert-cognitive-patterns.md
+### Mindset
 
-**Primary Mode:** Designer
+UX is the systematic reduction of cognitive load. The interface is a deterministic state machine that guides the user safely from point A to point B. Users scan, not read. Users make mistakes; the system prevents them when possible and forgives them when they happen.
 
-**Secondary Modes:** Builder (frontend implementation), Reviewer (frontend PRs)
+Think in:
+- **Flows**, not isolated screens
+- **States**, not just the default state
+- **Behavior**, not just layout
+- **User goals**, not only stakeholder requests
+- **Clarity** over cleverness
 
-**Purpose:** Governs how Anti-Gravity designs and evaluates user interfaces, prioritizing cognitive ease, system visibility, and error prevention over mere aesthetics
+### The 10 UX Lenses
 
-***
+Apply all ten before and during design or review:
 
-## MINDSET
+1. **User Goal Clarity** — What is the user trying to accomplish? Is the primary task obvious?
+2. **Information Hierarchy** — What should users notice first? Are the most important actions visually clear?
+3. **Flow Logic** — Is the path obvious? Are there unnecessary steps or dead ends?
+4. **Cognitive Load** — How much must the user remember or decide at once? Can choices be simplified?
+5. **State Visibility** — Does the user know what the system is doing? Are loading/error/empty states explicit?
+6. **Interaction Safety** — Can the user undo mistakes? Are destructive actions protected?
+7. **Consistency** — Does the screen follow established patterns? Is a new pattern introduced without reason?
+8. **Accessibility** — Keyboard reachable? Contrast adequate? Labels present? Touch targets 44px+?
+9. **Performance Perception** — Does it feel responsive? Are delays acknowledged?
+10. **Implementation Realism** — Are UX gains proportional to implementation cost?
 
-The engineering UX mental model is not about making things "look pretty" — it revolves around the systematic reduction of cognitive load. The expert views the interface not as a visual canvas, but as a deterministic state machine that must guide the user safely and predictably from point A to point B.
+### The 6 UI States
 
-They rely heavily on established usability heuristics (particularly Jakob Nielsen's 10 Heuristics). They know that users do not read; they scan. They know that users will make mistakes, and therefore the system must prevent them when possible and forgive them when they happen.
+Do not design only the Happy Path. Every screen must define:
 
-Every user interaction is evaluated against how closely it matches the user's real-world mental model, ensuring the system speaks the user's language rather than exposing database terminology or internal architectural constraints. The expert believes that if a user needs a manual to use the feature, the interface is broken.
+1. **Ideal** — Data present, looks perfect
+2. **Empty** — First-time use, no data (provide CTA)
+3. **Loading** — Fetching or processing (skeleton screens > spinners)
+4. **Error** — Action failed (empathetic message + recovery path)
+5. **Partial** — Some data available, or extreme text lengths
+6. **Disabled** — No permission, or prerequisites unmet
 
-The interface is not just a visual surface. It is:
+### Forms
 
-- a decision environment
-- a workflow guide
-- a trust signal
-- a failure-recovery surface
-- a translation layer between system complexity and human intention
+- Group related fields logically
+- Ask only for information needed at that stage
+- Use labels, help text, defaults, and validation feedback
+- Make errors specific and recoverable
+- Never wipe the whole form on one field's validation failure
 
-Anti-Gravity should always think in:
+### Destructive Actions
 
-- flows, not isolated screens
-- states, not just the default state
-- behavior, not just layout
-- user goals, not only stakeholder requests
-- clarity over cleverness
+- Prefer undo over confirmation dialogs (users click through confirmations mindlessly)
+- Use confirmation only for truly irreversible or high-cost actions
+- Make consequences clear before the action is taken
 
-***
+### Decision Framework
 
-## ACTIVATION TRIGGERS
+| Design Choice | Resolution |
+|---|---|
+| Free-form vs Dropdown | Constrained choices for standard data; free-form for unique text |
+| Pagination vs Infinite Scroll | Pagination for finding specific items; infinite scroll for discovery |
+| Explicit Save vs Auto-save | Auto-save for long-form content; explicit save for configuration |
+| Modals vs New Pages | Modals for quick supplementary actions; new pages for complex tasks |
 
-### When to Load This Skill
+---
 
-- Designing a new user flow, screen, or component
-- Writing frontend implementation code (React, Vue, HTML/CSS)
-- Defining how an application should handle loading, error, or empty states
-- Restructuring navigation or information architecture
-- Evaluating the accessibility of an interface
-- Deciding how a backend error should be communicated to the user
+## LAYER 2: VISUAL CRAFT LAWS
 
-### Red Flags That This Skill Is Being Neglected
+These rules apply to every CSS file, every component, every design decision. They are not optional.
 
-- The UI exposes raw database errors or stack traces to the user
-- Buttons or links do not provide visual feedback when clicked (loading states missing)
-- The user is blamed for errors (e.g., "Invalid input provided") rather than guided
-- Destructive actions (Delete) have no confirmation or undo functionality
-- The interface relies on icons without text labels, forcing the user to memorize their meaning
-- The layout breaks or becomes unusable on mobile devices
-- The design only considers the "Happy Path" and ignores edge cases
+### Color
 
-### Usually Pairs With
+- **Use OKLCH.** Not HSL, not hex for design decisions. OKLCH is perceptually uniform.
+- **Never use `#000` or `#fff`.** Tint every neutral toward the brand hue (chroma 0.005-0.01).
+- **Pick a color strategy before picking colors:**
+  - **Restrained** — tinted neutrals + one accent ≤10%. Product default; brand minimalism.
+  - **Committed** — one saturated color carries 30-60% of the surface. Brand default.
+  - **Full palette** — 3-4 named roles, each used deliberately. Brand campaigns; data viz.
+  - **Drenched** — the surface IS the color. Brand heroes, campaign pages.
+- **60-30-10 is about visual weight**, not pixel count. Accent works because it's rare.
+- **Alpha is a design smell.** Heavy `rgba()`/`hsla()` use means an incomplete palette. Define explicit overlay colors.
+- **Gray text on colored backgrounds is always wrong.** Use a darker shade of the background color, or transparency.
+- See [reference/color-and-contrast.md](reference/color-and-contrast.md) for full guidance.
 
-- `skill-coding.md` — When transitioning from UI design to frontend implementation
-- `skill-architecture.md` — To ensure the backend API can support the required UI states (e.g., returning proper error codes)
-- `skill-product-thinking.md` — To align the interface with the actual Job-to-be-Done
+### Typography
 
-***
+- **Body text minimum 16px (1rem).** Below this fails WCAG on mobile.
+- **Cap body line length at 65-75ch** using `max-width: 65ch`.
+- **Hierarchy through scale + weight contrast.** Minimum 1.25 ratio between type steps. Flat scales (1.1x) read as uncommitted.
+- **Fluid `clamp()` for headings only.** Body text stays at fixed rem. Keep `max ≤ 2.5x min`.
+- **Light text on dark: compensate on three axes.** Bump line-height +0.05-0.1, add letter-spacing 0.01-0.02em, optionally step weight up one notch.
+- **ALL-CAPS needs tracking.** Add 0.05em-0.12em letter-spacing to all-caps labels and headings.
+- **`text-wrap: balance` on headings, `text-wrap: pretty` on prose.**
+- **Web font loading:** Use `font-display: swap`. Preload the critical weight only. Match fallback metrics to minimize CLS.
+- See [reference/typography.md](reference/typography.md) for full guidance.
 
-## OBJECTIVES
+### Layout & Spacing
 
-When this skill is active, the goal is to produce an interface design that is:
+- **4pt base grid** (4, 8, 12, 16, 24, 32, 48, 64, 96px). Name tokens semantically (`--space-sm`), not by value.
+- **Vary spacing for rhythm.** Same padding everywhere is monotony.
+- **Cards are the lazy answer.** Use them only when truly the best affordance. **Never nest cards inside cards.**
+- **Don't wrap everything in a container.** Most things don't need one.
+- **Use `gap` instead of margins** for sibling spacing.
+- **Touch targets minimum 44x44px.** Use padding or pseudo-elements to expand without changing visual size.
+- See [reference/spatial-design.md](reference/spatial-design.md) for full guidance.
 
-1. **Clear** — Reduces cognitive load; users know exactly what to do next
-2. **Visible** — Always displays the current system status (loading, processing, success, error)
-3. **Forgiving** — Prevents errors before they happen and provides easy recovery paths
-4. **Accessible** — Usable by everyone, including those relying on keyboards or screen readers
-5. **Consistent** — Follows established patterns so users don't have to learn new mechanics
-6. **State-Complete** — Accounts for all possible UI states, not just the ideal scenario
+### Motion
 
-***
+- **Ease out with exponential curves:** `cubic-bezier(0.16, 1, 0.3, 1)` (expo out) is the recommended default.
+- **No bounce. No elastic.** They feel tacky and amateurish.
+- **Don't animate CSS layout properties** (`width`, `height`, `top`, `left`, margins).
+- **Exit animations are faster than entrances** (~75% of enter duration).
+- **Duration guide:** 100-150ms (instant feedback), 200-300ms (state changes), 300-500ms (layout), 500-800ms (entrances).
+- **`prefers-reduced-motion` is mandatory.** Provide crossfade alternatives, not just `animation: none`.
+- See [reference/motion-design.md](reference/motion-design.md) for full guidance.
 
-## DECISION FRAMEWORK
+### Interaction Design
 
-UI decisions continuously balance user freedom, efficiency, and error prevention.
+- **Every interactive element needs 8 states:** default, hover, focus, active, disabled, loading, error, success.
+- **Never `outline: none` without replacement.** Use `:focus-visible` for keyboard-only focus rings.
+- **Placeholders aren't labels.** They disappear on input. Always use visible `<label>` elements.
+- See [reference/interaction-design.md](reference/interaction-design.md) for full guidance.
 
-| Design Choice | Tradeoff Evaluation | Resolution Strategy |
-| --- | --- | --- |
-| **Free-form Input vs. Dropdown/Radio** | Maximum user flexibility vs. strict data integrity and ease of use. | Favor constrained choices (dropdowns) for standard data to prevent errors. Use free-form for unique text. |
-| **Pagination vs. Infinite Scroll** | Context preservation and footer access vs. continuous, frictionless engagement. | Use pagination for tasks requiring finding specific items (data tables). Use infinite scroll for discovery/feed consumption. |
-| **Explicit Save vs. Auto-save** | Clear system feedback vs. interaction efficiency. | Auto-save for long-form content creation (with a "Saved" indicator). Explicit save for configuration/settings changes. |
-| **Modals vs. New Pages** | Keeping context vs. focusing attention on a complex task. | Use modals for quick, supplementary actions. Use new pages for complex, multi-step tasks. |
+### Responsive Design
 
-***
+- **Mobile-first.** Base styles for mobile, `min-width` queries to layer complexity.
+- **Content-driven breakpoints.** Let content tell you where to break, not device sizes.
+- **Detect input method, not just screen size.** Use `@media (pointer: coarse)` and `@media (hover: none)`.
+- **Handle the notch.** Use `env(safe-area-inset-*)` and `viewport-fit=cover`.
+- See [reference/responsive-design.md](reference/responsive-design.md) for full guidance.
 
-## UI/UX LENSES
+### UX Writing
 
-Before and during design or review, explicitly inspect these ten lenses:
+- **Button labels: verb + object.** "Save changes" not "OK". "Delete project" not "Yes".
+- **Error messages: What happened + Why + How to fix.** Never blame the user.
+- **Empty states are onboarding moments.** Acknowledge, explain value, provide CTA.
+- **Consistency: pick one term and enforce it.** Delete/Remove/Trash → pick one.
+- See [reference/ux-writing.md](reference/ux-writing.md) for full guidance.
 
-### 1. User Goal Clarity
+### Absolute Bans
 
-- What is the user trying to accomplish here?
-- Is the primary task obvious?
-- Is the screen built around the user's job or around internal system structure?
+Match-and-refuse. If you're about to write any of these, rewrite the element with different structure:
 
-### 2. Information Hierarchy
+- **Side-stripe borders.** `border-left` or `border-right` > 1px as colored accent. Rewrite with full borders, background tints, icons, or nothing.
+- **Gradient text.** `background-clip: text` with gradient. Use a single solid color. Emphasis via weight or size.
+- **Glassmorphism as default.** Blurs and glass cards used decoratively. Rare and purposeful, or nothing.
+- **The hero-metric template.** Big number, small label, supporting stats, gradient accent. SaaS cliche.
+- **Identical card grids.** Same-sized cards with icon + heading + text, repeated endlessly.
+- **Modal as first thought.** Exhaust inline and progressive alternatives first.
+- **Em dashes in copy.** Use commas, colons, semicolons, periods, or parentheses.
 
-- What should users notice first?
-- What is primary, secondary, or optional?
-- Are the most important actions and signals visually and structurally clear?
+### The AI Slop Test
 
-### 3. Flow Logic
+If someone could look at this interface and say "AI made that" without doubt, it has failed. Check:
+- Are you using Inter, DM Sans, or Outfit by reflex?
+- Is the palette purple-to-blue or teal-to-green?
+- Are there rounded-square icon tiles above every heading?
+- Is every section a centered stack with identical card grids?
+- Could someone guess the palette from the category name alone? ("fintech = navy + gold", "healthcare = white + teal")
 
-- What are the steps the user must take?
-- Is the path obvious?
-- Are there unnecessary steps, branches, or dead ends?
+If yes to any: rework until the answer is no.
 
-### 4. Cognitive Load
+---
 
-- How much must the user remember, compare, interpret, or decide at once?
-- Is the screen doing too much?
-- Can choices be simplified, sequenced, or clarified?
+## LAYER 3: REGISTER SYSTEM
 
-### 5. State Visibility
+Every design task is either **brand** or **product**. Identify before designing.
 
-- Does the user know what the system is doing?
-- Are loading, saving, success, error, and empty states explicit?
-- Is progress visible where it matters?
+### Brand Register
 
-### 6. Interaction Safety and Recovery
+When design IS the product: brand sites, landing pages, marketing surfaces, portfolios, editorial.
 
-- Can the user undo mistakes, recover from failure, and understand what went wrong?
-- Are destructive actions protected appropriately?
-- Are error messages actionable rather than blaming?
+- **Typography:** Distinctive + refined. Display serif + sans body, or rule-breaking mono-only. Two families minimum only when voice needs it. Modular scale, fluid `clamp()`, ≥1.25 ratio.
+- **Color:** Committed, Full Palette, and Drenched strategies are encouraged. Palette IS voice. Don't hedge with neutrals.
+- **Layout:** Asymmetric compositions or rigorously-gridded. The failure is splitting the difference into a generic centered stack. Don't default to centering everything.
+- **Motion:** Ambitious first-load motion permitted. Scroll-triggered transitions, typographic choreography.
+- **Imagery:** Brand surfaces that imply imagery (fashion, food, travel, hotels) MUST ship imagery. Zero images is a bug.
+- **Permissions:** Single-purpose viewports, typographic risk, unexpected color strategies, art direction per section.
+- **Font selection:** Follow the 4-step procedure in [reference/brand.md](reference/brand.md). Check against the reflex-reject list.
+- **Reflex-reject font list:** Fraunces, Newsreader, Lora, Crimson (all variants), Playfair Display, Cormorant, Cormorant Garamond, Syne, IBM Plex families, Space Mono, Space Grotesk, Inter, DM Sans, DM Serif families, Outfit, Plus Jakarta Sans, Instrument Sans, Instrument Serif. When the existing brand has already committed to a font, identity-preservation wins; the reject list applies to new greenfield choices only.
+- See [reference/brand.md](reference/brand.md) for full guidance.
 
-### 7. Consistency
+### Product Register
 
-- Does the screen follow the product's interaction patterns, naming, components, and visual language?
-- Is a new pattern being introduced without strong reason?
+When design SERVES the product: app UIs, dashboards, settings, data tables, tools.
 
-### 8. Accessibility
+- **Typography:** System fonts are legitimate. One family is often right. Fixed rem scale, not fluid. Tighter scale ratio (1.125-1.2).
+- **Color:** Restrained by default. Accent for primary actions only, not decoration.
+- **Layout:** Predictable grids. Familiar patterns are features. Standard navigation.
+- **Components:** Every interactive component has all 8 states. Skeleton states for loading.
+- **Motion:** 150-250ms. Motion conveys state, not decoration. No orchestrated page-load sequences.
+- See [reference/product.md](reference/product.md) for full guidance.
 
-- Can the interface be used with keyboard, assistive technology, varying vision, varying motor ability, and smaller screens?
-- Are labels, focus behavior, contrast, targets, and semantics adequate?
+### Register Detection
 
-### 9. Performance Perception
+Priority order: (1) Cue in the task ("landing page" = brand, "dashboard" = product), (2) the surface in focus, (3) PRODUCT.md if it exists. First match wins.
 
-- Does the experience feel responsive?
-- Are delays acknowledged with loading states or skeleton screens?
-- Does the interface avoid jank, confusing reflows, or blocked interaction without explanation?
+---
 
-### 10. Implementation Realism
+## LAYER 4: EXECUTION STANDARDS
 
-- Is the proposed experience achievable without excessive complexity?
-- Are UX gains proportional to implementation cost?
-- Can the core value be delivered with a smaller scope first?
+### Framer Motion Performance
 
-***
+- **Never run infinite intervals off-screen.** Pause `setInterval` crossfaders when element is out of view using Intersection Observer or `useMotionValueEvent`.
+- **Explicit variant typing.** Always type variants using `const variants: Variants = {...}` to catch invalid CSS at compile time.
 
-## UI/UX HEURISTICS
+### Layout & Clipping Integrity
 
-Anti-Gravity should generally prefer:
+- **Beware `overflow: hidden` on complex hero sections.** For portal/zoom effects, the section container can use `overflow: clip`, but the sticky wrapper inside MUST use `overflow: visible`.
+- **SVG animations:** Don't mix absolute SVGs with CSS Grid children. Put SVGs in a wrapper absolutely positioned outside the grid container.
 
-- one clear primary action per screen or view
-- progressive disclosure over crowded overload
-- visible system status over hidden processing
-- real-world wording over technical jargon
-- consistent interaction patterns over novelty
-- user-recognizable structure over clever layout tricks
-- explicit feedback over silent state changes
-- recoverability over harsh irreversible actions
-- showing relevant information rather than forcing recall
-- standard vetted patterns before inventing new interaction logic
-- accessible defaults over opt-in accessibility
+### 3D CSS Perspectives
 
-***
+- For premium horizontal galleries, use 3D Coverflow: parent `perspective: 1200px`, track `transform-style: preserve-3d`, cards calculate `rotateY` and `z` from center distance.
+
+### Architectural Polish
+
+- **Global reduced motion:** ALWAYS include `@media (prefers-reduced-motion: reduce)` that forces `animation-duration: 0.01ms !important` and `scroll-behavior: auto`.
+- **Film grain overlays:** For premium dark aesthetics, implement as SVG `<feTurbulence>` filter via Base64 data URI in `::after`, `opacity: 0.03`, `pointer-events: none`.
+- **Typographic contrast:** Never use display (serif) fonts for long-form paragraph text. Body (sans-serif) for paragraphs.
+
+---
 
 ## BEHAVIORAL WORKFLOW
 
-When designing a user flow or interface, follow this sequence:
+### For New Screens/Flows
 
-### Step 1: Define the User and the Goal
+1. Write the user goal in plain language
+2. Determine register (brand or product)
+3. Map the flow as a sequence of states
+4. Define content hierarchy (primary, secondary, deferrable)
+5. Design all 6 UI states explicitly
+6. Apply visual craft laws (color, type, spacing, motion)
+7. Run the AI slop test
+8. Check accessibility and responsive behavior
+9. Verify against anti-patterns and absolute bans
 
-- Who is using this? (Admin, first-time user, power user?)
-- What is their specific Job-to-be-Done on this screen?
+### For Improving Existing UI
 
-### Step 2: Map the Flow (Not the Screen)
+1. Identify where users hesitate, misclick, or become confused
+2. Determine whether the issue is hierarchy, wording, states, flow, or craft
+3. Fix the most important friction first
+4. Re-check state coverage, accessibility, and anti-patterns
 
-- Map the step-by-step path the user must take to achieve the goal.
-- Eliminate unnecessary steps. Ask: "Can the system figure this out automatically?"
-
-### Step 3: Define the Content Hierarchy
-
-- What is the single most important piece of information? Make it the most prominent.
-- What is the primary action? Make it the most visually distinct (Primary Button).
-- Hide secondary actions and advanced settings behind progressive disclosure.
-
-### Step 4: Map the 6 UI States
-
-Do not just design the "Happy Path." Define how the UI looks and behaves in:
-
-1. **Ideal State:** Data is present and looks perfect.
-2. **Empty State:** First-time use, no data exists yet (provide a Call to Action).
-3. **Loading State:** Data is being fetched or an action is processing.
-4. **Error State:** The action failed (network error, validation error).
-5. **Partial State:** Only some data is available, or text is extremely long/short.
-6. **Disabled State:** The user does not have permission, or prerequisites aren't met.
-
-### Step 5: Apply Error Prevention & Forgiveness
-
-- Add confirmation dialogs or "Undo" snackbars for destructive actions.
-- Write empathetic, jargon-free error messages that provide a clear path to resolution.
-
-### Step 6: Audit Accessibility (a11y)
-
-- Ensure all interactive elements are reachable via keyboard (Tab/Enter).
-- Ensure color contrast meets minimum WCAG standards.
-- Ensure forms have explicit labels (not just placeholders).
-
-### Step 7: Before Finalizing — Re-check
-
-- Re-check the primary user goal.
-- Re-check that the primary action is obvious.
-- Re-check that all 6 UI states are covered.
-- Re-check error prevention and recovery paths.
-- Re-check accessibility basics.
-- Re-check whether the design is simpler and clearer than before.
-- Re-check whether the interface supports user success, not just stakeholder preference.
-
-***
-
-## BEHAVIORAL SECTIONS
-
-### A. When designing a new screen or flow
-
-1. Write the user goal in plain language.
-2. Define the primary action the user should take.
-3. Map the flow as a sequence of states, not just one static screen.
-4. Decide what information is essential, secondary, and deferrable.
-5. Design loading, empty, success, and error states explicitly.
-6. Choose familiar patterns before inventing new interaction logic.
-7. Check accessibility and mobile/narrow-screen behavior early.
-8. Keep the first version focused on the core path.
-
-### B. When improving an existing UI
-
-1. Identify where users hesitate, misclick, abandon, or become confused.
-2. Determine whether the issue is hierarchy, wording, state visibility, flow sequencing, or interaction safety.
-3. Fix the most important source of friction first.
-4. Remove or defer anything that distracts from the primary path.
-5. Re-check state coverage and accessibility after the improvement.
-
-### C. When designing forms
-
-1. Group related fields logically.
-2. Ask for only the information truly needed at that stage.
-3. Use labels, help text, defaults, and validation feedback to reduce ambiguity.
-4. Make the next step obvious.
-5. Make errors specific and recoverable.
-6. Preserve valid field state if one field fails validation — never wipe the whole form.
-
-### D. When handling destructive or risky actions
-
-1. Decide whether confirmation, undo, or staged commitment is best.
-2. Use stronger friction only when the risk justifies it.
-3. Make consequences clear before the action is taken.
-4. Make recovery or reversal visible when possible.
-5. Never execute a destructive action on a single click without safeguard.
-
-***
-
-## KEY DIAGNOSTIC QUESTIONS
-
-Ask these when evaluating a UI/UX design:
-
-- **The Visibility Check:** How will the user definitively know this background action (like a save or a delete) was successful?
-- **The Memory Check:** Does this screen require the user to remember complex information from a previous step? (Design for recognition, not recall.)
-- **The Recovery Check:** If the user accidentally clicks the wrong button or deletes a record here, how easily and quickly can they recover?
-- **The Jargon Check:** Does the interface speak the user's language, or did database column names (like `user_guid`) leak into the UI?
-- **The Edge Case Check:** What happens to this layout if a user inputs a name that is 50 characters long? What if it's translated into German (which takes 30% more space)?
-
-***
-
-## NON-NEGOTIABLE CHECKLIST
-
-- [ ] The primary Call to Action (CTA) is obvious and singular per view
-- [ ] All asynchronous actions have distinct loading indicators and definitive success/failure states
-- [ ] Error messages are empathetic, jargon-free, and clearly state the next steps
-- [ ] The 6 UI states (Ideal, Empty, Error, Loading, Partial, Disabled) are all accounted for
-- [ ] Destructive actions are protected by a confirmation step or a reliable undo feature
-- [ ] Technical jargon and internal system names have been eradicated from user-facing copy
-
-***
+---
 
 ## ANTI-PATTERNS
 
-### Exposing the Machine
+| Anti-Pattern | What It Looks Like | Fix |
+|---|---|---|
+| Exposing the Machine | Raw stack traces, HTTP codes in UI | Catch at boundary, translate to human-readable copy |
+| Mystery Meat Navigation | Icons without text labels | Pair icons with text labels for primary navigation |
+| Dead End Empty State | "No documents found" with no actions | Explanation + primary CTA to create first item |
+| Unforgiving Interface | Form clears all fields on one error | Preserve valid state, warn before destruction |
+| Component-Centric Thinking | Starting from widgets, not user journey | Design components to serve the flow |
 
-**What it looks like:** Displaying raw stack traces, generic "HTTP 500" errors, or database column names (`first_name_str`) in the UI.
-**Why it is harmful:** It spikes cognitive load, frightens non-technical users, and provides zero actionable guidance on how to fix the problem.
-**What to do instead:** Catch errors at the boundary and translate them into human-readable, actionable copy: "We couldn't save your profile right now. Please try again in a few minutes."
+---
 
-### The "Mystery Meat" Navigation
+## NON-NEGOTIABLE CHECKLIST
 
-**What it looks like:** Using obscure icons without text labels, assuming the user will hover over them to figure out what they do.
-**Why it is harmful:** Forces the user to rely on memory rather than recognition. Increases interaction time and friction.
-**What to do instead:** Always pair icons with text labels, especially for primary navigation or complex actions.
+Before delivering any frontend work:
 
-### The Dead End (Orphaned Empty State)
+- [ ] Primary CTA is obvious and singular per view
+- [ ] All async actions have loading indicators and success/failure states
+- [ ] Error messages are empathetic and state next steps
+- [ ] All 6 UI states accounted for
+- [ ] Destructive actions protected
+- [ ] No technical jargon in user-facing copy
+- [ ] Body text ≥ 16px
+- [ ] No pure black or pure white — all neutrals tinted
+- [ ] Motion uses exponential ease-out, no bounce
+- [ ] `prefers-reduced-motion` respected with alternatives
+- [ ] Touch targets ≥ 44px
+- [ ] Focus rings visible for keyboard navigation
+- [ ] Line length capped at 65-75ch
+- [ ] No items from the absolute bans list
+- [ ] Passes the AI slop test
 
-**What it looks like:** A page that says "No documents found" with absolutely no buttons, links, or instructions on what to do next.
-**Why it is harmful:** It abandons the user entirely.
-**What to do instead:** Every empty state should include an explanation of what goes there and a primary button to create/add the first item.
+---
 
-### The Unforgiving Interface
-
-**What it looks like:** A form that clears all 20 fields if the user gets one validation error, or a "Delete Account" button that executes instantly with one click.
-**Why it is harmful:** Punishes users for inevitable human error, causing massive frustration and churn.
-**What to do instead:** Preserve valid state. Warn before destruction, or provide a grace period to undo.
-
-### Component-Centric Thinking
-
-**What it looks like:** Starting from widgets, layout components, and visual elements rather than the actual journey the user is trying to complete.
-**Why it is harmful:** Produces screens that look assembled but do not guide the user through a real task. The design works as a collection of parts, not as an experience.
-**What to do instead:** Start from the user journey. Design components to serve the flow, not the other way around.
-
-***
-
-## OUTPUT CONTRACT
-
-When designing UI/UX flows, structure your output as follows:
-
-```markdown
-
-## User Goal & Context
-
-What the user is trying to accomplish and their technical proficiency.
-
-## Flow Structure
-
-1. User does X
-2. System does Y
-3. User sees Z
-
-## Layout & Hierarchy Logic
-
-What goes where and why. Which element is primary, secondary, tertiary.
-
-## State Coverage
-
-- **Ideal:** [Description]
-- **Empty:** [Description + Call to Action]
-- **Loading:** [Skeleton loaders / Spinners / Disabled buttons]
-- **Error:** [Specific error copy and recovery path]
-- **Partial:** [Description]
-- **Disabled:** [Description]
-
-## Interaction & Feedback
-
-Hover states, transitions, success toasts.
-
-## Accessibility Requirements
-
-ARIA labels, focus management, contrast notes.
-```
-
-***
-
-## EXAMPLES OF GOOD BEHAVIOR
-
-### Good: Handling Asynchronous State
-
-**âŒ Bad Approach:** User clicks "Submit". The button does nothing. Two seconds later, the page reloads.
-**âœ… Good Approach:** "When the user clicks 'Submit', the button should immediately enter a `disabled` state and display a loading spinner. The cursor should change to `wait`. Once the API returns a 200 OK, a green success toast should appear in the top right, and the form should reset."
-
-### Good: Humanizing Error Messages
-
-**âŒ Bad Copy:** `Error: Invalid password format. Regex validation failed.`
-**âœ… Good Copy:** `Your password needs to be at least 8 characters long and include a number.`
-
-### Good: Designing for Recognition (Not Recall)
-
-"In the multi-step checkout flow, the user shouldn't have to remember what they ordered while entering their credit card. We need to persist an 'Order Summary' sidebar on the right side of the screen throughout Steps 2, 3, and 4 so the context remains visible at all times."
-
-### Good: UX vs Implementation Tradeoff
-
-"The multi-step wizard would be cleaner visually, but it introduces extra navigation cost for a task most users complete in under a minute. A well-grouped single-page form with clear sections and inline validation is the better tradeoff for now."
-
-***
-
-## FILE RELATIONSHIPS
-
-| Related File | Relationship |
-| --- | --- |
-| `anti-gravity-core.md` | Core principles apply: "Communicate with precision" (translates to precise UI copy) and "Consider failure modes" (translates to UI error states). |
-| `skill-coding.md` | Designer mode plans the interface; Builder mode writes the React/CSS to implement it. |
-| `skill-product-thinking.md` | UI/UX is the physical manifestation of Product Thinking. You must know the Job-to-be-Done before drawing a single button. |
-| `expert-cognitive-patterns.md` | Employs the "Anti-Comfort" pattern to challenge assumptions about how users actually behave vs how we want them to behave. |
-
-***
-
-## AUTHORITY
-
-If any other file in this system appears to contradict this file on **how UI/UX should be reasoned through as a domain skill**, this file is authoritative unless a project-level override is explicitly documented.
-
-***
-
-## FINAL RULE
-
-A good interface helps users succeed without making them think harder than necessary.
-
-If the user still feels lost, the design is not good enough.
-
-***
-
-## VERSION HISTORY
-
-| Version | Date | Changes |
-| --- | --- | --- |
-| Gold v1.0 | Initial | Complete UI/UX skill — mindset, triggers, tradeoff framework table, 6-step workflow, 6 UI States model, diagnostic questions, 4 anti-patterns, output contract |
-| Gold v1.1 | Upgrade | Added UI/UX Lenses (10-lens framework) from C including Performance Perception and Implementation Realism; added Authority statement from C; added Behavioral Sections Aâ€“D (Forms, Destructive Actions) from C; added Before-Finalizing Re-check as Step 7 from B; added Final Rule from B; added UI/UX Heuristics list from A; added Component-Centric Thinking anti-pattern from B; added UX vs Implementation tradeoff example from C |
+**Final Rule:** A good interface helps users succeed without making them think harder than necessary. If the user still feels lost, the design is not good enough. If someone could say "AI made that" without hesitation, the craft is not good enough.

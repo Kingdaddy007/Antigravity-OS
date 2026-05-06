@@ -28,20 +28,20 @@ on real work in that domain.
 
 | # | File | Primary Mode | What It Governs |
 | :--- | :--- | :--- | :--- |
-| 1 | [skill-coding.md]({{GLOBAL_CONFIG_URI}}/skills/coding/SKILL.md) | Builder | Implementation quality, readability, error handling, conventions |
-| 2 | [skill-architecture.md]({{GLOBAL_CONFIG_URI}}/skills/architecture/SKILL.md) | Architect | System decomposition, boundaries, coupling and cohesion, patterns |
-| 3 | [skill-debugging.md]({{GLOBAL_CONFIG_URI}}/skills/debugging/SKILL.md) | Debugger | Symptom vs cause, evidence gathering, hypothesis ranking, root cause |
-| 4 | [skill-review-audit.md]({{GLOBAL_CONFIG_URI}}/skills/review-audit/SKILL.md) | Reviewer | Correctness, maintainability, security, anti-patterns, code smells |
-| 5 | [skill-security.md]({{GLOBAL_CONFIG_URI}}/skills/security/SKILL.md) | Security | STRIDE, trust boundaries, auth and authz, input validation, secrets |
-| 6 | [skill-ui-ux.md]({{GLOBAL_CONFIG_URI}}/skills/ui-ux/SKILL.md) | Designer | User flows, cognitive load, states, accessibility, interaction |
-| 7 | [skill-testing.md]({{GLOBAL_CONFIG_URI}}/skills/testing/SKILL.md) | Builder / Reviewer | Test strategy, test levels, edge cases, regression prevention |
-| 8 | [skill-performance.md]({{GLOBAL_CONFIG_URI}}/skills/performance/SKILL.md) | Performance | Bottleneck detection, profiling, measure-first optimization |
-| 9 | [skill-database.md]({{GLOBAL_CONFIG_URI}}/skills/database/SKILL.md) | Architect / Builder | Schema design, indexing, migrations, access patterns |
-| 10 | [skill-api-design.md]({{GLOBAL_CONFIG_URI}}/skills/api-design/SKILL.md) | Architect / Builder | Contract design, versioning, error handling, backward compatibility |
-| 11 | [skill-devops-infra.md]({{GLOBAL_CONFIG_URI}}/skills/devops-infra/SKILL.md) | Architect / Debugger | CI/CD, environments, observability, deployment, incident response |
-| 12 | [skill-refactoring.md]({{GLOBAL_CONFIG_URI}}/skills/refactoring/SKILL.md) | Optimizer | Debt identification, safe refactoring, Strangler Fig, scope control |
-| 13 | [skill-research-analysis.md]({{GLOBAL_CONFIG_URI}}/skills/research-analysis/SKILL.md) | Research | Structured investigation, evidence quality, comparison methodology |
-| 14 | [skill-product-thinking.md]({{GLOBAL_CONFIG_URI}}/skills/product-thinking/SKILL.md) | Cross-cutting | Jobs-to-be-Done, scoping, success metrics, opportunity cost |
+| 1 | [skill-coding.md](file:///C:/Users/Oviks/.gemini/antigravity/skills/coding/SKILL.md) | Builder | Implementation quality, readability, error handling, conventions |
+| 2 | [skill-architecture.md](file:///C:/Users/Oviks/.gemini/antigravity/skills/architecture/SKILL.md) | Architect | System decomposition, boundaries, coupling and cohesion, patterns |
+| 3 | [skill-debugging.md](file:///C:/Users/Oviks/.gemini/antigravity/skills/debugging/SKILL.md) | Debugger | Symptom vs cause, evidence gathering, hypothesis ranking, root cause |
+| 4 | [skill-review-audit.md](file:///C:/Users/Oviks/.gemini/antigravity/skills/review-audit/SKILL.md) | Reviewer | Correctness, maintainability, security, anti-patterns, code smells |
+| 5 | [skill-security.md](file:///C:/Users/Oviks/.gemini/antigravity/skills/security/SKILL.md) | Security | STRIDE, trust boundaries, auth and authz, input validation, secrets |
+| 6 | [skill-ui-ux.md](file:///C:/Users/Oviks/.gemini/antigravity/skills/ui-ux/SKILL.md) | Designer | User flows, cognitive load, states, accessibility, interaction |
+| 7 | [skill-testing.md](file:///C:/Users/Oviks/.gemini/antigravity/skills/testing/SKILL.md) | Builder / Reviewer | Test strategy, test levels, edge cases, regression prevention |
+| 8 | [skill-performance.md](file:///C:/Users/Oviks/.gemini/antigravity/skills/performance/SKILL.md) | Performance | Bottleneck detection, profiling, measure-first optimization |
+| 9 | [skill-database.md](file:///C:/Users/Oviks/.gemini/antigravity/skills/database/SKILL.md) | Architect / Builder | Schema design, indexing, migrations, access patterns |
+| 10 | [skill-api-design.md](file:///C:/Users/Oviks/.gemini/antigravity/skills/api-design/SKILL.md) | Architect / Builder | Contract design, versioning, error handling, backward compatibility |
+| 11 | [skill-devops-infra.md](file:///C:/Users/Oviks/.gemini/antigravity/skills/devops-infra/SKILL.md) | Architect / Debugger | CI/CD, environments, observability, deployment, incident response |
+| 12 | [skill-refactoring.md](file:///C:/Users/Oviks/.gemini/antigravity/skills/refactoring/SKILL.md) | Optimizer | Debt identification, safe refactoring, Strangler Fig, scope control |
+| 13 | [skill-research-analysis.md](file:///C:/Users/Oviks/.gemini/antigravity/skills/research-analysis/SKILL.md) | Research | Structured investigation, evidence quality, comparison methodology |
+| 14 | [skill-product-thinking.md](file:///C:/Users/Oviks/.gemini/antigravity/skills/product-thinking/SKILL.md) | Cross-cutting | Jobs-to-be-Done, scoping, success metrics, opportunity cost |
 
 ***
 

@@ -17,8 +17,10 @@ against each dimension below. Score each dimension.
 
 - If **Reasoning Transparency** scores **Failing** — add reasoning
   before delivery. Conclusions without logic are not acceptable.
+
 - If **Actionability** scores **Needs Work** — add specific next steps
   before delivery.
+
 - If **3 or more dimensions** score **Needs Work** — restructure
   before delivery.
 
@@ -159,16 +161,15 @@ someone can actually use it.
 
 | Dimension | Score | Notes |
 | :--- | :--- | :--- |
-| Structure and Organization | | |
-| Lead with the Answer | | |
-| Reasoning Transparency / Assumptions | | |
-| Precision and Specificity | | |
-| Calibrated Depth / Brevity Balance | | |
-| Actionability | | |
-| Tradeoff and Uncertainty Honesty | | |
-| Mode Alignment | | |
-| Tone Quality / Audience Fit | | |
-
+| Structure and Organization |||
+| Lead with the Answer |||
+| Reasoning Transparency / Assumptions |||
+| Precision and Specificity |||
+| Calibrated Depth / Brevity Balance |||
+| Actionability |||
+| Tradeoff and Uncertainty Honesty |||
+| Mode Alignment |||
+| Tone Quality / Audience Fit |||
 ***
 
 ## DELIVERY DECISION

@@ -125,8 +125,33 @@ Do NOT stop automatically. Instead:
 ---
 
 ### MANDATORY STOP-AND-VERIFY GATE
+
+>
 > **[CONTEXT AMNESIA FAILSAFE]**
-> Do NOT proceed to Step 1 until you have verified in your `<thought_process>` that all required context files and skill files have been read using tool calls. You must state: "I have read X, Y, Z files and I am ready to begin."
+> Do NOT proceed to Step 1 until you have SILENTLY verified that all required context files and skill files have been read using tool calls.
+
+### STEP 0 — WORKSPACE ISOLATION (MANDATORY)
+
+**Goal:** Create a clean, isolated workspace before writing any implementation code.
+
+Before writing any implementation code:
+
+1. Create a new git branch from the current clean state:
+   `git checkout -b feature/<short-name>`
+   Or, if the IDE supports it, create a git worktree:
+   `git worktree add ../feature-<short-name> -b feature/<short-name>`
+
+2. Run the project's test suite / build command to verify a clean baseline.
+   If the baseline is red (pre-existing failures), STOP and report to the user.
+   Do NOT proceed with implementation on a broken baseline unless the user explicitly overrides.
+
+3. All implementation work happens on this branch/worktree.
+   The main working tree stays untouched until merge.
+
+This step is non-negotiable. If the adapter or environment does not support
+worktrees, use a standard branch. If git is not initialized, initialize it first.
+
+---
 
 ### STEP 1 — DEFINE THE FEATURE OBJECTIVE
 
@@ -134,7 +159,7 @@ Do NOT stop automatically. Instead:
 
 #### Load Template (Step 1)
 
-- [REQUIRED] Load [feature-plan.md]({{GLOBAL_CONFIG_URI}}/global_templates/feature-plan.md)
+- [REQUIRED] Load [feature-plan.md](file:///C:/Users/Oviks/.gemini/antigravity/global_templates/feature-plan.md)
 - Follow the structure and guidance in the template to scope and plan the feature before implementation.
 
 #### Action: Define Objective (Step 1)
@@ -144,8 +169,10 @@ Do NOT stop automatically. Instead:
 3. Identify the Job-to-be-Done:
    > "When [situation], the user wants to [motivation] so they
    > can [expected outcome]"
+
 4. Define the success metric:
    > "We will know this worked when [measurable behavior] changes"
+
 5. Identify the riskiest assumption — the thing that, if wrong, invalidates the effort
 6. Identify whether this is user-facing, internal, operational, or infrastructure-facing
 
@@ -216,12 +243,15 @@ If the feature cannot be placed cleanly into the current system, escalate briefl
 
 ```text
 In scope:
+
 - [item]
 - [item]
 
 Out of scope (deferred):
+
 - [item]
 - [item]
+
 ```
 
 #### Gate: Scope Locking
@@ -301,10 +331,12 @@ High-risk, low-reversibility features require stronger verification planning at 
 
 ```text
 Implementation shape:
+
 - UI component / endpoint / service / repository / migration
 - Main state and side-effect boundaries
 - Data flow and interaction points
 - Implementation order
+
 ```
 
 #### Gate: Structural Fit
@@ -329,16 +361,46 @@ If the implementation shape is fighting the existing architecture, pause and adj
 
 ```text
 Verification plan:
+
 - Test targets: [list]
 - Critical edge cases: [list]
 - Failure paths: [list]
 - Confidence gaps: [list]
 - Runtime signals if relevant: [list]
+
 ```
 
 #### Gate: Verifiability
 
 If there is no credible verification path, reduce scope or redesign before building. Do NOT implement a feature you cannot verify.
+
+---
+
+### MICRO-TASK RULE (MANDATORY)
+
+Every implementation plan produced at Step 5/6 MUST be broken into tasks that take 2-5 minutes each.
+
+Each task must specify:
+
+- **Exact files** to create or modify
+- **The specific change** (what code to write, what to add/remove)
+- **Verification command** (test to run, build to check, output to confirm)
+- **Completion evidence** (what "done" looks like — a passing test, a screenshot, a log line)
+
+Tasks that are vague ("set up the component"), unbounded ("implement the feature"),
+or missing verification steps are rejected. Rewrite them.
+
+Why: Smaller tasks reduce hallucination, make rollbacks trivial, and give the user
+constant progress visibility.
+
+#### Automatic Dispatch Trigger
+
+If the resulting micro-task list has MORE THAN 3 tasks, you MUST proactively offer to use the Task Dispatch workflow.
+
+State to the user:
+> "We have [N] tasks here. To protect our context window and prevent hallucination, I recommend we dispatch the isolated tasks (like [Task X] and [Task Y]) to separate chat windows using `/workflow-task-dispatch`. Should I generate the Task Briefs for you?"
+
+Do NOT automatically start executing a massive sequence without offering this choice.
 
 ---
 
@@ -361,6 +423,7 @@ Load `skill-coding` and follow its behavioral workflow.
 2. Implement Server Action or API route
 3. Follow the pattern:
    **Validate → Authenticate → Authorize → Execute → Return Result**
+
 4. Handle all error paths — never just the happy path
 5. Follow `coding-standards.md` conventions
 
@@ -442,16 +505,56 @@ List any issues found and fix them before delivery.
 
 ```text
 Verified:
+
 - [item]
 - [item]
 
 Not yet verified:
+
 - [item]
+
 ```
 
 #### Gate: Readiness
 
 Do NOT call the feature done because the happy path worked once. Adjacent behavior, failure paths, and rollout risk all count.
+
+#### Verification Evidence Gate (MANDATORY)
+
+No task or workflow can be declared complete without verification evidence.
+
+Acceptable evidence (at least one required):
+
+- A test that was red, then green after the change
+- A build/lint command that passes
+- A command output showing the expected behavior
+- A screenshot or log demonstrating the fix
+- A structural verification trace (data flow from origin to consumer)
+
+"I believe it works" is NOT evidence. "It should work" is NOT evidence.
+Run the verification. Show the output. Then declare done.
+
+---
+
+### STEP 9A — MERGE REVIEW GATE (MANDATORY)
+
+**Goal:** Two-stage self-review before branch finalization or task sequence completion.
+
+#### Stage 1: Spec Compliance
+
+- Does the implementation match what was asked for?
+- Are there missing requirements?
+- Is there scope creep (things built that weren't requested)?
+
+#### Stage 2: Code Quality
+
+- Error handling on foreseeable failures?
+- Security basics addressed?
+- Naming and patterns consistent with project standards?
+- No dead code, no commented-out blocks, no TODOs without tickets?
+
+If either stage has blocking issues, fix them before declaring complete.
+Report the review results to the user with a summary.
 
 ---
 
@@ -462,31 +565,41 @@ Do NOT call the feature done because the happy path worked once. Adjacent behavi
 #### Delivery Structure
 
 ```text
+
 ## What Was Built
+
 [1-2 sentence summary of the feature]
 
 ## Approach
+
 [Brief description of approach and key decisions]
 
 ## Files Changed
+
 [List of files created or modified]
 
 ## Key Decisions
+
 [Non-obvious decisions and why they were made]
 
 ## Assumptions
+
 [Anything assumed that the user should verify]
 
 ## What to Test
+
 [How to verify the feature works — manual testing steps]
 
 ## What to Watch
+
 [Risks, edge cases, or things to monitor after deployment]
 
 ## Deferred Scope
+
 [Items explicitly moved to Phase 2 or future work]
 
 ## Next Steps
+
 [Follow-up work or rollout considerations]
 ```
 
@@ -533,6 +646,7 @@ If ANY answer is "yes," write the entry NOW before closing. Do not defer.
    > "This is growing beyond the defined scope. The new item is
    > [X]. Should I: (a) add it to this feature, (b) defer it to
    > Phase 2, or (c) skip it entirely?"
+
 4. Do NOT silently expand scope
 
 ### When requirements are discovered during implementation
@@ -647,6 +761,7 @@ Before marking a feature complete:
 ### Build Fails After Code Changes
 
 ```
+
 1. Check the EXACT error message — read it fully, don't skim
 2. Check if the error is in YOUR changed files or in a dependency
 3. If syntax error → fix in place, do not restructure
@@ -659,6 +774,7 @@ Before marking a feature complete:
 ### Tests Fail After Implementation
 
 ```
+
 1. Run the SINGLE failing test in isolation — is it the test or the code?
 2. Check if the test was written against OLD behavior that your feature intentionally changed
 3. If the test assumptions are stale → update the test to match new behavior
@@ -670,6 +786,7 @@ Before marking a feature complete:
 ### Session Interrupted Mid-Workflow
 
 ```
+
 1. Read task.md for current phase and completed steps
 2. Announce: "Resuming [workflow] from Phase [N] — [phase name]"
 3. Re-load the context and skill files listed in the workflow header
@@ -681,6 +798,7 @@ Before marking a feature complete:
 ### Feature Scope Keeps Growing
 
 ```
+
 1. STOP coding immediately
 2. Return to Step 3 (Scope Definition)
 3. List the new items that appeared
@@ -692,6 +810,7 @@ Before marking a feature complete:
 ### Architecture Doesn't Fit
 
 ```
+
 1. STOP before forcing the code into the wrong place
 2. Return to Step 5 (Design Shape)
 3. Identify WHY it doesn't fit — wrong layer? wrong module? missing abstraction?
@@ -703,6 +822,7 @@ Before marking a feature complete:
 ### Context Files Are Empty
 
 ```
+
 1. Announce: "Context file [filename] is empty — I'm working without project-specific guidance"
 2. Ask: "Do you want me to populate [filename] based on what I know about your project?"
 3. If yes → fill it now, then resume the workflow
@@ -721,6 +841,7 @@ This workflow integrates with `task.md`.
 **On interruption:** State file preserves progress for next session.
 
 Phase map for state tracking:
+
 ```
 1_define_objective → 2_ground_context → 3_define_scope → 4_identify_risks →
 5_design_shape → 6_verification_plan → 7_implement → 8_self_review →
@@ -748,6 +869,3 @@ This workflow succeeds when:
 Build the smallest correct feature in the right place, with clear behavior and visible verification — not the broadest or flashiest implementation.
 
 When in doubt, reduce scope before reducing quality.
-
-
-

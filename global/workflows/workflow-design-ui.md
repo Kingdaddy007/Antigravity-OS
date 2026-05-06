@@ -64,9 +64,12 @@ If the task includes both design and implementation, complete design steps first
 | UI requires new API endpoints | `skill-api-design` |
 | UI handles auth flows or sensitive data | `skill-security` |
 | Responsiveness or rendering cost matters | `skill-performance` |
+| Implementing Type B animations or Motion | `skill-advanced-frontend-execution` |
 
 ### Contexts — Always Load
 
+- `prototyping-spec.md`
+- `visual-identity.md`
 - `design-system.md`
 - `stack-context.md`
 - `coding-standards.md`
@@ -123,6 +126,7 @@ Clarify the user goal before designing. Do NOT start designing components agains
    - What is the user trying to accomplish?
    - Frame as Job-to-be-Done:
      > "When [situation], the user wants to [motivation] so that [outcome]"
+
    - What does the user have BEFORE this interaction?
    - What do they have AFTER?
    - Distinguish the feature request from the actual user need
@@ -415,16 +419,21 @@ Final UX quality check, caveats, and refinement suggestions if needed.
 #### Delivery Structure (Step 8)
 
 ```markdown
+
 ## What Was Built
+
 [1-2 sentence summary of the UI feature]
 
 ## User Goal
+
 [Job-to-be-Done statement]
 
 ## Flow Structure
+
 [Sequence of steps, entry, exits, friction points addressed]
 
 ## States Implemented
+
 - Loading: [approach]
 - Empty (first use): [approach]
 - Empty (filtered): [approach]
@@ -436,24 +445,31 @@ Final UX quality check, caveats, and refinement suggestions if needed.
 - Permission denied: [approach if applicable]
 
 ## Components Used
+
 [List of design system components used]
 
 ## Responsive Behavior
+
 [How the layout changes at each breakpoint]
 
 ## Accessibility
+
 [Summary of accessibility measures implemented]
 
 ## Key Decisions
+
 [Non-obvious design or implementation decisions and rationale]
 
 ## Tradeoffs and Constraints
+
 [Where simplicity competed with flexibility, density with readability]
 
 ## What to Test
+
 [How to manually verify each state]
 
 ## Next Steps
+
 [Deferred scope, Phase 2 items, follow-up work]
 ```
 

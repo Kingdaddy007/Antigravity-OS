@@ -234,11 +234,14 @@ Reversibility: [fully reversible / partially / irreversible]
 
 ```markdown
 Verified before release:
+
 - [item]
 - [item]
 
 Open concerns (accepted or deferred):
+
 - [item with reason]
+
 ```
 
 #### Gate (Step 3 — Readiness Verification)
@@ -428,42 +431,54 @@ Do not continue rollout just because the sequence says "next" if production sign
 #### Delivery Structure (Step 9 — Deployment Record)
 
 ```markdown
+
 ## Deployment Record
 
 ### Date and Time
+
 [When the deployment occurred]
 
 ### What Was Deployed
+
 [Features, fixes, changes included in this release]
 
 ### Deployment Type
+
 [Regular release / Hotfix / Infrastructure change]
 
 ### Risk Classification
+
 [Low / Moderate / High / Critical — and why]
 
 ### Pre-Deployment Checks
+
 [All passed / Note any concerns that were accepted and why]
 
 ### Rollout Strategy Used
+
 [Direct / Feature-flag / Staged / Canary / Blue-green]
 
 ### Post-Deployment Status
+
 [Healthy / Issues detected — describe]
 
 ### Monitoring Observations
+
 - Error rate: [normal / elevated — details]
 - Performance: [normal / degraded — details]
 - User reports: [none / describe]
 - Background jobs: [normal / issues — details]
 
 ### Rollback Required?
+
 [No / Yes — describe what happened]
 
 ### Action Items
+
 [Follow-up work triggered by this deployment]
 
 ### Follow-Up Needed
+
 [Observability gaps, regression tests, cleanup, post-mortem]
 ```
 

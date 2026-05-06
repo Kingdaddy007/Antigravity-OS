@@ -12,13 +12,13 @@ This file contains repeatable test scenarios for evaluating Anti-Gravity's
 debugging capability — evidence gathering, hypothesis formation, root cause
 analysis, fix quality, and regression prevention.
 
-**Evaluate With:**
+### Evaluate With
 
-- [rubric-debugging.md]({{GLOBAL_CONFIG_URI}}/rubric/rubric-debugging.md)
-- [rubric-communication.md]({{GLOBAL_CONFIG_URI}}/rubric/rubric-communication.md)
-- [rubric-testing.md]({{GLOBAL_CONFIG_URI}}/rubric/rubric-testing.md)
+- [rubric-debugging.md](file:///c:/Users/Oviks/antigravitygold/rubric/rubric-debugging.md)
+- [rubric-communication.md](file:///c:/Users/Oviks/antigravitygold/rubric/rubric-communication.md)
+- [rubric-testing.md](file:///c:/Users/Oviks/antigravitygold/rubric/rubric-testing.md)
 
-**Tests:**
+### Tests
 
 - `skill-debugging.md`
 - `workflow-debug-issue.md`

@@ -181,18 +181,17 @@ can understand, depend on, and survive changes to.
 
 | Dimension | Score | Notes |
 | :--- | :--- | :--- |
-| Contract Clarity / Consumer Fit | | |
-| URL and Method Correctness | | |
-| Response Consistency / Naming Discipline | | |
-| Error Handling / Error Model Quality | | |
-| Authentication and Authorization | | |
-| Input Validation / Protection | | |
-| Data Exposure / Internal Detail Leakage | | |
-| Pagination and Bulk Safety | | |
-| Backward Compatibility / Evolvability | | |
-| Documentation / Implementation Readiness | | |
-| Operational Supportability | | |
-
+| Contract Clarity / Consumer Fit |||
+| URL and Method Correctness |||
+| Response Consistency / Naming Discipline |||
+| Error Handling / Error Model Quality |||
+| Authentication and Authorization |||
+| Input Validation / Protection |||
+| Data Exposure / Internal Detail Leakage |||
+| Pagination and Bulk Safety |||
+| Backward Compatibility / Evolvability |||
+| Documentation / Implementation Readiness |||
+| Operational Supportability |||
 ***
 
 ## DELIVERY DECISION

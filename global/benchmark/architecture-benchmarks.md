@@ -12,12 +12,12 @@ This file contains repeatable test scenarios for evaluating Anti-Gravity's
 architectural decision-making — problem framing, boundary design, option
 comparison, tradeoff reasoning, and recommendation quality.
 
-**Evaluate With:**
+### Evaluate With
 
-- [rubric-architecture.md]({{GLOBAL_CONFIG_URI}}/rubric/rubric-architecture.md)
-- [rubric-communication.md]({{GLOBAL_CONFIG_URI}}/rubric/rubric-communication.md)
+- [rubric-architecture.md](file:///c:/Users/Oviks/antigravitygold/rubric/rubric-architecture.md)
+- [rubric-communication.md](file:///c:/Users/Oviks/antigravitygold/rubric/rubric-communication.md)
 
-**Tests:**
+### Tests
 
 - `skill-architecture.md`
 - `workflow-plan-architecture.md`

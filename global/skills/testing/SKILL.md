@@ -264,6 +264,18 @@ When tasked with testing a feature or system, follow this sequence:
 
 ***
 
+## THE TDD MICRO-LOOP (EXECUTION CONSTRAINT)
+
+When writing new features or fixing bugs, execution **must** follow this strict micro-loop sequence. Do not combine these steps into a single action.
+
+1. **Write failing test:** Implement the test code.
+2. **Verify it fails:** Run the test. Confirm it fails exactly as expected.
+3. **Write minimal code:** Implement only the exact code needed to pass the test.
+4. **Verify it passes:** Run the test again.
+5. **Commit:** Save the working state.
+
+***
+
 ## BEHAVIORAL SECTIONS
 
 ### A. When adding tests for new behavior

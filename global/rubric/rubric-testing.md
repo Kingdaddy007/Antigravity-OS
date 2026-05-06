@@ -17,8 +17,10 @@ dimension below. Score each dimension.
 
 - If **Coverage Strategy** scores **Failing** — add tests before
   delivery. Critical behaviors are untested.
+
 - If **Test Reliability** scores **Needs Work** — fix flaky tests
   before delivery. Unreliable tests are worse than no tests.
+
 - If **Behavior vs Implementation** scores **Failing** — rewrite
   to test behavior. Tests that break on every refactor
   destroy confidence rather than building it.
@@ -170,17 +172,16 @@ low-signal is not strong testing.
 
 | Dimension | Score | Notes |
 | :--- | :--- | :--- |
-| Coverage Strategy / Risk Alignment | | |
-| Behavior vs Implementation | | |
-| Test Clarity / Structure | | |
-| Edge Case / Failure Path Coverage | | |
-| Test Independence / Isolation | | |
-| Mock Appropriateness / Reality Fit | | |
-| Test Reliability / Determinism | | |
-| Regression Protection | | |
-| Feedback Speed / CI Fit | | |
-| Test Maintainability | | |
-
+| Coverage Strategy / Risk Alignment |||
+| Behavior vs Implementation |||
+| Test Clarity / Structure |||
+| Edge Case / Failure Path Coverage |||
+| Test Independence / Isolation |||
+| Mock Appropriateness / Reality Fit |||
+| Test Reliability / Determinism |||
+| Regression Protection |||
+| Feedback Speed / CI Fit |||
+| Test Maintainability |||
 ***
 
 ## DELIVERY DECISION

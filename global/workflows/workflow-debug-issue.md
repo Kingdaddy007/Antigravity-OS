@@ -126,8 +126,10 @@ Do NOT jump straight to a fix. Instead:
 ---
 
 ### MANDATORY STOP-AND-VERIFY GATE
+
+>
 > **[CONTEXT AMNESIA FAILSAFE]**
-> Do NOT proceed to Step 1 until you have verified in your `<thought_process>` that all required context files and skill files have been read using tool calls. You must state: "I have read X, Y, Z files and I am ready to begin."
+> Do NOT proceed to Step 1 until you have SILENTLY verified that all required context files and skill files have been read using tool calls.
 
 ### STEP 1 — UNDERSTAND THE SYMPTOM
 
@@ -220,14 +222,18 @@ If the symptom is still vague, tighten the definition before proceeding. Do not 
 
 ```text
 Evidence gathered:
+
 - [item]
 - [item]
 
 Evidence still missing:
+
 - [item]
 
 What the evidence suggests:
+
 - [summary]
+
 ```
 
 #### Gate (Step 2)
@@ -407,11 +413,14 @@ Code must pass the `skill-coding` Non-Negotiable Checklist before proceeding to 
 
 ```text
 Verified:
+
 - [item]
 - [item]
 
 Not yet verified:
+
 - [item]
+
 ```
 
 #### Gate (Step 6)
@@ -434,7 +443,7 @@ Do not treat "it stopped happening once" as sufficient proof for meaningful issu
 
 #### Load Template (Step 7)
 
-- [REQUIRED] Load [debug-report.md]({{GLOBAL_CONFIG_URI}}/global_templates/debug-report.md)
+- [REQUIRED] Load [debug-report.md](file:///C:/Users/Oviks/.gemini/antigravity/global_templates/debug-report.md)
 - Follow the structure and guidance in the template exactly to record the bug investigation.
 
 ---
@@ -445,7 +454,7 @@ Do not treat "it stopped happening once" as sufficient proof for meaningful issu
 2. Post-mortem format: Timeline, Impact, Root Cause using Five Whys, Contributing Factors, Action Items with owners and deadlines
 3. Blameless culture — focus on systems, not individuals
 
-#### Memory Capture (write to workspace `.agents/memory/` first, global only for cross-project lessons):
+#### Memory Capture (write to workspace `.agents/memory/` first, global only for cross-project lessons)
 
 - [ ] **Mistakes:** Log to `.agents/memory/mistakes-to-avoid.md` if this bug class could recur
 - [ ] **Patterns:** Log to `.agents/memory/common-patterns.md` if the fix reveals a reusable pattern
@@ -524,6 +533,7 @@ Before marking a bug fix as complete:
 ### Can't Reproduce the Bug
 
 ```
+
 1. Check if the bug is environment-specific (prod vs local vs staging)
 2. Check if it's timing-dependent (race condition, async order)
 3. Ask: "Under what conditions does this NEVER happen?" — the inverse helps isolate
@@ -535,6 +545,7 @@ Before marking a bug fix as complete:
 ### All Hypotheses Eliminated
 
 ```
+
 1. STOP — you're looking in the wrong area
 2. Widen the search: check infra, config, data, and external dependencies
 3. Check git log for recent changes in adjacent systems
@@ -547,6 +558,7 @@ Before marking a bug fix as complete:
 ### Fix Breaks Something Else
 
 ```
+
 1. REVERT the fix immediately — don't layer fix-on-fix
 2. The fix addressed a symptom, not the root cause — go back to Step 4
 3. Check: who else calls the code you changed?
@@ -558,6 +570,7 @@ Before marking a bug fix as complete:
 ### Bug is Actually a Feature Misunderstanding
 
 ```
+
 1. STOP debugging — this isn't a bug, it's a requirements gap
 2. Clarify: "Is this working as intended but not as expected?"
 3. If yes → switch to /workflow-build-feature to change the behavior
@@ -568,6 +581,7 @@ Before marking a bug fix as complete:
 ### Session Interrupted Mid-Debug
 
 ```
+
 1. Read task.md for current phase and completed steps
 2. Announce: "Resuming debug workflow from Phase [N]"
 3. Re-read the symptom statement and evidence gathered so far from task.md notes
@@ -578,6 +592,7 @@ Before marking a bug fix as complete:
 ### Pressure to Ship Incomplete Fix
 
 ```
+
 1. If P1/P2: ship a MITIGATION (feature flag, rollback) immediately
 2. Label it clearly: "This is mitigation, not a fix"
 3. Keep the debug workflow OPEN — do not close the investigation
@@ -596,6 +611,7 @@ This workflow integrates with `task.md`.
 **On interruption:** task.md preserves progress for next session.
 
 Phase map for state tracking:
+
 ```
 1_understand_symptom → 2_gather_evidence → 3_form_hypotheses → 4_isolate_root_cause →
 5_fix → 6_verify → 7_regression_defense → 8_post_fix_memory
@@ -617,6 +633,3 @@ Debug by reducing uncertainty until the cause becomes explainable — then fix t
 | :--- | :--- | :--- |
 | Gold v1.1 | Initial | Established the systematic sequence for diagnosing and fixing bugs |
 | Gold v1.2 | 2026-04-10 | Added Recovery Recipes and Workflow State Tracking integration |
-
-
-

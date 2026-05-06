@@ -17,8 +17,10 @@ each dimension below. Score each dimension.
 
 - If **Root Cause** scores **Failing** — do not deliver. The bug is not
   actually fixed.
+
 - If **Regression Prevention** scores **Needs Work** or below — write a
   regression test before delivery.
+
 - If **3 or more dimensions** score **Needs Work** — revisit the
   investigation before delivering.
 
@@ -157,16 +159,15 @@ temporarily disappeared.
 
 | Dimension | Score | Notes |
 | :--- | :--- | :--- |
-| Problem Definition | | |
-| Evidence Gathering | | |
-| Hypothesis Quality | | |
-| Symptom vs Cause Separation | | |
-| Root Cause Identification | | |
-| Fix Quality | | |
-| Verification Strength | | |
-| Regression Prevention | | |
-| Structural and Learning Awareness | | |
-
+| Problem Definition |||
+| Evidence Gathering |||
+| Hypothesis Quality |||
+| Symptom vs Cause Separation |||
+| Root Cause Identification |||
+| Fix Quality |||
+| Verification Strength |||
+| Regression Prevention |||
+| Structural and Learning Awareness |||
 ***
 
 ## DELIVERY DECISION

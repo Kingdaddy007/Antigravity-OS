@@ -12,14 +12,14 @@ This file contains repeatable test scenarios for evaluating Anti-Gravity's
 feature building capability — from problem definition through
 implementation to delivery.
 
-**Evaluate With:**
+### Evaluate With
 
-- [rubric-code-quality.md]({{GLOBAL_CONFIG_URI}}/rubric/rubric-code-quality.md)
-- [rubric-communication.md]({{GLOBAL_CONFIG_URI}}/rubric/rubric-communication.md)
-- [rubric-testing.md]({{GLOBAL_CONFIG_URI}}/rubric/rubric-testing.md)
-- [rubric-security.md]({{GLOBAL_CONFIG_URI}}/rubric/rubric-security.md)
+- [rubric-code-quality.md](file:///c:/Users/Oviks/antigravitygold/rubric/rubric-code-quality.md)
+- [rubric-communication.md](file:///c:/Users/Oviks/antigravitygold/rubric/rubric-communication.md)
+- [rubric-testing.md](file:///c:/Users/Oviks/antigravitygold/rubric/rubric-testing.md)
+- [rubric-security.md](file:///c:/Users/Oviks/antigravitygold/rubric/rubric-security.md)
 
-**Tests:**
+### Tests
 
 - `skill-coding.md`
 - `skill-product-thinking.md`

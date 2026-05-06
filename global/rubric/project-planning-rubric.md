@@ -106,15 +106,14 @@ we about to code our way into confusion?"**
 
 | Dimension | Score | Notes |
 | :--- | :--- | :--- |
-| Problem Clarity | | |
-| Scope Discipline | | |
-| Definition of Done | | |
-| Technical Feasibility | | |
-| Build Sequence Logic | | |
-| Timeline Realism | | |
-| Risk Awareness | | |
-| Communication Quality | | |
-
+| Problem Clarity |||
+| Scope Discipline |||
+| Definition of Done |||
+| Technical Feasibility |||
+| Build Sequence Logic |||
+| Timeline Realism |||
+| Risk Awareness |||
+| Communication Quality |||
 ---
 
 ## READINESS DECISION

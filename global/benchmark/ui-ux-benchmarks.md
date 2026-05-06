@@ -12,12 +12,12 @@ This file contains repeatable test scenarios for evaluating Anti-Gravity's
 UI/UX design and implementation capability — user goal clarity, state
 completeness, accessibility, interaction quality, and implementation readiness.
 
-**Evaluate With:**
+### Evaluate With
 
-- [rubric-ux.md]({{GLOBAL_CONFIG_URI}}/rubric/rubric-ux.md)
-- [rubric-communication.md]({{GLOBAL_CONFIG_URI}}/rubric/rubric-communication.md)
+- [rubric-ux.md](file:///C:/Users/Oviks/.gemini/antigravity/rubric/rubric-ux.md)
+- [rubric-communication.md](file:///C:/Users/Oviks/.gemini/antigravity/rubric/rubric-communication.md)
 
-**Tests:**
+### Tests
 
 - `skill-ui-ux.md`
 - `workflow-design-ui.md`
@@ -49,7 +49,7 @@ builder or a surface-level "make it nicer" assistant.
 2. Present it to Anti-Gravity as a real task — do not mention it is a benchmark.
 3. Let Anti-Gravity process it using its full system — skills, contexts, and workflows active as appropriate.
 4. Evaluate the output against the rubrics listed above.
-5. Record the score in [benchmark-results.md]({{GLOBAL_CONFIG_URI}}/memory/benchmark-results.md).
+5. Record the score in [benchmark-results.md](file:///C:/Users/Oviks/.gemini/antigravity/memory/benchmark-results.md).
 6. Compare scores across runs and versions to track improvement.
 
 ***
@@ -275,7 +275,7 @@ For each scenario, evaluate using `rubric-ux.md` dimensions:
 | Error Experience | Medium — errors are helpful, specific, and recoverable? |
 | Cognitive Load | Medium — information appropriately prioritized and scoped? |
 
-Record all scores in [benchmark-results.md]({{GLOBAL_CONFIG_URI}}/memory/benchmark-results.md).
+Record all scores in [benchmark-results.md](file:///C:/Users/Oviks/.gemini/antigravity/memory/benchmark-results.md).
 
 ***
 

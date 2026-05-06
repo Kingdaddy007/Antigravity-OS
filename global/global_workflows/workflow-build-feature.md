@@ -6,10 +6,9 @@ description: The complete step-by-step sequence for transforming feature request
 
 > **[CONTEXT AMNESIA FAILSAFE]**
 > YOU MUST USE TOOL CALLS TO READ THE FULL SOURCE FILE AND THE REQUIRED SKILLS/CONTEXTS BEFORE EXECUTING THIS.
-> PROVE YOU HAVE DONE THIS IN A `<thought_process>` BLOCK.
+> Verify silently in your internal reasoning that you have done this.
 
-
-> **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full 21,000-character logic, instructions, and implementation stages, the Agent MUST load and follow the [SOURCE FILE]({{GLOBAL_CONFIG_URI}}/workflows/workflow-build-feature.md).
+> **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full 21,000-character logic, instructions, and implementation stages, the Agent MUST load and follow the [SOURCE FILE](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-build-feature.md).
 
 ## WHAT THIS WORKFLOW DOES
 
@@ -21,7 +20,7 @@ Chains Architect, Developer, and Reviewer modes to prevent coding before underst
 
 ### 1. Load Full Instructions
 
-- [ ] **Load Source [REQUIRED]:** [workflow-build-feature.md]({{GLOBAL_CONFIG_URI}}/workflows/workflow-build-feature.md) (Follow all 11 steps).
+- [ ] **Load Source [REQUIRED]:** [workflow-build-feature.md](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-build-feature.md) (Follow all 11 steps).
 
 ### 2. Load Core Contexts & Skills (Always)
 
@@ -63,5 +62,3 @@ Chains Architect, Developer, and Reviewer modes to prevent coding before underst
 - **G4 (Safety):** Ensure all failure paths are tested, not just the happy path.
 
 > **Final Instruction:** Every detail from your original 20k word workflow is preserved in the Source file. Read it now.
-
-

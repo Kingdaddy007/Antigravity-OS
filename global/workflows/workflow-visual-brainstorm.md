@@ -24,6 +24,7 @@ expensive mistake in UI development: building something that looks
 different from what the user imagined.
 
 The output of this workflow is:
+
 1. A visual preview of the design direction (HTML file or Stitch mockup)
 2. Confirmed design tokens (colors, fonts, spacing) written to context files
 3. A clear "this is what we're building" visual reference
@@ -133,6 +134,7 @@ Recommend one. Let the user decide.
 #### Iteration Loop
 
 After presenting:
+
 - Ask: "What would you change? Colors, typography, layout, spacing?"
 - Apply the requested changes
 - Regenerate and re-present
@@ -163,6 +165,7 @@ After presenting:
 
 4. **Present to user**:
    "Here's your Stitch brief. Steps:
+
    1. Go to stitch.google.com
    2. Paste this brief as your prompt
    3. Optionally attach the visual-identity.md file for more context
@@ -206,6 +209,7 @@ Regardless of which path was used:
 #### Mode: Communicate
 
 Transition to the next phase:
+
 - If during project inception → return to Phase 3 (Architecture) of workflow-project-inception
 - If standalone design session → summarize decisions and suggest next workflow (workflow-design-ui or workflow-build-feature)
 

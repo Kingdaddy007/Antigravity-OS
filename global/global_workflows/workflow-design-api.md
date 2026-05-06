@@ -6,10 +6,9 @@ description: The systematic sequence for designing API endpoints and contracts â
 
 > **[CONTEXT AMNESIA FAILSAFE]**
 > YOU MUST USE TOOL CALLS TO READ THE FULL SOURCE FILE AND THE REQUIRED SKILLS/CONTEXTS BEFORE EXECUTING THIS.
-> PROVE YOU HAVE DONE THIS IN A `<thought_process>` BLOCK.
+> Verify silently in your internal reasoning that you have done this.
 
-
-> **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full 15,000-character logic, Error Taxonomy tables, and Server Action vs API Route decision matrices, the Agent MUST load and follow the [SOURCE FILE]({{GLOBAL_CONFIG_URI}}/workflows/workflow-design-api.md).
+> **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full 15,000-character logic, Error Taxonomy tables, and Server Action vs API Route decision matrices, the Agent MUST load and follow the [SOURCE FILE](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-design-api.md).
 
 ## WHAT THIS WORKFLOW DOES
 
@@ -21,7 +20,7 @@ Enforces a **Contract-First** discipline. It ensures APIs are designed for the c
 
 ### 1. Load Full Instructions
 
-- [ ] **Load Source [REQUIRED]:** [workflow-design-api.md]({{GLOBAL_CONFIG_URI}}/workflows/workflow-design-api.md) (Follow all 8 steps).
+- [ ] **Load Source [REQUIRED]:** [workflow-design-api.md](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-design-api.md) (Follow all 8 steps).
 
 ### 2. Load Core Contexts & Skills (Always)
 
@@ -63,5 +62,3 @@ Enforces a **Contract-First** discipline. It ensures APIs are designed for the c
 - **G4 (Implementation Leak):** Does the API shape expose private database IDs?
 
 > **Final Instruction:** Every detail of the Gold v1.1 API design process is preserved in the Source file. Read it now.
-
-
