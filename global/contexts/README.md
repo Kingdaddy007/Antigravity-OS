@@ -1,235 +1,146 @@
-# README — CONTEXTS FOLDER
+# README - CONTEXTS FOLDER
 
 **Location:** `.antigravity/contexts/`
-**Layer:** 6 — Ground Truth
-**Loading Tier:** 2 — **LOADED BY TASK**
+**Layer:** Ground truth
+**Loading Tier:** Tier 2 - loaded by task
 
-***
+---
 
 ## PURPOSE
 
-This folder contains YOUR project's ground truth. While `skills/`
-provide universal engineering expertise, context files ground that
-expertise in YOUR actual technology stack, YOUR conventions, YOUR
-architecture, YOUR business priorities, and YOUR domain rules.
+This folder contains the **live truth** Anti-Gravity should use when working inside a project.
 
-Without this folder, Anti-Gravity remains a strong general engineer.
-With this folder, it becomes a strong engineer for THIS specific project.
+Contexts are not the constitution and they are not generic teaching files. They are the active project facts that make recommendations less generic and more correct.
 
-Skills tell Anti-Gravity HOW to think.
-Contexts tell Anti-Gravity WHAT WORLD it is thinking inside.
+Skills answer **how to think**.
+Contexts answer **what is true here**.
 
-Without context, strong skills still produce generic output.
+---
 
-**These files are templates that YOU fill in.** Anti-Gravity does not
-generate the content — you provide your project's actual details.
-
-***
-
-## WHAT THIS FOLDER ANSWERS
-
-- What product are we building?
-- Who are the users?
-- What stack are we using?
-- What architecture already exists?
-- What standards should code and APIs follow?
-- What domain rules are non-negotiable?
-- What business priorities shape decisions right now?
-- What runtime and deployment reality must be respected?
-
-***
-
-## INVENTORY
-
-### Technical Context
-
-| # | File | What It Grounds | Key Contents |
-| :--- | :--- | :--- | :--- |
-| 1 | [project-context.md]({{GLOBAL_CONFIG_URI}}/contexts/project-context.md) | What the product IS | Users, Jobs-to-be-Done, business stage, constraints |
-| 2 | [stack-context.md]({{GLOBAL_CONFIG_URI}}/contexts/stack-context.md) | What technologies are used | Languages, frameworks, libraries, versions, tools |
-| 3 | [architecture-context.md]({{GLOBAL_CONFIG_URI}}/contexts/architecture-context.md) | How the code is organized | Folder structure, patterns, data flow, module boundaries, ADRs |
-| 4 | [coding-standards.md]({{GLOBAL_CONFIG_URI}}/contexts/coding-standards.md) | How code is written | Naming, imports, exports, TypeScript, components, git conventions |
-| 5 | [testing-standards.md]({{GLOBAL_CONFIG_URI}}/contexts/testing-standards.md) | How testing is done | Strategy, stack, what to test, mock boundaries, CI requirements |
-
-### Security and Design Context
-
-| # | File | What It Grounds | Key Contents |
-| :--- | :--- | :--- | :--- |
-| 6 | [security-baselines.md]({{GLOBAL_CONFIG_URI}}/contexts/security-baselines.md) | How security is enforced | Auth, authz, validation, secrets, headers, CORS, compliance |
-| 7 | [design-system.md]({{GLOBAL_CONFIG_URI}}/contexts/design-system.md) | How UI looks and behaves | Tokens, components, interactions, responsive, accessibility |
-
-### Data and API Context
-
-| # | File | What It Grounds | Key Contents |
-| :--- | :--- | :--- | :--- |
-| 8 | [database-context.md]({{GLOBAL_CONFIG_URI}}/contexts/database-context.md) | How data is stored and accessed | Schema conventions, tables, access patterns, indexing, migrations |
-| 9 | [api-conventions.md]({{GLOBAL_CONFIG_URI}}/contexts/api-conventions.md) | How APIs are designed | URL structure, methods, request and response format, auth, pagination |
-
-### Business and Operations Context
-
-| # | File | What It Grounds | Key Contents |
-| :--- | :--- | :--- | :--- |
-| 10 | [domain-rules.md]({{GLOBAL_CONFIG_URI}}/contexts/domain-rules.md) | What business rules the product enforces | Invariants, state machines, validation, calculations, terminology |
-| 11 | [business-priorities.md]({{GLOBAL_CONFIG_URI}}/contexts/business-priorities.md) | What matters most RIGHT NOW | Ranked priorities, tradeoff overrides, what we are NOT doing |
-| 12 | [infra-context.md]({{GLOBAL_CONFIG_URI}}/contexts/infra-context.md) | How the product runs operationally | Hosting, CI/CD, monitoring, incidents, scaling, DR, costs |
-
-***
-
-## LOADING RULES
-
-**Load a MAXIMUM of 4 context files per task.** Start lean, add if needed.
-Do not load all context files by default. Context overload is real.
-
-The `activation-engine.md` in `core/` defines which context files to
-load for each task type.
-
-| Task Type | Context Files to Load |
-| :--- | :--- |
-| Any code task | `stack-context.md` + `coding-standards.md` |
-| New feature | + `architecture-context.md` + `project-context.md` |
-| Database work | + `database-context.md` |
-| UI work | + `design-system.md` |
-| API work | + `api-conventions.md` |
-| Security work | + `security-baselines.md` |
-| Test writing | + `testing-standards.md` |
-| Deployment | + `infra-context.md` |
-| Scoping / prioritization | + `business-priorities.md` + `domain-rules.md` |
-| Business logic | + `domain-rules.md` |
-| Architecture planning | + `architecture-context.md` + `business-priorities.md` |
-| Debugging | + `stack-context.md` + `architecture-context.md` + relevant domain rules |
-
-***
-
-## EVERY CONTEXT FILE CONTAINS
-
-Every context file follows a consistent structure:
-
-1. **How Anti-Gravity Uses This File** — What changes when loaded, missing, or stale
-2. **WHY guidance on every section** — Why each section matters, not just what to fill in
-3. **Guided examples** — Illustrative content for reference
-4. **Cross-references** — Which other context files relate to this one
-5. **Maintenance schedule** — How often to review and update
-
-***
-
-## CRITICAL DIFFERENCE FROM SKILLS
-
-| Aspect | Skills | Contexts |
-| :--- | :--- | :--- |
-| Content type | Universal behavioral instructions | Project-specific facts |
-| Who writes it | Built into the system | YOU — filled in by the user |
-| Applicability | Any project, any stack | YOUR project only |
-| Stability | Changes rarely | Changes as your project evolves |
-| Loading | Based on task mode | Based on task domain |
-
-***
-
-## WHAT CONTEXT FILES SHOULD CONTAIN
+## WHAT BELONGS HERE
 
 Context files should contain:
 
-- Facts
-- Constraints
-- Stable rules
-- Environment-specific truths
-- Project-specific preferences
-- Real tradeoff posture
+- facts
+- constraints
+- active standards
+- known tradeoff posture
+- real environment details
+- current project reality
 
-They should not be:
+Context files should not contain:
 
-- Motivational or aspirational
-- Generic or theoretical
-- Bloated with irrelevant detail
-- Filled with behavioral instructions — those belong in `skills/` or `core/`
+- broad operating philosophy from `GEMINI.md`
+- domain behavior instructions from `skills/`
+- long fill-in tutorials
+- large example libraries
 
-A good context file is crisp, specific, updateable, and operational.
-It describes actual project reality, not the ideal state.
+Authoring scaffolds and longer examples now belong in `global_templates/`.
 
-***
+---
+
+## INVENTORY
+
+### Core runtime contexts
+
+| File | What It Grounds |
+| :--- | :--- |
+| `project-context.md` | product identity, users, stage, priorities |
+| `stack-context.md` | languages, frameworks, tools, runtime constraints |
+| `architecture-context.md` | structural boundaries and design decisions |
+| `coding-standards.md` | coding conventions and implementation defaults |
+
+### Additional domain contexts
+
+| File | What It Grounds |
+| :--- | :--- |
+| `testing-standards.md` | testing strategy and guardrails |
+| `security-baselines.md` | trust boundaries and security requirements |
+| `design-system.md` | design language and UI rules |
+| `database-context.md` | data model, schema patterns, migrations |
+| `api-conventions.md` | API contracts and consistency rules |
+| `domain-rules.md` | business invariants and domain logic |
+| `business-priorities.md` | current tradeoff posture |
+| `infra-context.md` | deployment, runtime, and operational reality |
+| `app-flow.md` | user journeys and flow logic |
+| `visual-identity.md` | visual direction and design identity |
+
+---
+
+## LOADING RULES
+
+Load only the contexts that materially improve the task.
+
+| Task Type | Typical Contexts |
+| :--- | :--- |
+| Any code task | `stack-context.md`, `coding-standards.md` |
+| New feature | add `architecture-context.md`, `project-context.md` |
+| Database work | add `database-context.md` |
+| UI work | add `design-system.md` or `visual-identity.md` |
+| API work | add `api-conventions.md` |
+| Security work | add `security-baselines.md` |
+| Testing | add `testing-standards.md` |
+| Deployment | add `infra-context.md` |
+| Business logic | add `domain-rules.md` |
+
+Start with 1-2 files and expand only if needed. Context overload is real.
+
+---
+
+## CONTEXT FILE CONTRACT
+
+Runtime context files should be easy to scan. The preferred structure is:
+
+1. **Runtime Summary** - fast orientation for normal use
+2. **Operational Truth** - the facts, rules, and constraints that govern work
+3. **Maintenance Notes** - how and when to update the file
+4. **Optional Inline Guidance** - short hints only when they improve authoring without bloating runtime use
+
+Long fill-in scaffolds, detailed examples, and teaching material should live in `global_templates/`.
+
+---
+
+## CONTEXT GAP HANDLING
+
+When a context file is missing, stale, or thin:
+
+1. name the gap
+2. request the missing fact or derive it from the project when possible
+3. record explicit assumptions if work must proceed
+4. update the live context file when the truth is known
+
+A stale context file is worse than no context file because it creates confident wrongness.
+
+---
 
 ## INTERACTION WITH OTHER FOLDERS
 
 | Folder | Relationship |
 | :--- | :--- |
-| `core/` | Core defines universal rules and is stable across projects. Contexts provide the specific facts those rules operate on. Core is the mind; contexts are the ground truth. |
-| `skills/` | Skills define HOW to think in a domain. Contexts define the specific environment to think ABOUT. Skill plus Context equals grounded expert behavior. |
-| `workflows/` | Workflows rely on contexts to ground their execution steps in project reality. Workflows specify which context files to load at each step. |
-| `templates/` | Templates may reference context files when producing project-specific output. |
-| `rubrics/` | Rubrics judge quality. Contexts help define what "good" means for this specific project. |
+| `core/` | Core provides permanent rules; contexts provide project truth |
+| `skills/` | Skills describe behavior; contexts ground that behavior here |
+| `workflows/` | Workflows load the contexts needed for execution |
+| `global_templates/` | Templates scaffold new contexts and formal outputs |
+| `memory/` | Memory explains what was learned over time; contexts state what is true now |
+| `rubric/` | Rubrics may use context to judge quality in the current project |
 
-***
-
-## CONTEXT GAP HANDLING
-
-When a context file is empty or missing:
-
-1. **Name the gap** — "I need [specific context] but [file] is not populated."
-2. **Ask** for the specific information needed.
-3. **If unavailable** — state assumptions clearly and flag them as assumptions.
-4. **NEVER silently guess** when context is missing.
-
-A context file that is stale or inaccurate is worse than no context file.
-Context files should be revised as the real project changes.
-
-***
-
-## QUALITY BAR FOR FILES IN THIS FOLDER
-
-A strong context file:
-
-- Describes real project truth, not aspirational theory
-- Is filled with YOUR actual project details — not left as a template
-- Is specific enough to reduce ambiguity for real tasks
-- Makes recommendations more accurate and specific
-- Defines important constraints clearly
-- Is kept current enough to remain useful
-- Includes the "How Anti-Gravity Uses This" section
-- Includes maintenance schedule guidance
-
-A weak context file:
-
-- Is too generic — could describe any project
-- Duplicates skills or core files
-- Is stale or inaccurate relative to the real project
-- Lists facts without helping decisions
-- Describes ideal state instead of actual project reality
-- Contains behavioral instructions that belong in `skills/` or `core/`
-
-***
-
-## COMMON MISTAKES TO AVOID
-
-- Writing context files as generic templates and never filling them in
-- Putting behavioral instructions here that belong in `skills/` or `core/`
-- Describing architecture or standards as they "should be" rather than as they really are
-- Failing to update contexts as the project evolves
-- Loading too many contexts when only a few are needed
-- Treating contexts as always-on — they are loaded by relevance
-
-***
+---
 
 ## MAINTENANCE
 
-| File | Update Frequency | Update Trigger |
-| :--- | :--- | :--- |
-| `project-context.md` | Quarterly | Pivot, new users, business change |
-| `stack-context.md` | On change | Any dependency version change, new library |
-| `architecture-context.md` | On change | Folder restructure, new pattern, new module |
-| `coding-standards.md` | On team agreement | New convention adopted |
-| `testing-standards.md` | On change | New test tool, changed strategy |
-| `security-baselines.md` | Quarterly + on change | Auth change, new compliance requirement |
-| `design-system.md` | On change | New component, new token, design evolution |
-| `database-context.md` | On change | New table, schema change, new index |
-| `api-conventions.md` | On change | New endpoint pattern, auth change |
-| `domain-rules.md` | On discovery | Bug reveals unknown rule, new state machine |
-| `business-priorities.md` | Monthly | Strategic shift, priority change |
-| `infra-context.md` | On change | New service, CI/CD change, monitoring change |
+Update contexts when the project changes, not just on a calendar.
 
-***
+Typical triggers:
+
+- product pivot
+- stack change
+- architecture shift
+- convention change
+- security or compliance change
+- major new domain rule
+
+---
 
 ## FINAL RULE
 
-A context file should make Anti-Gravity more accurate inside this
-project than it would be with general knowledge alone.
-
-`contexts/` should make Anti-Gravity less generic and more right.
+`contexts/` should make Anti-Gravity more correct in this project than general knowledge alone ever could.

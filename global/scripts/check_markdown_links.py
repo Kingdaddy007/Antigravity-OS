@@ -5,7 +5,7 @@ import re
 from pathlib import Path
 
 
-ROOT = Path(r"C:\Users\Oviks\antigravitygold")
+ROOT = Path(r"{{USER_HOME_PATH}}\antigravitygold")
 PAT = re.compile(r"\[[^\]]*\]\(([^\)]+\.md)\)", re.IGNORECASE)
 
 

@@ -8,7 +8,7 @@ description: The systematic sequence for running automated project verification 
 > YOU MUST USE TOOL CALLS TO READ THE FULL SOURCE FILE AND THE REQUIRED SKILLS/CONTEXTS BEFORE EXECUTING THIS.
 > Verify silently in your internal reasoning that you have done this.
 
-> **IMPORTANT [REQUIRED]:** This workflow runs the Antigravity Gold verification scripts against the current project. The scripts are located in `C:\Users\Oviks\.gemini\antigravity\scripts\`.
+> **IMPORTANT [REQUIRED]:** This workflow runs the Antigravity Gold verification scripts against the current project. The scripts are located in `{{USER_HOME_PATH}}\.gemini\antigravity\scripts\`.
 
 ## WHAT THIS WORKFLOW DOES
 
@@ -36,7 +36,7 @@ Runs automated quality checks against the project to catch security issues, code
 ### Quick Check (Most Common)
 
 ```bash
-python C:\Users\Oviks\.gemini\antigravity\scripts\verify.py <project_path>
+python {{USER_HOME_PATH}}\.gemini\antigravity\scripts\verify.py <project_path>
 ```
 
 This runs all 4 checks in priority order:
@@ -49,16 +49,16 @@ This runs all 4 checks in priority order:
 ### Targeted Check
 
 ```bash
-python C:\Users\Oviks\.gemini\antigravity\scripts\verify.py <project_path> --only security
-python C:\Users\Oviks\.gemini\antigravity\scripts\verify.py <project_path> --only quality
-python C:\Users\Oviks\.gemini\antigravity\scripts\verify.py <project_path> --only accessibility
-python C:\Users\Oviks\.gemini\antigravity\scripts\verify.py <project_path> --only performance
+python {{USER_HOME_PATH}}\.gemini\antigravity\scripts\verify.py <project_path> --only security
+python {{USER_HOME_PATH}}\.gemini\antigravity\scripts\verify.py <project_path> --only quality
+python {{USER_HOME_PATH}}\.gemini\antigravity\scripts\verify.py <project_path> --only accessibility
+python {{USER_HOME_PATH}}\.gemini\antigravity\scripts\verify.py <project_path> --only performance
 ```
 
 ### Skip Specific Checks
 
 ```bash
-python C:\Users\Oviks\.gemini\antigravity\scripts\verify.py <project_path> --skip performance
+python {{USER_HOME_PATH}}\.gemini\antigravity\scripts\verify.py <project_path> --skip performance
 ```
 
 ---

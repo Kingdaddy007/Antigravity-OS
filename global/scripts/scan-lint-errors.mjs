@@ -8,8 +8,8 @@ import fs from 'fs';
 import path from 'path';
 
 const TARGET_DIRS = [
-  'c:\\Users\\Oviks\\antigravitygold',
-  'c:\\Users\\Oviks\\.antigravity'
+  '{{USER_HOME_PATH}}\\antigravitygold',
+  '{{USER_HOME_PATH}}\\.antigravity'
 ];
 
 const IGNORE_DIRS = [
@@ -157,7 +157,7 @@ if (allResults.length === 0) {
     totalMD024 += r.md024.length;
 
     // Shorten path for readability
-    const short = r.filePath.replace('c:\\Users\\Oviks\\', '');
+    const short = r.filePath.replace('{{USER_HOME_PATH}}\\', '');
     console.log(`FILE: ${short}`);
 
     if (r.md025.length > 0) {

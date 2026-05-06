@@ -202,14 +202,13 @@ Ask the "20% question": "If we could only build 20% of this, which 20% delivers 
 
 ```
 MVP SCOPE:
-
 - [Core feature 1]
 - [Core feature 2]
 - [Core feature 3]
 
 EXPLICITLY NOT IN MVP:
-
 - [Everything else — listed to prevent scope creep]
+```
 
 ```
 
@@ -217,7 +216,6 @@ EXPLICITLY NOT IN MVP:
 
 ```
 VERSION 1 IS DONE WHEN:
-
 - [ ] [Core feature 1] works end to end
 - [ ] [Core feature 2] works end to end
 - [ ] [Core feature 3] works end to end

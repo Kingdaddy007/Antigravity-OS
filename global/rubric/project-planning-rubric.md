@@ -44,7 +44,7 @@ we about to code our way into confusion?"**
 | **Excellent** | Features categorized into Core / Important / Nice-to-Have / Out of Scope. MVP contains ONLY features essential to solving the core problem. "Out of Scope" is populated and specific. The "20% question" was applied. Scope can be built within the available timeline. |
 | **Acceptable** | Core features identified. MVP scope is reasonable. Some Phase 2 items listed. Scope is buildable within timeline with some buffer. |
 | **Needs Work** | MVP scope is too large. Too many "must have" features. No clear Phase 2 separation. Tight timeline with no buffer. |
-| **Failing** | No scope boundaries. Everything is "must have." The plan is to "build everything." Timeline is impossible given scope. Recipe for 80% built, never shipped. |
+| **Failing** | No scope boundaries. Everything is "must have." The plan is to "build everything." Timeline is impossible given scope. Leads to unfinished projects and missed shipping targets. |
 
 ### 3. DEFINITION OF DONE
 

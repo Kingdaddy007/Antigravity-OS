@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 const TARGET_DIRECTORIES = ['contexts', 'skills', 'core'];
-const PROJECT_ROOT = 'c:/Users/Oviks/antigravitygold';
+const PROJECT_ROOT = '{{USER_HOME_PATH}}/antigravitygold';
 const VERSION_HISTORY_HEADING = '## VERSION HISTORY';
 
 function processDirectory(dirPath) {
