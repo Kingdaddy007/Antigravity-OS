@@ -150,8 +150,7 @@ Use this table to track scores across runs at a glance:
 
 | Date | Category | Scenario | Overall | Weakest Dimension | Trend |
 | --- | --- | --- | --- | --- | --- |
-| | | | | | |
-
+|||||||
 > Fill this in as benchmark results accumulate. Use it to spot persistent weaknesses and verify improvement trends.
 
 ---

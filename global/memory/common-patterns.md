@@ -137,8 +137,10 @@ Every Server Action returns a discriminated union:
 
 ```typescript
 type ActionResult<T> =
-| { success: true; data: T }
-| { success: false; error: string; code?: string };
+
+| { success: true; data: T } |
+| { success: false; error: string; code?: string }; |
+
 ```
 
 Pattern in action:

@@ -14,9 +14,17 @@ import path from 'path';
 
 const DRY_RUN = process.argv.includes('--dry-run');
 
+import os from 'os';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const repoGlobalDir = path.resolve(__dirname, '..');
+const activeConfigDir = path.join(os.homedir(), '.gemini', 'config');
+
 const TARGET_DIRS = [
-  '{{USER_HOME_PATH}}\\antigravitygold',
-  '{{USER_HOME_PATH}}\\.antigravity'
+  repoGlobalDir,
+  activeConfigDir
 ];
 
 const IGNORE_DIRS = [
@@ -211,7 +219,7 @@ function processFile(filePath) {
       totalMD024 += md024Fixes;
       fixedFiles++;
 
-      const shortPath = filePath.replace('{{USER_HOME_PATH}}\\', '');
+      const shortPath = filePath.replace(os.homedir() + path.sep, '');
       console.log(`FIXED: ${shortPath}`);
       if (md025Fixes) console.log(`  MD025: ${md025Fixes} secondary H1s → bold`);
       if (md060Fixes) console.log(`  MD060: ${md060Fixes} table separators spaced`);

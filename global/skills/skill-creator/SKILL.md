@@ -7,12 +7,29 @@ description: >
   "update [skill name] to the new format". Also activated at the start of
   Phase 6 (skill refactoring) of the OS optimization plan. Produces lean,
   token-efficient SKILL.md files using the high-density truth-document format.
+  Do NOT use for general file editing, writing documentation, or formatting arbitrary markdown.
 ---
 
 # Skill Creator — Anti-Gravity OS
 
 Build every Anti-Gravity skill as a **truth document**: dense, imperative, activation-first.
 Never write a manual. Never explain the skill to a human reader. Write instructions for an AI.
+
+---
+
+## WHEN TO USE THIS
+
+- Creating a new SKILL.md for Anti-Gravity OS
+- Refactoring an existing skill to match the truth-document format
+- Compressing an oversized skill to reduce token waste
+
+## NEVER DO
+
+- Write meta-commentary about why a skill exists or who it's for
+- Include version history, file relationships, or inheritance headers
+- Use declarative voice ("the expert does X") — use imperative only
+- Leave anti-patterns as prose blocks when they can be tables
+- Write descriptions without trigger phrases AND exclusions
 
 ---
 

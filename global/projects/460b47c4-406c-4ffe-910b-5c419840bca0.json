@@ -1,0 +1,20 @@
+{
+  "id": "460b47c4-406c-4ffe-910b-5c419840bca0",
+  "name": "friendly-galileo",
+  "projectResources": {
+    "resources": [
+      {
+        "gitFolder": {
+          "folderUri": "file:///C:/Users/godsw/Documents/antigravity/friendly-galileo",
+          "defaultBranch": "master"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "fileAccessPolicy": "AGENT_SETTING_POLICY_ASK",
+    "internetPolicy": "AGENT_SETTING_POLICY_ASK",
+    "autoExecutionPolicy": "CASCADE_COMMANDS_AUTO_EXECUTION_OFF",
+    "artifactReviewMode": "ARTIFACT_REVIEW_MODE_ALWAYS"
+  }
+}

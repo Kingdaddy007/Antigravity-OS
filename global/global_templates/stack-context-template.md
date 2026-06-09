@@ -30,6 +30,7 @@ This template is for authoring. The final runtime file should be factual, compac
 - What frontend and backend frameworks are in use?
 - What package manager and build tools are used?
 - What validation, auth, and API style are used?
+- What animation and interaction library is used? (e.g., Motion for React/Vanilla, GSAP)
 
 ### Data And Infrastructure
 

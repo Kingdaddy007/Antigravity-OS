@@ -259,6 +259,7 @@ Expected:
 - Stronger verification depth (multiple layers when needed)
 - Broader regression awareness (neighboring behavior, not just the
   touched line)
+
 - Explicit confidence and rollback thinking, especially around
   migrations, security, or data integrity
 
@@ -302,10 +303,13 @@ We prioritize test types by their confidence-to-cost ratio:
 - **Static analysis** — TypeScript strict mode and linting catch the most
   bugs at zero runtime cost; treat these as required baseline, not optional
   polish
+
 - **Integration tests** — highest ROI; test real module interactions without
   the brittleness of E2E
+
 - **Unit tests** — reserved for complex, algorithmic, or math-heavy logic
   where isolation provides genuine clarity
+
 - **E2E tests** — reserved for critical revenue-path or user-journey flows
   only
 
@@ -328,7 +332,7 @@ We prioritize test types by their confidence-to-cost ratio:
 
 ### Static Analysis / Type Checks
 
-**Use for:**
+### Use for
 
 - TypeScript strict mode checking
 - Linter and formatter baseline
@@ -346,7 +350,7 @@ We prioritize test types by their confidence-to-cost ratio:
 
 ### Unit Tests
 
-**Use for:**
+### Use for
 
 - Isolated business logic
 - Pure functions with meaningful calculations
@@ -354,7 +358,7 @@ We prioritize test types by their confidence-to-cost ratio:
 - Transformation and formatting utilities
 - Edge-case-heavy logic where isolation adds genuine clarity
 
-**Avoid using for:**
+### Avoid using for
 
 - Behavior that only makes sense when modules interact together
 - Code so simple that TypeScript already protects it
@@ -372,7 +376,7 @@ We prioritize test types by their confidence-to-cost ratio:
 
 ### Integration Tests
 
-**Use for:**
+### Use for
 
 - Database interactions (queries, state transitions, retrieval)
 - Module boundary verification
@@ -382,7 +386,7 @@ We prioritize test types by their confidence-to-cost ratio:
 - Cross-boundary state transitions
 - Any risk that lives where two systems meet
 
-**Avoid using for:**
+### Avoid using for
 
 - Logic that is already verified by a fast unit test at lower cost
 - Flows so simple that the integration adds no new confidence
@@ -392,6 +396,7 @@ We prioritize test types by their confidence-to-cost ratio:
 - These often provide the highest ROI in real applications
 - Prefer integration tests where the main risk is boundary correctness,
   not isolated logic
+
 - Use realistic dependencies where possible — avoid mocking the world
 - If a test requires extensive mocking to work, question whether it is
   testing the right thing
@@ -400,14 +405,14 @@ We prioritize test types by their confidence-to-cost ratio:
 
 ### End-to-End Tests
 
-**Use for:**
+### Use for
 
 - Critical business or user journeys that cross multiple layers
 - High-value, high-risk flows (login, primary feature, payment, checkout)
 - Smoke tests for deployment confidence
 - Scenarios where only a full-stack run proves the behavior is correct
 
-**Avoid using for:**
+### Avoid using for
 
 - Every UI detail or visual state
 - Low-risk helper behavior
@@ -417,6 +422,7 @@ We prioritize test types by their confidence-to-cost ratio:
 
 - Keep E2E tests selective and high-value — a small strong suite beats
   a large brittle one
+
 - E2E tests are expensive to write, run, and maintain — justify each one
 - Never recommend E2E coverage as a substitute for missing integration
   or unit tests
@@ -520,6 +526,7 @@ We prioritize test types by their confidence-to-cost ratio:
 - Default to the lowest-mock test that still runs fast and deterministically
 - If a test requires mocking most of its dependencies, treat that as a
   signal that the wrong test layer is being used
+
 - Mock external boundaries; keep internal behavior real
 - Never use empty mock implementations that return nothing — they
   produce tests that always pass
@@ -552,6 +559,7 @@ API tests should cover:
 
 - API tests should verify consumer-visible contract behavior — not just
   that internal functions are called
+
 - Test the full request → handler → response cycle where possible, not
   only the handler function in isolation
 
@@ -574,6 +582,7 @@ Frontend tests should cover:
 - Avoid brittle tests tightly coupled to CSS class names or DOM structure
 - Prefer user-event interactions over direct event firing for realistic
   behavior simulation
+
 - Never test that a component renders — test that it behaves correctly
 
 ---
@@ -621,9 +630,11 @@ should be present:
 
 - If a bug was important enough to fix, it is usually important enough
   to protect against recurrence
+
 - Prefer reproducing the failure in a test first when practical
 - If no regression test is practical, state explicitly which alternative
   guardrail is in place and why
+
 - Never leave a bug fix with no guardrail of any kind
 
 ---
@@ -651,10 +662,11 @@ Flaky tests are treated as **defects**, not tolerated noise.
 - A test that fails intermittently without code changes is flaky
 - Flaky tests destroy trust in the suite and must not be normalized
 
-**Policy:**
+### Policy
 
 1. Quarantine quickly — mark flaky tests with `it.skip()` or equivalent,
    including a `// FLAKY:` comment explaining the symptoms
+
 2. Create a fix ticket with appropriate priority
 3. Fix, replace, or remove flaky tests as soon as practical
 4. Do not leave known flaky tests running in CI
@@ -709,7 +721,7 @@ Good tests in this project should be:
 - Maintainable — small enough and clear enough to evolve with the code
 - Meaningful when they fail — failures indicate real issues, not noise
 
-**Avoid tests that:**
+### Avoid tests that
 
 - Fail randomly or depend on timing
 - Assert only that mocks were called, not that behavior is correct

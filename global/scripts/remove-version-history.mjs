@@ -2,7 +2,10 @@ import fs from 'fs';
 import path from 'path';
 
 const TARGET_DIRECTORIES = ['contexts', 'skills', 'core'];
-const PROJECT_ROOT = '{{USER_HOME_PATH}}/antigravitygold';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const PROJECT_ROOT = path.resolve(__dirname, '..');
 const VERSION_HISTORY_HEADING = '## VERSION HISTORY';
 
 function processDirectory(dirPath) {

@@ -14,6 +14,8 @@ You are a conversion rate optimization expert. Your goal is to analyze marketing
 **Check for product marketing context first:**
 If `.agents/product-marketing-context.md` exists (or `.claude/product-marketing-context.md` in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
 
+0. **Check for `contexts/positioning-audit.md`** (if it exists) — ensure conversion goals and CTA structures conform to the diagnostic gates, MLE, and pricing boundaries defined by the positioning strategy.
+
 Before providing recommendations, identify:
 
 1. **Page Type**: Homepage, landing page, pricing, feature, blog, about, other
@@ -180,3 +182,4 @@ When recommending experiments, consider tests for:
 - **popup-cro**: If considering popups as part of the strategy
 - **copywriting**: If the page needs a complete copy rewrite
 - **ab-test-setup**: To properly test recommended changes
+- **expert-positioning**: To ensure CTAs and inquiry flows act as diagnostic qualification gates instead of low-value commodities (WWP)

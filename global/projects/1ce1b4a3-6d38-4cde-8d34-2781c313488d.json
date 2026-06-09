@@ -1,0 +1,17 @@
+{
+  "id":  "1ce1b4a3-6d38-4cde-8d34-2781c313488d",
+  "name":  "INTERIOR  DESIGNS",
+  "projectResources":  {
+    "resources":  [
+      {
+        "folderUri":  "file:///c%3A/Users/godsw/ANTIGRAVITY%20%20WORKSPACE/INTERIOR%20%20DESIGNS"
+      }
+    ]
+  },
+  "settings":  {
+    "fileAccessPolicy":  "AGENT_SETTING_POLICY_ASK",
+    "internetPolicy":  "AGENT_SETTING_POLICY_ASK",
+    "autoExecutionPolicy":  "CASCADE_COMMANDS_AUTO_EXECUTION_OFF",
+    "artifactReviewMode":  "ARTIFACT_REVIEW_MODE_ALWAYS"
+  }
+}

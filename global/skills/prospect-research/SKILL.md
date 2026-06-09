@@ -1,0 +1,138 @@
+---
+name: prospect-research
+description: >
+  Use this skill when finding, scoring, or profiling prospects for the
+  Cinematic Digital Showroom offer targeting luxury residential interior
+  designers and boutique interior design studios. Activated by "find
+  prospects", "research interior designers", "find Lagos prospects", "find
+  Dubai prospects", "who should I target this week", "score this designer",
+  "prospect research", "find designers with weak websites", or any task
+  that involves identifying, qualifying, or prioritizing outreach targets
+  for the BEVAMPED studio offer. Do NOT use for general web research,
+  competitor profiling, or sales outreach copy (use sales-enablement or
+  copywriting skills for those).
+---
+
+# Prospect Research
+
+## WHEN TO USE THIS
+
+- Finding new outreach targets for the Cinematic Digital Showroom offer.
+- Scoring and ranking a list of interior designers by ICP fit.
+- Auditing a specific designer's Instagram and website to decide on action.
+
+## NEVER DO
+
+- Target budget decorators, home staging businesses, or Airbnb/short-let stylists.
+- Target designers who already have excellent cinematic/conversion-focused websites.
+- Target large corporate firms with heavy procurement or gatekeepers.
+- Accept prospects without real completed project photography.
+- Score a prospect without checking both their Instagram AND website.
+- Produce a concept for a Growth Tier (50–79) prospect without prior interest shown.
+
+---
+
+## PRIMARY ICP
+
+**Luxury residential interior designers and boutique interior design studios** with:
+- Strong completed project photography
+- Premium or luxury positioning language
+- Active Instagram or social presence
+- Weak, static, outdated, broken, or nonexistent website
+- Founder-led or principal-led access
+
+**Geographic priority:** Nigeria (Lagos, Abuja, Port Harcourt) first → Dubai/UAE second → London, Johannesburg, Miami, NYC, LA last.
+
+**Nigeria signals:** Outdated WordPress/Wix, no website, Instagram-only, broken widgets, casino/spam footer links, no inquiry funnel.
+**Dubai signals:** Static portfolio site, no scroll motion, no case-study depth, no HNWI intake funnel, strong visuals but weak conversion.
+
+---
+
+## DISQUALIFY IF
+
+| Signal | Reason |
+| --- | --- |
+| Mostly reposted Pinterest/inspiration content | No real client proof |
+| Budget, affordable, DIY decor language | Wrong price tier |
+| No completed project evidence | Cannot build a concept |
+| Already excellent modern cinematic website | No gap to close |
+| Large commercial firm with multiple gatekeepers | Slow cycle, wrong ICP |
+| Inactive social + no contact method | Unreachable |
+
+---
+
+## SEARCH SOURCES
+
+Instagram · Google Search · Google Maps · Houzz · LinkedIn · Pinterest · luxury lifestyle award directories · interior design association directories · real estate/luxury home publications.
+
+**Instagram inspection:** bio, highlights, recent posts, project captions, follower quality, engagement quality, tagged locations, website link.
+**Website inspection:** homepage, portfolio, services, about, contact, mobile layout, CTAs, inquiry path, case studies, testimonials, technical issues.
+
+---
+
+## SEARCH QUERIES
+
+**Nigeria:** `luxury interior designer Lagos` · `turnkey interior design Lagos` · `bespoke interior designer Abuja` · `villa interior designer Port Harcourt` · `site:instagram.com luxury interior designer Lagos`
+
+**Dubai:** `luxury interior designer Dubai` · `villa interior designer Palm Jumeirah` · `boutique interior design studio Dubai` · `site:instagram.com villa interior designer Dubai`
+
+---
+
+## SCORING SYSTEM (100 points)
+
+| Category | Points | Top Score Criteria |
+| --- | --- | --- |
+| Visual Asset Quality | /25 | Exceptional editorial photography, luxury completed projects |
+| Website Gap | /20 | No site, broken site, hacked, severe template gap |
+| Business Maturity | /15 | Established premium firm, clear high-value project history |
+| Active Online Presence | /15 | Active, professional, recent project content |
+| Contact Accessibility | /15 | Direct founder email, WhatsApp, Instagram DM access |
+| Personalization Potential | /10 | Obvious gap + strong imagery + clear concept angle |
+
+**Elite Tier (80–100):** Create concept immediately. Record 90s walkthrough. Send high-personalization outreach.
+**Growth Tier (50–79):** Send light personalized message first. Build concept only after interest.
+**Low Tier (below 50):** Do not target.
+
+---
+
+## POSITIVE SIGNALS
+
+Premium language cues: `bespoke` · `curated` · `refined` · `turnkey` · `villa` · `penthouse` · `private residence` · `full-service design` · `custom joinery` · `quiet luxury`
+
+Strong personalization hooks: broken website element · no site despite strong Instagram · luxury project buried in a static gallery · founder story that can become a hero concept · diaspora/HNWI client angle.
+
+---
+
+## ANTI-PATTERNS
+
+| Anti-Pattern | What It Is | Fix |
+| --- | --- | --- |
+| Galaxy-brain ICP stretch | Targeting hospitality or commercial firms first because they "feel premium" | Lock to luxury residential and boutique studios as primary ICPs |
+| Generic gap messaging | Saying "your website looks outdated" without naming a specific failure | Name one concrete gap: broken counter, no case studies, Instagram-vs-website mismatch |
+| Concept before contact | Building a full hero concept for a Growth Tier prospect with no prior response | Send light DM first, build concept only after interest |
+| Budget exception | Accepting a prospect that shows budget language because their visuals are good | Disqualify. Ability to pay matters as much as visual quality |
+
+---
+
+## OUTPUT SHAPE
+
+**Prospect scan (5+ designers):**
+Search Scope → Executive Summary (totals by tier) → Structured Prospect Profiles → Market Observations → Recommended Next Actions
+
+**Single prospect audit:**
+Scores by category → Total ICP score + tier → Main website gap → Suggested hero concept angle → Suggested outreach hook → Recommended action
+
+**Prospect profile fields (required):**
+Studio name · Country · City · Segment · Website URL · Instagram URL · Founder name · Contact method · Website status · All 6 category scores · Total score · Main gap · Hero concept angle · Outreach hook · Recommended action
+
+---
+
+## NON-NEGOTIABLE CHECKLIST
+
+1. Both Instagram AND website inspected before scoring.
+2. Visual Asset Quality score based on real completed projects only — not inspiration reposts.
+3. Website Gap scored based on specific named failures, not general impressions.
+4. Personalization hook is concrete and specific, not generic ("your site looks old").
+5. Prospect tier (Elite / Growth / Low) stated explicitly.
+6. Recommended action is one of: Create concept immediately / Verify manually / Send light outreach / Add to nurture / Do not target.
+7. No concept created for Growth Tier without prior prospect engagement.

@@ -65,7 +65,7 @@ Without this workflow, developers optimize code that is not the bottleneck, add 
 
 | Condition | Context |
 | :--- | :--- |
-| Frontend performance | `design-system.md` |
+| Frontend performance | `DESIGN.md` |
 | API latency | `api-conventions.md` |
 | Infrastructure bottleneck | `infra-context.md` |
 | SLA requirements | `business-priorities.md` |

@@ -1,0 +1,17 @@
+{
+  "id":  "95619f74-57f5-47f1-9200-23dd9ea4b42a",
+  "name":  "INYENEBONG",
+  "projectResources":  {
+    "resources":  [
+      {
+        "folderUri":  "file:///c%3A/Users/godsw/ANTIGRAVITY%20%20WORKSPACE/INYENEBONG"
+      }
+    ]
+  },
+  "settings":  {
+    "fileAccessPolicy":  "AGENT_SETTING_POLICY_ASK",
+    "internetPolicy":  "AGENT_SETTING_POLICY_ASK",
+    "autoExecutionPolicy":  "CASCADE_COMMANDS_AUTO_EXECUTION_OFF",
+    "artifactReviewMode":  "ARTIFACT_REVIEW_MODE_ALWAYS"
+  }
+}

@@ -28,6 +28,7 @@ Do NOT use for trivial fixes — typos, obvious one-line fixes. A commit message
 ## THE TEMPLATE
 
 ```markdown
+
 # Debug Report: [Brief Description of Bug]
 
 ***
@@ -290,6 +291,7 @@ Observe: [what goes wrong]
 - [contexts/...]
 - [skills/...]
 - [Other related ADRs or reports]
+
 ```
 
 ***

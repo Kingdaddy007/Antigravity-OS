@@ -1,0 +1,17 @@
+{
+  "id":  "3a8ae395-a84d-4e06-9d98-ec98c3424b4e",
+  "name":  "inyenbong-test-2",
+  "projectResources":  {
+    "resources":  [
+      {
+        "folderUri":  "file:///c%3A/Users/godsw/ANTIGRAVITY%20%20WORKSPACE/inyenbong-test-2"
+      }
+    ]
+  },
+  "settings":  {
+    "fileAccessPolicy":  "AGENT_SETTING_POLICY_ASK",
+    "internetPolicy":  "AGENT_SETTING_POLICY_ASK",
+    "autoExecutionPolicy":  "CASCADE_COMMANDS_AUTO_EXECUTION_OFF",
+    "artifactReviewMode":  "ARTIFACT_REVIEW_MODE_ALWAYS"
+  }
+}

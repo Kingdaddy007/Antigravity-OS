@@ -98,11 +98,13 @@ Each step in a flow should follow this format:
 
 ```text
 [Step Number]. [Screen/State Name]
+
    - **What the user sees:** [describe the screen or state]
    - **What the user does:** [the primary action available]
    - **What happens next:** [where they go on success]
    - **On error:** [what happens if something fails]
    - **Alternative paths:** [other actions available, if any]
+
 ```
 
 ### Flow Symbols
@@ -380,52 +382,64 @@ Landing Page → Sign Up Form → Email Verification → [Verified?]
 
 ### The Disconnected Feature
 
-**What it looks like:**
+### What it looks like
+
 A new feature is built as a standalone screen with no clear entry point from existing navigation and no defined exit path back to the user's previous context.
 
-**Why it is harmful:**
+### Why it is harmful
+
 Users cannot discover the feature organically. When they do find it (via direct link or help docs), they cannot return to their previous task without using the browser back button. The feature feels bolted on rather than integrated.
 
-**What to do instead:**
+### What to do instead
+
 Before implementing any feature, define: Where does the user come from? Where do they go when done? How do they discover this feature in the first place? Add these connections to the app flow before writing code.
 
 ---
 
 ### The Happy-Path-Only Flow
 
-**What it looks like:**
+### What it looks like
+
 A flow is documented (or built) showing only the ideal sequence: user enters data → system processes → user sees result. No error states, no edge cases, no "what if the user goes back" scenarios.
 
-**Why it is harmful:**
+### Why it is harmful
+
 In production, the happy path is the minority case. Network failures, validation errors, expired sessions, permission issues, and user mistakes happen constantly. Without documented recovery paths, each developer invents their own, producing inconsistent and often broken error handling.
 
-**What to do instead:**
+### What to do instead
+
 For every step in a flow, answer: "What happens when this step fails?" Document the error state, the user's recovery options, and where they go next. This is especially critical for flows involving payments, data submission, or authentication.
 
 ---
 
 ### The Phantom Navigation
 
-**What it looks like:**
+### What it looks like
+
 The documented flow shows users navigating between screens by steps that do not correspond to any actual button, link, or menu item in the product. The flow makes logical sense on paper but has no physical implementation path.
 
-**Why it is harmful:**
+### Why it is harmful
+
 Developers build the screens but not the connections between them. Users are stranded — the next step exists, but there is no way to reach it without knowing a URL or clicking through unrelated navigation.
 
-**What to do instead:**
+### What to do instead
+
 For every transition in a flow, identify the specific UI element that triggers it. If no such element exists, add it to the design requirements before the flow is considered complete.
 
 ---
 
 ### The Infinite Loop
 
-**What it looks like:**
+### What it looks like
+
 An error recovery flow that sends the user back to the same step that caused the error, without changing anything about the step. The user retries, hits the same error, and is trapped in a frustrating cycle.
 
-**Why it is harmful:**
+### Why it is harmful
+
 Destroys user trust and creates support tickets. The user perceives the product as broken even if the error is on their end (e.g., invalid input, expired payment method).
 
-**What to do instead:**
+### What to do instead
+
 Error recovery flows must either: (a) change something about the step the user returns to (pre-fill corrected data, show a more specific error message, offer an alternative path), or (b) offer an escape route (contact support, skip this step, try a different method).
 
 ---
@@ -484,8 +498,7 @@ Future context, architecture, and design files should assume:
 | --- | --- |
 | `project-context.md` | Defines the product identity, user types, and critical flows that this file maps in detail |
 | `architecture-context.md` | Defines the routing, state management, and API structure that implements these flows |
-| `design-system.md` | Defines the interaction patterns (loading, error, empty states) used within flow steps |
-| `visual-identity.md` | Defines the visual treatment of screens and transitions in these flows |
+| `DESIGN.md` | Defines the visual tokens and design language used within these flows |
 | `domain-rules.md` | Business rules that constrain flow logic (e.g., "a booking cannot be confirmed without payment") |
 | `security-baselines.md` | Authentication and authorization rules that gate access to specific flows |
 

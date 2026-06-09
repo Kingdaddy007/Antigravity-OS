@@ -27,13 +27,14 @@ Do NOT use for Type 2 decisions — easily reversible choices need only a brief 
 ## THE TEMPLATE
 
 ```markdown
+
 # ADR-[NUMBER]: [Decision Title]
 
 ***
 
 ## Status
 
-<!-- One of: Proposed | Accepted | Deprecated | Superseded by ADR-[N] -->
+| <!-- One of: Proposed | Accepted | Deprecated | Superseded by ADR-[N] --> |
 
 [Status]
 
@@ -100,17 +101,17 @@ Do NOT use for Type 2 decisions — easily reversible choices need only a brief 
 
 ### Option A — [Name]
 
-**Description:**
+### Description
 
 [1-2 paragraph description of this approach]
 
-**Pros:**
+### Pros
 
 - [Advantage 1]
 - [Advantage 2]
 - [Advantage 3]
 
-**Cons:**
+### Cons
 
 - [Disadvantage 1]
 - [Disadvantage 2]
@@ -125,16 +126,16 @@ Do NOT use for Type 2 decisions — easily reversible choices need only a brief 
 
 ### Option B — [Name]
 
-**Description:**
+### Description
 
 [1-2 paragraph description]
 
-**Pros:**
+### Pros
 
 - [Advantage 1]
 - [Advantage 2]
 
-**Cons:**
+### Cons
 
 - [Disadvantage 1]
 - [Disadvantage 2]
@@ -149,16 +150,16 @@ Do NOT use for Type 2 decisions — easily reversible choices need only a brief 
 
 ### Option C — [Name]
 
-**Description:**
+### Description
 
 [1-2 paragraph description]
 
-**Pros:**
+### Pros
 
 - [Advantage 1]
 - [Advantage 2]
 
-**Cons:**
+### Cons
 
 - [Disadvantage 1]
 - [Disadvantage 2]
@@ -324,6 +325,7 @@ We chose **Option [X]: [Name]**
 - [workflows/...]
 - [Related ADRs]
 - [Links to diagrams, tickets, specs, benchmarks, research]
+
 ```
 
 ***

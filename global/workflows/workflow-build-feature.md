@@ -91,7 +91,9 @@ If the task starts ambiguous, clarify whether the user wants architecture, imple
 
 | Condition | Context | Purpose |
 | :--- | :--- | :--- |
-| UI work | `design-system.md` | Styles |
+| UI work | `PRODUCT.md` (project root) | Strategic design context (register, brand, anti-references) |
+| UI work | `DESIGN.md` (project root) | Visual system tokens (colors, typography, spacing, components) |
+| UI work | `DESIGN.md` | Supplementary design patterns |
 | Schema changes | `database-context.md` | Schema |
 | API work | `api-conventions.md` | Endpoints |
 | Auth or security surfaces | `security-baselines.md` | Safety |
@@ -159,7 +161,7 @@ worktrees, use a standard branch. If git is not initialized, initialize it first
 
 #### Load Template (Step 1)
 
-- [REQUIRED] Load [feature-plan.md](file:///C:/Users/Oviks/.gemini/antigravity/global_templates/feature-plan.md)
+- [REQUIRED] Load [feature-plan.md](file:///C:/Users/godsw/.gemini/config/global_templates/feature-plan.md)
 - Follow the structure and guidance in the template to scope and plan the feature before implementation.
 
 #### Action: Define Objective (Step 1)
@@ -312,7 +314,7 @@ High-risk, low-reversibility features require stronger verification planning at 
 4. **Define the component structure** (if UI involved):
    - What components are needed?
    - What states must be handled: loading, empty, error, success?
-   - Check `design-system.md` for available components
+   - Check `DESIGN.md` for available components
 
 5. **Identify security considerations:**
    - Does this touch auth, user input, or sensitive data?
@@ -427,13 +429,29 @@ Load `skill-coding` and follow its behavioral workflow.
 4. Handle all error paths — never just the happy path
 5. Follow `coding-standards.md` conventions
 
-#### Stage: 7c — Client Layer
+#### Stage: 7c — Client Layer (Impeccable Design Authority)
 
-1. Build components in `features/[feature]/components/`
-2. Create React Query hooks in `features/[feature]/hooks/`
-3. Follow `design-system.md` for component usage
-4. Handle ALL states: loading, empty, error, success
-5. Implement optimistic updates where appropriate
+> [!IMPORTANT]
+> **All UI work goes through Impeccable.** Studio-grade quality is the default standard, not an upgrade. Load `skill-ui-ux` and follow the Impeccable lifecycle.
+
+1. **Load design context:** Read `PRODUCT.md` (strategic) and `DESIGN.md` (visual tokens) from the project root. These are the design truth files created during Project Inception Phase 3A.
+2. **Run `/impeccable-craft`** for the full UI build loop:
+   - **Shape:** Creates a task-specific design brief (discovery, visual probes, confirmed scope)
+   - **Mock:** Generates visual direction for confirmation
+   - **Build:** Implements production-quality components
+   - **Verify:** Browser inspection and critique-and-fix loop
+3. Build components in `features/[feature]/components/`
+4. Create data hooks in `features/[feature]/hooks/`
+5. Follow `DESIGN.md` tokens for all color, typography, spacing, and component styling
+6. Handle ALL states: loading, empty, error, success, partial, disabled
+7. Implement optimistic updates where appropriate
+8. Apply `motion` (Framer Motion) for all Type B animations per the animation mapping
+
+**After the craft build loop completes,** evaluate whether a refinement pass is needed:
+- Feels weak or generic? → `/impeccable-bolder`
+- Feels static or lifeless? → `/impeccable-animate`
+- Too cluttered? → `/impeccable-distill`
+- Final production polish? → `/impeccable-polish`
 
 #### Stage: 7d — Testing
 

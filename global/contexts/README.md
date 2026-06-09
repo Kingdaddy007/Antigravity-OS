@@ -56,14 +56,12 @@ Authoring scaffolds and longer examples now belong in `global_templates/`.
 | :--- | :--- |
 | `testing-standards.md` | testing strategy and guardrails |
 | `security-baselines.md` | trust boundaries and security requirements |
-| `design-system.md` | design language and UI rules |
 | `database-context.md` | data model, schema patterns, migrations |
 | `api-conventions.md` | API contracts and consistency rules |
 | `domain-rules.md` | business invariants and domain logic |
 | `business-priorities.md` | current tradeoff posture |
 | `infra-context.md` | deployment, runtime, and operational reality |
 | `app-flow.md` | user journeys and flow logic |
-| `visual-identity.md` | visual direction and design identity |
 
 ---
 
@@ -76,7 +74,7 @@ Load only the contexts that materially improve the task.
 | Any code task | `stack-context.md`, `coding-standards.md` |
 | New feature | add `architecture-context.md`, `project-context.md` |
 | Database work | add `database-context.md` |
-| UI work | add `design-system.md` or `visual-identity.md` |
+| UI work | load PRODUCT.md and DESIGN.md |
 | API work | add `api-conventions.md` |
 | Security work | add `security-baselines.md` |
 | Testing | add `testing-standards.md` |

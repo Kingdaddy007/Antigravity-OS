@@ -1,0 +1,17 @@
+{
+  "id":  "11b4ef1f-4d1d-41df-925b-9444cb18d7c7",
+  "name":  "House Chior",
+  "projectResources":  {
+    "resources":  [
+      {
+        "folderUri":  "file:///c%3A/Users/godsw/ANTIGRAVITY%20%20WORKSPACE/House%20Chior"
+      }
+    ]
+  },
+  "settings":  {
+    "fileAccessPolicy":  "AGENT_SETTING_POLICY_ASK",
+    "internetPolicy":  "AGENT_SETTING_POLICY_ASK",
+    "autoExecutionPolicy":  "CASCADE_COMMANDS_AUTO_EXECUTION_OFF",
+    "artifactReviewMode":  "ARTIFACT_REVIEW_MODE_ALWAYS"
+  }
+}

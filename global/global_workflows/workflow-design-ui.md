@@ -1,63 +1,118 @@
 ---
-description: The systematic sequence for designing and implementing user interfaces — from user goal identification through component implementation with full state coverage and accessibility.
+name: workflow-design-ui
+description: Route frontend design work for high-end interior storytelling websites
 ---
 
-# WORKFLOW: DESIGN UI (MASTER UI)
-
-> **[CONTEXT AMNESIA FAILSAFE]**
-> YOU MUST USE TOOL CALLS TO READ THE FULL SOURCE FILE AND THE REQUIRED SKILLS/CONTEXTS BEFORE EXECUTING THIS.
-> Verify silently in your internal reasoning that you have done this.
-
-> **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full 15,000-character logic, state maps, and accessibility non-negotiables, the Agent MUST load and follow the [SOURCE FILE](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-design-ui.md).
+# WORKFLOW: DESIGN UI
 
 ## WHAT THIS WORKFLOW DOES
 
-Ensures UI work starts with the user goal, not the components. It forces full state coverage (loading, error, empty) and accessibility compliance, preventing "demo-only" code that breaks in production.
+Route frontend design work for high-end interior storytelling websites. Use the spatial system for brand/portfolio/showroom pages and use UI/UX rules to keep navigation, galleries, proof, inquiry, accessibility, and responsive behavior usable.
 
----
+## ACTIVATION
 
-## REQUIRED ACTIVATION (AGENT MUST LOAD)
+Use when:
 
-### 1. Load Full Instructions
+- Designing or implementing pages, components, galleries, inquiry forms, navigation, project indexes, material swatches, or responsive UI for interior/spatial websites.
+- Improving a decorator or spatial design site that feels generic, unclear, inaccessible, or template-like.
 
-- [ ] **Load Source [REQUIRED]:** [workflow-design-ui.md](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-design-ui.md) (Follow all 8 steps).
+Do NOT use when:
 
-### 2. Load Core Contexts & Skills (Always)
+- The task is backend/API/security/database/DevOps-only.
+- The task is pure copywriting without layout or UX impact.
 
-- **Core:** `anti-gravity-core.md`, `system-thinking.md`, `execution-workflow.md`, `operating-modes.md`.
-- **Skills:** `skill-ui-ux`, `skill-coding`, `skill-product-thinking`.
-- **Contexts:** `design-system.md`, `stack-context.md`, `coding-standards.md`, `architecture-context.md`, `domain-rules.md`.
+## REQUIRED FILES
 
-### 3. Load Conditional Assets
+For spatial brand pages, load:
 
-| Condition | Skill/Context to Load |
-| :--- | :--- |
-| New pages/routes | `skill-architecture`, `project-context.md` |
-| Data-heavy/Auth | `skill-api-design`, `security-baselines.md` |
-| Performance critical | `skill-performance`, `infra-context.md` |
+- `skills/spatial-experience-design/SKILL.md`
+- `skills/ui-ux/SKILL.md`
+- `skills/cinematic-motion/SKILL.md` when motion is present
+- `workflows/workflow-spatial-concept.md`
+- `workflows/workflow-impeccable-craft.md`
+- `skills/spatial-experience-design/reference/audit-mechanics-map.md`
+- `skills/spatial-experience-design/reference/scene-kit-and-asset-directive.md`
+- `contexts/spatial/` artifacts
 
----
+## ROUTING
 
-## DESIGN PROTOCOL (HIGH-LEVEL)
+### Spatial Brand Surface
 
-| Phase | Goal | Gate |
-| :--- | :--- | :--- |
-| **P1. Goal** | Define Job | Stop if Job-to-be-Done is unclear |
-| **P2. States** | Map Coverage | Map all 13 possible states first |
-| **P3. Priority** | Hierarchy | Define primary vs. secondary actions |
-| **P4. Layout** | Visual Plan | Select Design System components |
-| **P5. Build** | Implement | Happy path + Error/Empty states |
-| **P6. Verify** | QA States | Check responsive & keyboard nav |
-| **P7. Critique** | UX Integrity | Challenge visual vs. functional quality |
-| **P8. Deliver** | Full Specs | Include test steps for all states |
+Interior decorator portfolio, spatial studio, gallery, showroom, furniture/decor brand, architecture-adjacent website, luxury home brand.
 
----
+Route:
 
-## QUALITY GATES
+1. `workflow-spatial-concept.md` if artifacts are missing.
+2. `workflow-visual-brainstorm.md` if exploring direction.
+3. `workflow-impeccable-craft.md` for implementation.
+4. `workflow-impeccable-animate.md` for non-trivial motion.
 
-- **G1 (Goal):** No design without a Job-to-be-Done statement.
-- **G2 (States):** Coding starts ONLY after the state map is complete.
-- **G3 (A11y):** Accessibility is non-negotiable (Keyboard, Contrast, ARIA).
-- **G4 (System):** Do not invent new patterns where the Design System serves the need.
+### Product-Like UI Inside Spatial Site
 
-> **Final Instruction:** Every detail of the Gold v1.1 design process is preserved in the Source file. Read it now.
+Project filter, material selector, inquiry form, private portfolio gate, booking/request flow.
+
+Route:
+
+1. Use `skills/ui-ux/SKILL.md`.
+2. Preserve spatial tone.
+3. Design all states.
+4. Verify accessibility and mobile behavior.
+
+## EXECUTION SEQUENCE
+
+### STEP 1: Confirm Context
+
+Identify:
+
+- site type
+- visitor goal
+- inquiry goal
+- active spatial artifacts
+- current stage in Atmosphere -> Taste -> Transformation -> Proof -> Method -> Inquiry
+
+Gate: If spatial artifacts are missing for a brand page, run `workflow-spatial-concept.md`.
+
+### STEP 2: Map UI Responsibilities
+
+Define:
+
+- navigation model
+- project/gallery browsing
+- proof presentation
+- method/process section
+- inquiry path
+- states and errors
+- mobile behavior
+
+### STEP 3: Build Or Refine
+
+Use `workflow-impeccable-craft.md`.
+
+Preserve:
+
+- visual thesis
+- scene kit
+- depth map
+- material script
+- motion board
+- asset boundary
+
+### STEP 4: Verify
+
+Check:
+
+- primary action clarity
+- quiet inquiry visibility
+- gallery/project usability
+- responsive crops
+- keyboard/focus behavior
+- reduced-motion behavior
+- anti-template smell tests
+
+## QUALITY GATE CHECKLIST
+
+- [ ] Spatial brand pages route through spatial concept first.
+- [ ] UI follows the spatial journey.
+- [ ] All forms and interactive elements include states and accessibility.
+- [ ] Project/gallery UI supports curation before scanning.
+- [ ] No SaaS hero/card-grid/default CTA pattern appears by accident.

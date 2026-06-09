@@ -93,44 +93,42 @@ Do NOT use for routine decisions or low-risk changes.
 
 | Dimension | Assessment |
 | :--- | :--- |
-| Description | |
-| Category | |
-| Likelihood | |
-| Impact | |
-| Risk Score | |
-| Consequence | |
-| Why It Matters | |
-| Detection | |
-| Blast Radius | |
-| Reversibility | |
-| Current Mitigation | |
-| Additional Mitigation | |
-| Mitigation Owner | |
-| Residual Risk | |
-| Acceptance Decision | |
-
+| Description ||
+| Category ||
+| Likelihood ||
+| Impact ||
+| Risk Score ||
+| Consequence ||
+| Why It Matters ||
+| Detection ||
+| Blast Radius ||
+| Reversibility ||
+| Current Mitigation ||
+| Additional Mitigation ||
+| Mitigation Owner ||
+| Residual Risk ||
+| Acceptance Decision ||
 ***
 
 ### Risk 3: [Risk Name]
 
 | Dimension | Assessment |
 | :--- | :--- |
-| Description | |
-| Category | |
-| Likelihood | |
-| Impact | |
-| Risk Score | |
-| Consequence | |
-| Why It Matters | |
-| Detection | |
-| Blast Radius | |
-| Reversibility | |
-| Current Mitigation | |
-| Additional Mitigation | |
-| Mitigation Owner | |
-| Residual Risk | |
-| Acceptance Decision | |
-
+| Description ||
+| Category ||
+| Likelihood ||
+| Impact ||
+| Risk Score ||
+| Consequence ||
+| Why It Matters ||
+| Detection ||
+| Blast Radius ||
+| Reversibility ||
+| Current Mitigation ||
+| Additional Mitigation ||
+| Mitigation Owner ||
+| Residual Risk ||
+| Acceptance Decision ||
 > Add more risks as needed using the same structure.
 
 ***
@@ -233,7 +231,8 @@ If the risk materializes, what is the fallback or containment plan?
 
 **Overall Risk Level:** [Low / Medium / High / Critical]
 
-**Recommendation:**
+### Recommendation
+
 [Proceed / Proceed with mitigations / Defer until mitigations are in place / Do not proceed]
 
 ***

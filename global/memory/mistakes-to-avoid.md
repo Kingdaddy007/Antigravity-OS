@@ -97,39 +97,57 @@ Tags: #auth #database #deployment #testing #scope-creep #performance
 > Only read the full entries if a category title matches your current work area.
 
 ### Build / Compile Failures
+
 <!-- Entries tagged: #build #compile #dependency #import -->
+
 - [Jump to entries tagged #build]
 
 ### Data Integrity
+
 <!-- Entries tagged: #data-integrity #timestamp #candles #database #migration -->
+
 - (none yet)
 
 ### UI / Frontend Bugs
+
 <!-- Entries tagged: #lwc #crash #split-view #rendering #css -->
+
 - (none yet)
 
 ### Architecture / Design Decisions
+
 <!-- Entries tagged: #architecture #refactor #structure #module -->
+
 - (none yet)
 
 ### Security / Auth
+
 <!-- Entries tagged: #auth #security #authorization #data-leakage -->
+
 - (none yet — see Example Entry for reference pattern)
 
 ### API / Integration
+
 <!-- Entries tagged: #api #websocket #integration #deriv -->
+
 - (none yet)
 
 ### Testing / Verification
+
 <!-- Entries tagged: #testing #regression #edge-case -->
+
 - (none yet)
 
 ### Tooling / Process
+
 <!-- Entries tagged: #tooling #python #process #npm #config -->
+
 - (none yet)
 
 ### Performance
+
 <!-- Entries tagged: #performance #memory #cpu #bottleneck -->
+
 - (none yet)
 
 > **Rule:** When adding a new entry below, also add a one-line summary to the relevant category above.

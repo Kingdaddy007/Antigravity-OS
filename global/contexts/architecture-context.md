@@ -27,8 +27,10 @@ where things live, how they connect, and what rules govern the boundaries.
 
 - Place new code in the correct location following the organizational
   pattern — not guess based on generic conventions
+
 - Respect module boundaries — not suggest changes that violate ownership
   rules or create cross-module coupling
+
 - Follow established architectural patterns instead of inventing new ones
 - Understand data flow when debugging cross-cutting issues
 - Reference previous architectural decisions instead of re-litigating them
@@ -64,6 +66,7 @@ silently choosing one. Both files may need to be updated.
      to understand the structural environment it is actually operating in. -->
 
 ### What This Architecture Currently Is
+
 <!-- Describe the current architectural model honestly.
      If this is a deployed application, summarize the architectural style.
      If this is still in a spec/design/build phase, describe that reality.
@@ -83,6 +86,7 @@ silently choosing one. Both files may need to be updated.
 [Fill in]
 
 ### Architecture Summary
+
 <!-- WHY THIS MATTERS: Anti-Gravity uses this as the quick orientation
      anchor before diving into section-level detail. -->
 
@@ -97,16 +101,20 @@ silently choosing one. Both files may need to be updated.
 [Fill in]
 
 ### What This Architecture Is NOT
+
 <!-- WHY THIS MATTERS: Naming what the architecture is NOT prevents
      Anti-Gravity from suggesting patterns appropriate for a different
      architectural style. -->
 <!-- Be explicit. What has been deliberately ruled out?
      Examples:
+
      - "This is NOT a microservices architecture. Do not suggest
        splitting into separate services."
+
      - "This is NOT a traditional MVC application."
      - "This is NOT a runtime application yet — do not assume a
        deployed server, database, or client." -->
+
 - [Fill in]
 - [Fill in]
 
@@ -129,6 +137,7 @@ silently choosing one. Both files may need to be updated.
 | [Layer] | [What it does] | [What goes here] | [What is excluded] |
 
 ### Authoritative Boundaries
+
 <!-- Which layer is authoritative for what?
      Anti-Gravity uses this to resolve placement disputes — when two
      layers could plausibly own something, the authoritative boundary
@@ -141,12 +150,15 @@ silently choosing one. Both files may need to be updated.
 | [Layer] | [What this layer owns absolutely] |
 
 ### Structural Relationships Between Layers
+
 <!-- How do the layers depend on and constrain each other? -->
+
 - [Layer A] → [how it shapes or constrains Layer B]
 - [Layer B] → [how it uses or is constrained by layers above]
 - [Layer C] → [its relationship to the rest of the stack]
 
 ### Decision Rule: Where Does New Work Belong?
+
 <!-- A routing test for placing any new file, module, or piece of logic.
      Anti-Gravity uses this when placement is unclear. -->
 
@@ -169,6 +181,7 @@ silently choosing one. Both files may need to be updated.
      new code should go. Without this, new files may end up in wrong
      locations, violating the organizational pattern and creating confusion.
      Anti-Gravity will use this structure to:
+
      - Determine where to create new feature files
      - Know where to find existing code when debugging
      - Maintain consistency in file placement across the project -->
@@ -223,6 +236,7 @@ Shared Components and Utilities
 [Shared area] — [purpose and limits]
 
 ### Guidance for Anti-Gravity (Folder Structure)
+
 Respect domain boundaries when designing, reviewing, or implementing
 
 Do not recommend moving responsibility across domains casually
@@ -252,6 +266,7 @@ Team Ownership
 [Area] — owned by [team/person]
 
 ### Guidance for Anti-Gravity (Ownership)
+
 Avoid recommendations that blur ownership
 
 Treat ambiguous ownership as an architectural smell worth naming
@@ -265,7 +280,9 @@ Pattern Used For Notes
 [Pattern] [What it handles] [Key constraints or conventions]
 [Pattern] [What it handles] [Notes]
 [Pattern] [What it handles] [Notes]
+
 ### Guidance for Anti-Gravity (Communication Patterns)
+
 Do not recommend introducing new interaction patterns casually
 
 If the current pattern is problematic, state why explicitly rather
@@ -363,6 +380,7 @@ owning feature's query functions]
 
 Background jobs write results to the database — never directly
 to the client
+
 ## KEY ARCHITECTURAL PATTERNS
 
 <!-- WHY THIS MATTERS: Anti-Gravity must follow these patterns when
@@ -380,31 +398,41 @@ to the client
 | [Pattern] | [Location] | [How it works] | [When to skip it] |
 
 ### Patterns We Avoid
+
 <!-- Explicitly name patterns that have been ruled out — and why.
      This prevents Anti-Gravity from re-suggesting them. -->
+
 - **[Pattern]** — [why it is avoided in this project]
 - **[Pattern]** — [why it is avoided]
 - **[Pattern]** — [why it is avoided]
 
 ### Pattern Adoption Rules
+
 <!-- The threshold for introducing new patterns.
      These rules prevent one-off improvisation from fragmenting the
      codebase. -->
+
 - Before introducing a new pattern, verify no existing pattern solves
   the problem
+
 - If a new pattern is genuinely needed, document it in this file
   before using it
+
 - Do not create one-off patterns — if it is worth doing once, it is
   worth standardizing
+
 - If an existing pattern is insufficient, make the gap explicit before
   diverging
 
 ### Guidance for Anti-Gravity (Patterns)
+
 - Use these patterns as the first answer to any structural
   implementation question
+
 - Only deviate with explicit justification
 - When proposing a deviation, explain what the existing pattern
   cannot do
+
 - Do not suggest patterns from the avoided list without acknowledging
   they were deliberately excluded
 
@@ -431,8 +459,10 @@ to the client
 | Shared utility placement | [Fill in] | [Notes] |
 
 ### Guidance for Anti-Gravity (Architectural Defaults)
+
 - Use these defaults as the first answer to any placement or
   structural question in the relevant concern area
+
 - Only deviate from a default with explicit justification
 - When proposing a deviation, explain the gap the default cannot fill
 
@@ -455,6 +485,7 @@ to the client
 | 3 | [Decision topic] | [Choice] | [Alternatives] | [Rationale] | [Date] | [Revisit trigger] |
 
 ### Architectural Decisions Already Locked
+
 <!-- Decisions that are stable and should not be casually challenged.
      These represent the foundational commitments the entire system is
      built on. Changing them requires deliberate architectural review,
@@ -467,6 +498,7 @@ to the client
 5. **[Decision 5]** — [Why it is locked]
 
 ### Guidance for Future Architectural Changes
+
 <!-- If the architecture genuinely needs to change, use this process.
      Architectural drift without documentation is more dangerous than
      the problem being solved. -->
@@ -499,36 +531,46 @@ to the client
 | [Module] | [What it owns] | [What is excluded] | [Allowed imports] |
 
 ### Cross-Module Import Rules
+
 <!-- The rules that govern dependencies between modules.
      These prevent circular dependencies and hidden coupling. -->
 
 1. Modules **never** import directly from another module's internal
    code (components, hooks, actions, queries, handlers)
+
 2. Modules **may** import type definitions from other modules
    (`import type { X } from '@/features/x/types'`)
+
 3. If two modules need to share runtime code, it must be extracted
    to the shared layer
+
 4. The shared layer never imports from feature modules (no upward
    dependencies)
+
 5. The infrastructure layer never imports from feature or shared
    layers (leaf node — no app imports)
+
 6. If a rule must be violated, it is a signal that boundaries need
    redesigning — not that the rule is wrong
 
 ### Boundary Rules
+
 <!-- Important architectural boundaries that must be preserved.
      Anti-Gravity uses these to catch drift. If current code violates
      them, flag the mismatch explicitly rather than assuming the rule
      no longer applies. -->
+
 - [Boundary rule 1 — e.g., frontend must not call the database directly]
 - [Boundary rule 2 — e.g., external provider logic stays behind adaptor]
 - [Boundary rule 3 — e.g., domain logic must not depend on UI concerns]
 - [Boundary rule 4 — e.g., shared utilities must not contain domain logic]
 
 ### Guidance for Anti-Gravity (Module Boundaries)
+
 - Use these boundaries to catch architectural drift before it is written
 - If current code violates a boundary, flag the mismatch explicitly
   rather than assuming the rule is obsolete
+
 - If a boundary needs to change, that is an architectural decision —
   document it
 
@@ -543,6 +585,7 @@ to the client
      and easier to catch during review. -->
 
 ### Layer Leakage
+
 **What it looks like:** Project-specific facts placed in universal
 layers; domain behavior placed in context or utility layers; workflow
 steps embedded inside skill or domain files.
@@ -553,6 +596,7 @@ layer is updated but the other is not.
 If placement is unclear, use the Decision Rule routing test.
 
 ### Ownership Blurring
+
 **What it looks like:** Two modules co-owning the same concept.
 Data written by one module, read authoritatively by another. State
 transitions for the same entity spread across multiple services or
@@ -566,6 +610,7 @@ If ownership is genuinely unclear, flag it as an architectural smell
 before building on top of it.
 
 ### Shared Layer as Dumping Ground
+
 **What it looks like:** Business logic, domain rules, or feature-
 specific code accumulating in shared utilities or common packages
 because it was "easier to put it there."
@@ -577,6 +622,7 @@ generic code. Domain logic belongs in its owning module. If a shared
 area is growing domain-specific concerns, flag it.
 
 ### Silent Architectural Drift
+
 **What it looks like:** Boundaries or patterns quietly changing in
 code without being documented. New files placed in incorrect
 locations. Old patterns coexisting with new ones without explanation.
@@ -587,6 +633,7 @@ diverges from reality and loses its value.
 Update this file and the ADR when patterns or boundaries change.
 
 ### Re-Litigating Locked Decisions
+
 **What it looks like:** Suggesting architectural alternatives that
 were already evaluated and deliberately rejected — without
 acknowledging that the decision was already made.
@@ -599,6 +646,7 @@ been met, name it explicitly rather than re-opening the debate
 without context.
 
 ### Debt Compounding
+
 **What it looks like:** New code added to known debt areas that
 follows the debt pattern rather than the intended pattern. Debt
 normalized into the architecture by repetition until it is
@@ -611,6 +659,7 @@ constraint.
 the intended pattern — not the existing debt pattern. If the debt
 makes the correct approach impractical, flag it explicitly rather
 than silently reinforcing it.
+
 ## KNOWN ARCHITECTURAL DEBT
 
 <!-- WHY THIS MATTERS: Anti-Gravity should be aware of existing debt so
@@ -627,10 +676,13 @@ than silently reinforcing it.
 | 3 | [Debt description] | [Location] | [Impact] | [Why] | [Risk] | [Plan] |
 
 ### Guidance for Anti-Gravity
+
 - When working in a debt area, acknowledge the debt rather than
   building on it as if it is clean
+
 - Do not recommend solutions that depend on debt being resolved
   unless the resolution is part of the same task
+
 - If a recommendation would make debt worse, flag it explicitly
 - If a debt item has a plan, prefer solutions that align with
   that direction
@@ -648,42 +700,53 @@ than silently reinforcing it.
      to be careful but WHY and WHAT KIND of careful to be. -->
 
 ### Fragile Areas
+
 <!-- Where breakage is likely under change — handle with extra care,
      test thoroughly, avoid casual edits. -->
+
 - [Area] — [why it is fragile and what tends to break]
 - [Area] — [why it is fragile]
 - [Area] — [why it is fragile]
 
 ### Confusing Areas
+
 <!-- Where understanding is low, intent is unclear, or the code
      diverges from what the surrounding architecture would suggest.
      High risk of incorrect assumptions during implementation. -->
+
 - [Area] — [what is confusing and what assumptions are dangerous here]
 - [Area] — [what is confusing]
 - [Area] — [what is confusing]
 
 ### High Change Frequency Areas
+
 <!-- Where churn is constant, creating ongoing risk of drift,
      regression, and boundary erosion. Extra care needed to preserve
      pattern consistency despite frequent edits. -->
+
 - [Area] — [why it changes often and what risk that creates]
 - [Area] — [why it changes often]
 - [Area] — [why it changes often]
 
 ### Areas Requiring Extra Caution
+
 <!-- Where mistakes are especially costly — to users, to the business,
      to data integrity, or to system stability. Anti-Gravity should
      escalate rigor, test depth, and review care proportionally here. -->
+
 - [Area] — [why mistakes here are especially costly]
 - [Area] — [why mistakes here are especially costly]
 - [Area] — [why mistakes here are especially costly]
 
 ### Guidance for Anti-Gravity (Weak Spots)
+
 - Treat fragile areas as high-breakage risk — test before and after
 - Treat confusing areas as assumption traps — verify intent before
   building on them
+
 - Treat high-change areas as drift-risk zones — check pattern
   consistency before adding to them
+
 - Treat extra-caution areas as elevated-rigor surfaces — slow down,
   review more carefully, prefer smaller changes
 
@@ -705,19 +768,24 @@ than silently reinforcing it.
 | [System] | [Purpose] | [Method] | [Auth] | [Impact] | [Handling] |
 
 ### External Integration Boundaries
+
 <!-- Every external provider should be accessed through a deliberate
      abstraction boundary — not scattered across unrelated modules.
      This section defines where each integration is abstracted and
      what the boundary looks like. -->
+
 - **[Provider]** — abstracted at [location]; failure mode: [what happens]
 - **[Provider]** — abstracted at [location]; failure mode: [what happens]
 
 ### Guidance for Anti-Gravity (Integration Points)
+
 - External providers should always be accessed through their defined
   integration boundary — not called directly from business logic
+
 - Do not spread third-party coupling across unrelated modules
 - Factor provider failure into architecture, debugging, and design
   guidance
+
 - Consider rate limits, retry requirements, and idempotency when
   working near any external integration
 
@@ -738,10 +806,13 @@ than silently reinforcing it.
 | [Component] | [Capacity] | [Usage] | [Threshold] | [Plan] |
 
 ### Guidance for Anti-Gravity (Scaling)
+
 - Do not recommend solutions that work at scale if they are premature
   for current volume — complexity has a real cost
+
 - Do not recommend solutions that work now but will clearly break at
   the next order of magnitude
+
 - When a scaling threshold is close, name it rather than ignoring it
 
 ---
@@ -762,7 +833,9 @@ than silently reinforcing it.
 | [Layer] | [Status] | [Notes] |
 
 ### Current Architectural Frontier
+
 <!-- What is the active edge of the build right now? -->
+
 - **Active now:** [What is currently being built or stabilized]
 - **Next:** [What follows after the current frontier is complete]
 - **Deferred:** [What is intentionally not being built yet]
@@ -775,14 +848,17 @@ than silently reinforcing it.
      rather than "fixing" things that are actually good. Knowing the
      strengths of the current architecture prevents well-intentioned
      recommendations from eroding them. -->
+
 - [Strength 1] — [why it matters and what it enables]
 - [Strength 2] — [why it matters]
 - [Strength 3] — [why it matters]
 
 ### Guidance for Anti-Gravity (Strengths)
+
 - Preserve these strengths when making recommendations
 - Do not recommend changes that would erode a known strength without
   a compelling reason
+
 - When a recommendation touches a strength area, acknowledge it
   explicitly
 
@@ -795,11 +871,13 @@ than silently reinforcing it.
      for existing pain rather than assuming a clean foundation.
      Naming weaknesses also prevents Anti-Gravity from accidentally
      making them worse. -->
+
 - [Weakness 1] — [what it causes and where it hurts]
 - [Weakness 2] — [what it causes]
 - [Weakness 3] — [what it causes]
 
 ### Guidance for Anti-Gravity (CURRENT ARCHITECTURAL WEAKNESSES)
+
 - Treat these as known uncertainty zones — not settled, clean design
 - Do not build on top of a weakness as if it were solid
 - When working near a weak area, acknowledge the risk explicitly
@@ -815,32 +893,40 @@ than silently reinforcing it.
      relaxing a constraint, that dependency must be stated explicitly. -->
 
 ### Hard Constraints
+
 <!-- Fixed constraints that cannot be changed without significant
      external action — budget, team size, compliance, contract,
      legacy system coupling. -->
+
 - [Hard constraint 1] — [why it exists and what it rules out]
 - [Hard constraint 2] — [why it exists]
 - [Hard constraint 3] — [why it exists]
 
 ### Soft Constraints and Preferences
+
 <!-- Semi-fixed constraints or strong preferences that guide decisions
      but can be revisited with good reason. -->
+
 - [Soft constraint 1]
 - [Soft constraint 2]
 - [Soft constraint 3]
 
 ### Current Debt and Transitional Structure
+
 <!-- Areas where the architecture is in transition — old patterns
      coexisting with new ones, migrations in progress, debt that is
      known but not yet addressed. -->
+
 - [Transitional area 1] — [old state → intended new state]
 - [Transitional area 2] — [transition description]
 - [Transitional area 3] — [transition description]
 
 ### Guidance for Anti-Gravity (ARCHITECTURAL CONSTRAINTS)
+
 - Do not recommend changes that ignore hard constraints
 - If a recommendation depends on relaxing a constraint, name that
   dependency explicitly
+
 - In transitional areas, prefer solutions that move toward the
   intended new state rather than reinforcing the old one
 
@@ -854,21 +940,27 @@ than silently reinforcing it.
      current state in ways that make future evolution harder. -->
 
 ### Intended Direction
+
 - [Evolution direction 1] — [why this matters and what it enables]
 - [Evolution direction 2] — [direction and motivation]
 - [Evolution direction 3] — [direction and motivation]
 
 ### What Should NOT Change
+
 <!-- What architectural commitments should stay stable even as the
      system evolves? -->
+
 - [Stable commitment 1]
 - [Stable commitment 2]
 
 ### Guidance for Anti-Gravity (ARCHITECTURAL EVOLUTION DIRECTION)
+
 - Recommendations should align with the intended evolution direction
   where appropriate
+
 - Avoid optimizing for current state in ways that make future
   evolution significantly harder
+
 - If current architecture and intended direction conflict, flag it
   explicitly rather than picking one silently
 
@@ -884,17 +976,23 @@ than silently reinforcing it.
 
 - New behavior is placed in the correct layer or domain — not wherever
   is most convenient
+
 - Business logic stays in its appropriate layer — never in transport,
   UI, or infrastructure layers
+
 - Ownership remains explicit — every new module or function has a
   clear home
+
 - Interfaces remain simpler than internal complexity — consumers should
   not need to understand internal implementation to use a boundary
+
 - Changes strengthen the current architectural direction rather than
   eroding it
+
 - New integrations are isolated behind clear abstraction boundaries
 - Structural recommendations are proportionate to actual system needs —
   not aspirationally over-engineered
+
 - [Project-specific definition of good — fill in]
 - [Project-specific definition — fill in]
 
@@ -997,7 +1095,9 @@ When working inside this architecture, Anti-Gravity must:
 ## TEMPLATE FILL-IN SUMMARY
 
 ### Required
+
 *(Anti-Gravity is significantly degraded without these)*
+
 - [ ] Current Architectural Reality — with IS NOT declarations
 - [ ] Layer Model table — What Belongs / What Does NOT Belong
 - [ ] Folder Structure — annotated tree with Placement Rules
@@ -1009,7 +1109,9 @@ When working inside this architecture, Anti-Gravity must:
 - [ ] Architectural Defaults table
 
 ### High Value
+
 *(Strongly recommended)*
+
 - [ ] Architectural Patterns table — with When NOT to Use column
 - [ ] Patterns We Avoid
 - [ ] Architectural Decisions Record — with Revisit When column
@@ -1020,6 +1122,7 @@ When working inside this architecture, Anti-Gravity must:
 - [ ] Architectural Constraints — Hard / Soft / Transitional
 
 ### Useful When Relevant
+
 - [ ] Communication Patterns table
 - [ ] Scaling Notes table
 - [ ] Current Architectural State + Frontier

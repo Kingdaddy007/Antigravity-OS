@@ -145,7 +145,7 @@ A weak entry:
 
 **Why:** Transition from ad-hoc prompting to a structured cognitive operating system. Problems addressed: weak reasoning shape, mode confusion, lack of governing principles, no skill orchestration, no self-evaluation capability.
 
-**Expected Improvement:**
+### Expected Improvement
 
 - Repeatable, principled behavior across task types
 - Explicit operating modes that reduce posture confusion
@@ -153,7 +153,7 @@ A weak entry:
 - Self-evaluation capability through rubrics
 - Improvable behavior through benchmarking
 
-**Known Risks or Limitations:**
+### Known Risks or Limitations
 
 - Initial Gold v1.0 has not been fully benchmarked
 - Context file templates require user population before grounding value is realized
@@ -161,11 +161,11 @@ A weak entry:
 
 **Impact:** Anti-Gravity now operates with defined identity, structured thinking, explicit operating modes, systematic execution, and self-evaluation. Behavior is repeatable and measurable for the first time.
 
-**Files Affected:**
+### Files Affected
 
 - All files — created
 
-**Related Files / Areas:**
+### Related Files / Areas
 
 - benchmarks/ — to be built in a follow-on phase
 
@@ -179,20 +179,20 @@ A weak entry:
 
 **Why:** Ten of the original mental models were reformulations of concepts already present in Layer 2. The same ideas appeared twice in the always-loaded tier, consuming context window space for zero additional value. The new structure addresses a genuinely different cognitive level: Layer 2 defines WHAT to think about. Layer 3 now defines HOW to guard the thinking process against reasoning errors.
 
-**Expected Improvement:**
+### Expected Improvement
 
 - Zero overlap between Layer 2 and Layer 3
 - Layer 3 now catches thinking errors rather than duplicating thinking dimensions
 - Each always-loaded file has a distinct and non-redundant function
 
-**Known Risks or Limitations:**
+### Known Risks or Limitations
 
 - Behavioral change has not been benchmarked yet
 - Some engineers may expect "mental models" language and not find it
 
 **Impact:** Layer 3 now functions as a genuine meta-cognitive layer. Redundancy in the always-loaded core is eliminated. Context window efficiency improves for tasks where both layers were previously loaded.
 
-**Files Affected:**
+### Files Affected
 
 - core/expert-cognitive-patterns.md — created
 - core/senior-engineer-mental-models.md — deprecated

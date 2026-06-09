@@ -492,65 +492,80 @@ If a recommendation is fast, elegant, or convenient but violates these baselines
 
 ### 1. Convenience Over Trust Boundary
 
-**What it looks like:**
+### What it looks like
+
 Weakening access control, skipping validation, or broadening privileges because the correct design feels slower or more annoying.
 
-**Why it is harmful:**
+### Why it is harmful
+
 It creates security debt exactly where trust should be strongest and often becomes permanent, not temporary.
 
-**What to do instead:**
+### What to do instead
+
 Preserve real boundary enforcement and, if an exception is truly needed, document scope, duration, and owner explicitly.
 
 ---
 
 ### 2. Client-Trust Illusion
 
-**What it looks like:**
+### What it looks like
+
 Assuming disabled buttons, hidden routes, or UI-only checks enforce authorization.
 
-**Why it is harmful:**
+### Why it is harmful
+
 A malicious or buggy client can bypass surface-level restrictions entirely.
 
-**What to do instead:**
+### What to do instead
+
 Enforce permissions at the authoritative server or control boundary and treat UI checks as UX, not security.
 
 ---
 
 ### 3. Secret Sprawl
 
-**What it looks like:**
+### What it looks like
+
 Credentials appearing in source, logs, screenshots, tickets, or local scripts.
 
-**Why it is harmful:**
+### Why it is harmful
+
 Every copy increases the attack surface and complicates incident response and rotation.
 
-**What to do instead:**
+### What to do instead
+
 Centralize secret storage, prohibit secrets in code and logs, and treat secret handling as a first-class operational concern.
 
 ---
 
 ### 4. Internal-Equals-Safe Assumption
 
-**What it looks like:**
+### What it looks like
+
 Treating internal APIs, admin tools, or back-office systems as exempt from rigorous security because they are “not public.”
 
-**Why it is harmful:**
+### Why it is harmful
+
 Many serious incidents target exactly those internal paths via lateral movement or insider misuse.
 
-**What to do instead:**
+### What to do instead
+
 Apply explicit trust reasoning and appropriate controls even on non-public surfaces.
 
 ---
 
 ### 5. Security-Sensitive Changes Reviewed Like Routine Edits
 
-**What it looks like:**
+### What it looks like
+
 Auth, authz, or sensitive-data changes going through the same level of review as minor UI tweaks.
 
-**Why it is harmful:**
+### Why it is harmful
+
 Underestimates the blast radius of mistakes in those areas.
 
-**What to do instead:**
+### What to do instead
+
 Increase scrutiny, verification depth, and rollout caution for any change that affects trust boundaries, sensitive data, or privileged actions.
 
 ---

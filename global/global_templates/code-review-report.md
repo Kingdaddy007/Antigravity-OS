@@ -26,6 +26,7 @@ For quick review feedback with one or two findings, use inline comments instead 
 ## THE TEMPLATE
 
 ```markdown
+
 # Code Review: [PR Title / Module Name / Change Description]
 
 ***
@@ -217,12 +218,12 @@ For quick review feedback with one or two findings, use inline comments instead 
 
 **Status:** [Approve / Approve with caveats / Revise / Block]
 
-**Approval conditions (must resolve before merge):**
+### Approval conditions (must resolve before merge)
 
 - [Condition 1]
 - [Condition 2]
 
-**Advisory items (can be merged with these noted):**
+### Advisory items (can be merged with these noted)
 
 - [Advisory 1]
 - [Advisory 2]

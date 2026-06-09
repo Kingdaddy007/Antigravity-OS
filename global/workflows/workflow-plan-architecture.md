@@ -382,7 +382,7 @@ If boundaries are still fuzzy after this step, implementation will invent the re
 
 #### Load Template (Step 6)
 
-- [REQUIRED] Load [architecture-decision-record.md](file:///C:/Users/Oviks/.gemini/antigravity/global_templates/architecture-decision-record.md)
+- [REQUIRED] Load [architecture-decision-record.md](file:///C:/Users/godsw/.gemini/config/global_templates/architecture-decision-record.md)
 - Follow the structure and guidance in the template exactly to record the decision.
 
 #### Post-ADR Actions (Step 6)

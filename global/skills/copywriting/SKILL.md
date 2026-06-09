@@ -11,8 +11,25 @@ You are an expert conversion copywriter. Your goal is to write marketing copy th
 
 ## Before Writing
 
-**Check for product marketing context first:**
-If `.agents/product-marketing-context.md` exists (or `.claude/product-marketing-context.md` in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+**Context Load Order (follow this sequence):**
+
+1. **If `contexts/story.md` exists → read it first. Extract:**
+   - Copy direction: headline strategy, tone, key messages
+   - CTA strategy: what action each section drives toward
+   - Narrative arc: the emotional journey the copy must carry
+   - Section breakdown: what each page section must accomplish
+   Use these as non-negotiable constraints. Do not re-derive.
+
+2. **If `contexts/positioning-audit.md` exists → read for positioning boundaries, MLE, and CTA gates.**
+
+3. **If `contexts/research-brief.md` exists → read for audience, competitors, positioning**
+
+4. **If `PRODUCT.md` exists → read for register, brand personality, anti-references**
+
+5. **Then check for product marketing context:**
+   If `.agents/product-marketing-context.md` exists (or `.claude/product-marketing-context.md` in older setups), read it. Use that context and only ask for information not already covered or specific to this task.
+
+6. **Only ask questions for information not covered by the above**
 
 Gather this context (ask if not provided):
 
@@ -247,6 +264,7 @@ For headlines and CTAs, provide 2-3 options:
 
 - **copy-editing**: For polishing existing copy (use after your draft)
 - **page-cro**: If page structure/strategy needs work, not just copy
+- **expert-positioning**: For auditing positioning strategy and refactoring submissive/vendor language (WWP)
 - **email-sequence**: For email copywriting
 - **popup-cro**: For popup and modal copy
 - **ab-test-setup**: To test copy variations

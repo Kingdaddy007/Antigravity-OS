@@ -484,7 +484,7 @@ REVIEW
 | [service 2] | [cost] | [driver] |
 | [service 3] | [cost] | [driver] |
 | [service 4] | [cost] | [driver] |
-| **Total** | **[total]** | |
+| **Total** | **[total]** ||
 
 ### Cost Constraints
 

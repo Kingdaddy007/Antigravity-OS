@@ -179,7 +179,7 @@ opencode skills install https://github.com/Emily2040/seedance-2.0
 
 | Platform | Workspace path | Global path |
 |:---|:---|:---|
-| [**Antigravity**](https://antigravity.google/) | `.agent/skills/seedance-20/` | `~/.gemini/antigravity/skills/seedance-20/` |
+| [**Antigravity**](https://antigravity.google/) | `.agent/skills/seedance-20/` | `~/.gemini/config/skills/seedance-20/` |
 | [**Gemini CLI**](https://geminicli.com/) | `.gemini/skills/seedance-20/` | `~/.gemini/skills/seedance-20/` |
 | [**Firebase Studio**](https://firebase.studio/) | `.idx/skills/seedance-20/` | — |
 | [**Claude Code**](https://code.claude.com/) | `.claude/skills/seedance-20/` | `~/.claude/skills/seedance-20/` |
@@ -345,3 +345,4 @@ MIT © 2026 Emily (@iamemily2050)
   </sub><br>
   <sub>Source intelligence: ByteDance Seedance 2.0 official blog, Douyin creator community, CSDN practitioner tutorials, Q1 2026.</sub>
 </p>
+

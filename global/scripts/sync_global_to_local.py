@@ -7,8 +7,8 @@ import re
 from pathlib import Path
 
 
-GLOBAL_ROOT = Path(r"{{USER_HOME_PATH}}\.gemini\antigravity")
-LOCAL_ROOT = Path(r"{{USER_HOME_PATH}}\antigravitygold")
+GLOBAL_ROOT = Path.home() / ".gemini" / "config"
+LOCAL_ROOT = Path(__file__).resolve().parent.parent
 
 
 MAPPINGS = [
@@ -40,10 +40,10 @@ TEXT_EXTENSIONS = {
 
 
 REPLACEMENTS = [
-    (r"{{USER_HOME_PATH}}\.gemini\antigravity", r"{{USER_HOME_PATH}}\antigravitygold"),
-    (r"{{USER_HOME_PATH}}\.gemini\antigravity", r"{{USER_HOME_PATH}}\antigravitygold"),
-    (r"{{USER_HOME_PATH}}/.gemini/antigravity", r"{{USER_HOME_PATH}}/antigravitygold"),
-    (r"{{USER_HOME_PATH}}/.gemini/antigravity", r"{{USER_HOME_PATH}}/antigravitygold"),
+    (r"C:\Users\Oviks\.gemini\antigravity", r"c:\Users\Oviks\antigravitygold"),
+    (r"c:\Users\Oviks\.gemini\antigravity", r"c:\Users\Oviks\antigravitygold"),
+    (r"C:/Users/Oviks/.gemini/antigravity", r"c:/Users/Oviks/antigravitygold"),
+    (r"c:/Users/Oviks/.gemini/antigravity", r"c:/Users/Oviks/antigravitygold"),
     (r"/global_workflows/", r"/.agents/workflows/"),
     (r"/global_templates/", r"/templates/"),
     (r"/rubrics/", r"/rubric/"),

@@ -443,7 +443,7 @@ Do not treat "it stopped happening once" as sufficient proof for meaningful issu
 
 #### Load Template (Step 7)
 
-- [REQUIRED] Load [debug-report.md](file:///C:/Users/Oviks/.gemini/antigravity/global_templates/debug-report.md)
+- [REQUIRED] Load [debug-report.md](file:///C:/Users/godsw/.gemini/config/global_templates/debug-report.md)
 - Follow the structure and guidance in the template exactly to record the bug investigation.
 
 ---

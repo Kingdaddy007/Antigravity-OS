@@ -1,0 +1,48 @@
+# Audit Mechanics Map
+
+Use the 30 local audit reports in `design-audit/` as the living reference library. When proposing a visual or motion concept, cite at least 2 mechanics from this map and name how they are adapted for the current interior/spatial brand.
+
+## Design Audit Directory Paths
+
+To inspect the raw reports for any of the 30 websites, load the corresponding `.md` file from these directories:
+- **Local Workspace Path:** `design-audit/` (e.g., `design-audit/site-01-oryzo.md`)
+- **Global Configuration Paths:**
+  - For Gemini: `C:/Users/godsw/.gemini/config/design-audit/`
+  - For OpenClaude: `C:/Users/godsw/.openclaude/design-audit/`
+  - For Codex: `C:/Users/godsw/.codex/design-audit/`
+
+## Core Adaptation Map
+
+| Audit Site | Mechanic To Adapt | Use For Interior / Spatial Sites |
+| --- | --- | --- |
+| Site 01 Oryzo | pinned anchor object, color reset chapters, canvas image sequence | one chair/lamp/vase/material sample owns scroll while rooms change behind it |
+| Site 02 Montfort | atmospheric fly-through, fog/cloud diegetic wipes | camera enters through dust, curtain, light, or shadow into a residence |
+| Site 03 MAIN | continuous WebGL camera path, progress rail | guided walkthrough of abstracted rooms or material worlds |
+| Site 04 Porcelain | curtain entry, product spin, brush mask | doorway/curtain open into project gallery; object/specimen inspection |
+| Site 05 Cartier | canvas-first exhibition, material drama, camera-path brief | luxury gallery procession through rooms, objects, and light chambers |
+| Site 07 Springs | editorial parallax card stack, chaptered real estate narrative | architectural/interior portfolio with overlapping renders and calm scroll |
+| Site 09 Joby | credibility ladder: experience -> service -> proof -> ecosystem -> vision | decorator site sequence: atmosphere -> transformation -> proof -> method -> inquiry |
+| Site 10 Obsidian | archive luxury, FLIP grid-to-hero, ink masks | curated project archive with museum labels and shared-element project expansion |
+| Site 14 Terminal | sequence-scrub brand film, hard visual cuts, data-over-reality | room film or renovation process scrubbed by scroll with caption cues |
+| Site 15 IBEX | room-by-room color chapters, one focal point, slow plate reveals | gallery-like portfolio chapters; each room gets one dominant visual |
+| Site 18 Estates | stacked full-bleed media panels, invisible UI, slow scroll friction | ultra-premium residential showcase with quiet concierge inquiry |
+| Site 20 Cartier | diorama procession, monumentalization, gallery pullback | small decor/fixture made monumental via silhouettes, light, and scale |
+| Site 21 Tidescape | negative template: beige, stock, fade-up, scatter | smell test; reject this structure |
+| Site 22 Tea | ritual transformation, contemplative copy choreography | styling/renovation process as physical ritual with short copy beats |
+| Site 23 Hool | governing physics sentence, ambient/narrative/interactive split | one world law such as "curtains breathe in lamplight" or "stone holds weight" |
+| Site 25 Indigo | structural motif, card fan/bloom, playful proof | motif-led decor brand or playful studio using swatches/cards as physical system |
+| Site 26 Goldhive | narrative object overlay, 2D-to-3D breakout | object/furniture/fixture travels across portfolio chapters |
+| Site 27 Setby | technical annotation, object role inventory, shape inheritance | annotated chair/lamp/material sample with DOM labels tied to object points |
+| Site 28 CALMM | depth sandwich, scene kit coherence, curtain veil | layered interior hero with foreground blur, room, object, proof overlays |
+| Site 29 Lounge Coffee | hero event, split mask, experience-then-store, palette cleanser | mural/fabric/door/light reveal before project grid or inquiry |
+| Site 30 Nauta | living mockup ticker, hard-cut segmentation, trust-preserving motion | live process/proof panel for design method, availability, project phases |
+
+## Proposal Rule
+
+Every serious visual direction must include:
+
+- `Mechanic source:` site number/name.
+- `Adaptation:` how it becomes a spatial/interior mechanic.
+- `Assets needed:` image, render, video, SVG, WebGL, or CSS-native.
+- `Motion role:` arrival, ambient, scroll-bound, or interaction.
+- `Why it avoids Tidescape:` the specific template smell it rejects.

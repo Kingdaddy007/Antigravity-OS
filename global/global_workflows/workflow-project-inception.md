@@ -1,61 +1,186 @@
 ---
-description: The systematic sequence for taking a raw idea and turning it into a structured, sequenced, executable project plan — the bridge between "I have an idea" and "let's start building."
+name: workflow-project-inception
+description: Turn a new high-end interior storytelling website idea into buildable spatial context
 ---
 
-# WORKFLOW: PROJECT INCEPTION (MASTER)
-
-> **[CONTEXT AMNESIA FAILSAFE]**
-> YOU MUST USE TOOL CALLS TO READ THE FULL SOURCE FILE AND THE REQUIRED SKILLS/CONTEXTS BEFORE EXECUTING THIS.
-> Verify silently in your internal reasoning that you have done this.
-
-> **IMPORTANT [REQUIRED]:** This is the UI Trigger. For the full detailed logic, instructions, and implementation phases, the Agent MUST load and follow the [SOURCE FILE](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-project-inception.md).
+# WORKFLOW: PROJECT INCEPTION
 
 ## WHAT THIS WORKFLOW DOES
 
-This workflow transforms a raw idea into a buildable plan. It acts as the "product manager" ensuring the "why" and "what" are locked before the "how" begins.
+Turn a new high-end interior storytelling website idea into buildable spatial context. For interior decorators, spatial studios, furniture/decor showrooms, galleries, architecture-adjacent studios, and luxury home brands, route visual planning through the spatial experience system before technical build work.
 
----
+Default journey:
 
-## REQUIRED ACTIVATION (AGENT MUST LOAD)
+`Atmosphere -> Taste -> Transformation -> Proof -> Method -> Inquiry`
 
-### 1. Load Full Instructions
+## ACTIVATION
 
-- [ ] **Load Source [REQUIRED]:** [workflow-project-inception.md](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-project-inception.md) (Follow all 6 phases).
+Use when:
 
-### 2. Load Core Contexts & Skills (Always)
+- Starting a new interior decorator, interior design, spatial studio, staging, furniture, decor, gallery, architecture-adjacent, or luxury home website.
+- Turning a rough premium website idea into a build plan.
+- Creating first project contexts for a visual/spatial brand.
 
-- **Core:** `anti-gravity-core.md`, `system-thinking.md`, `execution-workflow.md`.
-- **Skills:** `skill-product-thinking`, `skill-architecture`.
-- **Contexts:** No existing context needed (it creates them).
+Do NOT use when:
 
-### 3. Load Conditional Assets
+- Adding a small feature to an already-planned project.
+- Debugging an existing implementation.
+- Doing backend/API/security/database/DevOps-only work.
 
-| Condition | Skill/Context to Load |
-| :--- | :--- |
-| UI/Frontend | `skill-ui-ux`, `visual-brainstorming` |
-| Database/Data | `skill-database` |
-| API/Integration | `skill-api-design` |
+## REQUIRED FILES
 
----
+Load:
 
-## EXECUTION SUMMARY (HIGH-LEVEL)
+- `skills/brand-strategy/SKILL.md`
+- `skills/storytelling/SKILL.md`
+- `skills/spatial-experience-design/SKILL.md`
+- `skills/cinematic-showroom-strategy/SKILL.md`
+- `skills/ui-ux/SKILL.md`
+- `workflows/workflow-spatial-concept.md`
+- `skills/spatial-experience-design/reference/audit-mechanics-map.md`
+- `skills/spatial-experience-design/reference/scene-kit-and-asset-directive.md`
+- `skills/spatial-experience-design/reference/cinematic-room-grammar.md` when image/video prompts are needed
+- `skills/spatial-experience-design/reference/portfolio-proof-chapters.md` when portfolio is central
+- `skills/cinematic-motion/reference/video-to-website-choreography.md` when scroll-led media is involved
+- `design-audit/` when premium inspiration is needed
 
-| Phase | Goal | Gate |
-| :--- | :--- | :--- |
-| **P1. Problem** | Define Why | User confirms problem statement |
-| **P2. Scope** | Define What | Lock Core vs Nice-to-Have |
-| **P3. Design** | Define Structure | Stack, Data Model, Riskiest Decision |
-| **P4. Sequence** | Define Order | Numbered Build Plan |
-| **P5. Summary** | Finalize Brief | Create Project Brief Document |
-| **P6. Launch** | Begin Build | Hand off to Build Workflow |
+## EXECUTION SEQUENCE
 
----
+### PHASE 1: DEFINE THE SPATIAL BUSINESS PROBLEM
 
-## QUALITY GATES
+Capture:
 
-- **G1 (Problem):** Do NOT skip Phase 1. Understanding the problem is the foundation.
-- **G2 (MVP):** Use the "20% question" to keep MVP focused only on core value.
-- **G3 (Safety):** Identify the riskiest building block and validate it first.
-- **G4 (Logic):** Sequence builds foundation before features (Infrastructure -> Data -> Auth -> Feature 1).
+- brand/studio type
+- audience and desired client
+- price/perception goal
+- current or intended taste world
+- existing assets and missing assets
+- inquiry goal
+- wrong-fit clients
 
-> **Final Instruction:** The detailed steps for problem extraction, feature categorization, and architecture design are in the Source file. Read it now.
+Output:
+
+- `contexts/project-context.md`
+- `contexts/brand-diagnostics.md` when positioning is unclear
+
+Gate: Do not discuss features before the brand perception and inquiry goal are clear.
+
+### PHASE 2: DIAGNOSE POSITIONING AND STORY
+
+Use `brand-strategy` and `storytelling`.
+
+Create:
+
+- `contexts/spatial/spatial-story.md`
+- `contexts/spatial/brand-to-scene-translation.md` when the project is cinematic, video-led, or portfolio-led
+
+It must include:
+
+- visual thesis input
+- audience self-image
+- brand tension
+- entry room
+- threshold event
+- signature object/material
+- room sequence
+- transformation proof
+- method reveal
+- inquiry posture
+
+`brand-to-scene-translation.md` must include:
+
+- perception gap
+- desired visitor belief
+- taste world
+- enemy/cliche to reject
+- spatial metaphor
+- first scene
+- whole-site scene sequence
+- prompt implications
+- portfolio/proof implications
+- inquiry implication
+
+Gate: Do not create DESIGN tokens before the spatial story exists.
+
+### PHASE 3: RUN SPATIAL CONCEPT
+
+Run `workflow-spatial-concept.md`.
+
+Required outputs:
+
+- `contexts/spatial/anti-template-preflight.md`
+- `contexts/spatial/visual-thesis.md`
+- `contexts/spatial/room-sequence.md`
+- `contexts/spatial/brand-to-scene-translation.md`
+- `contexts/spatial/audit-adaptation-map.md`
+- `contexts/spatial/showroom-choreography.md`
+- `contexts/spatial/portfolio-proof-chapters.md` when portfolio is central
+- `contexts/spatial/cinematic-prompt-pack.md` when image/video prompts are needed
+- `contexts/spatial/beloved-asset-directive.md`
+- `contexts/spatial/hero-event-blueprint.md`
+- `contexts/spatial/scene-kit-brief.md`
+- `contexts/spatial/depth-map.md`
+- `contexts/spatial/material-script.md`
+- `contexts/spatial/motion-board.md`
+- `contexts/spatial/asset-boundary.md`
+
+Gate: No mockup, design system, or implementation until these exist.
+
+### PHASE 4: DEFINE THE VISUAL SYSTEM
+
+Create or update:
+
+- `DESIGN.md`
+- `DESIGN.json`
+
+Tokens must derive from:
+
+- material script
+- light behavior
+- room sequence
+- typography posture
+- UI/inquiry model
+
+Do not derive the palette from generic color preference.
+
+### PHASE 5: PLAN BUILD ORDER
+
+Build order:
+
+1. Project setup and asset folders.
+2. Scene choreography and prompt pack.
+3. Video/still asset generation or sourcing.
+4. Static semantic room sequence.
+5. Scene kit integration and responsive crops.
+6. Material/light styling.
+7. Gallery/project/proof sections.
+8. Inquiry path and states.
+9. Motion tracks via `workflow-impeccable-animate.md`.
+10. Browser verification and anti-template critique.
+
+### PHASE 6: PACKAGE THE NORTH STAR
+
+Deliver:
+
+- spatial story summary
+- visual thesis
+- room sequence
+- brand-to-scene translation
+- showroom choreography
+- cinematic prompt pack when media is generated
+- portfolio proof chapters when portfolio is central
+- scene kit requirements
+- asset boundary
+- build order
+- verification checklist
+
+## QUALITY GATE CHECKLIST
+
+- [ ] Brand perception and inquiry goal are clear.
+- [ ] `spatial-story.md` exists.
+- [ ] Cinematic/video-led projects include brand-to-scene translation, showroom choreography, and prompt pack.
+- [ ] Prompt pack derives from approved context files, not standalone inspiration.
+- [ ] All spatial concept artifacts exist.
+- [ ] DESIGN files derive from material/light/room sequence.
+- [ ] Build order uses spatial craft and animate workflows.
+- [ ] Backend/API/security/database concerns are not mixed into visual planning.

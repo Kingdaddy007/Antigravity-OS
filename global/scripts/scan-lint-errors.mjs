@@ -7,9 +7,17 @@
 import fs from 'fs';
 import path from 'path';
 
+import os from 'os';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const repoGlobalDir = path.resolve(__dirname, '..');
+const activeConfigDir = path.join(os.homedir(), '.gemini', 'config');
+
 const TARGET_DIRS = [
-  '{{USER_HOME_PATH}}\\antigravitygold',
-  '{{USER_HOME_PATH}}\\.antigravity'
+  repoGlobalDir,
+  activeConfigDir
 ];
 
 const IGNORE_DIRS = [
@@ -157,7 +165,7 @@ if (allResults.length === 0) {
     totalMD024 += r.md024.length;
 
     // Shorten path for readability
-    const short = r.filePath.replace('{{USER_HOME_PATH}}\\', '');
+    const short = r.filePath.replace(os.homedir() + path.sep, '');
     console.log(`FILE: ${short}`);
 
     if (r.md025.length > 0) {

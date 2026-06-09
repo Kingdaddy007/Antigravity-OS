@@ -76,7 +76,7 @@ Without this workflow, reviews either rubber-stamp code with a quick approval, o
 | Auth, input, or security code | `security-baselines.md` |
 | Business logic | `domain-rules.md` |
 | Test quality being evaluated | `testing-standards.md` |
-| UI components being reviewed | `design-system.md` |
+| UI components being reviewed | `DESIGN.md` |
 | API changes | `api-conventions.md` |
 | Database changes | `database-context.md` |
 
@@ -386,7 +386,7 @@ State the minimum changes needed for approval when not ready. Do not leave the a
 
 #### Load Template (Step 8)
 
-- [REQUIRED] Load [code-review-report.md](file:///C:/Users/Oviks/.gemini/antigravity/global_templates/code-review-report.md)
+- [REQUIRED] Load [code-review-report.md](file:///C:/Users/godsw/.gemini/config/global_templates/code-review-report.md)
 - Follow the structure and guidance in the template exactly to deliver the code review findings.
 
 #### Tone Rules (Step 8)

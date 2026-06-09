@@ -26,17 +26,21 @@ Do NOT use for bug fixes, small improvements, or refactoring tasks. A brief comm
 ## THE TEMPLATE
 
 ```markdown
+
 # Feature Plan: [Feature Name]
 
 ***
 
 ## Date
+
 [YYYY-MM-DD]
 
 ## Author
+
 [Who wrote this plan]
 
 ## Owner(s)
+
 - [Owner 1]
 - [Owner 2]
 
@@ -357,6 +361,7 @@ We will know this succeeded when [measurable behavior] changes by [amount] withi
 - [ ] Opportunity cost is acknowledged
 - [ ] Exit strategy exists
 - [ ] Rollout and rollback plan defined
+
 ```
 
 ***

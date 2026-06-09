@@ -1,9 +1,17 @@
 import fs from 'fs';
 import path from 'path';
 
+import os from 'os';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const repoGlobalDir = path.resolve(__dirname, '..');
+const activeConfigDir = path.join(os.homedir(), '.gemini', 'config');
+
 const TARGET_DIRS = [
-  '{{USER_HOME_PATH}}\\antigravitygold',
-  '{{USER_HOME_PATH}}\\.antigravity'
+  repoGlobalDir,
+  activeConfigDir
 ];
 
 const IGNORE_DIRS = ['node_modules', '.git', '.gemini', '.next', 'dist', 'build', 'brain', '.vscode', 'extensions'];

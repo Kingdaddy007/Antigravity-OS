@@ -5,7 +5,7 @@ import re
 from pathlib import Path
 
 
-ROOT = Path(r"{{USER_HOME_PATH}}\antigravitygold")
+ROOT = Path(__file__).resolve().parent.parent
 PAT = re.compile(r"\[[^\]]*\]\(([^\)]+\.md)\)", re.IGNORECASE)
 
 

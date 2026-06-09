@@ -1,73 +1,93 @@
 ---
-description: The systematic sequence for generating visual design previews and Google Stitch design briefs during brainstorming — making design direction visible before implementation begins.
+name: workflow-visual-brainstorm
+description: Route visual exploration for high-end interior storytelling websites
 ---
 
-# WORKFLOW: VISUAL BRAINSTORMING (MASTER)
-
-> **[CONTEXT AMNESIA FAILSAFE]**
-> YOU MUST USE TOOL CALLS TO READ THE FULL SOURCE FILE AND THE REQUIRED SKILLS/CONTEXTS BEFORE EXECUTING THIS.
-> Verify silently in your internal reasoning that you have done this.
-
-> **IMPORTANT [REQUIRED]:** This is the Trigger. For the full detailed logic, dual-path execution (HTML Preview vs Google Stitch Brief), and design token export process, the Agent MUST load and follow the [SOURCE FILE](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-visual-brainstorm.md).
+# WORKFLOW: VISUAL BRAINSTORM
 
 ## WHAT THIS WORKFLOW DOES
 
-Produces visual artifacts (live HTML previews or Google Stitch design briefs) that let the user SEE design decisions before committing to implementation. Prevents the most expensive UI mistake: building something that looks different from what the user imagined.
+Route visual exploration for high-end interior storytelling websites through `workflow-spatial-concept.md`. Do not generate generic color, typography, or Stitch-style direction options before the spatial concept artifacts exist.
 
----
+## ACTIVATION
 
-## REQUIRED ACTIVATION (AGENT MUST LOAD)
+Use when:
 
-### 1. Load Full Instructions
+- The user asks to explore visual direction for an interior decorator, spatial studio, showroom, decor, furniture, gallery, or luxury home website.
+- The user asks for mockups, visual brainstorms, premium direction, or "make it look like a 20k site."
 
-- [ ] **Load Source [REQUIRED]:** [workflow-visual-brainstorm.md](file:///C:/Users/Oviks/.gemini/antigravity/workflows/workflow-visual-brainstorm.md) (Follow all 5 phases).
+Do NOT use when:
 
-### 2. Load Core Contexts & Skills (Always)
+- The task is backend/API/security/database/DevOps.
+- A complete spatial concept already exists and the task is implementation.
 
-- **Core:** `anti-gravity-core.md`, `system-thinking.md`.
-- **Skills:** `visual-brainstorming`, `skill-ui-ux`.
-- **Contexts:** `visual-identity.md` (if exists), `design-system.md` (if exists).
+## REQUIRED FILES
 
-### 3. Load Conditional Assets
+Load:
 
-| Condition | Skill/Context to Load |
-| :--- | :--- |
-| During project inception | `skill-product-thinking`, `skill-architecture` |
-| Complex UI / dashboards | `skill-coding` (for HTML preview generation) |
-| Existing project with stack | `stack-context.md` |
+- `workflows/workflow-spatial-concept.md`
+- `skills/spatial-experience-design/SKILL.md`
+- `skills/storytelling/SKILL.md`
+- `skills/cinematic-motion/SKILL.md` when motion is involved
+- `skills/spatial-experience-design/reference/audit-mechanics-map.md`
+- `skills/spatial-experience-design/reference/scene-kit-and-asset-directive.md`
 
----
+## EXECUTION SEQUENCE
 
-## EXECUTION PROTOCOL (HIGH-LEVEL)
+### STEP 1: Check Spatial Artifacts
 
-| Phase | Goal | Gate |
-| :--- | :--- | :--- |
-| **P1. Understand** | Clarify what needs visualization | Clear question before any preview |
-| **P2. Choose Path** | Select HTML Preview or Stitch Brief | Path explicitly chosen |
-| **P3A. HTML Preview** | Generate & iterate on live preview | User approves visual direction |
-| **P3B. Stitch Brief** | Prepare detailed brief for Google Stitch | User completes Stitch session |
-| **P4. Lock Direction** | Export design tokens to context files | Tokens written to visual-identity.md |
-| **P5. Hand Off** | Transition to build workflow | Next workflow identified |
+Look for:
 
----
+- `contexts/spatial/visual-thesis.md`
+- `contexts/spatial/anti-template-preflight.md`
+- `contexts/spatial/room-sequence.md`
+- `contexts/spatial/audit-adaptation-map.md`
+- `contexts/spatial/beloved-asset-directive.md`
+- `contexts/spatial/hero-event-blueprint.md`
+- `contexts/spatial/scene-kit-brief.md`
+- `contexts/spatial/depth-map.md`
+- `contexts/spatial/material-script.md`
+- `contexts/spatial/motion-board.md`
+- `contexts/spatial/asset-boundary.md`
 
-## DUAL-PATH DECISION
+If any are missing, run `workflow-spatial-concept.md` first.
 
-| Need | Path A: HTML Preview | Path B: Google Stitch |
-| :--- | :--- | :--- |
-| Color palette comparison | ✅ Best | Overkill |
-| Typography preview | ✅ Best | Overkill |
-| Full page layout mockup | ⚠️ Basic wireframe | ✅ Best |
-| Production-quality mockup | ❌ Not the tool | ✅ Best |
-| Fast decision (< 5 min) | ✅ Best | ❌ Too slow |
+Gate: Do not create visual options until the spatial contract exists.
 
----
+### STEP 2: Generate Direction Options From The Contract
 
-## QUALITY GATES
+Create 2-3 options only within the approved visual thesis. Options may vary:
 
-- **G1 (Clarity):** No preview without a clear question to answer.
-- **G2 (Path):** Path A or B explicitly chosen — never assumed.
-- **G3 (Approval):** User approves visual direction before tokens are exported.
-- **G4 (Export):** Design tokens MUST be written to `contexts/visual-identity.md`.
+- archetype emphasis
+- hero event treatment
+- room sequence pacing
+- material/light emphasis
+- scene kit intensity
+- motion restraint
 
-> **Final Instruction:** The full dual-path execution logic, HTML preview templates, Stitch brief structure, and design token export process are in the Source file. Read it now.
+Do not present palette-only variants.
+
+### STEP 3: Check Against Anti-Template Smells
+
+For each option, state:
+
+- Why it cannot be mistaken for a generic decorator template.
+- Which design-audit mechanics it adapts.
+- Which image-native assets it depends on.
+- Which motion track carries the signature experience.
+- Which parts remain quiet for proof and inquiry.
+
+### STEP 4: Lock Direction
+
+Record the chosen direction by updating or creating:
+
+- `contexts/spatial/selected-direction.md`
+- updates to scene kit, depth map, material script, and motion board if the selected direction changes them.
+
+## QUALITY GATE CHECKLIST
+
+- [ ] Spatial concept artifacts exist before visual options.
+- [ ] Options differ by spatial idea, not only color.
+- [ ] Each option names asset requirements.
+- [ ] The selected direction updates the spatial contract.
+- [ ] Template luxury patterns are rejected.

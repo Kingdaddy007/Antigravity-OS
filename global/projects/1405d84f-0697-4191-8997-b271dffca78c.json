@@ -1,0 +1,20 @@
+{
+  "id": "1405d84f-0697-4191-8997-b271dffca78c",
+  "name": "INSTALLATION",
+  "projectResources": {
+    "resources": [
+      {
+        "gitFolder": {
+          "folderUri": "file:///c%3A/Users/godsw/ANTIGRAVITY%20%20WORKSPACE/BYU%20ASSIGNMENT/INSTALLATION",
+          "defaultBranch": "main"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "fileAccessPolicy": "AGENT_SETTING_POLICY_ASK",
+    "internetPolicy": "AGENT_SETTING_POLICY_ASK",
+    "autoExecutionPolicy": "CASCADE_COMMANDS_AUTO_EXECUTION_OFF",
+    "artifactReviewMode": "ARTIFACT_REVIEW_MODE_ALWAYS"
+  }
+}

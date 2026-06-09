@@ -133,7 +133,7 @@ A postmortem is only useful if it changes future behavior, design, instrumentati
 | 2 | [Specific action] | Prevent / Detect / Mitigate | [Who] | [When] | [Status] |
 | 3 | [Specific action] | Prevent / Detect / Mitigate | [Who] | [When] | [Status] |
 
-**Action types:**
+### Action types
 
 - **Prevent** — stop this class of incident from happening
 - **Detect** — catch it faster next time
