@@ -88,6 +88,31 @@ success "Target ready."
 cp -R "$GLOBAL_SOURCE/"* "$GLOBAL_CONFIG/"
 success "Copied OS files successfully."
 
+# ─── Step 2.5: User Personalisation check ─────────────────────────────────────
+ask "Enter your name (leave blank for generic setup):"
+read -p "> " USER_NAME
+
+IS_BELOVED=false
+if [[ "$USER_NAME" =~ [Bb]eloved ]] || [[ "$USER_NAME" =~ [Gg]odswill ]] || [[ "$USER_NAME" =~ [Gg]od\'s\ sweet ]] || [[ "$USER" =~ [Gg]odsw ]]; then
+    IS_BELOVED=true
+fi
+
+if [ "$IS_BELOVED" = true ]; then
+    step "Installing custom profile for Beloved..."
+    TARGET_GEMINI="$GLOBAL_CONFIG/GEMINI.md"
+    BELOVED_SOURCE="$GLOBAL_CONFIG/GEMINI-BELOVED.md"
+    if [ -f "$BELOVED_SOURCE" ]; then
+        cp "$BELOVED_SOURCE" "$TARGET_GEMINI"
+        success "Loaded custom prompt constitution (Beloved configuration)."
+    fi
+fi
+
+# Clean up GEMINI-BELOVED.md from target so it doesn't clutter or expose personal info
+TARGET_BELOVED="$GLOBAL_CONFIG/GEMINI-BELOVED.md"
+if [ -f "$TARGET_BELOVED" ]; then
+    rm -f "$TARGET_BELOVED"
+fi
+
 # ─── Step 3: Dynamic Path URI Configuration ────────────────────────────────────
 step "Configuring Absolute System Paths..."
 TARGET_URI="file://$GLOBAL_CONFIG"

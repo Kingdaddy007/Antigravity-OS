@@ -75,6 +75,32 @@ Get-ChildItem -Path $GlobalConfig -Recurse | Remove-Item -Recurse -Force -ErrorA
 Copy-Item -Path "$GlobalSource\*" -Destination $GlobalConfig -Recurse -Force
 Write-Success "Copied OS files successfully."
 
+# ─── Step 2.5: User Personalisation check ─────────────────────────────────────
+Write-Question "Enter your name (leave blank for generic setup):"
+$UserName = (Read-Host).Trim()
+
+$IsBeloved = $false
+if ($UserName -match "(?i)Beloved" -or $UserName -match "(?i)Godswill" -or $UserName -match "(?i)God's sweet" -or $env:USERNAME -match "(?i)godsw") {
+    $IsBeloved = $true
+}
+
+if ($IsBeloved) {
+    Write-Step "Installing custom profile for Beloved..."
+    # Replace the generic GEMINI.md in destination with GEMINI-BELOVED.md
+    $TargetGemini = Join-Path $GlobalConfig "GEMINI.md"
+    $BelovedSource = Join-Path $GlobalConfig "GEMINI-BELOVED.md"
+    if (Test-Path $BelovedSource) {
+        Copy-Item -Path $BelovedSource -Destination $TargetGemini -Force
+        Write-Success "Loaded custom prompt constitution (Beloved configuration)."
+    }
+}
+
+# Clean up GEMINI-BELOVED.md from target so it doesn't clutter or expose personal info
+$TargetBeloved = Join-Path $GlobalConfig "GEMINI-BELOVED.md"
+if (Test-Path $TargetBeloved) {
+    Remove-Item -Path $TargetBeloved -Force
+}
+
 
 # ─── Step 3: Dynamic Path URI Configuration ────────────────────────────────────
 Write-Step "Configuring Absolute System Paths..."
