@@ -113,6 +113,63 @@ if [ -f "$TARGET_BELOVED" ]; then
     rm -f "$TARGET_BELOVED"
 fi
 
+# ─── Step 2.6: Interactive Profile Customisation ──────────────────────────────
+if [ "$IS_BELOVED" = false ]; then
+    ask "Would you like to customize your GEMINI.md master prompt now? [y/n]"
+    read -p "> " CUSTOMIZE
+    if [[ "$CUSTOMIZE" =~ ^[Yy]$ ]]; then
+        step "Customizing your GEMINI.md profile..."
+        
+        read -p "Enter your Name/Nickname: " REAL_NAME
+        [ -z "$REAL_NAME" ] && REAL_NAME="[Your Name]"
+        
+        read -p "Enter your Location (e.g. London-based): " LOCATION
+        [ -z "$LOCATION" ] && LOCATION="[Your Location]"
+        
+        read -p "Describe your Work Style (e.g. sprint-based, steady-paced): " WORK_STYLE
+        [ -z "$WORK_STYLE" ] && WORK_STYLE="steady-paced and task-focused."
+        
+        read -p "Describe your Execution Patterns (e.g. how you handle project milestones): " EXECUTION
+        [ -z "$EXECUTION" ] && EXECUTION="finishes task milestones before shifting scope."
+        
+        read -p "Specify your rule for Decisions & Clarity (e.g. move at 70% clarity): " CLARITY
+        [ -z "$CLARITY" ] && CLARITY="move forward once clarity is good enough (70% rule)."
+        
+        read -p "Specify your rule for Communication Patterns (e.g. direct, clear): " COMM_PATTERNS
+        [ -z "$COMM_PATTERNS" ] && COMM_PATTERNS="direct, clear, and highlights blockers early."
+        
+        read -p "Detail your Resource Constraints (e.g. rate limits, budget): " RESOURCES
+        [ -z "$RESOURCES" ] && RESOURCES="none specified."
+        
+        read -p "Describe your Quality Standard (e.g. clean code, test coverage): " QUALITY
+        [ -z "$QUALITY" ] && QUALITY="expects clean code and solid verification traces."
+
+        GEMINI_PATH="$GLOBAL_CONFIG/GEMINI.md"
+        if [ -f "$GEMINI_PATH" ]; then
+            if command -v perl >/dev/null 2>&1; then
+                perl -pi -e "s/\[Your Name\]/$REAL_NAME/g" "$GEMINI_PATH"
+                perl -pi -e "s/\[Your Location\]/$LOCATION/g" "$GEMINI_PATH"
+                perl -pi -e "s/\[Describe your work pace, e\.g\., sprint-based, steady-paced, 1-3 day pushes, etc\.\]/$WORK_STYLE/g" "$GEMINI_PATH"
+                perl -pi -e "s/\[Detail how you start and finish projects, or rules for project milestones\.\]/$EXECUTION/g" "$GEMINI_PATH"
+                perl -pi -e "s/\[Specify your rule for taking action with incomplete information, e\.g\., decide at 70% clarity\.\]/$CLARITY/g" "$GEMINI_PATH"
+                perl -pi -e "s/\[State how you communicate under stress, during wrap-ups, or standard routines\.\]/$COMM_PATTERNS/g" "$GEMINI_PATH"
+                perl -pi -e "s/\[Detail local resource realities, API\/financial budgets, or other environment limitations\.\]/$RESOURCES/g" "$GEMINI_PATH"
+                perl -pi -e "s/\[Describe your expectations for visual quality, test coverage, code styles, or premium motion assets\.\]/$QUALITY/g" "$GEMINI_PATH"
+            else
+                sedi "s|\[Your Name\]|$REAL_NAME|g" "$GEMINI_PATH"
+                sedi "s|\[Your Location\]|$LOCATION|g" "$GEMINI_PATH"
+                sedi "s|\[Describe your work pace, e\.g\., sprint-based, steady-paced, 1-3 day pushes, etc\.\]|$WORK_STYLE|g" "$GEMINI_PATH"
+                sedi "s|\[Detail how you start and finish projects, or rules for project milestones\.\]|$EXECUTION|g" "$GEMINI_PATH"
+                sedi "s|\[Specify your rule for taking action with incomplete information, e\.g\., decide at 70% clarity\.\]|$CLARITY|g" "$GEMINI_PATH"
+                sedi "s|\[State how you communicate under stress, during wrap-ups, or standard routines\.\]|$COMM_PATTERNS|g" "$GEMINI_PATH"
+                sedi "s|\[Detail local resource realities, API/financial budgets, or other environment limitations\.\]|$RESOURCES|g" "$GEMINI_PATH"
+                sedi "s|\[Describe your expectations for visual quality, test coverage, code styles, or premium motion assets\.\]|$QUALITY|g" "$GEMINI_PATH"
+            fi
+            success "Your personalized GEMINI.md has been generated!"
+        fi
+    fi
+fi
+
 # ─── Step 3: Dynamic Path URI Configuration ────────────────────────────────────
 step "Configuring Absolute System Paths..."
 TARGET_URI="file://$GLOBAL_CONFIG"

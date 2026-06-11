@@ -101,6 +101,55 @@ if (Test-Path $TargetBeloved) {
     Remove-Item -Path $TargetBeloved -Force
 }
 
+# ─── Step 2.6: Interactive Profile Customisation ──────────────────────────────
+if (-not $IsBeloved) {
+    Write-Question "Would you like to customize your GEMINI.md master prompt now? [Y/N]"
+    $Customize = Read-Host
+    if ($Customize.Trim().ToUpper() -eq "Y") {
+        Write-Step "Customizing your GEMINI.md profile..."
+        
+        $RealName = (Read-Host "Enter your Name/Nickname").Trim()
+        if ([string]::IsNullOrEmpty($RealName)) { $RealName = "[Your Name]" }
+        
+        $Location = (Read-Host "Enter your Location (e.g. London-based)").Trim()
+        if ([string]::IsNullOrEmpty($Location)) { $Location = "[Your Location]" }
+        
+        $WorkStyle = (Read-Host "Describe your Work Style (e.g. sprint-based, steady-paced)").Trim()
+        if ([string]::IsNullOrEmpty($WorkStyle)) { $WorkStyle = "steady-paced and task-focused." }
+        
+        $Execution = (Read-Host "Describe your Execution Patterns (e.g. how you handle project milestones)").Trim()
+        if ([string]::IsNullOrEmpty($Execution)) { $Execution = "finishes task milestones before shifting scope." }
+        
+        $Clarity = (Read-Host "Specify your rule for Decisions & Clarity (e.g. move at 70% clarity)").Trim()
+        if ([string]::IsNullOrEmpty($Clarity)) { $Clarity = "move forward once clarity is good enough (70% rule)." }
+        
+        $CommPatterns = (Read-Host "Specify your Communication Patterns under stress or when writing summaries").Trim()
+        if ([string]::IsNullOrEmpty($CommPatterns)) { $CommPatterns = "direct, clear, and highlights blockers early." }
+        
+        $Resources = (Read-Host "Detail your Resource Constraints (e.g. rate limits, budget)").Trim()
+        if ([string]::IsNullOrEmpty($Resources)) { $Resources = "none specified." }
+        
+        $Quality = (Read-Host "Describe your Quality Standard (e.g. premium animations, logic-first, clean code)").Trim()
+        if ([string]::IsNullOrEmpty($Quality)) { $Quality = "expects clean code and solid verification traces." }
+
+        $GeminiPath = Join-Path $GlobalConfig "GEMINI.md"
+        if (Test-Path $GeminiPath) {
+            $GeminiContent = Get-Content $GeminiPath -Raw
+            $GeminiContent = $GeminiContent -replace "\[Your Name\]", $RealName
+            $GeminiContent = $GeminiContent -replace "\[Your Location\]", $Location
+            $GeminiContent = $GeminiContent -replace "\[Describe your work pace, e\.g\., sprint-based, steady-paced, 1-3 day pushes, etc\.\]", $WorkStyle
+            $GeminiContent = $GeminiContent -replace "\[Detail how you start and finish projects, or rules for project milestones\.\]", $Execution
+            $GeminiContent = $GeminiContent -replace "\[Specify your rule for taking action with incomplete information, e\.g\., decide at 70% clarity\.\]", $Clarity
+            $GeminiContent = $GeminiContent -replace "\[State how you communicate under stress, during wrap-ups, or standard routines\.\]", $CommPatterns
+            $GeminiContent = $GeminiContent -replace "\[Detail local resource realities, API/financial budgets, or other environment limitations\.\]", $Resources
+            $GeminiContent = $GeminiContent -replace "\[Describe your expectations for visual quality, test coverage, code styles, or premium motion assets\.\]", $Quality
+            
+            Set-Content -Path $GeminiPath -Value $GeminiContent -NoNewline
+            Write-Success "Your personalized GEMINI.md has been generated!"
+        }
+    }
+}
+
 
 # ─── Step 3: Dynamic Path URI Configuration ────────────────────────────────────
 Write-Step "Configuring Absolute System Paths..."
