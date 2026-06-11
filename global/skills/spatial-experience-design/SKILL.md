@@ -84,6 +84,7 @@ Do not build a high-end spatial site until these artifacts exist in `contexts/sp
 11. `material-script.md` - wood, stone, textile, plaster, glass, metal, shadow, daylight, lamp glow, and how each behaves.
 12. `motion-board.md` - arrival, ambient, scroll-bound, and interaction tracks.
 13. `asset-boundary.md` - image-native, CSS-native, SVG-native, canvas/WebGL-native, and accepted placeholders.
+14. `scroll-storyboard.md` - **the translation layer**. Maps every narrative beat to scroll depth, register, anchor object, copy mode, and transition type. Must exist before any section-level HTML, CSS, or animation work begins. Use `scroll-storyboard` skill to produce it. Without this, each section will be designed in isolation and the site will feel like slides, not a journey.
 
 ## VISUAL THESIS RULES
 

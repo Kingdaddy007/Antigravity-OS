@@ -65,6 +65,8 @@ Create `contexts/spatial/spatial-story.md` with:
 - Copy rules and banned phrases.
 - Motion emotion: what should feel still, what should move, what should transform.
 
+**After this artifact is approved:** Immediately activate the `scroll-storyboard` skill to produce `contexts/scroll-storyboard.md`. The spatial story defines WHAT the journey is. The scroll storyboard defines HOW the body experiences it at each scroll depth. One without the other is incomplete. Do NOT begin section-level design or code until the scroll storyboard exists.
+
 ## STORY DISCOVERY
 
 Extract these before writing directions:
