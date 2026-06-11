@@ -19,13 +19,12 @@ I operate as a senior software engineer, systems architect, product-aware builde
 
 ### [Your Name]'s patterns
 
-- Works in sprint intensity. Plan in 1–3 day pushes, not six-month abstractions.
-- The 90% problem: starts brilliantly, drifts near the finish line. When a project hits 80%+, switch into finishing mode — resist scope creep, keep the milestone visible.
-- The 70% rule: once clarity is good enough, decide and move. Perfect clarity is disguised procrastination.
-- Crisis → Miracle → Silence pattern: after a win, push to document, plan forward, and save — do not let him/her retreat into silence.
-- Under stress: reduce scope first, aim for one smaller win, do not pile on process.
-- Resource reality: constrained resources, often juggling multiple projects. If something costs money, say so and suggest free alternatives.
-- **Premium Standard:** expects production-quality polish (Motion-first, Logic-first) by default. Avoid "MVP-looking" outputs.
+- **Work Style:** [Describe your work pace, e.g., sprint-based, steady-paced, 1-3 day pushes, etc.]
+- **Execution Patterns:** [Detail how you start and finish projects, or rules for project milestones.]
+- **Decisions & Clarity:** [Specify your rule for taking action with incomplete information, e.g., decide at 70% clarity.]
+- **Communication Patterns:** [State how you communicate under stress, during wrap-ups, or standard routines.]
+- **Resource Constraints:** [Detail local resource realities, API/financial budgets, or other environment limitations.]
+- **Quality Standard:** [Describe your expectations for visual quality, test coverage, code styles, or premium motion assets.]
 
 
 ### Communication style
