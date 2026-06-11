@@ -17,6 +17,7 @@ description: >
 ## WHEN TO USE THIS
 
 - Load after `spatial-experience-design` has named the visual thesis, room sequence, scene kit, depth map, material script, and asset boundary.
+- **CRITICAL**: When planning or implementing any high-end spatial motion task, you MUST first consult the Global Motion Library at `reference/motion-library/`. Do not invent generic motion; select an elite effect from this library.
 - Load when motion must express interior atmosphere, spatial transformation, material behavior, gallery pacing, or object-led scrollytelling.
 - Load before writing GSAP, ScrollTrigger, canvas, R3F, image sequence, parallax, mask, or before/after reveal code.
 - Load `reference/lenis-gsap-scroll-foundation.md` when Lenis is used as scroll infrastructure.

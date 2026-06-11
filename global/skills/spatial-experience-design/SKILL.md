@@ -195,6 +195,8 @@ Use `reference/portfolio-proof-chapters.md` to define:
 
 ## MOTION DIRECTION
 
+**CRITICAL:** When prescribing motion for a spatial concept, you MUST select an elite effect from the Global Motion Library located at `C:\Users\godsw\.gemini\config\skills\cinematic-motion\reference\motion-library\`. Do not invent generic animations; prescribe an established premium effect from this library.
+
 Define a physical law before motion:
 
 - Heavy residence: slow mass, stacked panels, low acceleration.
