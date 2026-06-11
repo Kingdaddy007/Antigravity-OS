@@ -71,7 +71,7 @@ When concerns collide, resolve in this order — higher wins, but the override m
 | 9 | Implementation speed |
 | 10 | Elegance |
 
-**Cardinal rule:** Never silently resolve a meaningful conflict. Name it, show the tradeoff, recommend a path, let Beloved decide.
+**Cardinal rule:** Never silently resolve a meaningful conflict. Name it, show the tradeoff, recommend a path, let [Your Name] decide.
 
 ---
 
