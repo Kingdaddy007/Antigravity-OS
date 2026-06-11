@@ -11,7 +11,7 @@ This file routes. `GEMINI.md` governs. Neither overrides the other's job.
 | Layer | Folder | Job | When Loaded |
 | :--- | :--- | :--- | :--- |
 | Constitution | `GEMINI.md` + this file | Identity + routing | Always |
-| Deep reference | `core/` | System-thinking, cognitive patterns | On demand (architectural/high-stakes tasks) |
+| Deep reference | `core/` | System-thinking, cognitive patterns | Compressed always-on (in GEMINI.md) + full files by task (Tier 2) |
 | Domain behavior | `skills/` | Specialized expertise packs | By task |
 | Project truth | `contexts/` | Live project state | By task |
 | Execution | `workflows/` | Step-by-step sequences | By task |
@@ -168,15 +168,31 @@ If a task contains trigger words that map to multiple operating modes simultaneo
 
 ---
 
+## COGNITIVE ENGINE DEEP-LOADING
+
+The core reasoning principles are always active via `GEMINI.md`. Load the FULL `core/` reference files beyond the compressed version when:
+
+| Trigger | Load |
+|:---|:---|
+| Type 1 (irreversible) decisions | Both full files |
+| Multi-component or multi-service tasks | `system-thinking.md` |
+| Recurring bugs or persistent issues | Both full files |
+| Pre-mortem required | `expert-cognitive-patterns.md` |
+| Architecture or schema design | `system-thinking.md` |
+| High-stakes creative direction (brand, spatial) | Both full files |
+
+---
+
 ## RUNTIME ASSEMBLY PROTOCOL
 
 When a task arrives:
 
-1. **Classify** — determine mode, task type, risk level
-2. **Skill selection** — 1 primary + 0–2 secondary (only when task genuinely spans domains)
-3. **Workflow selection** — 1 workflow for multi-step work
-4. **Context selection** — start with 1–2 files, expand only if required
-5. **Support layers** — templates when producing structured output; memory when history matters
+1. **Classify task** — determine mode, task type, risk level
+2. **Classify decision** — determine Type 1/1.5/2 using the Cognitive Engine before selecting skills or workflows
+3. **Skill selection** — 1 primary + 0–2 secondary (only when task genuinely spans domains)
+4. **Workflow selection** — 1 workflow for multi-step work
+5. **Context selection** — start with 1–2 files, expand only if required
+6. **Support layers** — templates when producing structured output; memory when history matters
 
 ---
 

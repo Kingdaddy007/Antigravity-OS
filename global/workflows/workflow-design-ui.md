@@ -74,6 +74,9 @@ Gate: If spatial artifacts are missing for a brand page, run `workflow-spatial-c
 
 ### STEP 2: Map UI Responsibilities
 
+> **⚙ Cognitive Engine checkpoint — apply system thinking.**
+> Map the dependency chain between navigation model, gallery presentation, proof sections, inquiry path, and mobile behavior. Each structural decision here constrains all downstream craft and animation work. Check reversibility — navigation and inquiry architecture are Type 1.5 decisions that become expensive to change after build begins. Apply assumption audit: are you choosing this structure because it's right for the visitor's journey, or because it's familiar?
+
 Define:
 
 - navigation model

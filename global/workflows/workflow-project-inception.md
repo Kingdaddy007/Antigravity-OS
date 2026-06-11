@@ -67,6 +67,8 @@ Gate: Do not discuss features before the brand perception and inquiry goal are c
 
 ### PHASE 2: DIAGNOSE POSITIONING AND STORY
 
+> **⚙ Cognitive Engine checkpoint — load `core/system-thinking.md` + `core/expert-cognitive-patterns.md`.**
+> This phase contains the highest-stakes creative and strategic decisions. Apply system decomposition to diagnose current brand state vs desired positioning. Apply gray thinking and framing bias safeguards when evaluating brand tension and audience self-image. Generate 3+ positioning directions with explicit tradeoffs before selecting. Classify each major decision as Type 1, 1.5, or 2 and invest the appropriate depth.
 Use `brand-strategy` and `storytelling`.
 
 Create:

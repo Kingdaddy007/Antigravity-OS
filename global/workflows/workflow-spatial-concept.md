@@ -65,6 +65,8 @@ Gate: Do not propose a direction until the lazy/default direction is named and b
 
 ### STEP 2: Name The Visual Thesis
 
+> **⚙ Cognitive Engine checkpoint — load `core/expert-cognitive-patterns.md`.**
+> This is a Type 1.5 creative decision. Apply gray thinking — generate 3 genuinely distinct concept directions, not 3 variations of the same idea. Apply anti-comfort safeguard — if one concept feels obviously right immediately, actively challenge it before presenting. Apply first-principles assumption audit — strip away convention and ask what is provably true about this brand's spatial identity.
 Before writing the thesis, run a short concept forge with Beloved using `skills/spatial-experience-design/reference/concept-forge-questions.md`.
 
 Ask only high-leverage questions about:
@@ -121,6 +123,8 @@ Gate: Services/pricing cannot appear before atmosphere, taste, and transformatio
 
 ### STEP 4: Translate Brand To Scene
 
+> **⚙ Cognitive Engine checkpoint — apply system decomposition.**
+> Define current perception state, desired spatial experience, and the gap between them. Map how each scene decision connects to the brand positioning established in Step 2. Check for framing bias — are you translating the brand the way it was presented, or have you re-examined it from the visitor's perspective?
 Use `skills/cinematic-showroom-strategy/SKILL.md`.
 
 Write `contexts/spatial/brand-to-scene-translation.md`.
@@ -336,6 +340,8 @@ Gate: Reject prompts that say only "luxury room", "cinematic interior", "modern 
 
 ### STEP 14: Present The Creative Contract
 
+> **⚙ Cognitive Engine checkpoint — run self-evaluation.**
+> Before presenting: check for over-simplification, binary thinking, and comfort bias across all prior steps. Verify second-order effects of the overall creative direction. Ask: if this creative contract fails in 6 months, what went wrong? (Pre-mortem.)
 Summarize:
 
 - Visual thesis.

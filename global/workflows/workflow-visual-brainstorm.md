@@ -56,6 +56,8 @@ Gate: Do not create visual options until the spatial contract exists.
 
 ### STEP 2: Generate Direction Options From The Contract
 
+> **⚙ Cognitive Engine checkpoint — apply cognitive safeguards.**
+> Gray thinking: explore genuinely different visual territories, not safe variations of one idea. Framing bias: restate the visual problem from the visitor's emotional journey, not just the brand's intent. Anti-comfort: if one direction feels obvious, that's a signal to push harder on alternatives. First principles: what is provably true about how this space should feel, stripped of convention?
 Create 2-3 options only within the approved visual thesis. Options may vary:
 
 - archetype emphasis
