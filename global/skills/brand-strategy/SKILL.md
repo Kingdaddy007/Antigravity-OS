@@ -135,6 +135,8 @@ Translate positioning into constraints:
 
 Do not output abstract adjectives without constraints.
 
+For color palette selection and color psychology decisions, load the `color-system` skill.
+
 ## OUTPUT SHAPE
 
 **Brand diagnostic:** Perception gap -> taste world -> enemy -> proof architecture -> premium leaks -> spatial direction.

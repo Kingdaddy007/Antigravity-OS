@@ -1,129 +1,106 @@
-﻿---
+---
 name: workflow-impeccable-layout
 description: Impeccable UI/UX layout workflow
 ---
 
-Assess and improve layout and spacing that feels monotonous, crowded, or structurally weak — turning generic arrangements into intentional, rhythmic compositions.
+Assess and improve layout and spacing that feels monotonous, crowded, or structurally weak — turning generic arrangements into intentional, rhythmic compositions driven by psychology, time, and the LIFT system.
 
 ---
 
 ## Register
 
-Brand: asymmetric compositions, fluid spacing with `clamp()`, intentional grid-breaking for emphasis. Rhythm through contrast — tight groupings paired with generous separations.
+Brand: asymmetric compositions, fluid spacing with `clamp()`, intentional grid-breaking for emphasis. Rhythm through contrast — tight groupings paired with generous separations. Layout is eye choreography.
 
 Product: predictable grids, consistent densities, familiar navigation patterns. Responsive behavior is structural (collapse sidebar, responsive table), not fluid typography. Consistency IS an affordance.
 
 ---
 
-## Assess Current Layout
+## Assess Current Layout (The LIFT System)
 
-Analyze what's weak about the current spatial design:
+Evaluate the spatial design not just structurally, but psychologically:
 
-1. **Spacing**:
-   - Is spacing consistent or arbitrary? (Random padding/margin values)
-   - Is all spacing the same? (Equal padding everywhere = no rhythm)
-   - Are related elements grouped tightly, with generous space between groups?
+1. **Leverage Points (Focal Anchors)**:
+   - What is the *single most important thing*? Is it dominating via scale, contrast, positioning, or isolation?
+   - Are there competing elements fighting for leverage? (If everything is bold, nothing is).
 
-2. **Visual hierarchy**:
-   - Apply the squint test: blur your (metaphorical) eyes — can you still identify the most important element, second most important, and clear groupings?
-   - Is hierarchy achieved effectively? (Space and weight alone can be enough — but is the current approach working?)
-   - Does whitespace guide the eye to what matters?
+2. **Internal Rhythm (Eye Choreography)**:
+   - Does the eye flow naturally from the leverage point to secondary information?
+   - Is spacing predictable enough to build trust and relax the brain?
 
-3. **Grid & structure**:
-   - Is there a clear underlying structure, or does the layout feel random?
-   - Are identical card grids used everywhere? (Icon + heading + text, repeated endlessly)
-   - Is everything centered? (Left-aligned with asymmetric layouts feels more designed, but not a hard and fast rule)
+3. **Friction & Flow**:
+   - *Bad Friction*: Clutter, unwanted noise, tight spaces where they shouldn't be, competing focal points.
+   - *Good Friction*: Intentional disruptions (asymmetry, rotated elements, grid-breaking overlaps) that force the eye to pause and re-engage.
+   - *Flow*: Smooth, scannable reading paths with clear boundaries.
 
-4. **Rhythm & variety**:
-   - Does the layout have visual rhythm? (Alternating tight/generous spacing)
-   - Is every section structured the same way? (Monotonous repetition)
-   - Are there intentional moments of surprise or emphasis?
+4. **Temporal Flow (Time-Based Journey)**:
+   - Does the layout control *how long* the eye lingers?
+   - **Punch (Impact)**: Fast hit, bold headline, full-bleed visual.
+   - **Slow (Linger)**: Layered details, finer typography, secondary paths to explore.
+   - **Release (Pool)**: Vast open whitespace for the eye to rest and process.
 
-5. **Density**:
-   - Is the layout too cramped? (Not enough breathing room)
-   - Is the layout too sparse? (Excessive whitespace without purpose)
-   - Does density match the content type? (Data-dense UIs need tighter spacing; marketing pages need more air)
+5. **Density & Grids**:
+   - Is the layout too cramped or too sparse?
+   - Is it a monotonous 12-column or identical card grid everywhere?
+   - Does it use grids dynamically (e.g., asymmetric grids, elements spanning multiple columns)?
 
-**CRITICAL**: Layout problems are often the root cause of interfaces feeling "off" even when colors and fonts are fine. Space is a design material — use it with intention.
+**CRITICAL**: Space is a design material. Layout is not just where things sit; it is *when* the user sees them.
 
-## Plan Layout Improvements
+## Plan & Improve Systematically
 
-Consult the [spatial design reference](../skills/ui-ux/reference/spatial-design.md) for detailed guidance on grids, rhythm, and container queries.
+### 1. Establish the LIFT Foundation
 
-Create a systematic plan:
+- **Isolate the Leverage Point**: Push back anything that competes with the primary focal point.
+- **Map the Eye Journey**: Define the path the eye should take. Guide it using consistent margins and gutters.
 
-- **Spacing system**: Use a consistent scale — whether that's a framework's built-in scale (e.g., Tailwind), rem-based tokens, or a custom system. The specific values matter less than consistency.
-- **Hierarchy strategy**: How will space communicate importance?
-- **Layout approach**: What structure fits the content? Flex for 1D, Grid for 2D, named areas for complex page layouts.
-- **Rhythm**: Where should spacing be tight vs generous?
+### 2. Choreograph Temporal Flow
 
-## Improve Layout Systematically
+- **Pacing**: Alternate between fast beats (bold, large imagery) and slow beats (detailed text, specs, exploration paths).
+- **Pools of Space**: Add generous vertical padding (`96px-160px`) between major sections to act as "release" pools for the brain.
 
-### Establish a Spacing System
+### 3. Master Grids & Break Them
 
-- Use a consistent spacing scale — framework scales (Tailwind, etc.), rem-based tokens, or a custom scale all work. What matters is that values come from a defined set, not arbitrary numbers.
-- Name tokens semantically if using custom properties: `--space-xs` through `--space-xl`, not `--spacing-8`
-- Use `gap` for sibling spacing instead of margins — eliminates margin collapse hacks
-- Apply `clamp()` for fluid spacing that breathes on larger screens
+- **Versatility**: Grids aren't just for rows of cards. Use them for typography alignment, hero layouts, and overlapping elements.
+- **Asymmetric Grids**: Let hero elements take up more space to naturally draw attention, leaving smaller columns for secondary flow.
+- **Break the Rules**: Have 90% of your design adhere to the grid, but intentionally break one element out of it (e.g., an overlapping image or floating CTA) to create contrast and "Good Friction."
 
-### Create Visual Rhythm
+### 4. Create Structural Rhythm
 
-- **Tight grouping** for related elements (8-12px between siblings)
-- **Generous separation** between distinct sections (48-96px)
-- **Varied spacing** within sections — not every row needs the same gap
-- **Asymmetric compositions** — break the predictable centered-content pattern when it makes sense
+- **Tight grouping**: 8-12px between related siblings.
+- **Generous separation**: 48-96px between distinct sections.
+- **Fluid spacing**: Apply `clamp()` for spacing that breathes naturally across screen sizes without hard breakpoints.
 
-### Choose the Right Layout Tool
+### 5. Choose the Right Structural Tool
 
-- **Use Flexbox for 1D layouts**: Rows of items, nav bars, button groups, card contents, most component internals. Flex is simpler and more appropriate for the majority of layout tasks.
-- **Use Grid for 2D layouts**: Page-level structure, dashboards, data-dense interfaces, anything where rows AND columns need coordinated control.
-- **Don't default to Grid** when Flexbox with `flex-wrap` would be simpler and more flexible.
-- Use `repeat(auto-fit, minmax(280px, 1fr))` for responsive grids without breakpoints.
-- Use named grid areas (`grid-template-areas`) for complex page layouts — redefine at breakpoints.
+- **Use Flexbox for 1D layouts**: Rows, nav bars, button groups.
+- **Use Grid for 2D layouts**: Page-level structure, asymmetric compositions.
+- **Don't default to Grid** when Flexbox with `flex-wrap` is simpler.
 
-### Break Card Grid Monotony
+### 6. Break Card Monotony
 
-- Don't default to card grids for everything — spacing and alignment create visual grouping naturally
-- Use cards only when content is truly distinct and actionable — never nest cards inside cards
-- Vary card sizes, span columns, or mix cards with non-card content to break repetition
+- Don't default to identical card grids for everything.
+- Mix module sizes (e.g., span a featured card across two columns) to create visual interest.
+- Never nest cards inside cards — use spacing and dividers for internal hierarchy.
 
-### Strengthen Visual Hierarchy
+### 7. Manage Depth & Elevation
 
-- Use the fewest dimensions needed for clear hierarchy. Space alone can be enough — generous whitespace around an element draws the eye. Some of the most sophisticated designs achieve rhythm with just space and weight. Add color or size contrast only when simpler means aren't sufficient.
-- Be aware of reading flow — in LTR languages, the eye naturally scans top-left to bottom-right, but primary action placement depends on context (e.g., bottom-right in dialogs, top in navigation).
-- Create clear content groupings through proximity and separation.
-
-### Manage Depth & Elevation
-
-- Create a semantic z-index scale (dropdown → sticky → modal-backdrop → modal → toast → tooltip)
-- Build a consistent shadow scale (sm → md → lg → xl) — shadows should be subtle
-- Use elevation to reinforce hierarchy, not as decoration
-
-### Optical Adjustments
-
-- If an icon looks visually off-center despite being geometrically centered, nudge it — but only if you're confident it actually looks wrong. Don't adjust speculatively.
+- Build a consistent shadow scale (sm → md → lg → xl) — shadows should be subtle.
+- Use elevation to reinforce hierarchy, not as mere decoration.
 
 **NEVER**:
-- Use arbitrary spacing values outside your scale
-- Make all spacing equal — variety creates hierarchy
-- Wrap everything in cards — not everything needs a container
-- Nest cards inside cards — use spacing and dividers for hierarchy within
-- Use identical card grids everywhere (icon + heading + text, repeated)
-- Center everything — left-aligned with asymmetry feels more designed
-- Default to the hero metric layout (big number, small label, stats, gradient) as a template. If showing real user data, a prominent metric can work — but it should display actual data, not decorative numbers.
-- Default to CSS Grid when Flexbox would be simpler — use the simplest tool for the job
-- Use arbitrary z-index values (999, 9999) — build a semantic scale
+- Make all spacing equal — variety creates hierarchy and tempo.
+- Use arbitrary spacing values outside your scale.
+- Wrap everything in cards — not everything needs a container.
+- Center everything blindly — left-aligned with asymmetry often feels far more premium and intentional.
+- Ignore transferability — if it only looks good at exactly 1440px width, it's broken.
 
 ## Verify Layout Improvements
 
-- **Squint test**: Can you identify primary, secondary, and groupings with blurred vision?
-- **Rhythm**: Does the page have a satisfying beat of tight and generous spacing?
-- **Hierarchy**: Is the most important content obvious within 2 seconds?
-- **Breathing room**: Does the layout feel comfortable, not cramped or wasteful?
-- **Consistency**: Is the spacing system applied uniformly?
-- **Responsiveness**: Does the layout adapt gracefully across screen sizes?
+- **The Squint Test**: With blurred vision, is the Leverage Point still obvious?
+- **The Rhythm Check**: Does the page have a satisfying beat of tight groupings and generous release pools?
+- **The Friction Check**: Is the eye pausing at the right moments, or just getting confused by clutter?
+- **Responsiveness (Transferability)**: Does the hierarchy survive when shrunk to a mobile screen?
 
-Remember: Space is the most underused design tool. A layout with the right rhythm and hierarchy can make even simple content feel polished and intentional.
+Remember: Space is the most underused design tool. A layout with the right rhythm, friction, and temporal flow transforms a generic page into an unforgettable experience.
 
 ## Live-mode signature params
 
@@ -144,5 +121,3 @@ For variants whose topology genuinely changes (stacked vs. side-by-side, grid vs
 ```
 
 See `reference/live.md` for the full params contract.
-
-

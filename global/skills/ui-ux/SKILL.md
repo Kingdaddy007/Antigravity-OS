@@ -92,6 +92,7 @@ Map UI responsibilities to the journey:
 - Do not make every section the same width, rhythm, or grid.
 - Use image crops deliberately; mobile crops must preserve room subject and lighting.
 - Use OKLCH or a consistent token system for implementation, but choose colors from material/light behavior first.
+- For color palette selection, functional color mapping, and color psychology, load the `color-system` skill.
 
 ## ACCESSIBILITY AND STATE COVERAGE
 

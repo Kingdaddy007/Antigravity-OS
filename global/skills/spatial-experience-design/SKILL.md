@@ -88,7 +88,7 @@ Do not build a high-end spatial site until these artifacts exist in `contexts/sp
 
 ## VISUAL THESIS RULES
 
-Write the visual thesis before choosing typography or color.
+Write the visual thesis before choosing typography or color. For color palette selection and functional mapping, load the `color-system` skill.
 
 If Beloved is unsure, run the concept forge:
 
