@@ -208,7 +208,8 @@ Ask if needed: "What specific user problem does this solve?"
 5. Identify adjacent components, services, or flows affected
 6. Identify project-level constraints that shape the build
 7. Note whether the feature touches security, performance, data, or UX-sensitive surfaces
-8. **CHECK MEMORY (MANDATORY — workspace first, then global):**
+8. **DOX TRAVERSAL (MANDATORY):** Before writing code, traverse from the root to the target directory. Read all `AGENTS.md` files along the path to understand local boundaries and contracts.
+9. **CHECK MEMORY (MANDATORY — workspace first, then global):**
    - Scan `.agents/memory/decisions-log.md` then `antigravity/memory/decisions-log.md` — has a related decision been made before?
    - Scan `.agents/memory/common-patterns.md` then `antigravity/memory/common-patterns.md` — does a proven pattern exist?
    - Scan `.agents/memory/mistakes-to-avoid.md` then `antigravity/memory/mistakes-to-avoid.md` — have we hit traps in this area?
@@ -647,6 +648,7 @@ Ask these 4 questions before closing. Write to **workspace memory** (`.agents/me
 - [ ] **Patterns:** Did a reusable solution pattern emerge that applies beyond this feature? → Log to `.agents/memory/common-patterns.md`
 - [ ] **Mistakes:** Did any bug, misstep, or wrong path cost real time to fix? → Log to `.agents/memory/mistakes-to-avoid.md`
 - [ ] **Postmortem:** Did anything break in a way that revealed a systemic weakness? → Log to `.agents/memory/postmortems.md`
+- [ ] **Directory Contracts:** Did we create a new directory or change the exported interface/dependencies of an existing one? → Update the local `AGENTS.md` file.
 
 If workspace memory files do not exist, create them (copy format from global templates).
 If ALL 4 answers are "no," state: "No memory entries needed — session was routine."

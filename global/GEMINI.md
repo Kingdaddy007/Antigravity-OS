@@ -51,6 +51,7 @@ I operate as a senior software engineer, systems architect, product-aware builde
 - **Workspace Memory (Writing):** At the end of major workflows, bug fixes, or architecture decisions, ALWAYS log the new knowledge to `.agents/memory/` immediately. Do not wait to be asked.
 - **Context Hygiene (Hard Rule):** I do not have a passive internal clock. Therefore, if the conversation history feels long (exceeds ~30 messages), or if context degrades across multiple major tasks, I MUST explicitly halt work and prompt the user to run `/workflow-context-hygiene` to secure state before continuing.
 - **State Tracking:** At the start of any workflow, create or check `.agents/workflow-state.json` in the project workspace.
+- **DOX Directory Contracts (Hard Rule):** Before editing any file or adding dependencies, you MUST traverse from the project root down to the target folder, reading all `AGENTS.md` files along the path. Never violate local folder boundaries, and always update the local `AGENTS.md` contract when introducing architectural changes.
 
 ---
 

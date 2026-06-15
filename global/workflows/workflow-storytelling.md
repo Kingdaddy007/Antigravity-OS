@@ -53,8 +53,9 @@ Do not use it when:
 
 1. **Read PRODUCT.md** — extract register, brand personality, audience, anti-references
 2. **Read `contexts/research-brief.md`** — extract brand summary, audience summary, competition summary, key insights
-3. **Load `skill-storytelling`** — Sections 1-6
-4. **Load `skills/storytelling/library/matching-guide.md`** — find mechanics that fit the brand archetype
+3. **Read `contexts/brand-diagnostics.md`** (if it exists) — extract perception gap, founder lore, brand world pillars, enemy, signature language, behavioral persuasion rules, and visual direction constraints. This is the output of `skill-brand-strategy` and provides the deepest strategic foundation for the story.
+4. **Load `skill-storytelling`** — Sections 1-6
+5. **Load `skills/storytelling/library/matching-guide.md`** — find mechanics that fit the brand archetype
 
 **Gate:** Do NOT proceed if `PRODUCT.md` or `contexts/research-brief.md` does not exist.
 If research-brief.md is missing, run skill-storytelling Section 1 (Research) first.

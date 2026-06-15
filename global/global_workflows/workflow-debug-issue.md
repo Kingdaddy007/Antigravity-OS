@@ -352,7 +352,8 @@ Do not call a hypothesis confirmed because it sounds coherent. Tie confirmation 
 
 #### Actions (Step 5)
 
-1. **Design the fix:**
+1. **DOX TRAVERSAL (MANDATORY):** Before writing code, traverse from the root to the target directory. Read all `AGENTS.md` files along the path to understand local boundaries, contracts, and testing rules. Do NOT break local architectural constraints for a quick fix.
+2. **Design the fix:**
    - Does this fix the ROOT CAUSE or just mask the symptom?
    - What is the MINIMUM change that fixes the issue?
    - Could this fix introduce new problems?
@@ -460,6 +461,7 @@ Do not treat "it stopped happening once" as sufficient proof for meaningful issu
 - [ ] **Patterns:** Log to `.agents/memory/common-patterns.md` if the fix reveals a reusable pattern
 - [ ] **Postmortem:** Log to `.agents/memory/postmortems.md` if P1/P2 severity
 - [ ] **Contexts:** Update relevant context files if the bug reveals a gap in documented conventions
+- [ ] **Directory Contracts:** Did the fix require changing a directory's exported interface or adding a new external dependency? → Update the local `AGENTS.md` file.
 
 If workspace memory files do not exist, create them (copy format from global templates).
 
