@@ -444,6 +444,20 @@ Use `skill-competitor-profiling` for structured competitor analysis:
 
 **Output:** `competitor-profiles/_summary.md`
 
+#### Step 2.5: Brand World Diagnostics (Scenario A & B)
+
+When the project involves building or redesigning a brand website, portfolio, or landing page for a real person or business with existing messy footprints (social profiles, old sites, founder interviews, scattered content):
+
+1. Load `skills/brand-strategy/SKILL.md` (the Brand World Diagnostics system).
+2. Run the 12-layer diagnostic against all available raw inputs.
+3. Produce the structured Brand World Diagnostic output.
+
+This output feeds directly into Step 3 (Research & Story) — the perception gap, founder lore, brand world pillars, enemy, and signature language become the raw material for `skill-storytelling` to craft `contexts/story.md`.
+
+**Output:** `contexts/brand-diagnostics.md`
+
+**Gate:** For Scenario A (fresh brand), do not proceed to storytelling without completing the brand diagnostic. The story cannot be crafted without knowing the perception gap, founder lore, and enemy.
+
 #### Step 3: Research & Story
 
 Before defining any visual system, define the STORY. The story drives everything —
@@ -456,6 +470,7 @@ Gather information about the brand, audience, competition, and context:
 - Research the audience (needs, wants, objections, language, proof points)
 - Research the competition (reference `competitor-profiles/_summary.md` for structured analysis)
 - Research the existing materials (current website, brand assets, messaging)
+- If refactoring an existing presence, load `skills/expert-positioning/SKILL.md` to audit current positioning leaks, minimum engagements, and copy posture.
 
 **Output:** `contexts/research-brief.md`
 

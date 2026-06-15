@@ -306,10 +306,11 @@ Generate at least two options.
 
 #### Implementation Pipeline (Step 5)
 
-1. **Record Baseline:** Document current performance measurement exactly.
-1. **Single Variable:** Implement ONE optimization at a time. No batching.
-1. **Readable Performance:** Encapsulate complexity behind clean interfaces.
-1. **Comment why, not just what:** Explain the optimization's rationale.
+1. **DOX TRAVERSAL (MANDATORY):** Traverse the target directory and read its `AGENTS.md` file. Ensure your optimization does not violate existing architectural contracts.
+2. **Record Baseline:** Document current performance measurement exactly.
+3. **Single Variable:** Implement ONE optimization at a time. No batching.
+4. **Readable Performance:** Encapsulate complexity behind clean interfaces.
+5. **Comment why, not just what:** Explain the optimization's rationale.
 
 #### Gate (Step 5)
 

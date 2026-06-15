@@ -37,6 +37,12 @@ You may NEVER violate the local contract. If a user request forces a violation, 
 ### 3. The Update Rule (Leave It Better)
 When you complete a task that changes the architecture, adds new files, or alters the exposed interface of a directory, you MUST update that directory's `AGENTS.md` to reflect the new state. If you create a new major directory, you MUST initialize an `AGENTS.md` file inside it.
 
+### 4. Legacy Projects (Fallback)
+If you traverse a project directory structure and find **zero** `AGENTS.md` files (even at the root), this means DOX has not been initialized for this project. 
+- Do NOT halt work or hallucinate rules. 
+- **Gracefully degrade** to standard project-wide guidelines and continue your task.
+- Proactively suggest to the user that they initialize DOX by running the DOX Initialization Prompt.
+
 ## Initialization Template
 When creating a new `AGENTS.md` file in a directory, use the following structure:
 
