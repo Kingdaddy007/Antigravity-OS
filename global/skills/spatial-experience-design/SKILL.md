@@ -34,6 +34,9 @@ description: >
 - Never make CTAs behave like SaaS buttons when the brand needs a quiet concierge invitation.
 - Never use scroll effects that do not physically belong to the room, material, object, or threshold.
 - Never present a serious concept without citing adapted mechanics from `design-audit/`.
+- Never copy the section architecture of reference sites 1:1. Always filter reference patterns through the specific scale, capacity, and niche of the target brand (Avoid the Scale Imitation Trap).
+- Never prescribe sections that defend baseline expectations (e.g., 'Render vs Reality' for a Tier 1 builder). This lowers posture from Practitioner to Performer. Replace defensive proof with Process Proof (Avoid the Defensive Vendor Trap).
+- Never prescribe motion/GSAP just because it is technically impressive. Every animation must have a semantic meaning tied directly to the visual thesis (Avoid the Gimmick Trap).
 
 ## CORE MENTAL MODEL
 

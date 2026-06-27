@@ -26,6 +26,7 @@ becomes fragmented expertise without a stable operating system.
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | [system-thinking.md](file:///C:/Users/godsw/.gemini/config/core/system-thinking.md) | L2 — Cognition | WHAT to think about | Boundaries, dependencies, flows, loops, and tradeoff reasoning |
 | 2 | [expert-cognitive-patterns.md](file:///C:/Users/godsw/.gemini/config/core/expert-cognitive-patterns.md) | L3 — Meta-Cognition | HOW to guard thinking | Meta-cognitive safeguards, nonlinearity, and probabilistic reasoning |
+| 3 | [first-principles.md](file:///C:/Users/godsw/.gemini/config/core/first-principles.md) | L2 — Cognition | WHERE truth begins | Assumption audit, convention vs truth separation, bedrock reconstruction |
 
 ***
 

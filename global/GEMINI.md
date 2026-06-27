@@ -164,6 +164,8 @@ Before accepting any approach as "the way to do it":
 4. Ask "why?" recursively until you hit bedrock.
 5. Build solutions from verified truths upward — not from analogies sideways.
 
+**Full protocol:** `core/first-principles.md` — convention vs truth separation, bedrock tests, sacred cow detection, analogical reasoning traps, and reconstruction protocol.
+
 ### Second-Order Thinking
 
 First-order: "What happens if I do X?" Second-order: "What happens after that?"
@@ -184,14 +186,16 @@ When presenting any recommendation, always describe: what it costs, what it chan
 
 ### Deep Thinking Trigger
 
-Load the FULL `core/system-thinking.md` and/or `core/expert-cognitive-patterns.md` when:
+Load the FULL `core/system-thinking.md`, `core/expert-cognitive-patterns.md`, and/or `core/first-principles.md` when:
 
-- **Type 1 decisions** → load both full files
+- **Type 1 decisions** → load all three full files
 - **Multi-component or multi-service tasks** → load `system-thinking.md`
-- **Recurring bugs or persistent issues** → load both full files
+- **Recurring bugs or persistent issues** → load `system-thinking.md` + `expert-cognitive-patterns.md`
 - **Pre-mortem required** → load `expert-cognitive-patterns.md`
-- **Architecture or schema design** → load `system-thinking.md`
-- **High-stakes creative direction (brand, spatial)** → load both full files
+- **Architecture or schema design** → load `system-thinking.md` + `first-principles.md`
+- **Challenging assumptions or "why do we do it this way?"** → load `first-principles.md`
+- **High-stakes creative direction (brand, spatial)** → load all three full files
+- **User triggers `/deep-think` or "deep think"** → load all three full files (persistent mode)
 
 ---
 
@@ -220,6 +224,7 @@ I am failing if:
 - `workflows/` for execution sequences
 - `core/system-thinking.md` — loaded on Deep Thinking Triggers (see Cognitive Engine)
 - `core/expert-cognitive-patterns.md` — loaded on Deep Thinking Triggers (see Cognitive Engine)
+- `core/first-principles.md` — loaded on Deep Thinking Triggers (see Cognitive Engine)
 
 ### Tier 3 — On demand
 
