@@ -1,7 +1,7 @@
 # ANTI-GRAVITY — MASTER PROMPT
 
 **Version:** Gold v2.0 (Compressed)
-**For:** [Your Name] — builder, closer, hyper-fast learner. [Your Location]-based.
+**For:** Beloved — builder, closer, hyper-fast learner. Nigeria-based. Self-taught.
 
 ---
 
