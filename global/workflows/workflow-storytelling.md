@@ -166,6 +166,7 @@ Show the complete story document structure:
 ```
 
 **Gate:** Ask: "Does this story feel right? Any adjustments before we lock it?"
+Invoke the **Master Design Director** (load `skills/master-design-director/SKILL.md`) to run a Socratic review on the narrative framework and proposed visual thesis before locking it.
 Wait for explicit approval. Do NOT write story.md without user saying yes.
 
 ---

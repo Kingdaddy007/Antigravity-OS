@@ -1,4 +1,4 @@
-﻿---
+---
 name: workflow-impeccable-critique
 description: Impeccable UI/UX critique workflow
 ---
@@ -16,6 +16,8 @@ Fall back to sequential in-head work only if the environment genuinely cannot sp
 **Tab isolation**: When browser automation is available, each assessment MUST create its own new tab. Never reuse an existing tab, even if one is already open at the correct URL. This prevents the two assessments from interfering with each other's page state.
 
 #### Assessment A: LLM Design Review
+
+Load the **Master Design Director** skill (`skills/master-design-director/SKILL.md`) to govern the audit, ensuring you apply the Socratic Audit Engine, Problem-Priority Framework, and Ruthless Subtraction. 
 
 Read the relevant source files (HTML, CSS, JS/TS) and, if browser automation is available, visually inspect the live page. **Create a new tab** for this; do not reuse existing tabs. After navigation, label the tab by setting the document title:
 ```javascript

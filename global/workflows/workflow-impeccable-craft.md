@@ -142,9 +142,12 @@ Look for:
 - reduced-motion failure
 - mobile collapse into raw stack
 
-### STEP 7: Critique And Fix
+### STEP 7: Socratic Audit & Critique
 
-Run the anti-template smell tests.
+Invoke the **Master Design Director** (load `skills/master-design-director/SKILL.md`) to perform a Socratic Audit of the built layout.
+- The Director will evaluate the composition against the **Socratic Audit Engine** (hierarchy, grid rhythm, negative space, and image perspective).
+- Enforce the **Problem-Priority Framework** (Level 1 to Level 5). Resolve Level 1 and 2 issues before addressing lower-level polish.
+- Apply the **Ruthless Subtraction Framework** to strip away any decorative clutter.
 
 The result fails if:
 

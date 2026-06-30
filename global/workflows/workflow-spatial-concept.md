@@ -338,7 +338,7 @@ Every image/video prompt must include a `Strategic Source` block:
 Gate: If a prompt cannot trace its choices back to approved context files, reject and rewrite it.
 Gate: Reject prompts that say only "luxury room", "cinematic interior", "modern elegant", or any generic styling without light, camera, depth, belief, and section role.
 
-### STEP 14: Present The Creative Contract
+### STEP 14: Present The Creative Contract & Run the Director Gate
 
 > **⚙ Cognitive Engine checkpoint — run self-evaluation.**
 > Before presenting: check for over-simplification, binary thinking, and comfort bias across all prior steps. Verify second-order effects of the overall creative direction. Ask: if this creative contract fails in 6 months, what went wrong? (Pre-mortem.)
@@ -360,6 +360,8 @@ Summarize:
 - Asset boundary and blockers.
 
 Ask for approval or revisions before build.
+
+Gate: Run the **Master Design Director Gate** (load `skills/master-design-director/SKILL.md`). The Director will evaluate the Creative Contract using the **Pre-Build Gate** checklist. Build is BLOCKED if "Build allowed: No".
 
 ## QUALITY GATE CHECKLIST
 

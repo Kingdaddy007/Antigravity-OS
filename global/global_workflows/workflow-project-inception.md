@@ -126,6 +126,7 @@ Required outputs:
 - `contexts/spatial/motion-board.md`
 - `contexts/spatial/asset-boundary.md`
 
+Gate: Invoke the **Master Design Director** to audit the Creative Contract. Build is BLOCKED until the Pre-Build Gate checklist returns "Build allowed: Yes".
 Gate: No mockup, design system, or implementation until these exist.
 
 ### PHASE 4: DEFINE THE VISUAL SYSTEM

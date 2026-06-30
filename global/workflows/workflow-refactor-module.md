@@ -280,7 +280,8 @@ Stop condition: [what constitutes done]
 
 #### Transformation Workflow (Step 4)
 
-1. **Iterative Change:**
+1. **DOX TRAVERSAL (MANDATORY):** Traverse the target directory and read its `AGENTS.md` file. Ensure your refactor respects existing boundary contracts and dependencies.
+2. **Iterative Change:**
    1. Make one refactoring move (extract, rename, move, or simplify)
    1. Run the full test suite
    1. If tests pass: commit

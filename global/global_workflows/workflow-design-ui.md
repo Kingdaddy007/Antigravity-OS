@@ -100,9 +100,9 @@ Preserve:
 - motion board
 - asset boundary
 
-### STEP 4: Verify
+### STEP 4: Verify & Director Audit
 
-Check:
+Invoke the **Master Design Director** (load `skills/master-design-director/SKILL.md` or run `/impeccable-critique`) to verify the layout:
 
 - primary action clarity
 - quiet inquiry visibility
