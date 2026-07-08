@@ -24,8 +24,10 @@ description: >
 ## NEVER DO
 
 - Propose a fix before gathering evidence
+- Write bug fixes or modify codebase logic without a running, red-capable repro command
 - Change more than one variable at a time when testing a hypothesis
 - Swallow exceptions or add null guards without finding why the bad state exists
+- Leave debug prints or untagged log statements in the codebase after fixing (always tag with `[DEBUG-xxxx]`)
 - Declare a fix done without verifying the root cause, not just the symptom
 - Leave failed experiments (commented blocks, abandoned print statements) in the code
 - Say "I don't know why this works, but it does" and move on
@@ -114,9 +116,10 @@ Restate the exact symptom observed. Separate the *symptom* (what happened) from 
 - When did it last work? What changed between then and now?
 - What was the exact input or state that triggered the failure?
 
-### Step 3 — Secure Reproduction
+### Step 3 — Secure Reproduction (The Repro Gate)
 
-Define the exact sequence of events, state conditions, and inputs to reproduce. If it cannot be reproduced, aggregate log and trace evidence to reconstruct the event virtually.
+Define the exact sequence of events, state conditions, and inputs to reproduce. 
+Before writing fixes, you MUST construct a deterministic test or script (a failing unit test, curl command, etc.) that fails specifically on this bug. You cannot proceed until you have a single command that deterministically prints the failure symptom. If it cannot be reproduced, aggregate log and trace evidence to reconstruct the event virtually.
 
 ### Step 4 — Formulate and Rank Hypotheses
 
@@ -125,6 +128,7 @@ Based on evidence, generate 2–3 plausible explanations. Rank by likelihood and
 ### Step 5 — Isolate the Variable
 
 Test the highest-ranked hypothesis. Change *only one thing at a time*. If you change three things and the bug disappears, you do not know which one fixed it. If the hypothesis is wrong, revert the change immediately.
+**Log Isolation:** If injecting logs, tag every temporary diagnostic log with a unique string (e.g., `[DEBUG-ab92]`). This makes cleanup a single grep command and deletion trivial.
 
 ### Step 6 — Identify Root Cause (5 Whys)
 
@@ -144,7 +148,7 @@ Implement the targeted fix. Verify the original symptom is gone. Check for regre
 
 ### Step 8 — Prevent Recurrence
 
-Recommend or write an automated test that fails without the fix and passes with it.
+Recommend or write an automated test that fails without the fix and passes with it. If no test seam exists to prevent this bug from reoccurring, report this architectural blocker to the user. A system without test seams is broken by design.
 
 ---
 
@@ -166,6 +170,7 @@ Ask these when stuck:
 | Anti-Pattern | What It Looks Like | Why It's Harmful | Fix |
 | --- | --- | --- | --- |
 | **Shotgun Debugging** | Random changes, arbitrary print statements, commenting out blocks hoping it resolves | Destroys baseline state; even if it "works" you don't know why; introduces new bugs | Formulate a hypothesis first. Test deliberately. One change at a time. |
+| **Vibe Debugging** | Reading files and immediately writing a "fix" based on a hunch without a failing repro case | Fixes the wrong code, creates regressions, and leaves the actual bug active | Halt work. Build a reproducing test case first before touching logic |
 | **Symptom Suppression** | Catching an exception and returning null; adding `if (data === undefined) return;` without finding why | Hides the structural flaw; corrupted data propagates silently, causing worse bugs later | Let it crash until root cause is found. Fix the source of the bad data. |
 | **Confirming the First Guess** | Seeing an error, assuming it's an API timeout, rewriting the network layer without checking logs | Wastes time solving the wrong problem | Prove your guess with evidence before writing a single line of fix code. |
 | **"Works On My Machine"** | Dismissing a bug report because it's not locally reproducible | Ignores production realities: concurrency, bad data, latency, varying state | Look at production telemetry. Understand environmental differences. |

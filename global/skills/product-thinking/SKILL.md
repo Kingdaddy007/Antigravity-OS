@@ -222,6 +222,13 @@ Write the Job-to-be-Done down. Define the success metric before any implementati
 5. Work backward from imagined failures to identify blind spots, untested assumptions, or scope decisions that carry hidden risk.
 6. Revise the plan or scope based on what the pre-mortem revealed.
 
+### Phase 5E — The Grilling Gate (Interactive Stress-Testing)
+
+Before finalizing any complex product plan or design tradeoff, initiate a Socratic interview with the user.
+1. **One Question at a Time:** Grouping questions into a list is bewildering. Ask one question, wait for the response, and only then proceed.
+2. **Opinionated Guidance:** Do not put the cognitive load of selecting options entirely on the user. For every question you ask, recommend a path based on local constraints.
+3. **Confirmation Handshake:** Once all branches are resolved, summarize the settled decisions. Ask: "We have a shared understanding. Shall I proceed to implement?" Do not write code until explicit consent is given.
+
 ### Phase 6 — Verify
 
 Does the scope represent the minimum viable test of the core hypothesis? Are success metrics tied to behavior — not vanity outputs? Is the validation plan credible? Has opportunity cost been explicitly acknowledged?
@@ -297,6 +304,7 @@ Prefer:
 | **The Requirements Void** | Engineering begins work on "improve the dashboard" or "make onboarding better" without a specific user problem, success metric, or scope definition | Engineers fill the void with their own assumptions about what "better" means. The result is technically excellent work aimed at the wrong target. | Refuse to begin implementation without a problem statement, success metric, and scope boundary. Ask: "What specific user problem are we solving? How will we know it worked? What is in scope and what is not?" |
 | **Scope Creep Acceptance** | Well-scoped MVP gradually accepts additions: "While we're at it...", "It would be weird to ship without...", "Users will expect..." until the MVP has tripled in size | Core hypothesis is obscured by peripheral features, making it impossible to attribute success or failure accurately | Write the scope boundary down before starting. Everything outside the boundary goes to a "Phase 2" list. The question for any proposed addition is not "is this a good idea?" — it probably is — but "is this essential to testing the core hypothesis?" |
 | **Build-By-Default** | New code is treated as the automatic answer to every user problem before lower-cost alternatives are considered | Engineering effort is consumed solving problems that configuration, copy changes, process adjustment, or removal of confusion could have solved for free | Before writing code, ask: could this be solved without code? Simpler paths are always preferable when confidence is low. |
+| **The Question Dump** | "Here are 5 questions about the database, the UI, and the API keys." | User gets overwhelmed, skips detail, and makes poor design decisions. | Ask questions one-by-one in a linear loop. Provide a recommended path for each. Wait for the answer before asking the next. |
 
 ---
 

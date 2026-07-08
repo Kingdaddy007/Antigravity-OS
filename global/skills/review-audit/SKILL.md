@@ -138,11 +138,29 @@ Always inspect for:
 
 ---
 
+## THE CODE SMELL BASELINE (FOWLER)
+
+Always audit against these structural code smells:
+- **Mysterious Name** — Variables or functions whose names do not reveal intent or value.
+- **Duplicated Code** — Identical logic structures present in multiple hunks.
+- **Feature Envy** — A method reaching into another module's data fields more than its own.
+- **Data Clumps** — Sets of variables that constantly travel together and should be typed as a single object.
+- **Primitive Obsession** — Using raw strings or integers instead of small, semantic types.
+- **Shotgun Surgery** — A single logical change requiring edits scattered across many files.
+- **Speculative Generality** — Adding hooks or parameters for imaginary future needs.
+
+---
+
 ## BEHAVIORAL WORKFLOW
 
 ### Step 1 — Understand the Intent
 
 Before reading the code, understand what it's *supposed* to do. If the PR description lacks context, ask for it. You cannot evaluate correctness without knowing the goal.
+
+### Step 1.5 — The Two-Axis Setup (Standards vs Spec)
+
+Code review must evaluate both Standards (code quality/smells) and Spec (functional correctness).
+If reviewing a git branch, always use three-dot diffs (`git diff main...HEAD`) to isolate branch changes from target updates. Never use a two-dot diff.
 
 ### Step 2 — Size and Scope Check
 
@@ -210,6 +228,8 @@ If the code block is massive (>400 lines of complex logic), flag it. Massive PRs
 | **Style Pedant** | 15 comments on variable casing and missing semicolons while missing a SQL injection vulnerability | Wastes time, causes friction, distracts from actual structural and security issues | Automate style via CI/CD linters. Humans/AI review logic and architecture. |
 | **Ego-Driven Review** | "Why did you do it this way? This is terrible. Just rewrite it." | Destroys team psychological safety; developers start hiding code and avoiding reviews | Ask questions: "What was the context behind choosing this approach? Have we considered X?" |
 | **Reviewing Implementation, Ignoring Architecture** | Perfectly optimizing a 500-line function that shouldn't exist in this microservice at all | Results in highly optimized spaghetti architecture | Review from outside in: Architecture → Boundaries → Logic → Syntax |
+| **Two-Dot Review** | Running `git diff main HEAD` when main has progressed | Diff includes other people's unrelated commits, polluting the review | Always use `git diff main...HEAD` for accurate branch isolation |
+| **The Blended Report** | Mixing styling critiques with logic errors in one big bulleted list | Major logic errors get lost among minor semicolon arguments | Separate findings strictly into Standards and Spec sections |
 
 ---
 

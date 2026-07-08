@@ -134,6 +134,17 @@ Use a 3-column table: `| Anti-Pattern | What It Is | Fix |`
 ### Rule 7 — The output shape section is mandatory
 Every skill must define what a response looks like when it's active.
 
+### Rule 8 — The Leading-Words Technique
+Model reasoning is heavily influenced by the first few tokens of its prompt.
+- **Commanding Imperatives:** Start sentences with verbs: `Run`, `Verify`, `Compare`, `Assert` (not `You should write...`).
+- **Trigger Alignment:** Place signal keywords at the very top of descriptions and files to anchor model context early.
+
+### Rule 9 — Eliminate Double Negatives
+Models struggle with double negatives (e.g. "Do not avoid checking if tests are not failing"). Rephrase as positive commands: "Ensure tests pass before committing."
+
+### Rule 10 — Model-Invoked vs User-Invoked Load
+Distinguish between skills that are called explicitly by the user (high visibility) and skills that are loaded silently by the model based on trigger keywords. For model-invoked skills, keep the description tightly bound to specific triggers to prevent context pollution.
+
 ---
 
 ## OUTPUT FORMAT CONTRACT
@@ -189,6 +200,8 @@ When refactoring or creating a skill:
 | Manualized Reference | Writing references as human essays instead of AI-operational guidance | Use imperatives, diagnostics, frameworks, and decision rules |
 | Over-Splitting | Creating too many tiny references with overlapping content | Merge related material into focused reference files |
 | Under-Splitting | Creating one massive reference that hides multiple unrelated domains | Split by task, domain, or retrieval need |
+| Token Bloat | Including full 100-line code templates directly in the skill text | Move templates to separate files and reference their paths |
+| Double Negatives | "Do not avoid checking if tests are not failing" | Use positive commands: "Ensure tests pass before committing" |
 
 ---
 

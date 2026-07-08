@@ -95,6 +95,7 @@ Apply all ten before and during design:
 
 - Are related behaviors kept together? Are unrelated concerns entangled?
 - Will common changes land cleanly within one boundary or spray across many?
+- **The Deletion Test:** If you delete a module and all its complexity vanishes, the module was a pass-through. If its complexity scatters into N caller sites, the module was earning its keep.
 
 ### 6. Failure Behavior
 
@@ -151,6 +152,12 @@ Apply all ten before and during design:
 - Maximize the internal functionality hidden behind that API.
 - Ensure the interface speaks the language of the domain, not the language of the underlying implementation.
 
+### Step 4.5 — Design It Twice (Interface Evaluation)
+
+- Your first architectural draft is rarely your best. Force parallel explorations before finalizing code boundaries.
+- Sketch a Minimalist interface (1-3 entry points), a Flexible interface (high configuration), and a Default-focused interface.
+- Compare them on depth, locality, and seam placement. Pick the one that provides the most leverage.
+
 ### Step 5 — Map Failure Domains
 
 - Define the "Blast Radius": if Component A fails, does Component B fail?
@@ -205,7 +212,7 @@ Explain why a complex choice (like a distributed database or event stream) might
 | **Resume-Driven Development** | Using complex tech for the sake of it, without scale justification | Massive operational overhead without performance gain | Present the simple path as baseline; use complex tech only when requirements justify the cost |
 | **Complexity Aversion** | Defaulting to the simplest architecture even when real client scale or compliance demands more | Under-engineered systems fail at the wrong moment; retrofitting is expensive | Assess real requirements first. If complexity is justified, recommend it — don't suppress it |
 | **Silent Narrowing** | Presenting only one architecture option as if no other viable path exists | Removes Beloved's ability to make an informed decision | Always present Simple, Balanced, and Enterprise paths; make a recommendation; let Beloved choose |
-| **Shallow Modules** | An interface that requires 15 configuration parameters to initialize | No cognitive relief; complexity scales linearly with codebase size | Push complexity downward. The interface should offer a simple abstraction that hides the difficult mechanics |
+| **Shallow Modules** | An interface that requires 15 configuration parameters to initialize, or a class that simply delegates all its calls to a repository without adding logic | No cognitive relief; complexity scales linearly with codebase size; fails the deletion test | Push complexity downward. The interface should offer a simple abstraction that hides the difficult mechanics. |
 | **Distributed Monolith** | Microservices that share a single database, or services that must be deployed simultaneously | All the operational complexity of microservices with none of the independence or fault isolation benefits | Redraw boundaries based on domain contexts. Use async communication between boundaries |
 | **Premature Generalization** | Building an "Entity Management Engine" instead of the specific User and Order tables needed today | Future requirements are usually guessed wrong; the generalized system handles the actual present clumsily | YAGNI. Build exactly what is needed today. Refactor when the third concrete use case arrives |
 
