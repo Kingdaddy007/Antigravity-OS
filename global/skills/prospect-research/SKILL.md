@@ -140,3 +140,5 @@ Studio name · Country · City · Segment · Website URL · Instagram URL · Fou
 5. Prospect tier (Elite / Growth / Low) stated explicitly.
 6. Recommended action is one of: Create concept immediately / Verify manually / Send light outreach / Add to nurture / Do not target.
 7. No concept created for Growth Tier without prior prospect engagement.
+8. Confirm studio team size is under 20 staff and no dedicated marketing/PR department is evident before finalising score.
+
