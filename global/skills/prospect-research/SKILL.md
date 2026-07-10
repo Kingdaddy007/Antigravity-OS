@@ -26,6 +26,7 @@ description: >
 - Target budget decorators, home staging businesses, or Airbnb/short-let stylists.
 - Target designers who already have excellent cinematic/conversion-focused websites.
 - Target large corporate firms with heavy procurement or gatekeepers.
+- Target firms with 20+ staff, dedicated marketing departments, or corporate bidding structures.
 - Accept prospects without real completed project photography.
 - Score a prospect without checking both their Instagram AND website.
 - Produce a concept for a Growth Tier (50–79) prospect without prior interest shown.
@@ -57,6 +58,7 @@ description: >
 | No completed project evidence | Cannot build a concept |
 | Already excellent modern cinematic website | No gap to close |
 | Large commercial firm with multiple gatekeepers | Slow cycle, wrong ICP |
+| Team size is 20+ employees or has dedicated PR/Marketing teams | High gatekeeper risk, unreachable founder |
 | Inactive social + no contact method | Unreachable |
 
 ---
@@ -84,9 +86,9 @@ Instagram · Google Search · Google Maps · Houzz · LinkedIn · Pinterest · l
 | --- | --- | --- |
 | Visual Asset Quality | /25 | Exceptional editorial photography, luxury completed projects |
 | Website Gap | /20 | No site, broken site, hacked, severe template gap |
-| Business Maturity | /15 | Established premium firm, clear high-value project history |
+| Business Maturity | /10 | Established premium boutique, clear high-value residential history |
 | Active Online Presence | /15 | Active, professional, recent project content |
-| Contact Accessibility | /15 | Direct founder email, WhatsApp, Instagram DM access |
+| Contact Accessibility | /20 | Direct founder email/WhatsApp, active founder presence, direct DM access |
 | Personalization Potential | /10 | Obvious gap + strong imagery + clear concept angle |
 
 **Elite Tier (80–100):** Create concept immediately. Record 90s walkthrough. Send high-personalization outreach.
@@ -98,6 +100,8 @@ Instagram · Google Search · Google Maps · Houzz · LinkedIn · Pinterest · l
 ## POSITIVE SIGNALS
 
 Premium language cues: `bespoke` · `curated` · `refined` · `turnkey` · `villa` · `penthouse` · `private residence` · `full-service design` · `custom joinery` · `quiet luxury`
+
+Founder Visibility: Founder's face, name, or voice is prominent on Instagram reels/stories (highly accessible and brand-conscious).
 
 Strong personalization hooks: broken website element · no site despite strong Instagram · luxury project buried in a static gallery · founder story that can become a hero concept · diaspora/HNWI client angle.
 
