@@ -1,5 +1,25 @@
 # On-Scroll Layout Formations
 
+## Contents
+
+- [Concept](#concept)
+  - [The Spatial Metaphor](#the-spatial-metaphor)
+- [Required Context Before Implementation](#required-context-before-implementation)
+- [1. Spatial Convergence (Exploded 3D Assembly)](#1-spatial-convergence-exploded-3d-assembly)
+  - [CSS Structure](#css-structure)
+  - [GSAP & Math Implementation](#gsap-math-implementation)
+- [2. Cinematic Window (Dual-Axis Threshold Wipe)](#2-cinematic-window-dual-axis-threshold-wipe)
+  - [CSS Structure](#css-structure)
+  - [GSAP Implementation](#gsap-implementation)
+- [3. Tactile Swinging Cabinet (Y-Axis Panel Swing)](#3-tactile-swinging-cabinet-y-axis-panel-swing)
+  - [CSS Structure](#css-structure)
+  - [GSAP Implementation](#gsap-implementation)
+- [4. The Arc Procession (Distant Pivot Sweep)](#4-the-arc-procession-distant-pivot-sweep)
+  - [CSS Structure](#css-structure)
+  - [GSAP Implementation](#gsap-implementation)
+- [Anti-Patterns](#anti-patterns)
+- [Quality Gate](#quality-gate)
+
 ## Concept
 
 **Name:** The Cinematic Layout Formation

@@ -1,14 +1,33 @@
+---
+id: build-feature
+version: 1
+status: active
+intent: Execute build feature with explicit authority, state, outputs, and evidence.
+use_when: [the task matches build feature]
+do_not_use_when: [another workflow more precisely matches the requested outcome]
+inputs: [user objective, workspace context, constraints, requested authority mode]
+required_resources: [applicable AGENTS.md files, referenced skills and contexts]
+mutation_class: local_edit
+approval_gates: [confirm scope expansion or destructive action before mutation]
+states: [intake, assess, propose, approve-if-needed, execute-if-authorized, verify, deliver]
+outputs: [task result, changed-artifact list when applicable, evidence, residual risks]
+verification: [run proportionate checks, record raw evidence, label anything unverified]
+failure_paths: [stop on authority or contract conflict, preserve state, report blocker and safe next action]
+resume_contract: task-scoped .agents/workflows/build-feature.json using the workflows directory contract
+next_workflows: [none]
+profiles: [general]
+---
+
 # WORKFLOW: BUILD FEATURE (FULL SOURCE)
 
 **Version:** Gold v1.1 (Master Merge)
 **Layer:** 8 — Execution Workflow
 **Tier:** 2 — Loaded by task
-**File:** workflows/workflow-build-feature-SOURCE.md
 **Primary Mode:** Builder
 **Secondary Modes:** Architect, Security, Reviewer, Designer, Teacher
 **Purpose:** The complete step-by-step sequence for building a new feature from initial request through to shipped, verified, production-quality code. Prevents coding before understanding, scope creep, architectural misplacement, and unverified delivery.
 **Loaded When:** Building new functionality, adding a feature, implementing a new user capability, or creating a new module.
-**Inherits From:** execution-workflow.md (universal process)
+**Inherits From:** this workflow contract and applicable project `AGENTS.md` files
 
 ---
 
@@ -49,15 +68,9 @@ If the task starts ambiguous, clarify whether the user wants architecture, imple
 
 ### Core Files
 
-- `core/anti-gravity-core.md`
 - `core/system-thinking.md`
 - `core/expert-cognitive-patterns.md`
-- `core/operating-modes.md`
-- `core/activation-engine.md`
-- `core/execution-workflow.md`
-- `core/conflict-resolution.md`
-- `core/communication-standards.md`
-- `core/quality-bar.md`
+- `core/first-principles.md` when requirements or constraints are ambiguous
 
 ### Skills — Always Load
 
@@ -161,7 +174,7 @@ worktrees, use a standard branch. If git is not initialized, initialize it first
 
 #### Load Template (Step 1)
 
-- [REQUIRED] Load [feature-plan.md](file:///C:/Users/godsw/.gemini/config/global_templates/feature-plan.md)
+- [REQUIRED] Load [feature-plan.md](../global_templates/feature-plan.md)
 - Follow the structure and guidance in the template to scope and plan the feature before implementation.
 
 #### Action: Define Objective (Step 1)
@@ -398,12 +411,12 @@ constant progress visibility.
 
 #### Automatic Dispatch Trigger
 
-If the resulting micro-task list has MORE THAN 3 tasks, you MUST proactively offer to use the Task Dispatch workflow.
+If the plan contains two or more genuinely independent tasks with clear ownership and evidence contracts, consider the Task Dispatch workflow. Dispatch based on dependency isolation and available concurrency, not raw task count.
 
 State to the user:
 > "We have [N] tasks here. To protect our context window and prevent hallucination, I recommend we dispatch the isolated tasks (like [Task X] and [Task Y]) to separate chat windows using `/workflow-task-dispatch`. Should I generate the Task Briefs for you?"
 
-Do NOT automatically start executing a massive sequence without offering this choice.
+Do not dispatch coupled tasks or overlapping file edits. Record blocking edges and reintegrate every worker result before completion.
 
 ---
 
@@ -436,7 +449,7 @@ Load `skill-coding` and follow its behavioral workflow.
 > **All UI work goes through Impeccable.** Studio-grade quality is the default standard, not an upgrade. Load `skill-ui-ux` and follow the Impeccable lifecycle.
 
 1. **Load design context:** Read `PRODUCT.md` (strategic) and `DESIGN.md` (visual tokens) from the project root. These are the design truth files created during Project Inception Phase 3A.
-2. **Run `/impeccable-craft`** for the full UI build loop:
+2. **Run `/ui-craft`** for the general UI build loop. Spatial-profile work uses `/impeccable-craft` after its concept gate:
    - **Shape:** Creates a task-specific design brief (discovery, visual probes, confirmed scope)
    - **Mock:** Generates visual direction for confirmation
    - **Build:** Implements production-quality components
@@ -450,7 +463,7 @@ Load `skill-coding` and follow its behavioral workflow.
 
 **After the craft build loop completes,** evaluate whether a refinement pass is needed:
 - Feels weak or generic? → `/impeccable-bolder`
-- Feels static or lifeless? → `/impeccable-animate`
+- Needs purposeful product feedback or continuity? → `/ui-animate`; spatial cinematic motion → `/impeccable-animate`
 - Too cluttered? → `/impeccable-distill`
 - Final production polish? → `/impeccable-polish`
 
@@ -807,10 +820,10 @@ Before marking a feature complete:
 
 ```
 
-1. Read task.md for current phase and completed steps
+1. Read .agents/workflows/<task-id>.json for current phase and completed steps
 2. Announce: "Resuming [workflow] from Phase [N] — [phase name]"
 3. Re-load the context and skill files listed in the workflow header
-4. Check the task.md notes and key pending items
+4. Check the .agents/workflows/<task-id>.json notes and key pending items
 5. Resume from the START of the interrupted phase (not the middle)
 6. Do NOT restart the entire workflow from Phase 1
 ```
@@ -854,10 +867,10 @@ Before marking a feature complete:
 
 ## WORKFLOW STATE TRACKING
 
-This workflow integrates with `task.md`.
+This workflow integrates with `.agents/workflows/<task-id>.json`.
 
-**On activation:** Check `task.md` for existing state or create a new checklist.
-**After each step:** Update `task.md` with current phase, status, and notes.
+**On activation:** Check `.agents/workflows/<task-id>.json` for existing state or create a new checklist.
+**After each step:** Update `.agents/workflows/<task-id>.json` with current phase, status, and notes.
 **On interruption:** State file preserves progress for next session.
 
 Phase map for state tracking:

@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://antigravity-os.dev/schemas/workflow-state.schema.json",
+  "title": "Anti-Gravity task-scoped workflow state",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "task_id",
+    "workflow_id",
+    "mode",
+    "status",
+    "current_state",
+    "completed_states",
+    "owner",
+    "workspace",
+    "evidence",
+    "artifacts",
+    "approvals",
+    "blockers",
+    "next_action",
+    "created_at",
+    "updated_at",
+    "archived"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "task_id": { "type": "string", "pattern": "^[a-zA-Z0-9._-]+$" },
+    "workflow_id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "mode": {
+      "enum": ["diagnose", "propose", "implement", "incident-mitigate"]
+    },
+    "status": {
+      "enum": ["pending", "in_progress", "blocked", "complete", "cancelled"]
+    },
+    "current_state": { "type": "string", "minLength": 1 },
+    "completed_states": { "type": "array", "items": { "type": "string" } },
+    "owner": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["agent", "thread"],
+      "properties": {
+        "agent": { "type": "string", "minLength": 1 },
+        "thread": { "type": "string", "minLength": 1 },
+        "worktree": { "type": ["string", "null"] }
+      }
+    },
+    "workspace": { "type": "string", "minLength": 1 },
+    "lease": {
+      "type": ["object", "null"],
+      "properties": {
+        "holder": { "type": "string" },
+        "expires_at": { "type": "string", "format": "date-time" }
+      },
+      "required": ["holder", "expires_at"],
+      "additionalProperties": false
+    },
+    "evidence": { "type": "array", "items": { "type": "object" } },
+    "artifacts": { "type": "array", "items": { "type": "string" } },
+    "approvals": { "type": "array", "items": { "type": "object" } },
+    "blockers": { "type": "array", "items": { "type": "string" } },
+    "next_action": { "type": ["string", "null"] },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" },
+    "archived": { "type": "boolean" }
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Spatial Experience Design"
+  short_description: "Guidance for spatial experience design tasks"
+  default_prompt: "Use $spatial-experience-design to help complete this task with its domain workflow."

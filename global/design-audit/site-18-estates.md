@@ -53,7 +53,7 @@
 Comparing the Estates site to our active skills reveals the following gaps:
 
 #### Gap A: Absence of "Billionaire Minimal / Private Estates" Brand Archetype
-* **The Gap:** [cinematic-motion/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/cinematic-motion/SKILL.md) groups luxury under general guidelines. It has no specific rules for billionaire minimal brands, which require the absolute removal of listing grids, button borders, and search filters.
+* **The Gap:** [cinematic-motion/SKILL.md](../skills/cinematic-motion/SKILL.md) groups luxury under general guidelines. It has no specific rules for billionaire minimal brands, which require the absolute removal of listing grids, button borders, and search filters.
 * **Why it matters:** The model defaults to adding standard listing-site cards and search inputs, cheapening the brand.
 
 #### Gap B: Lack of the "Stacked Media Panels" Pattern

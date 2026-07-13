@@ -57,7 +57,7 @@
 Comparing this premium execution to our active skills reveals critical systemic blind spots:
 
 #### Gap A: Missing Canvas Image Sequence Scrubbing
-* **The Gap:** [cinematic-motion/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/cinematic-motion/SKILL.md) explains 3D rendering with R3F (React Three Fiber) and video scrubbing (`ffmpeg -g 1`). However, it has **zero guidelines or code templates for Canvas Image Sequence scrubbing**.
+* **The Gap:** [cinematic-motion/SKILL.md](../skills/cinematic-motion/SKILL.md) explains 3D rendering with R3F (React Three Fiber) and video scrubbing (`ffmpeg -g 1`). However, it has **zero guidelines or code templates for Canvas Image Sequence scrubbing**.
 * **Why it matters:** Real-time WebGL/3D on the web is CPU/GPU heavy and prone to loading stutters. Canvas image sequences (drawing pre-rendered transparent WebPs on scroll) are the industry standard for Apple-style reveals. Our assistant has no template to write this performantly.
 
 #### Gap B: No "Anchor Object Pinning" Choreography Template
@@ -65,7 +65,7 @@ Comparing this premium execution to our active skills reveals critical systemic 
 * **Why it matters:** Without a clear layout structure (e.g., a `.pin-wrapper` holding a `.canvas-container` set to `position: absolute` or `sticky`, and sibling `.scroll-section` triggers), the assistant tries to write ad-hoc CSS positioning, leading to scroll gaps and overlapping layers.
 
 #### Gap C: Lack of Dynamic Color Reset Guidelines
-* **The Gap:** [ui-ux/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/ui-ux/SKILL.md) and [color-and-contrast.md](file:///c:/Users/godsw/.gemini/config/skills/ui-ux/reference/color-and-contrast.md) focus on choosing a singular, cohesive color strategy (Restrained, Committed, etc.). They lack rules for scroll-driven color shifts or sudden high-contrast resets to create visual pacing.
+* **The Gap:** [ui-ux/SKILL.md](../skills/ui-ux/SKILL.md) and [color-and-contrast.md](../skills/ui-ux/reference/color-and-contrast.md) focus on choosing a singular, cohesive color strategy (Restrained, Committed, etc.). They lack rules for scroll-driven color shifts or sudden high-contrast resets to create visual pacing.
 * **Why it matters:** The assistant defaults to a single background color throughout the page, resulting in a monotonous scroll experience.
 
 #### Gap D: Missing Text-Reveal Mask Patterns

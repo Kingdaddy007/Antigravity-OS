@@ -1,0 +1,4 @@
+interface:
+  display_name: "Fallow"
+  short_description: "Guidance for fallow tasks"
+  default_prompt: "Use $fallow to help complete this task with its domain workflow."

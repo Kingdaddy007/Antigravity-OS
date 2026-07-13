@@ -1,208 +1,247 @@
 #!/usr/bin/env bash
-# Anti-Gravity OS — Mac/Linux Installer
-# Run: ./install.sh
+# Anti-Gravity OS - safe macOS/Linux installer
 
-# ─── Colors ──────────────────────────────────────────────────────────────────
-CYAN='\033[0;36m'
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-WHITE='\033[1;37m'
-DARKCYAN='\033[0;36m'
-NC='\033[0m' # No Color
-
-function step()    { echo -e "\n${CYAN}▶ $1${NC}"; }
-function success() { echo -e "  ${GREEN}✓ $1${NC}"; }
-function warn()    { echo -e "  ${YELLOW}⚠ $1${NC}"; }
-function ask()     { echo -e "\n${WHITE}$1${NC}"; }
-function header()  {
-    echo -e "\n${DARKCYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-    echo -e "   ${CYAN}Anti-Gravity OS — Installer v1.2${NC}"
-    echo -e "${DARKCYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-}
-
-header
-
-SCRIPT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-GLOBAL_SOURCE="$SCRIPT_ROOT/global"
+set -Eeuo pipefail
 
 GLOBAL_CONFIG=""
 IDE=""
+HOST_ID=""
+DRY_RUN=false
+ASSUME_YES=false
+TARGET=""
+BACKUP=""
+STAGE=""
+BACKUP_CREATED=false
+ACTIVATED=false
 
-# Parse arguments
-while [[ "$#" -gt 0 ]]; do
-    case $1 in
-        --global-config) GLOBAL_CONFIG="$2"; shift ;;
-        --ide) IDE="$2"; shift ;;
-        *) warn "Unknown parameter passed: $1"; exit 1 ;;
+step() { printf '\n> %s\n' "$1"; }
+success() { printf '  OK  %s\n' "$1"; }
+warn() { printf '  WARN  %s\n' "$1" >&2; }
+
+usage() {
+    cat <<'EOF'
+Usage: ./install.sh [--ide 1-6] [--host HOST] [--global-config PARENT] [--dry-run] [--yes]
+
+The installer always writes to a dedicated directory named "antigravity".
+--global-config is a parent directory unless it already ends in /antigravity.
+EOF
+}
+
+while (($#)); do
+    case "$1" in
+        --global-config)
+            [[ $# -ge 2 ]] || { warn '--global-config needs a value'; exit 2; }
+            GLOBAL_CONFIG="$2"; shift 2 ;;
+        --ide)
+            [[ $# -ge 2 ]] || { warn '--ide needs a value'; exit 2; }
+            IDE="$2"; shift 2 ;;
+        --host)
+            [[ $# -ge 2 ]] || { warn '--host needs a value'; exit 2; }
+            HOST_ID="$2"; shift 2 ;;
+        --dry-run) DRY_RUN=true; shift ;;
+        --yes) ASSUME_YES=true; shift ;;
+        --help|-h) usage; exit 0 ;;
+        *) warn "Unknown option: $1"; usage; exit 2 ;;
     esac
-    shift
 done
 
-# ─── Step 1: Global config target ─────────────────────────────────────────────
-if [ -z "$GLOBAL_CONFIG" ]; then
-    if [ -z "$IDE" ]; then
-        ask "Which IDE are you using?"
-        echo ""
-        echo "  [1] Google AI Studio / Gemini   → ~/.gemini/antigravity/"
-        echo "  [2] Cursor                      → ~/.cursor/rules/"
-        echo "  [3] Windsurf                    → ~/.codeium/windsurf/memories/"
-        echo "  [4] VS Code (Copilot)           → .github/ in project root"
-        echo "  [5] OpenCode                    → ~/.config/opencode/"
-        echo "  [6] Custom path"
-        echo ""
-        read -p "Enter 1–6: " IDE_CHOICE
-        IDE="$IDE_CHOICE"
+SCRIPT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
+GLOBAL_SOURCE="$SCRIPT_ROOT/global"
+[[ -f "$GLOBAL_SOURCE/GEMINI.md" ]] || { warn "Incomplete source: $GLOBAL_SOURCE"; exit 1; }
+
+expand_path() {
+    local path="$1"
+    [[ -n "$path" ]] || { warn 'Install path cannot be empty'; return 1; }
+    path="${path/#\~/$HOME}"
+    [[ "$path" = /* ]] || path="$PWD/$path"
+    [[ "$path" != *'/../'* && "$path" != */.. && "$path" != ../* ]] || {
+        warn "Refusing path containing parent traversal: $path"; return 1;
+    }
+    printf '%s\n' "${path%/}"
+}
+
+add_namespace() {
+    local base
+    base="$(expand_path "$1")"
+    if [[ "${base##*/}" == 'antigravity' ]]; then
+        printf '%s\n' "$base"
+    else
+        printf '%s/antigravity\n' "$base"
+    fi
+}
+
+select_target() {
+    if [[ -n "$GLOBAL_CONFIG" ]]; then
+        [[ -n "$HOST_ID" ]] || { warn 'Custom/global config targets require --host gemini|codex|cursor|windsurf|opencode.'; return 1; }
+        SELECTED_TARGET="$(add_namespace "$GLOBAL_CONFIG")"
+        return
+    fi
+
+    if [[ -z "$IDE" ]]; then
+        cat <<'EOF'
+Choose a host:
+  [1] Gemini     -> ~/.gemini/antigravity
+  [2] Codex      -> ~/.codex/antigravity
+  [3] Cursor     -> ~/.cursor/rules/antigravity
+  [4] Windsurf   -> ~/.codeium/windsurf/memories/antigravity
+  [5] OpenCode   -> ~/.config/opencode/antigravity
+  [6] Custom parent directory
+EOF
+        read -r -p 'Enter 1-6: ' IDE
     fi
 
     case "$IDE" in
-        1) GLOBAL_CONFIG="$HOME/.gemini/antigravity" ;;
-        2) GLOBAL_CONFIG="$HOME/.cursor/rules" ;;
-        3) GLOBAL_CONFIG="$HOME/.codeium/windsurf/memories" ;;
-        4) GLOBAL_CONFIG="$(pwd)/.github/antigravity" ;;
-        5) GLOBAL_CONFIG="$HOME/.config/opencode" ;;
-        6) 
-            ask "Enter the full path to your global config folder:"
-            read -p "> " GLOBAL_CONFIG
-            # Expand tilde if present
-            GLOBAL_CONFIG="${GLOBAL_CONFIG/#\~/$HOME}"
-            ;;
-        *) 
-            warn "Unrecognised choice. Defaulting to ~/.gemini/antigravity/"
-            GLOBAL_CONFIG="$HOME/.gemini/antigravity"
-            ;;
-    esac
-fi
-
-# ─── Step 2: Install Global Layer ────────────────────────────────────────────
-step "Installing OS → $GLOBAL_CONFIG"
-
-if [ ! -d "$GLOBAL_CONFIG" ]; then
-    mkdir -p "$GLOBAL_CONFIG"
-    success "Created configuration directory: $GLOBAL_CONFIG"
-fi
-
-step "Cleaning target directory..."
-rm -rf "$GLOBAL_CONFIG"/*
-success "Target ready."
-
-cp -R "$GLOBAL_SOURCE/"* "$GLOBAL_CONFIG/"
-success "Copied OS files successfully."
-
-# ─── Step 2.5: User Personalisation check ─────────────────────────────────────
-ask "Enter your name (leave blank for generic setup):"
-read -p "> " USER_NAME
-
-IS_BELOVED=false
-if [[ "$USER_NAME" =~ [Bb]eloved ]] || [[ "$USER_NAME" =~ [Gg]odswill ]] || [[ "$USER_NAME" =~ [Gg]od\'s\ sweet ]] || [[ "$USER" =~ [Gg]odsw ]]; then
-    IS_BELOVED=true
-fi
-
-if [ "$IS_BELOVED" = true ]; then
-    step "Installing custom profile for Beloved..."
-    TARGET_GEMINI="$GLOBAL_CONFIG/GEMINI.md"
-    BELOVED_SOURCE="$GLOBAL_CONFIG/GEMINI-BELOVED.md"
-    if [ -f "$BELOVED_SOURCE" ]; then
-        cp "$BELOVED_SOURCE" "$TARGET_GEMINI"
-        success "Loaded custom prompt constitution (Beloved configuration)."
-    fi
-fi
-
-# Clean up GEMINI-BELOVED.md from target so it doesn't clutter or expose personal info
-TARGET_BELOVED="$GLOBAL_CONFIG/GEMINI-BELOVED.md"
-if [ -f "$TARGET_BELOVED" ]; then
-    rm -f "$TARGET_BELOVED"
-fi
-
-# ─── Step 2.6: Interactive Profile Customisation ──────────────────────────────
-if [ "$IS_BELOVED" = false ]; then
-    ask "Would you like to customize your GEMINI.md master prompt now? [y/n]"
-    read -p "> " CUSTOMIZE
-    if [[ "$CUSTOMIZE" =~ ^[Yy]$ ]]; then
-        step "Customizing your GEMINI.md profile..."
-        
-        read -p "Enter your Name/Nickname: " REAL_NAME
-        [ -z "$REAL_NAME" ] && REAL_NAME="[Your Name]"
-        
-        read -p "Enter your Location (e.g. London-based): " LOCATION
-        [ -z "$LOCATION" ] && LOCATION="[Your Location]"
-        
-        read -p "Describe your Work Style (e.g. sprint-based, steady-paced): " WORK_STYLE
-        [ -z "$WORK_STYLE" ] && WORK_STYLE="steady-paced and task-focused."
-        
-        read -p "Describe your Execution Patterns (e.g. how you handle project milestones): " EXECUTION
-        [ -z "$EXECUTION" ] && EXECUTION="finishes task milestones before shifting scope."
-        
-        read -p "Specify your rule for Decisions & Clarity (e.g. move at 70% clarity): " CLARITY
-        [ -z "$CLARITY" ] && CLARITY="move forward once clarity is good enough (70% rule)."
-        
-        read -p "Specify your rule for Communication Patterns (e.g. direct, clear): " COMM_PATTERNS
-        [ -z "$COMM_PATTERNS" ] && COMM_PATTERNS="direct, clear, and highlights blockers early."
-        
-        read -p "Detail your Resource Constraints (e.g. rate limits, budget): " RESOURCES
-        [ -z "$RESOURCES" ] && RESOURCES="none specified."
-        
-        read -p "Describe your Quality Standard (e.g. clean code, test coverage): " QUALITY
-        [ -z "$QUALITY" ] && QUALITY="expects clean code and solid verification traces."
-
-        GEMINI_PATH="$GLOBAL_CONFIG/GEMINI.md"
-        if [ -f "$GEMINI_PATH" ]; then
-            if command -v perl >/dev/null 2>&1; then
-                perl -pi -e "s/\[Your Name\]/$REAL_NAME/g" "$GEMINI_PATH"
-                perl -pi -e "s/\[Your Location\]/$LOCATION/g" "$GEMINI_PATH"
-                perl -pi -e "s/\[Describe your work pace, e\.g\., sprint-based, steady-paced, 1-3 day pushes, etc\.\]/$WORK_STYLE/g" "$GEMINI_PATH"
-                perl -pi -e "s/\[Detail how you start and finish projects, or rules for project milestones\.\]/$EXECUTION/g" "$GEMINI_PATH"
-                perl -pi -e "s/\[Specify your rule for taking action with incomplete information, e\.g\., decide at 70% clarity\.\]/$CLARITY/g" "$GEMINI_PATH"
-                perl -pi -e "s/\[State how you communicate under stress, during wrap-ups, or standard routines\.\]/$COMM_PATTERNS/g" "$GEMINI_PATH"
-                perl -pi -e "s/\[Detail local resource realities, API\/financial budgets, or other environment limitations\.\]/$RESOURCES/g" "$GEMINI_PATH"
-                perl -pi -e "s/\[Describe your expectations for visual quality, test coverage, code styles, or premium motion assets\.\]/$QUALITY/g" "$GEMINI_PATH"
-            else
-                sedi "s|\[Your Name\]|$REAL_NAME|g" "$GEMINI_PATH"
-                sedi "s|\[Your Location\]|$LOCATION|g" "$GEMINI_PATH"
-                sedi "s|\[Describe your work pace, e\.g\., sprint-based, steady-paced, 1-3 day pushes, etc\.\]|$WORK_STYLE|g" "$GEMINI_PATH"
-                sedi "s|\[Detail how you start and finish projects, or rules for project milestones\.\]|$EXECUTION|g" "$GEMINI_PATH"
-                sedi "s|\[Specify your rule for taking action with incomplete information, e\.g\., decide at 70% clarity\.\]|$CLARITY|g" "$GEMINI_PATH"
-                sedi "s|\[State how you communicate under stress, during wrap-ups, or standard routines\.\]|$COMM_PATTERNS|g" "$GEMINI_PATH"
-                sedi "s|\[Detail local resource realities, API/financial budgets, or other environment limitations\.\]|$RESOURCES|g" "$GEMINI_PATH"
-                sedi "s|\[Describe your expectations for visual quality, test coverage, code styles, or premium motion assets\.\]|$QUALITY|g" "$GEMINI_PATH"
+        1) HOST_ID='gemini'; SELECTED_TARGET="$HOME/.gemini/antigravity" ;;
+        2) HOST_ID='codex'; SELECTED_TARGET="$HOME/.codex/antigravity" ;;
+        3) HOST_ID='cursor'; SELECTED_TARGET="$HOME/.cursor/rules/antigravity" ;;
+        4) HOST_ID='windsurf'; SELECTED_TARGET="$HOME/.codeium/windsurf/memories/antigravity" ;;
+        5) HOST_ID='opencode'; SELECTED_TARGET="$HOME/.config/opencode/antigravity" ;;
+        6)
+            local custom_parent
+            if [[ -z "$HOST_ID" ]]; then
+                read -r -p 'Supported host (gemini, codex, cursor, windsurf, opencode): ' HOST_ID
             fi
-            success "Your personalized GEMINI.md has been generated!"
-        fi
-    fi
-fi
-
-# ─── Step 3: Dynamic Path URI Configuration ────────────────────────────────────
-step "Configuring Absolute System Paths..."
-TARGET_URI="file://$GLOBAL_CONFIG"
-success "Target system URI resolved: $TARGET_URI"
-
-replace_count=0
-# Find all markdown files and substitute {{GLOBAL_CONFIG_URI}} with $TARGET_URI
-# Usage of sed requires different syntax passing on mac vs linux
-sedi() {
-    case $(uname) in
-        Darwin*) sed -i '' "$@" ;;
-        *) sed -i "$@" ;;
+            read -r -p 'Parent directory for the antigravity namespace: ' custom_parent
+            SELECTED_TARGET="$(add_namespace "$custom_parent")" ;;
+        *) warn "Unknown host choice '$IDE'. Use 1-6."; return 1 ;;
     esac
 }
 
-while IFS= read -r -d '' file; do
-    if grep -q "{{GLOBAL_CONFIG_URI}}" "$file"; then
-        sedi "s|{{GLOBAL_CONFIG_URI}}|$TARGET_URI|g" "$file"
-        replace_count=$((replace_count + 1))
+assert_supported_host() {
+    case "$HOST_ID" in gemini|codex|cursor|windsurf|opencode) return 0 ;; esac
+    warn "Unsupported host '$HOST_ID'. Use gemini, codex, cursor, windsurf, or opencode."
+    return 1
+}
+
+find_python() {
+    if command -v python3 >/dev/null 2>&1; then PYTHON=(python3); return 0; fi
+    if command -v python >/dev/null 2>&1; then PYTHON=(python); return 0; fi
+    return 1
+}
+
+resolve_host_payload() {
+    INSTALL_SOURCE="$SCRIPT_ROOT/dist/$HOST_ID"
+    PENDING_BUILD=false
+    if [[ -f "$INSTALL_SOURCE/adapter.json" ]]; then return 0; fi
+    if ! find_python; then
+        warn "No prebuilt dist/$HOST_ID payload and no Python 3 runtime were found. Use a release package containing dist/$HOST_ID or install Python 3 and rerun."
+        return 1
     fi
-done < <(find "$GLOBAL_CONFIG" -type f -name "*.md" -print0)
+    if [[ "$DRY_RUN" == true ]]; then PENDING_BUILD=true; return 0; fi
+    "${PYTHON[@]}" "$SCRIPT_ROOT/global/scripts/os.py" build --host "$HOST_ID"
+    [[ -f "$INSTALL_SOURCE/adapter.json" ]] || {
+        warn "Failed to build the $HOST_ID payload. Run validation or use a release package containing dist/$HOST_ID."
+        return 1
+    }
+}
 
-success "Re-wrote system URIs in $replace_count configuration files."
+assert_safe_target() {
+    local target="$1"
+    [[ "${target##*/}" == 'antigravity' ]] || { warn "Refusing non-namespaced target: $target"; return 1; }
+    [[ "$target" != '/' && "$target" != "$HOME" ]] || { warn "Refusing dangerous target: $target"; return 1; }
+    [[ "${target%/*}" != '' ]] || { warn "Refusing to install directly below the filesystem root: $target"; return 1; }
+    [[ "$INSTALL_SOURCE" != "$target" && "$INSTALL_SOURCE" != "$target/"* && "$target" != "$INSTALL_SOURCE/"* ]] || {
+        warn 'Source and target must not contain one another.'; return 1;
+    }
+    [[ ! -L "$target" ]] || { warn "Refusing symlink target: $target"; return 1; }
+}
 
-# ─── Step 4: Summary ─────────────────────────────────────────────────────────
-echo -e "\n${DARKCYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "   ${GREEN}Anti-Gravity OS — Installation Complete${NC}"
-echo -e "${DARKCYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
+copy_contents() {
+    local source="$1" destination="$2"
+    cp -a "$source/." "$destination/"
+}
 
-echo -e "${WHITE}  GLOBAL SYSTEM installed at:"
-echo -e "    $GLOBAL_CONFIG\n"
-echo -e "  Next steps:"
-echo -e "    1. Fill in your context files (contexts/stack-context.md, etc.)"
-echo -e "    2. Tell your AI: \"Read GEMINI.md\" or configure it as your master prompt.\n${NC}"
+configure_uris() {
+    local directory="$1" target_uri="file://$1" count=0 file
+    while IFS= read -r -d '' file; do
+        if grep -q '{{GLOBAL_CONFIG_URI}}' "$file"; then
+            if command -v perl >/dev/null 2>&1; then
+                TARGET_URI="$target_uri" perl -0pi -e 's|\{\{GLOBAL_CONFIG_URI\}\}|$ENV{TARGET_URI}|g' "$file"
+            else
+                warn 'Perl is required to replace portable URI placeholders safely.'
+                return 1
+            fi
+            count=$((count + 1))
+        fi
+    done < <(find "$directory" -type f -name '*.md' -print0)
+    printf '%s\n' "$count"
+}
 
-echo -e "${DARKCYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
+rollback() {
+    local exit_code=$?
+    trap - ERR INT TERM
+    warn 'Installation failed; starting rollback.'
+    if [[ "$ACTIVATED" == true && -d "$TARGET" ]]; then
+        assert_safe_target "$TARGET"
+        rm -rf -- "$TARGET"
+    fi
+    if [[ "$BACKUP_CREATED" == true && -d "$BACKUP" ]]; then
+        mv -- "$BACKUP" "$TARGET"
+        warn 'Previous installation was restored.'
+    fi
+    if [[ -n "$STAGE" && -d "$STAGE" ]]; then
+        rm -rf -- "$STAGE"
+    fi
+    exit "$exit_code"
+}
+
+SELECTED_TARGET=""
+select_target
+assert_supported_host
+TARGET="$(expand_path "$SELECTED_TARGET")"
+resolve_host_payload
+assert_safe_target "$TARGET"
+PARENT="${TARGET%/*}"
+TIMESTAMP="$(date -u +%Y%m%d-%H%M%S)"
+BACKUP_ROOT="$PARENT/.antigravity-backups"
+BACKUP="$BACKUP_ROOT/$TIMESTAMP-$$"
+STAGE="$PARENT/.antigravity-stage-$$-$RANDOM"
+if [[ -d "$INSTALL_SOURCE" ]]; then SOURCE_FILE_COUNT="$(find "$INSTALL_SOURCE" -type f | wc -l | tr -d ' ')"; else SOURCE_FILE_COUNT=0; fi
+
+step 'Installation plan'
+printf '  Host: %s\n  Payload: %s\n  Target: %s\n  Managed payload files: %s\n' "$HOST_ID" "$INSTALL_SOURCE" "$TARGET" "$SOURCE_FILE_COUNT"
+if [[ "$PENDING_BUILD" == true ]]; then printf '  Payload action: build with global/scripts/os.py after approval\n'; fi
+if [[ -d "$TARGET" ]]; then
+    printf '  Existing namespace backup: %s\n' "$BACKUP"
+    printf '  Existing extra files are retained in the staged replacement.\n'
+else
+    printf '  Existing namespace: none\n'
+fi
+printf '  Shared parent directories are never cleared.\n'
+
+if [[ "$DRY_RUN" == true ]]; then
+    success 'Dry run complete. No files were written.'
+    exit 0
+fi
+
+if [[ "$ASSUME_YES" != true ]]; then
+    read -r -p "Install only into '$TARGET'? Type INSTALL to continue: " CONFIRMATION
+    [[ "$CONFIRMATION" == 'INSTALL' ]] || { warn 'Installation cancelled. No files were changed.'; exit 0; }
+fi
+
+trap rollback ERR INT TERM
+mkdir -p -- "$PARENT"
+mkdir -- "$STAGE"
+if [[ "$PENDING_BUILD" == true ]]; then
+    DRY_RUN=false
+    resolve_host_payload
+fi
+if [[ -d "$TARGET" ]]; then copy_contents "$TARGET" "$STAGE"; fi
+copy_contents "$INSTALL_SOURCE" "$STAGE"
+URI_COUNT="$(configure_uris "$STAGE")"
+
+if [[ -d "$TARGET" ]]; then
+    mkdir -p -- "$BACKUP_ROOT"
+    mv -- "$TARGET" "$BACKUP"
+    BACKUP_CREATED=true
+fi
+mv -- "$STAGE" "$TARGET"
+ACTIVATED=true
+[[ -f "$TARGET/adapter.json" ]]
+INSTRUCTION_TARGET="$(sed -n 's/^[[:space:]]*"instruction_target"[[:space:]]*:[[:space:]]*"\([^"]*\)".*/\1/p' "$TARGET/adapter.json" | head -n 1)"
+[[ -n "$INSTRUCTION_TARGET" && -f "$TARGET/$INSTRUCTION_TARGET" ]]
+trap - ERR INT TERM
+
+success "Installed Anti-Gravity OS at $TARGET"
+success "Configured portable URIs in $URI_COUNT file(s)."
+if [[ "$BACKUP_CREATED" == true ]]; then success "Previous namespace retained at $BACKUP"; fi

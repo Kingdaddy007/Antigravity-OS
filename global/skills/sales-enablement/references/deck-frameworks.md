@@ -1,5 +1,32 @@
 # Sales Deck Frameworks
 
+## Contents
+
+- [The Storytelling Arc](#the-storytelling-arc)
+- [Slide-by-Slide Template](#slide-by-slide-template)
+  - [Slide 1: Current World Problem](#slide-1-current-world-problem)
+  - [Slide 2: Cost of the Problem](#slide-2-cost-of-the-problem)
+  - [Slide 3: The Shift Happening](#slide-3-the-shift-happening)
+  - [Slide 4: Your Approach](#slide-4-your-approach)
+  - [Slide 5: Product Walkthrough](#slide-5-product-walkthrough)
+  - [Slide 6: Proof Points](#slide-6-proof-points)
+  - [Slide 7: Case Study](#slide-7-case-study)
+  - [Slide 8: Implementation / Timeline](#slide-8-implementation-timeline)
+  - [Slide 9: ROI / Value](#slide-9-roi-value)
+  - [Slide 10: Pricing Overview](#slide-10-pricing-overview)
+  - [Slide 11: Next Steps / CTA](#slide-11-next-steps-cta)
+- [Persona Customization Guide](#persona-customization-guide)
+  - [Technical Buyer Deck](#technical-buyer-deck)
+  - [Economic Buyer Deck](#economic-buyer-deck)
+  - [Champion Deck](#champion-deck)
+- [Anti-Patterns](#anti-patterns)
+  - [The Feature Dump](#the-feature-dump)
+  - [The Wall of Text](#the-wall-of-text)
+  - [The Missing Story Arc](#the-missing-story-arc)
+  - [The Generic Screenshot](#the-generic-screenshot)
+  - [The Premature Demo](#the-premature-demo)
+  - [The Kitchen Sink](#the-kitchen-sink)
+
 Detailed slide-by-slide guidance for building sales decks that tell a story and close deals.
 
 ## The Storytelling Arc

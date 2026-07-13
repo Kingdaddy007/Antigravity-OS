@@ -50,7 +50,7 @@
 Comparing the HELIOS site to our active skills reveals the following gaps:
 
 #### Gap A: Absence of the "Generative Simulation Surface" Category
-* **The Gap:** [cinematic-motion/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/cinematic-motion/SKILL.md) describes offline pre-rendered sequence scrubs and standard model viewers, but misses **Real-Time Generative Simulation** (where visuals are calculated procedurally on the fly).
+* **The Gap:** [cinematic-motion/SKILL.md](../skills/cinematic-motion/SKILL.md) describes offline pre-rendered sequence scrubs and standard model viewers, but misses **Real-Time Generative Simulation** (where visuals are calculated procedurally on the fly).
 * **Why it matters:** The model defaults to static image frame folders when procedural math models would be lighter and more interactive.
 
 #### Gap B: No Requirement for a "Math/Simulation Brief"

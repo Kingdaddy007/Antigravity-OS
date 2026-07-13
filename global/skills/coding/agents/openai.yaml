@@ -1,0 +1,4 @@
+interface:
+  display_name: "Coding"
+  short_description: "Guidance for coding tasks"
+  default_prompt: "Use $coding to help complete this task with its domain workflow."

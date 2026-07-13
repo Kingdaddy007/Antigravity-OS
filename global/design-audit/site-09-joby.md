@@ -56,11 +56,11 @@ Comparing the Joby Aviation site to our active skills reveals the following gaps
 * **Why it matters:** The model designs sections for decoration rather than building structured validation loops for high-stakes business audiences.
 
 #### Gap B: No Code Pattern for "Scroll-Linked Proof Modules"
-* **The Gap:** [cinematic-motion/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/cinematic-motion/SKILL.md) lacks code frameworks for **category lists driving pinned showcases**.
+* **The Gap:** [cinematic-motion/SKILL.md](../skills/cinematic-motion/SKILL.md) lacks code frameworks for **category lists driving pinned showcases**.
 * **Why it matters:** The model struggles to coordinate vertical list offsets with absolute right-aligned image fades, causing timing lag.
 
 #### Gap C: Omission of "Optimistic Technology" / Technical Softening Rules
-* **The Gap:** [ui-ux/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/ui-ux/SKILL.md) focuses on either minimalist luxury (monochrome/serifs) or startup tech (dark modes/snappy curves). It lacks instructions for **Optimistic Technology / Technical Softening** (rounded type, sunset warmth, accessibility).
+* **The Gap:** [ui-ux/SKILL.md](../skills/ui-ux/SKILL.md) focuses on either minimalist luxury (monochrome/serifs) or startup tech (dark modes/snappy curves). It lacks instructions for **Optimistic Technology / Technical Softening** (rounded type, sunset warmth, accessibility).
 * **Why it matters:** The model defaults to dark-mode SaaS templates, making infrastructure projects look like software widgets.
 
 ---

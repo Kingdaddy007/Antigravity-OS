@@ -1,94 +1,55 @@
 ---
-name: seedance-20
-description: 'Generate and direct cinematic AI videos with Seedance 2.0 (ByteDance/Dreamina/Jimeng). Covers text-to-video, image-to-video, video-to-video, and reference-to-video workflows with @Tag asset references, multi-character scenes, audio design, and post-processing. Use when making AI video, writing Seedance prompts, directing a scene, fixing generation errors, or building an AI short film, product ad, or music video.'
+name: seedance
+description: Generate and direct Seedance video workflows using text, image, audio, and video references. Use for prompt direction, multimodal reference planning, scene consistency, audio design, troubleshooting, or post-processing.
 license: MIT
-user-invocable: true
-user-invokable: true
-tags: ["ai-video", "filmmaking", "bytedance", "seedance", "multimodal", "lip-sync", "openclaw", "antigravity", "gemini-cli", "firebase", "codex", "cursor", "windsurf", "opencode"]
-metadata: {"version": "5.0.0", "updated": "2026-03-03", "openclaw": {"emoji": "🎬", "homepage": "https://github.com/Emily2040/seedance-2.0"}, "antigravity": {"emoji": "🎬", "homepage": "https://github.com/Emily2040/seedance-2.0"}, "gemini-cli": {"emoji": "🎬", "homepage": "https://github.com/Emily2040/seedance-2.0"}, "firebase": {"emoji": "🎬", "homepage": "https://github.com/Emily2040/seedance-2.0"}, "author": "Emily (@iamemily2050)", "repository": "https://github.com/Emily2040/seedance-2.0"}
 ---
 
-# seedance-20
+# Seedance
 
-Seedance 2.0 quad-modal AI filmmaking (T2V · I2V · V2V · R2V).
+## Verified Capability Baseline
 
-## The v5.0 Philosophy
+As of 2026-07-13, ByteDance's official Seedance 2.0 launch material verifies:
 
-> **Direct the model. Don't micro-manage it.** Tell it WHAT you want and HOW it should FEEL, not every pixel of HOW to execute it. Use @references to show, not tell.
+- text, image, audio, and video inputs;
+- combined reference input of up to 9 images, 3 video clips, and 3 audio clips;
+- multimodal reference for composition, motion, camera, visual effects, and sound;
+- video generation, editing, and extension;
+- 15-second high-quality multi-shot audio-video output and dual-channel audio;
+- identity verification or prior legal authorization for real-person portrait references.
 
-This library offers two workflows:
+See [platform constraints](references/platform-constraints.md) and [source verification](../../baselines/source-verification.md) before relying on platform limits or availability. Dated filter behavior, API status, named-party enforcement narratives, prompt-length claims, pricing, and surface-specific controls are not part of the verified baseline.
 
-1. **Full Interview**: For users with a vague idea who need creative guidance. Start with [skill:seedance-interview].
-2. **Direct Prompt**: For users who know what they want. Start with [skill:seedance-prompt].
+## Routing
 
-> **Note (Feb 2026):** Seedance V2 currently performs best with short (<2000 char) Chinese prompts.
+Choose the smallest applicable skill:
 
-> **Feb 2026 Status**: Seedance 2.0 API global release was delayed (from planned Feb 24) due to copyright enforcement actions by Disney, Paramount Skydance, Netflix, MPA, and SAG-AFTRA. ByteDance paused real-person face uploads Feb 15. Content filters for named franchise characters, anime IPs, and streaming originals have been tightened. The [skill:seedance-copyright] module reflects the current post-enforcement state. Run it before every generation.
+- Vague concept or guided direction: `seedance-interview` or `seedance-interview-short`.
+- Direct prompt construction: `seedance-prompt` or `seedance-prompt-short`.
+- Camera, motion, lighting, characters, style, VFX, or audio: load only that specialist skill.
+- Known genre structure: `seedance-recipes`.
+- Failed output: `seedance-troubleshoot`.
+- Copyright, likeness, or brand risk: `seedance-copyright`.
+- Post-processing or automation: `seedance-pipeline`.
 
+Language vocabulary and worked-example skills are optional references, not prerequisites.
 
-## Platform Compatibility
+## Core Workflow
 
-| Platform | Install path | Scope |
-|---|---|---|
-| **Antigravity** | `.agent/skills/seedance-20/` | workspace |
-| **Gemini CLI** | `.gemini/skills/seedance-20/` | workspace |
-| **Firebase Studio** | `.idx/skills/seedance-20/` | workspace |
-| **Claude Code** | `.claude/skills/seedance-20/` | workspace |
-| **OpenClaw / ClawHub** | `.claude/skills/seedance-20/` | workspace |
-| **GitHub Copilot** | `.github/skills/seedance-20/` | workspace |
-| **Codex** | `.agents/skills/seedance-20/` | workspace |
-| **Cursor** | `.cursor/skills/seedance-20/` | workspace |
-| **Windsurf** | `.windsurf/skills/seedance-20/` | workspace |
-| **OpenCode** | `.opencode/skills/seedance-20/` | workspace |
+1. Confirm the active surface and discover its current controls.
+2. Identify the generation mode and available referenced assets.
+3. Define subject, action, environment, camera, timing, style, lighting, audio, and continuity constraints.
+4. Use references for information they can convey more reliably than prose.
+5. Keep the prompt concise enough for the active surface; do not claim a universal character limit without current official evidence.
+6. Generate a low-risk test, inspect drift and failure modes, then revise one causal dimension at a time.
+7. Obtain authorization for any external upload, purchase, publication, or use of a real person's likeness.
 
-### One-liner installs
+## Evidence Rules
 
-```bash
-# Antigravity / Gemini CLI / Firebase Studio
-antigravity skills install https://github.com/Emily2040/seedance-2.0
-gemini skills install https://github.com/Emily2040/seedance-2.0
-# Claude Code / OpenClaw
-claude skills install https://github.com/Emily2040/seedance-2.0
-# Codex
-codex skills install https://github.com/Emily2040/seedance-2.0
-# Cursor
-cursor skills install https://github.com/Emily2040/seedance-2.0
-# Windsurf
-windsurf skills install https://github.com/Emily2040/seedance-2.0
-# OpenCode
-opencode skills install https://github.com/Emily2040/seedance-2.0
-```
+- Treat all February-March 2026 operational claims outside the verified baseline as historical snapshots.
+- Verify current platform behavior using official ByteDance documentation and the active product surface.
+- If official evidence is unavailable, label the claim unverified and avoid production dependency on it.
+- Community examples may inspire prompts but cannot establish legal, policy, API, pricing, or model-limit facts.
 
-## Skills
+## Conditional References
 
-**Core pipeline**
-[skill:seedance-interview] / [skill:seedance-interview-short] · [skill:seedance-prompt] / [skill:seedance-prompt-short] · [skill:seedance-camera] · [skill:seedance-motion] · [skill:seedance-lighting] · [skill:seedance-characters] · [skill:seedance-style] · [skill:seedance-vfx] · [skill:seedance-audio] · [skill:seedance-pipeline] · [skill:seedance-recipes] · [skill:seedance-troubleshoot]
-
-**Content quality**
-[skill:seedance-copyright] · [skill:seedance-antislop] · [skill:seedance-filter]
-
-**Vocabulary**
-[skill:seedance-vocab-zh] · [skill:seedance-vocab-ja] · [skill:seedance-vocab-ko] · [skill:seedance-vocab-es] · [skill:seedance-vocab-ru]
-
-**Working Examples**
-[skill:seedance-examples-zh]
-
-## References
-
-[ref:platform-constraints] · [ref:json-schema] · [ref:prompt-examples] · [ref:quick-ref] · [ref:storytelling-framework] · [ref:genre-guides] · [ref:reference-workflow] · [ref:i2v-guide] · [ref:intent-vs-precision]
-
-## Version history
-
-| Version | Date | Changes |
-|---|---|---|
-| 5.0.0 | 2026-03-03 | **Intent-First Overhaul.** Rewrote seedance-prompt (genre router, 30-100 word target, I2V gate). Restructured seedance-motion (intent-first, @Video reference primary). Updated seedance-camera (One-Move Rule, genre presets). Updated seedance-recipes (7 genre categories). Updated seedance-interview (Quick Mode exit, genre detection). Updated seedance-troubleshoot (diagnostic tree). Added 4 new references: genre-guides, reference-workflow, i2v-guide, intent-vs-precision. Minor updates to seedance-prompt-short, seedance-style, seedance-vfx, seedance-audio. |
-| 4.2.0 | 2026-03-03 | Safe Vocabulary Integration: added filter-safe action, weapon, clothing, body, environment, material, VFX, sound, and production-context terms to seedance-filter and all 5 language vocabulary skills (zh, ja, ko, es, ru). Term counts: zh 550+, ja/ko/es/ru 450+ each. |
-| 4.1.0 | 2026-03-02 | Added seedance-filter: content filter intelligence, 37% block-rate diagnosis, four-question framework, safe-prompting techniques. |
-| 4.0.0 | 2026-02-28 | Cognitive Architecture upgrade: L8 Construction-First interview, L7 Concealment Check prompt, L11 Conservation Law troubleshoot. Inspired by agi-in-md cognitive compression. |
-| 3.8.0 | 2026-02-27 | Dual Workflow System: Max Detail + Max Performance. Added seedance-prompt-short and seedance-interview-short. |
-| 3.7.0 | 2026-02-26 | Redesigned seedance-interview as "Director's Journey" with 5-stage storytelling workflow. Added storytelling-framework reference. |
-| 3.6.1 | 2026-02-26 | Enhanced vocab-zh (400+ terms, 16 categories). Added seedance-examples-zh with 16 battle-tested Chinese prompts across 7 genres. |
-| 3.3.0 | 2026-02-25 | Rewrote seedance-interview v4.0: A/B/C/D/E guided stages, 5-flow types (image/video/audio/one-liner/script), 3-option prompt output, language selection |
-| 3.2.1 | 2026-02-25 | **Accuracy corrections**: removed negative-prompt support claim (not supported), corrected API availability (no public API yet), fixed aspect ratios (added 3:4 and 21:9), fixed video input limit (15s combined not per-file), removed mobile-only duration claim |
-| 3.1.0 | 2026-02-25 | Added copyright, antislop, vocab-ja/ko/es/ru modules. 24 files. |
-| 3.0.0 | 2026-02-25 | Initial 12-skill core pipeline. |
+Start with [resource-index.md](references/resource-index.md) and load only the references needed for the task. Historical package changes live in [version-history.md](references/version-history.md); they are not runtime platform facts.

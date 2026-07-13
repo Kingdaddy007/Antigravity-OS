@@ -1,15 +1,6 @@
 ---
 name: cinematic-showroom-strategy
-description: >
-  Use this skill when planning cinematic interior designer websites, video-led
-  portfolios, AI-generated room films, scroll-driven showroom pages, or full
-  spatial web experiences where brand diagnosis must become scene sequence,
-  image/video prompts, portfolio proof, and website choreography. Activated by
-  "cinematic showroom", "video-to-website", "AI room video", "cinematic
-  portfolio", "scroll-driven interior website", "Awwwards interior site", or
-  when `spatial-experience-design` needs prompts and section choreography. Do
-  NOT use for generic video backgrounds, product launch pages, backend work, or
-  decorative motion without brand/spatial proof.
+description: 'Use this skill when planning cinematic interior designer websites, video-led portfolios, AI-generated room films, scroll-driven showroom pages, or full spatial web experiences where brand diagnosis must become scene sequence, image/video prompts, portfolio proof, and website choreography. Activated by "cinematic showroom", "video-to-website", "AI room video", "cinematic portfolio", "scroll-driven interior website", "Awwwards interior site", or when `spatial-experience-design` needs prompts and section choreography. Do NOT use for generic video backgrounds, product launch pages, backend work, or decorative motion without brand/spatial proof.'
 ---
 
 # Cinematic Showroom Strategy

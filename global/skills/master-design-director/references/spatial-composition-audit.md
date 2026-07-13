@@ -1,5 +1,20 @@
 # Spatial-Editorial Composition Audit
 
+## Contents
+
+- [Purpose](#purpose)
+- [Page As Sequential Spatial Event](#page-as-sequential-spatial-event)
+- [First 3 Seconds](#first-3-seconds)
+- [Grid, Spacing, And Layout Authority](#grid-spacing-and-layout-authority)
+- [Typography As Spatial Behavior](#typography-as-spatial-behavior)
+- [Imagery Selection, Cropping, And Sequencing](#imagery-selection-cropping-and-sequencing)
+- [Content Pacing And Emotional Escalation](#content-pacing-and-emotional-escalation)
+- [Motion Choreography](#motion-choreography)
+- [Inquiry Readiness](#inquiry-readiness)
+- [Mobile Spatial Failure Warnings](#mobile-spatial-failure-warnings)
+- [Integrated Audit Questions](#integrated-audit-questions)
+- [Critique Language](#critique-language)
+
 ## Purpose
 
 Use this reference to audit luxury spatial web composition as an authored sequence, not a stack of modules. Apply it to first impressions, grid, spacing, typography, imagery, motion, pacing, mobile behavior, and inquiry readiness.

@@ -49,7 +49,7 @@
 Comparing the Nauta site to our active skills reveals the following gaps:
 
 #### Gap A: Absence of the "Premium Product-Register Storytelling" Lane
-* **The Gap:** [cinematic-motion/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/cinematic-motion/SKILL.md) and [ui-ux/SKILL.md](file:///C:/Users/godsw/config/skills/ui-ux/SKILL.md) focus heavily on visual brand films, lacking a specific design guide for premium B2B SaaS.
+* **The Gap:** [cinematic-motion/SKILL.md](../skills/cinematic-motion/SKILL.md) and [ui-ux/SKILL.md](../skills/ui-ux/SKILL.md) focus heavily on visual brand films, lacking a specific design guide for premium B2B SaaS.
 * **Why it matters:** SaaS pages get over-designed with dramatic mask wipes and long scroll pins that damage professional trust.
 
 #### Gap B: No "Living Mockup" Pattern

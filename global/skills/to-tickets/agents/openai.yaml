@@ -1,0 +1,4 @@
+interface:
+  display_name: "To Tickets"
+  short_description: "Guidance for to tickets tasks"
+  default_prompt: "Use $to-tickets to help complete this task with its domain workflow."

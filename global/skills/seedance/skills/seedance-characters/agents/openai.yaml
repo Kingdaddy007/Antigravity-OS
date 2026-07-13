@@ -1,0 +1,4 @@
+interface:
+  display_name: "Seedance Characters"
+  short_description: "Guidance for seedance characters tasks"
+  default_prompt: "Use $seedance-characters to help complete this task with its domain workflow."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Apply Transition"
+  short_description: "Guidance for apply transition tasks"
+  default_prompt: "Use $apply-transition to help complete this task with its domain workflow."

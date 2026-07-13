@@ -1,9 +1,28 @@
+---
+id: security-audit
+version: 1
+status: active
+intent: Execute security audit with explicit authority, state, outputs, and evidence.
+use_when: [the task matches security audit]
+do_not_use_when: [another workflow more precisely matches the requested outcome]
+inputs: [user objective, workspace context, constraints, requested authority mode]
+required_resources: [applicable AGENTS.md files, referenced skills and contexts]
+mutation_class: read_only
+approval_gates: [confirm implement mode before any mutation]
+states: [intake, assess, propose, approve-if-needed, execute-if-authorized, verify, deliver]
+outputs: [task result, changed-artifact list when applicable, evidence, residual risks]
+verification: [run proportionate checks, record raw evidence, label anything unverified]
+failure_paths: [stop on authority or contract conflict, preserve state, report blocker and safe next action]
+resume_contract: task-scoped .agents/workflows/security-audit.json using the workflows directory contract
+next_workflows: [none]
+profiles: [general]
+---
+
 # WORKFLOW: SECURITY AUDIT (FULL SOURCE)
 
 **Version:** Gold v1.1 (Master Merge)
 **Layer:** 8 — Execution Workflow
 **Tier:** 2 — Loaded by task
-**File:** workflows/workflow-security-audit-SOURCE.md
 **Primary Mode:** Security
 **Secondary Modes:** Reviewer, Architect, Debugger
 **Purpose:** The systematic sequence for evaluating the security posture of code, features, or system components — identifying vulnerabilities, assessing risk, and recommending mitigations. Uses the STRIDE framework across trust boundaries to systematically identify vulnerabilities rather than relying on ad-hoc assessment.

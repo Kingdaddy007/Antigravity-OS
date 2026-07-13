@@ -2,11 +2,10 @@
 name: seedance-pipeline
 description: 'Integrate Seedance 2.0 with ComfyUI nodes and post-processing chains covering upscale, frame interpolation, color grade, composite, and metadata cleanup. Use when building automated video pipelines, connecting Seedance to external tools, or finishing and delivering a generated video clip.'
 license: MIT
-user-invocable: true
-user-invokable: true
-tags: ["pipeline", "comfyui", "api", "firebase", "openclaw", "antigravity", "gemini-cli", "codex", "cursor", "windsurf", "opencode"]
-metadata: {"version": "5.0.0", "updated": "2026-03-03", "openclaw": {"emoji": "🔗", "homepage": "https://github.com/Emily2040/seedance-2.0"}, "parent": "seedance-20", "antigravity": {"emoji": "🔗", "homepage": "https://github.com/Emily2040/seedance-2.0"}, "gemini-cli": {"emoji": "🔗", "homepage": "https://github.com/Emily2040/seedance-2.0"}, "firebase": {"emoji": "🔗", "homepage": "https://github.com/Emily2040/seedance-2.0"}, "author": "Emily (@iamemily2050)", "repository": "https://github.com/Emily2040/seedance-2.0"}
 ---
+## STATUS VERIFICATION GATE
+
+Treat platform availability, model limits, filter behavior, enforcement actions, and API status dated February-March 2026 as historical snapshots. Before relying on them, verify current official ByteDance/Seedance documentation. If verification is unavailable, label the claim unverified and avoid presenting it as current fact.
 
 # seedance-pipeline
 

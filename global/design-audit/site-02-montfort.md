@@ -44,7 +44,7 @@
 Comparing the Montfort system to our active skills reveals the following gaps:
 
 #### Gap A: Lack of an "Atmospheric Fly-Through" Subtype
-* **The Gap:** [cinematic-motion/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/cinematic-motion/SKILL.md) lacks layout/motion instructions for **Z-axis progression**. It defaults to standard scroll reveals (parallax, sticky, masks, or bento grids) rather than camera-depth staging.
+* **The Gap:** [cinematic-motion/SKILL.md](../skills/cinematic-motion/SKILL.md) lacks layout/motion instructions for **Z-axis progression**. It defaults to standard scroll reveals (parallax, sticky, masks, or bento grids) rather than camera-depth staging.
 * **Why it matters:** The assistant cannot build immersive spatial depth (Z-axis scale/opacity overlapping) because it treats scroll strictly as a Y-axis movement.
 
 #### Gap B: Absence of Diegetic Wipes
@@ -56,7 +56,7 @@ Comparing the Montfort system to our active skills reveals the following gaps:
 * **Why it matters:** If the user provides a warm-toned sunny video and a cool-toned mountain peak, the assistant will implement them side-by-side, breaking the immersive illusion.
 
 #### Gap D: Missing Restraint Rules for Moving Footage
-* **The Gap:** [ui-ux/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/ui-ux/SKILL.md) doesn't warn that copy must stay sparse and delay its entry when overlaid on heavy background videos, leading to cluttered, unreadable screens.
+* **The Gap:** [ui-ux/SKILL.md](../skills/ui-ux/SKILL.md) doesn't warn that copy must stay sparse and delay its entry when overlaid on heavy background videos, leading to cluttered, unreadable screens.
 
 ---
 

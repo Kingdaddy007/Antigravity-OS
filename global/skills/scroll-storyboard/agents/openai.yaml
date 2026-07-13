@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scroll Storyboard"
+  short_description: "Guidance for scroll storyboard tasks"
+  default_prompt: "Use $scroll-storyboard to help complete this task with its domain workflow."

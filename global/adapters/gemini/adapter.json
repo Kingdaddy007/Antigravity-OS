@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "host": "gemini",
+  "namespace": "antigravity",
+  "content_root": ".",
+  "instruction_target": "GEMINI.md",
+  "skills_target": "skills",
+  "workflows_target": "workflows",
+  "supports_slash_commands": true,
+  "approval_model": "mixed",
+  "capabilities": {
+    "read_file": "host-native file reading",
+    "list_files": "host-native directory listing",
+    "search_text": "host-native text search",
+    "edit_file": "host-native patch or file editing",
+    "run_command": "host-native terminal execution",
+    "request_approval": "host-native confirmation gate"
+  }
+}

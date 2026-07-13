@@ -1,8 +1,6 @@
 ---
 name: competitor-profiling
-description: "When the user wants to research, profile, or analyze competitors from their URLs. Also use when the user mentions 'competitor profile,' 'competitor research,' 'competitor analysis,' 'profile this competitor,' 'analyze competitor,' 'competitive intelligence,' 'competitor deep dive,' 'who are my competitors,' 'competitor landscape,' 'competitor dossier,' 'competitive audit,' or 'research these competitors.' Input is a list of competitor URLs. Output is structured competitor profile markdown files. For creating comparison/alternative pages from profiles, see competitor-alternatives. For sales-specific battle cards, see sales-enablement."
-metadata:
-  version: 1.0.0
+description: 'When the user wants to research, profile, or analyze competitors from their URLs. Also use when the user mentions ''competitor profile,'' ''competitor research,'' ''competitor analysis,'' ''profile this competitor,'' ''analyze competitor,'' ''competitive intelligence,'' ''competitor deep dive,'' ''who are my competitors,'' ''competitor landscape,'' ''competitor dossier,'' ''competitive audit,'' or ''research these competitors.'' Input is a list of competitor URLs. Output is structured competitor profile markdown files.'
 ---
 
 # Competitor Profiling
@@ -180,6 +178,10 @@ Combine scraped content with SEO data to build the profile. Cross-reference clai
 
 ---
 
+
+## REFERENCE LOADING RULES
+
+Load `references/resource-index.md` when the task needs examples, specialist criteria, implementation details, or domain-specific diagnostics beyond this core workflow. Select only the references whose indexed purpose matches the task; do not load the package wholesale.
 ## Output Format
 
 ### Profile Document Structure
@@ -402,10 +404,10 @@ Only ask if not answered by context or input:
 
 ## Related Skills
 
-- **competitor-alternatives**: For creating comparison/alternative pages from these profiles
-- **customer-research**: For mining reviews and community sentiment in depth
-- **content-strategy**: For using competitor content gaps to plan your own content
-- **seo-audit**: For auditing your own site relative to competitors
+- **copywriting**: For creating comparison/alternative pages from these profiles
+- **research-analysis**: For deeper evidence gathering and source comparison
+- **copywriting**: For planning content and messaging from competitive gaps
+- **page-cro**: For search-intent and conversion analysis on comparison pages
 - **sales-enablement**: For turning profiles into battle cards and sales collateral
-- **paid-ads**: For analyzing competitor ad strategies
-- **pricing-strategy**: For deeper pricing analysis informed by competitor profiles
+- **research-analysis**: For evidence-backed analysis of competitor advertising
+- **product-thinking**: For pricing and packaging tradeoff analysis

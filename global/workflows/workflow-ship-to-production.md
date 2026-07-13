@@ -1,3 +1,23 @@
+---
+id: ship-to-production
+version: 1
+status: active
+intent: Execute ship to production with explicit authority, state, outputs, and evidence.
+use_when: [the task matches ship to production]
+do_not_use_when: [another workflow more precisely matches the requested outcome]
+inputs: [user objective, workspace context, constraints, requested authority mode]
+required_resources: [applicable AGENTS.md files, referenced skills and contexts]
+mutation_class: external_or_production
+approval_gates: [just-in-time approval naming target, action, rollback, and evidence plan]
+states: [intake, assess, propose, approve-if-needed, execute-if-authorized, verify, deliver]
+outputs: [task result, changed-artifact list when applicable, evidence, residual risks]
+verification: [run proportionate checks, record raw evidence, label anything unverified]
+failure_paths: [stop on authority or contract conflict, preserve state, report blocker and safe next action]
+resume_contract: task-scoped .agents/workflows/ship-to-production.json using the workflows directory contract
+next_workflows: [none]
+profiles: [general]
+---
+
 # WORKFLOW: SHIP TO PRODUCTION
 
 **Version:** Gold v1.1 (Master Merge)
@@ -354,6 +374,10 @@ Kill switch if feature-flagged: [flag name and how to toggle]
 **Mode:** DevOps/Infra
 **Goal:** Deploy using the established process. Keep rollout disciplined. Do not add undocumented improvisation.
 
+#### Just-in-Time Production Approval (Mandatory)
+
+Immediately before any production mutation, confirm the target environment/account, release identifier, exact action, expected user effect, rollback or containment path, monitoring owner, and evidence plan. Obtain explicit approval for this deployment even when readiness was approved earlier. Risk classification changes evidence depth and approvers; it never removes this gate.
+
 #### Actions (Step 7 — Execute Deployment)
 
 1. Follow `infra-context.md` deployment procedure exactly.
@@ -493,7 +517,7 @@ Do not continue rollout just because the sequence says "next" if production sign
 
 ## HOTFIX VARIANT
 
-When deploying a hotfix for an active P1 or P2 production incident:
+When deploying a hotfix for an active SEV-1 or SEV-2 production incident:
 
 ### Modified Process (Hotfix)
 

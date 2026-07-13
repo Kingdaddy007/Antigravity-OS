@@ -42,7 +42,7 @@
 ### 4. Gaps in Current System
 
 #### Gap A: Lack of "Canvas-First Exhibition" Category
-* **The Gap:** [cinematic-motion/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/cinematic-motion/SKILL.md) assumes a traditional web page containing a 3D canvas block. It has no design rules for **Canvas-First environments** where HTML is reduced to a minimal static overlay and the page architecture exists solely inside WebGL.
+* **The Gap:** [cinematic-motion/SKILL.md](../skills/cinematic-motion/SKILL.md) assumes a traditional web page containing a 3D canvas block. It has no design rules for **Canvas-First environments** where HTML is reduced to a minimal static overlay and the page architecture exists solely inside WebGL.
 * **Why it matters:** The model tries to write standard vertical sections containing absolute canvases, leading to scroll gaps and layering bugs.
 
 #### Gap B: No "Mesh-Breach" or Geometry-Driven Wipes

@@ -1,15 +1,6 @@
 ---
 name: coding
-description: >
-  Use this skill when writing, modifying, or generating code of any kind.
-  Activated when the user asks to build features, implement functions, create
-  components, write endpoints, set up forms, wire things together, or produce
-  any working implementation. Trigger phrases: "build this", "implement",
-  "write the code for", "create a function that", "add this endpoint", "make
-  it work", "update this code to", "wire this together".
-  Do NOT use for: pure architectural decisions before implementation starts
-  (use architecture skill), root-cause debugging of existing broken code
-  (use debugging skill).
+description: 'Use this skill when writing, modifying, or generating code of any kind. Activated when the user asks to build features, implement functions, create components, write endpoints, set up forms, wire things together, or produce any working implementation. Trigger phrases: "build this", "implement", "write the code for", "create a function that", "add this endpoint", "make it work", "update this code to", "wire this together". Do NOT use for: pure architectural decisions before implementation starts (use architecture skill), root-cause debugging of existing broken code (use debugging skill).'
 ---
 
 # Coding

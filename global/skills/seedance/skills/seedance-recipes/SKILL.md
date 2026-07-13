@@ -2,11 +2,10 @@
 name: seedance-recipes
 description: 'Apply genre recipe templates to Seedance 2.0 — product ads, fight scenes, brand films, mood pieces, dialogue clips, one-take journeys, music videos, novel adaptations, architecture walkthroughs, and action transfers. Use when you need a ready-made prompt structure for a known genre or format.'
 license: MIT
-user-invocable: true
-user-invokable: true
-tags: ["recipes", "templates", "genre", "openclaw", "antigravity", "gemini-cli", "codex", "cursor"]
-metadata: {"version": "5.0.0", "updated": "2026-03-03", "openclaw": {"emoji": "📖", "homepage": "https://github.com/Emily2040/seedance-2.0"}, "parent": "seedance-20", "antigravity": {"emoji": "📖", "homepage": "https://github.com/Emily2040/seedance-2.0"}, "gemini-cli": {"emoji": "📖", "homepage": "https://github.com/Emily2040/seedance-2.0"}, "author": "Emily (@iamemily2050)", "repository": "https://github.com/Emily2040/seedance-2.0"}
 ---
+## STATUS VERIFICATION GATE
+
+Treat platform availability, model limits, filter behavior, enforcement actions, and API status dated February-March 2026 as historical snapshots. Before relying on them, verify current official ByteDance/Seedance documentation. If verification is unavailable, label the claim unverified and avoid presenting it as current fact.
 
 # seedance-recipes · Genre Templates (v5.0)
 

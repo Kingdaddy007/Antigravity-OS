@@ -1,0 +1,4 @@
+interface:
+  display_name: "Seedance Audio"
+  short_description: "Guidance for seedance audio tasks"
+  default_prompt: "Use $seedance-audio to help complete this task with its domain workflow."

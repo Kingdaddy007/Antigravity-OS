@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://antigravity-os.dev/schemas/workflow.schema.json",
+  "title": "Anti-Gravity canonical workflow metadata",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "version",
+    "status",
+    "intent",
+    "use_when",
+    "do_not_use_when",
+    "inputs",
+    "required_resources",
+    "mutation_class",
+    "approval_gates",
+    "states",
+    "outputs",
+    "verification",
+    "failure_paths",
+    "resume_contract",
+    "next_workflows",
+    "profiles"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "version": { "type": "integer", "minimum": 1 },
+    "status": { "enum": ["active", "experimental", "deprecated"] },
+    "intent": { "type": "string", "minLength": 1 },
+    "use_when": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+    "do_not_use_when": { "type": "array", "items": { "type": "string" } },
+    "inputs": { "type": "array", "items": { "type": "string" } },
+    "required_resources": { "type": "array", "items": { "type": "string" } },
+    "mutation_class": {
+      "enum": [
+        "read_only",
+        "local_edit",
+        "dependency_or_network",
+        "destructive",
+        "external_or_production"
+      ]
+    },
+    "approval_gates": { "type": "array", "items": { "type": "string" } },
+    "states": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+    "outputs": { "type": "array", "items": { "type": "string" } },
+    "verification": { "type": "array", "items": { "type": "string" } },
+    "failure_paths": { "type": "array", "items": { "type": "string" } },
+    "resume_contract": { "type": "string", "minLength": 1 },
+    "next_workflows": { "type": "array", "items": { "type": "string" } },
+    "profiles": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+  }
+}
+

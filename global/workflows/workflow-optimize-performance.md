@@ -1,9 +1,28 @@
+---
+id: optimize-performance
+version: 1
+status: active
+intent: Execute optimize performance with explicit authority, state, outputs, and evidence.
+use_when: [the task matches optimize performance]
+do_not_use_when: [another workflow more precisely matches the requested outcome]
+inputs: [user objective, workspace context, constraints, requested authority mode]
+required_resources: [applicable AGENTS.md files, referenced skills and contexts]
+mutation_class: local_edit
+approval_gates: [confirm scope expansion or destructive action before mutation]
+states: [intake, assess, propose, approve-if-needed, execute-if-authorized, verify, deliver]
+outputs: [task result, changed-artifact list when applicable, evidence, residual risks]
+verification: [run proportionate checks, record raw evidence, label anything unverified]
+failure_paths: [stop on authority or contract conflict, preserve state, report blocker and safe next action]
+resume_contract: task-scoped .agents/workflows/optimize-performance.json using the workflows directory contract
+next_workflows: [none]
+profiles: [general]
+---
+
 # WORKFLOW: OPTIMIZE PERFORMANCE (FULL SOURCE)
 
 **Version:** Gold v1.1 (Master Merge)
 **Layer:** 8 — Execution Workflow
 **Tier:** 2 — Loaded by task
-**File:** workflows/workflow-optimize-performance-SOURCE.md
 **Primary Mode:** Performance
 **Secondary Modes:** Debugger, Builder, Architect, Database, DevOps/Infra
 **Purpose:** The systematic sequence for identifying and resolving performance bottlenecks — always measurement-first, never premature optimization. Prevents wasted effort on the wrong bottleneck and ensures complexity is only introduced where the gain is proven and worth the cost.

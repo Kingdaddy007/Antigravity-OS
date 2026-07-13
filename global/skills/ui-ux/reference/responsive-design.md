@@ -1,4 +1,16 @@
-﻿# Responsive Design
+# Responsive Design
+
+## Contents
+
+- [Mobile-First: Write It Right](#mobile-first-write-it-right)
+- [Breakpoints: Content-Driven](#breakpoints-content-driven)
+- [Detect Input Method, Not Just Screen Size](#detect-input-method-not-just-screen-size)
+- [Safe Areas: Handle the Notch](#safe-areas-handle-the-notch)
+- [Responsive Images: Get It Right](#responsive-images-get-it-right)
+  - [srcset with Width Descriptors](#srcset-with-width-descriptors)
+  - [Picture Element for Art Direction](#picture-element-for-art-direction)
+- [Layout Adaptation Patterns](#layout-adaptation-patterns)
+- [Testing: Don't Trust DevTools Alone](#testing-dont-trust-devtools-alone)
 
 ## Mobile-First: Write It Right
 

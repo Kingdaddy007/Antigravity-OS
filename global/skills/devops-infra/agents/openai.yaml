@@ -1,0 +1,4 @@
+interface:
+  display_name: "Devops Infra"
+  short_description: "Guidance for devops infra tasks"
+  default_prompt: "Use $devops-infra to help complete this task with its domain workflow."

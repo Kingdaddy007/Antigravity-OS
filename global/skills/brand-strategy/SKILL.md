@@ -1,14 +1,6 @@
 ---
 name: brand-strategy
-description: >
-  Use this skill when diagnosing or building positioning for interior
-  decorators, interior designers, spatial studios, architecture-adjacent
-  studios, staging brands, furniture/decor showrooms, luxury home stylists, or
-  gallery-like spatial brands. Activated by "brand audit", "position this
-  interior designer", "make this decorator feel premium", "brand world",
-  "perception gap", "founder lore", "premium signal", or "why does this design
-  site feel generic". Do NOT use for backend/API/security/database work or for
-  visual execution without positioning evidence.
+description: 'Use this skill when diagnosing or building positioning for interior decorators, interior designers, spatial studios, architecture-adjacent studios, staging brands, furniture/decor showrooms, luxury home stylists, or gallery-like spatial brands. Activated by "brand audit", "position this interior designer", "make this decorator feel premium", "brand world", "perception gap", "founder lore", "premium signal", or "why does this design site feel generic". Do NOT use for backend/API/security/database work or for visual execution without positioning evidence.'
 ---
 
 # Brand Strategy

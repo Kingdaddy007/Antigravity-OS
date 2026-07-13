@@ -1,6 +1,23 @@
 ---
 name: workflow-impeccable-critique
 description: Impeccable UI/UX critique workflow
+id: impeccable-critique
+version: 1
+status: active
+intent: Execute impeccable critique with explicit authority, state, outputs, and evidence.
+use_when: [the task matches impeccable critique]
+do_not_use_when: [another workflow more precisely matches the requested outcome]
+inputs: [user objective, workspace context, constraints, requested authority mode]
+required_resources: [applicable AGENTS.md files, referenced skills and contexts]
+mutation_class: read_only
+approval_gates: [confirm implement mode before any mutation]
+states: [intake, assess, propose, approve-if-needed, execute-if-authorized, verify, deliver]
+outputs: [task result, changed-artifact list when applicable, evidence, residual risks]
+verification: [run proportionate checks, record raw evidence, label anything unverified]
+failure_paths: [stop on authority or contract conflict, preserve state, report blocker and safe next action]
+resume_contract: task-scoped .agents/workflows/impeccable-critique.json using the workflows directory contract
+next_workflows: [none]
+profiles: [general]
 ---
 
 > **Additional context needed**: what the interface is trying to accomplish.
@@ -135,16 +152,16 @@ Highlight 2-3 things done well. Be specific about why they work.
 #### Priority Issues
 The 3-5 most impactful design problems, ordered by importance.
 
-For each issue, tag with **P0-P3 severity** (consult [heuristics-scoring](../skills/ui-ux/reference/heuristics-scoring.md) for severity definitions):
-- **[P?] What**: Name the problem clearly
+For each issue, tag with **critical/high/medium/low severity** (consult [heuristics-scoring](../skills/ui-ux/reference/heuristics-scoring.md) for severity definitions):
+- **[severity] What**: Name the problem clearly
 - **Why it matters**: How this hurts users or undermines goals
 - **Fix**: What to do about it (be concrete)
-- **Suggested command**: Which command could address this (from: {{available_commands}})
+- **Suggested command**: Which command could address this (from: the installed workflow registry)
 
 #### Persona Red Flags
 > *Consult [personas](../skills/ui-ux/reference/personas.md)*
 
-Auto-select 2-3 personas most relevant to this interface type (use the selection table in the reference). If `{{config_file}}` contains a `## Design Context` section from `impeccable teach`, also generate 1-2 project-specific personas from the audience/brand info.
+Auto-select 2-3 personas most relevant to this interface type (use the selection table in the reference). If `the active project rule file` contains a `## Design Context` section from `impeccable teach`, also generate 1-2 project-specific personas from the audience/brand info.
 
 For each selected persona, walk through the primary user action and list specific red flags found:
 
@@ -173,7 +190,7 @@ Provocative questions that might unlock better solutions:
 
 ### Ask the User
 
-**After presenting findings**, use targeted questions based on what was actually found. {{ask_instruction}} These answers will shape the action plan.
+**After presenting findings**, use targeted questions based on what was actually found. ask the user a concise blocking question These answers will shape the action plan.
 
 Ask questions along these lines (adapt to the specific findings; do NOT ask generic questions):
 
@@ -199,35 +216,35 @@ Ask questions along these lines (adapt to the specific findings; do NOT ask gene
 
 List recommended commands in priority order, based on the user's answers:
 
-1. **`{{command_prefix}}command-name`**: Brief description of what to fix (specific context from critique findings)
-2. **`{{command_prefix}}command-name`**: Brief description (specific context)
+1. **`/command-name`**: Brief description of what to fix (specific context from critique findings)
+2. **`/command-name`**: Brief description (specific context)
 ...
 
 **Rules for recommendations**:
-- Only recommend commands from: {{available_commands}}
+- Only recommend commands from: the installed workflow registry
 - Order by the user's stated priorities first, then by impact
 - Each item's description should carry enough context that the command knows what to focus on
 - Map each Priority Issue to the appropriate command
 - Skip commands that would address zero issues
 - If the user chose a limited scope, only include items within that scope
 - If the user marked areas as off-limits, exclude commands that would touch those areas
-- End with `{{command_prefix}}impeccable polish` as the final step if any fixes were recommended
+- End with `/impeccable-polish` as the final step if any fixes were recommended
 
 After presenting the summary, tell the user:
 
 > You can ask me to run these one at a time, all at once, or in any order you prefer.
 >
-> Re-run `{{command_prefix}}impeccable critique` after fixes to see your score improve.
+> Re-run `/impeccable-critique` after fixes to see your score improve.
 
 ### Machine-Readable Issue List (Output Artifact)
 
-At the end of every critique run, append a structured fix list to `contexts/critique-issues.md`:
+At the end of every critique run, append a structured fix list to `.agents/contexts/critique-issues.md`:
 
 ```
-[P0] Issue: [description] | Location: [file/component] | Fix: [action]
-[P1] Issue: [description] | Location: [file/component] | Fix: [action]
-[P2] Issue: [description] | Location: [file/component] | Fix: [action]
-[P3] Issue: [description] | Location: [file/component] | Fix: [action]
+[critical] Issue: [description] | Location: [file/component] | Fix: [action]
+[high] Issue: [description] | Location: [file/component] | Fix: [action]
+[medium] Issue: [description] | Location: [file/component] | Fix: [action]
+[low] Issue: [description] | Location: [file/component] | Fix: [action]
 ```
 
 This file is consumed by `/impeccable-polish` to ensure identified issues are addressed before shipping. Overwrite the file on each new critique run (do not append to stale issues).

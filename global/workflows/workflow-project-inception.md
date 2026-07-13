@@ -1,189 +1,773 @@
 ---
-name: workflow-project-inception
-description: Turn a new high-end interior storytelling website idea into buildable spatial context
+id: project-inception
+version: 1
+status: active
+intent: Execute project inception with explicit authority, state, outputs, and evidence.
+use_when: [the task matches project inception]
+do_not_use_when: [another workflow more precisely matches the requested outcome]
+inputs: [user objective, workspace context, constraints, requested authority mode]
+required_resources: [applicable AGENTS.md files, referenced skills and contexts]
+mutation_class: local_edit
+approval_gates: [confirm scope expansion or destructive action before mutation]
+states: [intake, assess, propose, approve-if-needed, execute-if-authorized, verify, deliver]
+outputs: [task result, changed-artifact list when applicable, evidence, residual risks]
+verification: [run proportionate checks, record raw evidence, label anything unverified]
+failure_paths: [stop on authority or contract conflict, preserve state, report blocker and safe next action]
+resume_contract: task-scoped .agents/workflows/project-inception.json using the workflows directory contract
+next_workflows: [none]
+profiles: [general]
 ---
 
 # WORKFLOW: PROJECT INCEPTION
 
+**Version:** Gold v1.2
+**Layer:** Execution workflow
+**Tier:** 2 - loaded by task
+**Purpose:** Turn a raw idea into a buildable plan, initialize runtime context, and set up local project memory before implementation begins.
+
+---
+
 ## WHAT THIS WORKFLOW DOES
 
-Turn a new high-end interior storytelling website idea into buildable spatial context. For interior decorators, spatial studios, furniture/decor showrooms, galleries, architecture-adjacent studios, and luxury home brands, route visual planning through the spatial experience system before technical build work.
+This workflow is the bridge between:
 
-Default journey:
+- "I have an idea"
+- and
+- "We have a scoped project, runtime context files, local memory, and a build sequence"
 
-`Atmosphere -> Taste -> Transformation -> Proof -> Method -> Inquiry`
+Its outputs are:
 
-## ACTIVATION
+1. a clear problem definition
+2. a target user and job-to-be-done
+3. a scoped MVP with explicit non-goals
+4. a technical direction
+5. a sequenced build plan
+6. runtime-ready context files in `.agents/contexts/`
+7. initialized workspace memory files in `.agents/memory/`
 
-Use when:
+---
 
-- Starting a new interior decorator, interior design, spatial studio, staging, furniture, decor, gallery, architecture-adjacent, or luxury home website.
-- Turning a rough premium website idea into a build plan.
-- Creating first project contexts for a visual/spatial brand.
+## WHEN TO USE IT
 
-Do NOT use when:
+Use this workflow when:
 
-- Adding a small feature to an already-planned project.
-- Debugging an existing implementation.
-- Doing backend/API/security/database/DevOps-only work.
+- starting a new product, tool, side project, or hackathon build
+- turning a rough idea into a plan
+- creating the first project context for a workspace
+
+Do not use it when:
+
+- adding a feature to an existing project
+- debugging an existing system
+- reviewing an already-planned build
+
+---
 
 ## REQUIRED FILES
 
-Load:
+### Primary skills
 
-- `skills/brand-strategy/SKILL.md`
-- `skills/storytelling/SKILL.md`
-- `skills/spatial-experience-design/SKILL.md`
-- `skills/cinematic-showroom-strategy/SKILL.md`
-- `skills/ui-ux/SKILL.md`
-- `workflows/workflow-spatial-concept.md`
-- `skills/spatial-experience-design/reference/audit-mechanics-map.md`
-- `skills/spatial-experience-design/reference/scene-kit-and-asset-directive.md`
-- `skills/spatial-experience-design/reference/cinematic-room-grammar.md` when image/video prompts are needed
-- `skills/spatial-experience-design/reference/portfolio-proof-chapters.md` when portfolio is central
-- `skills/cinematic-motion/reference/video-to-website-choreography.md` when scroll-led media is involved
-- `design-audit/` when premium inspiration is needed
+- `skill-product-thinking`
+- `skill-architecture`
+
+### Conditional skills
+
+- `skill-ui-ux` if the project has a real user interface
+- `skill-database` if the project has persistence or a meaningful data model
+- `skill-api-design` if the project exposes or consumes APIs
+
+### Templates this workflow should use
+
+- `../context_templates/project-context.md`
+- Phase 1A inputs (no scaffold required)
+- `../context_templates/stack-context.md`
+- `../context_templates/coding-standards.md` when conventions are already clear
+- `project-brief.md` when producing a formal project brief
+
+### Runtime context files this workflow creates or initializes
+
+- `.agents/contexts/project-context.md`
+- `.agents/contexts/product-marketing-context.md`
+- `.agents/contexts/stack-context.md`
+- `.agents/contexts/architecture-context.md`
+- `.agents/contexts/database-context.md` if relevant
+- `.agents/contexts/app-flow.md` if the product has real user journeys
+- `.agents/contexts/coding-standards.md` if project-specific conventions are known
+
+### Workspace memory files this workflow initializes
+
+- `.agents/memory/decisions-log.md`
+- `.agents/memory/common-patterns.md`
+- `.agents/memory/mistakes-to-avoid.md`
+- `.agents/memory/postmortems.md`
+
+> [!IMPORTANT]
+> The files in `.agents/contexts/` are **runtime truth**, not authoring templates.
+> Use templates to scaffold them, then save concise project truth into the runtime files.
+
+---
 
 ## EXECUTION SEQUENCE
 
-### PHASE 1: DEFINE THE SPATIAL BUSINESS PROBLEM
+### PHASE 0: INITIALIZE WORKFLOW STATE
 
-Capture:
+**Do this before anything else.** Create the session state file so the workflow
+can be resumed if interrupted at any point.
 
-- brand/studio type
-- audience and desired client
-- price/perception goal
-- current or intended taste world
-- existing assets and missing assets
-- inquiry goal
-- wrong-fit clients
+1. Check if `.agents/workflows/<task-id>.json` already exists for this project.
+2. If it exists and status is `in_progress`: ask "You have an active **project-inception** workflow at **Phase [N]** — [pct]% complete. Resume?"
+3. If starting fresh or resuming, create/update `.agents/workflows/<task-id>.json`:
+
+```json
+{
+  "workflow": "project-inception",
+  "phase": 1,
+  "started": "[timestamp]",
+  "updated": "[timestamp]",
+  "status": "in_progress",
+  "last_completed": null,
+  "children": []
+}
+```
+
+4. **Scaffold Local Contexts Directory:** Ensure that `.agents/contexts/` exists inside the project workspace (`<workspace>/.agents/contexts/`). If it does not, initialize it from the read-only context template source at `../context_templates/`. This is a mandatory gate: templates remain unchanged, while every project-specific fact is written only to `.agents/contexts/`.
+5. Update the `phase` and `last_completed` fields at the start of each phase.
+6. When invoking child workflows (teach, document, story, visual-brainstorm):
+   add them to the `children` array with their own state path.
+7. On resume: read state, find `last_completed`, continue from next step.
+
+---
+
+### PHASE 1: DISCOVER THE PROBLEM
+
+Do not let the user skip this phase. The number one cause of failed projects is building a solution before understanding the problem.
+
+#### Step 1: Discover Project Posture & Extract the Idea
+
+First, ask the user to select the **Project Posture** to route the workflow:
+1. **Product Mode:** Building a digital product, software tool, or SaaS application. (Standard linear flow: MVP -> Tech -> Design).
+2. **Scenario A (Fresh Brand Website/Portfolio):** Building a brand website, landing page, or portfolio from scratch with no existing online presence or assets. (MVP and App Flow are deferred until after Phase 3A Research & Story are completed).
+3. **Scenario B (Redesign/Upgrade):** Redeveloping or upgrading an existing website. (Standard flow but focused on conversion-driven restructuring).
+
+Save this posture in the workflow state or context.
+
+Next, ask the user to explain their idea in plain language. Listen for:
+
+- What does it do?
+- Who is it for?
+- Why does it matter?
+- What triggered this idea? (pain point, opportunity, competition requirement)
+
+#### Step 2: Define the problem
+
+Restate the idea as a problem statement:
+
+```
+[Target user] struggles with [specific problem] because [root cause].
+Currently they [current workaround], which is [why it's inadequate].
+```
+
+#### Step 3: Define the user
+
+Create a brief user profile:
+
+```
+PRIMARY USER: [Who]
+CONTEXT: [When/where they encounter the problem]
+CURRENT BEHAVIOR: [What they do today]
+DESIRED OUTCOME: [What they wish they could do]
+TECHNICAL COMFORT: [Low / Medium / High]
+```
+
+#### Step 4: Define the job-to-be-done
+
+```
+When [situation], [user] wants to [motivation] so that they can [outcome].
+```
+
+#### Step 5: Define success
+
+```
+This project succeeds when [measurable outcome].
+MVP is "done" when [specific criteria].
+```
+
+#### Phase 1 output
+
+- problem statement
+- user profile
+- JTBD
+- success definition
+
+Gate:
+
+- do not continue until the problem statement feels accurate and the user agrees it captures the real problem
+
+---
+
+### PHASE 1A: MARKET POSITIONING
+
+Use when:
+- the product will be marketed or sold to users
+- the product has a landing page, marketing site, or direct sales motion
+
+#### Step 1: Clarify the Objections
+- Why would the user say "no"?
+- What are they currently paying for that this replaces?
+
+#### Step 2: Define the Unique Value Proposition
+- What is the ONE specific reason they should choose this over alternatives?
+
+#### Step 3: Establish Brand Voice Hypothesis (Preliminary)
+- How should the product sound initially? (Professional? Irreverent? Direct? Academic?)
+- > [!IMPORTANT]
+  > This is a preliminary brand voice hypothesis to guide early planning. The authoritative brand voice, tone, and strategic emotional goals are locked later during the creation of `story.md` in Phase 3A, after full audience and competitor research.
+
+Output:
+- `.agents/contexts/product-marketing-context.md` as the live runtime truth for marketing context
+
+Authoring rule:
+- use scaffolding if needed, but save `product-marketing-context.md` as a live context file
+
+Gate:
+- before designing MVP, confirm the unique value proposition is actually compelling to the target user
+
+---
+
+### PHASE 2: DEFINE THE MVP
+
+> [!IMPORTANT]
+> **Scenario A (Fresh Brand Website) Deferral Gate:** If the Project Posture is set to **Scenario A (Fresh Brand Website/Portfolio)**, defer this phase entirely. You cannot brainstorm or categorize page blocks or features before understanding the brand's unique strategy and research. This phase must be executed *after* Phase 3A (DESIGN IDENTITY & VISUAL SYSTEM) is completed and `.agents/contexts/story.md` is locked.
+
+#### Step 1: Brainstorm features
+
+List everything the product could do. Do not filter yet. Generate 10-20 capabilities.
+
+#### Step 2: Categorize and prioritize
+
+Sort every feature into:
+
+| Category | Rule | Features |
+| :--- | :--- | :--- |
+| **🔴 Core (Must Have)** | Without this, the product does not solve the problem | [list] |
+| **🟡 Important (Should Have)** | Makes the product significantly better but not essential for v1 | [list] |
+| **🟢 Nice-to-Have (Could Have)** | Would be great but can wait for v2 | [list] |
+| **⚫ Out of Scope (Won't Have)** | Deliberately excluded | [list] |
+
+#### Step 3: Define the MVP
+
+The MVP is ONLY the 🔴 Core features. Nothing else.
+
+Ask the "20% question": "If we could only build 20% of this, which 20% delivers the core value?" That is the MVP.
+
+```
+MVP SCOPE:
+
+- [Core feature 1]
+- [Core feature 2]
+- [Core feature 3]
+
+EXPLICITLY NOT IN MVP:
+
+- [Everything else — listed to prevent scope creep]
+
+```
+
+#### Step 4: Define what "shipped" looks like
+
+```
+VERSION 1 IS DONE WHEN:
+
+- [ ] [Core feature 1] works end to end
+- [ ] [Core feature 2] works end to end
+- [ ] [Core feature 3] works end to end
+- [ ] User can [complete the primary job] without assistance
+- [ ] Deployed to [target environment]
+
+```
+
+#### Phase 2 output
+
+- prioritized feature list
+- MVP scope
+- explicit non-goals
+- definition of done
+
+Gate:
+
+- do not proceed with an unbounded feature list
+- user confirms: "Yes, this MVP scope is what I want to build first."
+
+---
+
+### PHASE 2A: MAP THE APP FLOW
+
+> [!IMPORTANT]
+> **Landing Page / Single-Page Experience Deferral Gate:** If the project is a single-page landing page, portfolio, or brand website (Scenario A or B), defer this phase. A single-page experience does not have standard app routes or settings panels. Instead, the scroll narrative and section sequence defined in `.agents/contexts/story.md` (Phase 3A) will serve as the app flow.
+
+Use when:
+
+- the product has users, screens, states, routes, or task flows
+
+Skip only if the product has no user journeys (e.g., a pure background script).
+
+#### Step 1: Define the primary user journeys
+
+For each main user type, map their "golden path" — the main thing they do. List every step from entry point to job completion.
+
+#### Step 2: Define secondary and error flows
+
+- Map secondary tasks (profile management, settings, etc.)
+- Define how global errors (network failure, auth expiry) are handled
+- Define flow-specific error recoveries
+
+#### Step 3: Map navigation and transitions
+
+- Define the global navigation
+- Ensure every transition between screens is explicit (including loading states and redirects)
 
 Output:
 
-- `contexts/project-context.md`
-- `contexts/brand-diagnostics.md` when positioning is unclear
+- `.agents/contexts/app-flow.md` as the live runtime truth for user flows
 
-Gate: Do not discuss features before the brand perception and inquiry goal are clear.
+Authoring rule:
 
-### PHASE 2: DIAGNOSE POSITIONING AND STORY
+- use scaffolding if needed, but save `app-flow.md` as a live context file, not as a template exercise
 
-> **⚙ Cognitive Engine checkpoint — load `core/system-thinking.md` + `core/expert-cognitive-patterns.md`.**
-> This phase contains the highest-stakes creative and strategic decisions. Apply system decomposition to diagnose current brand state vs desired positioning. Apply gray thinking and framing bias safeguards when evaluating brand tension and audience self-image. Generate 3+ positioning directions with explicit tradeoffs before selecting. Classify each major decision as Type 1, 1.5, or 2 and invest the appropriate depth.
-Use `brand-strategy` and `storytelling`.
+Gate:
 
-Create:
+- before designing architecture or visual UI, confirm the user journey makes sense — are there dead ends? Are error states handled?
 
-- `contexts/spatial/spatial-story.md`
-- `contexts/spatial/brand-to-scene-translation.md` when the project is cinematic, video-led, or portfolio-led
+---
 
-It must include:
+### PHASE 2B: PROTOTYPING & RESEARCH (THE DESIGN LOOP)
 
-- visual thesis input
-- audience self-image
-- brand tension
-- entry room
-- threshold event
-- signature object/material
-- room sequence
-- transformation proof
-- method reveal
-- inquiry posture
+Use when:
+- the product has a user interface and needs a competitive baseline.
 
-`brand-to-scene-translation.md` must include:
+#### Step 1: Competitive Teardown
+- Select 3-5 competitor or reference websites.
+- Extract the "Structure without Style". Use Anti-Gravity's browser tools or external tools (Perplexity/Tango).
+- Identify: Jobs-to-be-Done on each page, specific section blocks (Hero, Features, Pricing), and key interactions (scroll effects, components).
 
-- perception gap
-- desired visitor belief
-- taste world
-- enemy/cliche to reject
-- spatial metaphor
-- first scene
-- whole-site scene sequence
-- prompt implications
-- portfolio/proof implications
-- inquiry implication
+#### Step 2: The Prototyping Spec
+- Synthesize the research into a structural blueprint.
+- List the required sections, the data they display, and their priority.
 
-Gate: Do not create DESIGN tokens before the spatial story exists.
+Output:
+- `.agents/contexts/prototyping-spec.md` as the live runtime truth for structural wireframing.
 
-### PHASE 3: RUN SPATIAL CONCEPT
+Gate:
+- Do not proceed to visual identity or coding until the structural layout and section blocks are defined.
 
-Run `workflow-spatial-concept.md`.
+---
 
-Required outputs:
+### PHASE 3: DEFINE THE TECHNICAL DIRECTION
 
-- `contexts/spatial/anti-template-preflight.md`
-- `contexts/spatial/visual-thesis.md`
-- `contexts/spatial/room-sequence.md`
-- `contexts/spatial/brand-to-scene-translation.md`
-- `contexts/spatial/audit-adaptation-map.md`
-- `contexts/spatial/showroom-choreography.md`
-- `contexts/spatial/portfolio-proof-chapters.md` when portfolio is central
-- `contexts/spatial/cinematic-prompt-pack.md` when image/video prompts are needed
-- `contexts/spatial/beloved-asset-directive.md`
-- `contexts/spatial/hero-event-blueprint.md`
-- `contexts/spatial/scene-kit-brief.md`
-- `contexts/spatial/depth-map.md`
-- `contexts/spatial/material-script.md`
-- `contexts/spatial/motion-board.md`
-- `contexts/spatial/asset-boundary.md`
+#### Step 1: Choose the tech stack
 
-Gate: Invoke the **Master Design Director** to audit the Creative Contract. Build is BLOCKED until the Pre-Build Gate checklist returns "Build allowed: Yes".
-Gate: No mockup, design system, or implementation until these exist.
+Based on the user's existing skills, project requirements, timeline constraints, and deployment target.
 
-### PHASE 4: DEFINE THE VISUAL SYSTEM
+```
+TECH STACK:
 
-Create or update:
+- Frontend: [framework]
+- Backend: [framework/approach]
+- Database: [engine]
+- Auth: [approach]
+- Hosting: [provider]
+- Deployment: [approach]
 
-- `DESIGN.md`
-- `DESIGN.json`
+```
 
-Tokens must derive from:
+#### Step 2: Design the data model
 
-- material script
-- light behavior
-- room sequence
-- typography posture
-- UI/inquiry model
+- What entities exist?
+- What are the relationships?
 
-Do not derive the palette from generic color preference.
+```
+ENTITIES:
 
-### PHASE 5: PLAN BUILD ORDER
+- [Entity 1]: [key fields]
+- [Entity 2]: [key fields]
+- [Entity 3]: [key fields]
 
-Build order:
+RELATIONSHIPS:
 
-1. Project setup and asset folders.
-2. Scene choreography and prompt pack.
-3. Video/still asset generation or sourcing.
-4. Static semantic room sequence.
-5. Scene kit integration and responsive crops.
-6. Material/light styling.
-7. Gallery/project/proof sections.
-8. Inquiry path and states.
-9. Motion tracks via `workflow-impeccable-animate.md`.
-10. Browser verification and anti-template critique.
+- [Entity 1] has many [Entity 2]
+- [Entity 2] belongs to [Entity 1]
 
-### PHASE 6: PACKAGE THE NORTH STAR
+```
 
-Deliver:
+#### Step 3: Define the API shape (if applicable)
 
-- spatial story summary
-- visual thesis
-- room sequence
-- brand-to-scene translation
-- showroom choreography
-- cinematic prompt pack when media is generated
-- portfolio proof chapters when portfolio is central
-- scene kit requirements
-- asset boundary
-- build order
-- verification checklist
+- What endpoints are needed?
+- What are the primary CRUD operations?
 
-## QUALITY GATE CHECKLIST
+#### Step 4: Define the folder structure
 
-- [ ] Brand perception and inquiry goal are clear.
-- [ ] `spatial-story.md` exists.
-- [ ] Cinematic/video-led projects include brand-to-scene translation, showroom choreography, and prompt pack.
-- [ ] Prompt pack derives from approved context files, not standalone inspiration.
-- [ ] All spatial concept artifacts exist.
-- [ ] DESIGN files derive from material/light/room sequence.
-- [ ] Build order uses spatial craft and animate workflows.
-- [ ] Backend/API/security/database concerns are not mixed into visual planning.
+Based on the stack and patterns:
+
+```
+project/
+├── [folder structure]
+```
+
+#### Step 5: Identify the riskiest technical decision
+
+- What is the one technical choice that, if wrong, would cost the most to fix?
+- How can we validate it early?
+
+#### Phase 3 output
+
+- stack decision
+- data model
+- API shape
+- folder structure
+- riskiest technical decision and validation plan
+
+Gate:
+
+- if the stack or architecture choice is still highly unstable, name the uncertainty explicitly before moving on
+
+---
+
+### PHASE 3A: DESIGN IDENTITY & VISUAL SYSTEM
+
+This phase is **mandatory** for any product with a user interface. Impeccable is the design authority — all visual identity work goes through its workflows.
+
+> [!IMPORTANT]
+> **Impeccable owns this phase.** Do not manually define colors, typography, or spacing in text. Use the Impeccable workflows below to create structured, machine-readable design context that all subsequent build work draws from.
+
+> [!CAUTION]
+> **CRITICAL SEQUENCE:** Research → Story → DESIGN.md. The visual system cannot serve the story if it is created before the story exists. Do NOT reorder these steps.
+
+#### Step 1: Run `/impeccable-teach` → PRODUCT.md
+
+This creates the **strategic design context** at the project root:
+
+- **Register** — Is this a brand surface (design IS the product) or a product surface (design SERVES the product)?
+- **Users & Purpose** — Who uses this, what's the job-to-be-done, what emotions should the UI evoke?
+- **Brand Personality** — 3-word personality, tone, voice
+- **Anti-references** — What this should explicitly NOT look like
+- **Design Principles** — 3-5 strategic principles derived from the conversation
+- **Accessibility & Inclusion** — WCAG level, known user needs
+
+The `teach` workflow interviews the user, scans the codebase for existing signals, and writes `PRODUCT.md`.
+
+#### Step 2: Competitor Profiling
+
+Use `skill-competitor-profiling` for structured competitor analysis:
+- Select 3-5 competitors or reference products
+- Run the competitor-profiling skill to generate `competitor-profiles/_summary.md`
+- Identify: what others are doing, the gap, the opportunity
+
+**Output:** `competitor-profiles/_summary.md`
+
+#### Step 2.5: Brand World Diagnostics (Scenario A & B)
+
+When the project involves building or redesigning a brand website, portfolio, or landing page for a real person or business with existing messy footprints (social profiles, old sites, founder interviews, scattered content):
+
+1. Load `skills/brand-strategy/SKILL.md` (the Brand World Diagnostics system).
+2. Run the 12-layer diagnostic against all available raw inputs.
+3. Produce the structured Brand World Diagnostic output.
+
+This output feeds directly into Step 3 (Research & Story) — the perception gap, founder lore, brand world pillars, enemy, and signature language become the raw material for `skill-storytelling` to craft `.agents/contexts/story.md`.
+
+**Output:** `.agents/contexts/brand-diagnostics.md`
+
+**Gate:** For Scenario A (fresh brand), do not proceed to storytelling without completing the brand diagnostic. The story cannot be crafted without knowing the perception gap, founder lore, and enemy.
+
+#### Step 3: Research & Story
+
+Before defining any visual system, define the STORY. The story drives everything —
+copy, visuals, layout, animation, typography.
+
+**3a. Research (skill-storytelling Section 1)**
+
+Gather information about the brand, audience, competition, and context:
+- Research the brand (who, what, why, how, personality, anti-references)
+- Research the audience (needs, wants, objections, language, proof points)
+- Research the competition (reference `competitor-profiles/_summary.md` for structured analysis)
+- Research the existing materials (current website, brand assets, messaging)
+- If refactoring an existing presence, load `skills/expert-positioning/SKILL.md` to audit current positioning leaks, minimum engagements, and copy posture.
+
+**Output:** `.agents/contexts/research-brief.md`
+
+**3b. Story (skill-storytelling Sections 2-6)**
+
+Synthesize research into a narrative:
+- Choose narrative arc (Brand Story, Product Journey, Portfolio Story, etc.)
+- Map emotional journey (Hook → Build → Climax → Resolve emotions)
+- Define copy direction (headline strategy, tone, key messages, CTA strategy)
+- Define visual direction (hero visual, image style, color mood, typography voice)
+- Define motion direction (hero animation, scroll behavior, climax pattern)
+- Present 2-3 story directions to user
+- User picks one or blends elements
+
+**Output:** `.agents/contexts/story.md`
+
+This is the master document that drives all subsequent decisions. Every other
+context file (DESIGN.md, motion-direction.md, the actual copy) derives from this.
+
+#### Step 4: Run `/impeccable-document` → DESIGN.md + DESIGN.json
+
+This creates the **visual design system** at the project root — now informed by story.md:
+
+- DESIGN.md — YAML frontmatter with machine-readable tokens (colors, typography, spacing, rounded, components) + markdown body with 8 sections (Overview, Colors, Typography, Layout, Elevation & Depth, Shapes, Components, Do's and Don'ts). Follows the Google Stitch DESIGN.md format.
+- DESIGN.json — Sidecar with extensions (tonal ramps, shadows, motion tokens, component HTML/CSS snippets, narrative).
+
+The `document` workflow has two modes:
+- **Scan mode** (default): Extracts real tokens from existing code
+- **Seed mode** (new projects): Checks if `.agents/contexts/story.md` is present in the workspace. If it is, automatically extracts the design parameters (colors, typography, motion, references, anti-references) from the story to seed the visual tokens, avoiding redundant user questions. If `.agents/contexts/story.md` is missing, interviews the user for the 5 design answers, then creates a minimal scaffold marked `<!-- SEED -->`.
+
+> [!IMPORTANT]
+> DESIGN.md is created AFTER story.md exists. The visual tokens should serve the narrative direction, not contradict it. If story.md demands an organic "drenched" color strategy, DESIGN.md should reflect that — not generic hex values chosen by instinct.
+
+#### Step 5: Visual Brainstorm (incl. Phase 3C Motion Exploration)
+
+Run `workflow-visual-brainstorm.md` to explore visual directions informed by story.md:
+- Present 2-3 visual directions
+- User picks direction
+- **Phase 3C (motion exploration):** Present 2-3 motion directions, map patterns to scroll sections, generate image briefs for Figma
+- Lock visual direction → Write design tokens and creative details directly to `DESIGN.md` and `DESIGN.json`.
+- Write `.agents/contexts/motion-direction.md` (single source of truth for motion direction)
+
+**Output:** `DESIGN.md` / `DESIGN.json` + `.agents/contexts/motion-direction.md`
+
+> [!IMPORTANT]
+> `motion-direction.md` is created ONLY here — not duplicated from any other workflow. Visual Brainstorm Phase 3C is the single authority for motion direction creation.
+
+#### Step 6: External Prototyping (Mockup)
+
+- Bring the `DESIGN.md` tokens and `prototyping-spec.md` structure into Figma AI, Lovable, or Google Stitch.
+- Generate page mockups to SEE the structure and vibe before coding.
+- Extract any final adjustments back into DESIGN.md.
+
+Output:
+
+- `PRODUCT.md` at project root (strategic design context)
+- `DESIGN.md` + `DESIGN.json` at project root (visual system and tokens)
+- `.agents/contexts/motion-direction.md` — motion vocabulary, scroll narrative, asset requirements (created by Visual Brainstorm Phase 3C)
+
+Gate:
+
+- before moving to architecture, confirm the visual direction feels right for the target user and business context. A trading tool should not look like a social app. A luxury marketplace should not look like a SaaS dashboard.
+- verify that `.agents/contexts/research-brief.md` exists if Phase 3A applied (research completed for brand, audience, competition)
+- verify that `.agents/contexts/story.md` exists if Phase 3A applied (narrative arc, emotional journey, copy/visual/motion direction defined)
+- verify that `.agents/contexts/motion-direction.md` exists if Phase 3A applied (created by visual brainstorm Phase 3C — emotion diagnosis, archetype, motion vocabulary, scroll narrative, asset requirements)
+
+---
+
+### PHASE 4: CREATE RUNTIME CONTEXTS
+
+Goal:
+
+- turn the planning work into runtime-ready context files
+- make sure the next workflow has real project truth to work from
+
+Required writes:
+
+- create `.agents/contexts/project-context.md` using `../context_templates/project-context.md` as scaffolding
+- create `.agents/contexts/product-marketing-context.md` using Phase 1A inputs (no scaffold required) if Phase 1A applied
+- create `.agents/contexts/business-priorities.md` to establish tradeoffs before building (speed vs quality, budget vs scale)
+- create `.agents/contexts/stack-context.md` using `../context_templates/stack-context.md` as scaffolding
+- create `.agents/contexts/architecture-context.md`
+- create `.agents/contexts/database-context.md` if relevant
+- initialize `.agents/contexts/coding-standards.md` if concrete conventions are already known, using `../context_templates/coding-standards.md`
+- verify that `.agents/contexts/app-flow.md` exists if Phase 2A applied
+- verify that `.agents/contexts/prototyping-spec.md` exists if Phase 2B applied
+- verify that `PRODUCT.md` exists at project root if Phase 3A applied (created by `/impeccable-teach`)
+- verify that `DESIGN.md` + `DESIGN.json` exist at project root if Phase 3A applied (created by `/impeccable-document`)
+- verify that `.agents/contexts/motion-direction.md` exists if Phase 3A applied (created by visual brainstorm Phase 3C — emotion diagnosis, archetype, vocabulary, scroll narrative, asset requirements)
+
+Context-writing rule:
+
+- runtime contexts should be concise, factual, and updateable
+- longer fill guidance belongs in `global_templates/`
+- PRODUCT.md and DESIGN.md are design truth — reference them directly in other files, do not duplicate them.
+
+---
+
+### PHASE 5: INITIALIZE WORKSPACE MEMORY
+
+Goal:
+
+- prevent project knowledge from leaking into global memory
+- create a local continuity layer before implementation begins
+
+Required writes:
+
+- update `.agents/workflows/<task-id>.json` (already created in Phase 0) — set phase to 5, update `last_completed`
+- create `.agents/memory/decisions-log.md`
+- create `.agents/memory/common-patterns.md`
+- create `.agents/memory/mistakes-to-avoid.md`
+- create `.agents/memory/postmortems.md`
+
+> [!CAUTION]
+> Failure to create these files will lead to global memory contamination. Project-specific lessons MUST go local first. Global memory is reserved for cross-project or Anti-Gravity-level lessons.
+
+First entry:
+
+- log the initial stack and architecture choice in local `decisions-log.md`
+
+---
+
+### PHASE 6: CREATE THE BUILD SEQUENCE
+
+Goal:
+
+- turn the MVP into a practical implementation order
+- expose dependencies and critical path
+- make the first execution workflow obvious
+
+#### Universal build order
+
+For most web applications, the build order is:
+
+```
+STEP 1: PROJECT SETUP (Foundation)
+├── Initialize project with chosen stack
+├── Set up folder structure
+├── Configure dev environment (database, env vars)
+├── Set up linting, formatting, git
+└── Verify: project runs locally with blank page
+
+STEP 2: DATABASE + DATA MODEL (Skeleton)
+├── Define schema (Prisma, SQL, etc.)
+├── Create migrations
+├── Seed with test data
+└── Verify: can read/write data from CLI/script
+
+STEP 3: AUTHENTICATION (Security Foundation)
+├── Implement auth (login, register, session)
+├── Protect routes
+├── Set up basic role model (if needed)
+└── Verify: can log in, protected pages redirect
+
+STEP 4: CORE FEATURE 1 — Backend (Most Important Feature)
+├── API endpoints or Server Actions
+├── Database queries
+├── Input validation
+├── Error handling
+└── Verify: feature works via API/action (no UI yet)
+
+STEP 5: CORE FEATURE 1 — Frontend
+├── For general UI/UX work, use `/ui-craft` (flow → states → build → verify); spatial-profile work uses `/impeccable-craft`
+├── Pages and components
+├── Data fetching
+├── All states: loading, empty, error, success
+├── Forms and interactions
+└── Verify: feature works end-to-end in browser
+
+STEP 6: CORE FEATURE 2 — Full Stack
+├── Backend (API + DB)
+├── Frontend (pages + components)
+├── All states
+└── Verify: works end-to-end
+
+STEP 7: CORE FEATURE 3 — Full Stack
+├── [Same pattern]
+└── Verify: works end-to-end
+
+STEP 8: INTEGRATION + POLISH
+├── Connect features together
+├── Navigation and routing
+├── Error handling across all flows
+├── Responsive design check
+├── Basic accessibility check
+└── Verify: user can complete the full primary job
+
+STEP 9: TESTING + HARDENING
+├── Test critical paths
+├── Fix edge cases discovered during testing
+├── Security review (auth, input validation)
+├── Performance check (any obvious bottlenecks?)
+└── Verify: no broken flows, no obvious security holes
+
+STEP 10: DEPLOY
+├── Set up hosting
+├── Configure environment variables
+├── Deploy
+├── Smoke test on production
+└── Verify: live and working
+```
+
+Output:
+
+- sequenced implementation plan
+- optional day-by-day version for hackathons or time-boxed builds
+
+---
+
+### PHASE 7: PACKAGE THE NORTH STAR
+
+Goal:
+
+- capture the result in a form that is reusable by later workflows
+
+Outputs:
+
+- concise project brief
+- MVP scope
+- build sequence
+- initialized runtime contexts
+- initialized local memory
+
+Optional:
+
+- load `project-brief.md` if a formal brief is useful
+- apply the project planning rubric during critique if the project is high-stakes or especially fuzzy
+
+#### Execution handoff
+
+Hand off to the engineering workflows:
+
+1. Start Step 1 from the build sequence
+2. Use `workflow-build-feature.md` for each feature
+3. Use the relevant skill files for each step
+4. Commit after each completed step
+5. Check off items in the Definition of Done as they are completed
+6. When 80% done: shift to finishing mode — resist scope creep, push to ship
+
+---
+
+## QUALITY GATES
+
+Before calling project inception complete, verify:
+
+- [ ] Problem clearly defined (user confirmed)
+- [ ] Target user identified
+- [ ] Unique value proposition and brand voice established — `product-marketing-context.md` created (if applicable)
+- [ ] Features brainstormed and prioritized (Core / Important / Nice-to-Have / Out of Scope)
+- [ ] MVP scope is ONLY Core features
+- [ ] Definition of done is specific and checkable
+- [ ] App flow mapped (user journeys, error states, transitions) — `app-flow.md` created
+- [ ] Design identity established via Impeccable — `PRODUCT.md` created (if UI project)
+- [ ] Visual system documented — `DESIGN.md` + `DESIGN.json` created (if UI project)
+- [ ] Motion direction established — `.agents/contexts/motion-direction.md` created (emotion, archetype, vocabulary, scroll narrative, assets)
+- [ ] Animation types mapped per section (Type A/B/C) with specific patterns noted
+- [ ] Tech stack chosen
+- [ ] Data model designed
+- [ ] Build sequence numbered and ordered
+- [ ] Time mapped (if deadline exists)
+- [ ] Risk identified
+- [ ] Context files created or updated
+- [ ] Workspace memory initialized
+- [ ] Project brief document compiled
+- [ ] The next execution workflow is obvious
+
+---
+
+## RECOVERY RULES
+
+- If the idea keeps growing, return to MVP scope and re-lock the non-goals.
+- If the stack is too uncertain, document assumptions and the validation plan instead of pretending certainty.
+- If context files become essays, move the scaffolding back into `global_templates/` and keep the runtime files factual.
+- If project-specific knowledge starts heading toward global memory, stop and reroute it to workspace memory.
+
+---
+
+## FINAL RULE
+
+This workflow does not just plan the project. It creates the runtime truth and local memory the rest of Anti-Gravity depends on.

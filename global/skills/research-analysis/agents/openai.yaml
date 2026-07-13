@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Analysis"
+  short_description: "Guidance for research analysis tasks"
+  default_prompt: "Use $research-analysis to help complete this task with its domain workflow."

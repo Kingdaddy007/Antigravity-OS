@@ -1,0 +1,4 @@
+interface:
+  display_name: "Seedance Copyright"
+  short_description: "Guidance for seedance copyright tasks"
+  default_prompt: "Use $seedance-copyright to help complete this task with its domain workflow."

@@ -1,11 +1,6 @@
 ---
-name: RESOLVING MERGE CONFLICTS
-description: >
-  Use when you need to resolve an in-progress git merge/rebase conflict.
-  Signal phrases: "resolving conflicts", "merge conflict", "rebase conflict",
-  "git merge --continue", "git rebase --continue", "conflict hunks".
-  Never abort a merge or rebase without explicit user consent. Always preserve
-  both intents where possible, and verify with automated checks.
+name: resolving-merge-conflicts
+description: 'Use when you need to resolve an in-progress git merge/rebase conflict. Signal phrases: "resolving conflicts", "merge conflict", "rebase conflict", "git merge --continue", "git rebase --continue", "conflict hunks". Never abort a merge or rebase without explicit user consent. Always preserve both intents where possible, and verify with automated checks.'
 ---
 
 # RESOLVING MERGE CONFLICTS

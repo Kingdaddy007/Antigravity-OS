@@ -1,0 +1,4 @@
+interface:
+  display_name: "Copywriting"
+  short_description: "Guidance for copywriting tasks"
+  default_prompt: "Use $copywriting to help complete this task with its domain workflow."

@@ -1,5 +1,15 @@
 # Genre Guides & Prompt Templates (v5.0)
 
+## Contents
+
+- [1. Product / E-commerce](#1-product-e-commerce)
+- [2. Lifestyle / Social Media](#2-lifestyle-social-media)
+- [3. Drama / Narrative](#3-drama-narrative)
+- [4. Music Video](#4-music-video)
+- [5. Landscape / Travel](#5-landscape-travel)
+- [6. Commercial / Brand](#6-commercial-brand)
+- [7. Anime / Artistic](#7-anime-artistic)
+
 This reference provides genre-specific prompt templates and best practices for the seven most common Seedance 2.0 content categories. Use these as the starting point for the [skill:seedance-prompt] genre router.
 
 ---

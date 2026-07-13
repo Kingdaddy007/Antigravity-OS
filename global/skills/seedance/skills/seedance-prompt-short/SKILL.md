@@ -2,18 +2,10 @@
 name: seedance-prompt-short
 description: 'Build, validate, and compress Seedance 2.0 prompts to a hard 2000-character limit using the Five-Layer Stack, @Tag delegation, and the new Compression Engine. Use when constructing or debugging any T2V, I2V, V2V, or R2V prompt for the short-form workflow.'
 license: MIT
-user-invocable: true
-user-invokable: true
-tags: [prompt, compression, t2v, i2v, v2v, r2v, character-limit, openclaw, antigravity, gemini-cli]
-metadata: {
-  "version": "5.0.0",
-  "updated": "2026-03-03",
-  "openclaw": {"emoji": "⚡️", "homepage": "https://github.com/Emily2040/seedance-2.0"},
-  "parent": "seedance-20",
-  "author": "Emily (@iamemily2050)",
-  "repository": "https://github.com/Emily2040/seedance-2.0"
-}
 ---
+## STATUS VERIFICATION GATE
+
+Treat platform availability, model limits, filter behavior, enforcement actions, and API status dated February-March 2026 as historical snapshots. Before relying on them, verify current official ByteDance/Seedance documentation. If verification is unavailable, label the claim unverified and avoid presenting it as current fact.
 
 # seedance-prompt-short
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Testing"
+  short_description: "Guidance for testing tasks"
+  default_prompt: "Use $testing to help complete this task with its domain workflow."

@@ -49,7 +49,7 @@
 Comparing the Elva site to our active skills reveals the following gaps:
 
 #### Gap A: Lack of "Anchor Object State-Morph" Concept
-* **The Gap:** [cinematic-motion/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/cinematic-motion/SKILL.md) covers standard slide-ins, scatters, and fades. It lacks rules for **state-morphing a single persistent visual element** across the entire scroll narrative.
+* **The Gap:** [cinematic-motion/SKILL.md](../skills/cinematic-motion/SKILL.md) covers standard slide-ins, scatters, and fades. It lacks rules for **state-morphing a single persistent visual element** across the entire scroll narrative.
 * **Why it matters:** The model treats sections as independent visuals instead of maintaining a single transformable canvas spine, breaking identity continuity.
 
 #### Gap B: No Physics Language in Motion Planning
@@ -61,7 +61,7 @@ Comparing the Elva site to our active skills reveals the following gaps:
 * **Why it matters:** The assistant will attempt to load and autoplay 10-15 WebGL video textures simultaneously, instantly causing frame-drops and tab crashes on mobile/tablet devices.
 
 #### Gap D: No Conversion Structure Safeguards
-* **The Gap:** [ui-ux/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/ui-ux/SKILL.md) does not remind the model to keep the standard conversion funnel visible (headline, proof, process, CTA) when building fully-hijacked pinned canvas layouts.
+* **The Gap:** [ui-ux/SKILL.md](../skills/ui-ux/SKILL.md) does not remind the model to keep the standard conversion funnel visible (headline, proof, process, CTA) when building fully-hijacked pinned canvas layouts.
 
 ---
 

@@ -1,5 +1,10 @@
 # Flat Overlapping Parallax Deck
 
+## Contents
+
+- [CSS Reference](#css-reference)
+- [GSAP Reference](#gsap-reference)
+
 This is a reference for a pinned overlapping GSAP parallax deck, created June 12, 2026.
 It stacks cards absolutely on top of each other and uses a single ScrollTrigger timeline to slide them up from the bottom (yPercent: 100 to 0), while simultaneously scaling down and tilting the card underneath it.
 

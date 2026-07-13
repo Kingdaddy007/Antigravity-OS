@@ -1,0 +1,4 @@
+interface:
+  display_name: "Copy Editing"
+  short_description: "Guidance for copy editing tasks"
+  default_prompt: "Use $copy-editing to help complete this task with its domain workflow."

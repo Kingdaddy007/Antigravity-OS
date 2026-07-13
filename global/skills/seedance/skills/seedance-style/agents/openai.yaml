@@ -1,0 +1,4 @@
+interface:
+  display_name: "Seedance Style"
+  short_description: "Guidance for seedance style tasks"
+  default_prompt: "Use $seedance-style to help complete this task with its domain workflow."

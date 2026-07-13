@@ -1,5 +1,25 @@
 # Canvas Frame Scroll Implementation
 
+## Contents
+
+- [When To Use](#when-to-use)
+- [Required Context](#required-context)
+- [Video Analysis](#video-analysis)
+- [Frame Extraction](#frame-extraction)
+- [Page Structure](#page-structure)
+- [Layout Contract](#layout-contract)
+- [Lenis Setup](#lenis-setup)
+- [Frame Preloader](#frame-preloader)
+- [Canvas Renderer](#canvas-renderer)
+- [Frame-To-Scroll Binding](#frame-to-scroll-binding)
+- [Section Animation System](#section-animation-system)
+- [Dark Overlay And Stats](#dark-overlay-and-stats)
+- [Marquee](#marquee)
+- [Circle-Wipe Hero Reveal](#circle-wipe-hero-reveal)
+- [Mobile And Reduced Motion](#mobile-and-reduced-motion)
+- [Troubleshooting](#troubleshooting)
+- [Quality Gate](#quality-gate)
+
 Use this when an approved spatial concept needs a real video converted into scroll-controlled canvas frames. Adapted from the installed LobeHub skill `remamare13-claude-framework-video-to-website`.
 
 Installed source in this sandbox:

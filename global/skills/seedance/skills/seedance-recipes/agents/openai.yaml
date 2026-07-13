@@ -1,0 +1,4 @@
+interface:
+  display_name: "Seedance Recipes"
+  short_description: "Guidance for seedance recipes tasks"
+  default_prompt: "Use $seedance-recipes to help complete this task with its domain workflow."

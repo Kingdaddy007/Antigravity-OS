@@ -1,5 +1,19 @@
 # Infinite Parallax Gallery Loop
 
+## Contents
+
+- [When To Use](#when-to-use)
+- [Never Use](#never-use)
+- [Core Mechanic](#core-mechanic)
+- [Required Structure](#required-structure)
+- [CSS Contract](#css-contract)
+- [JavaScript Contract](#javascript-contract)
+- [Spatial Adaptation](#spatial-adaptation)
+- [Prompt Requirements](#prompt-requirements)
+- [Mobile And Reduced Motion](#mobile-and-reduced-motion)
+- [Quality Gate](#quality-gate)
+- [Output](#output)
+
 Use this when a spatial website needs the feeling of an endless private showroom, gallery corridor, material archive, or portfolio reel. Adapted from Joe Ben Taylor's "Infinite Scroll with Parallax" demo and Codrops tutorial.
 
 Sources:

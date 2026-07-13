@@ -45,7 +45,7 @@
 Comparing the Assam Tea site to our active skills reveals the following gaps:
 
 #### Gap A: Absence of the "Ritual Transformation Sequence" Pattern
-* **The Gap:** [cinematic-motion/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/cinematic-motion/SKILL.md) covers product showcases but lacks guidelines for **Ritual Transformation Sequences** (illustrating the physical prep/use stages of a product in chronological order).
+* **The Gap:** [cinematic-motion/SKILL.md](../skills/cinematic-motion/SKILL.md) covers product showcases but lacks guidelines for **Ritual Transformation Sequences** (illustrating the physical prep/use stages of a product in chronological order).
 * **Why it matters:** The model defaults to static product grids rather than building a narrative of use.
 
 #### Gap B: Lack of "Contemplative Copy Choreography" Specs

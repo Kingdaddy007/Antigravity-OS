@@ -1,6 +1,23 @@
 ---
 name: workflow-visual-brainstorm
 description: Route visual exploration for high-end interior storytelling websites
+id: visual-brainstorm
+version: 1
+status: active
+intent: Execute visual brainstorm with explicit authority, state, outputs, and evidence.
+use_when: [the task matches visual brainstorm]
+do_not_use_when: [another workflow more precisely matches the requested outcome]
+inputs: [user objective, workspace context, constraints, requested authority mode]
+required_resources: [applicable AGENTS.md files, referenced skills and contexts]
+mutation_class: read_only
+approval_gates: [confirm implement mode before any mutation]
+states: [intake, assess, propose, approve-if-needed, execute-if-authorized, verify, deliver]
+outputs: [task result, changed-artifact list when applicable, evidence, residual risks]
+verification: [run proportionate checks, record raw evidence, label anything unverified]
+failure_paths: [stop on authority or contract conflict, preserve state, report blocker and safe next action]
+resume_contract: task-scoped .agents/workflows/visual-brainstorm.json using the workflows directory contract
+next_workflows: [none]
+profiles: [spatial]
 ---
 
 # WORKFLOW: VISUAL BRAINSTORM
@@ -38,17 +55,17 @@ Load:
 
 Look for:
 
-- `contexts/spatial/visual-thesis.md`
-- `contexts/spatial/anti-template-preflight.md`
-- `contexts/spatial/room-sequence.md`
-- `contexts/spatial/audit-adaptation-map.md`
-- `contexts/spatial/beloved-asset-directive.md`
-- `contexts/spatial/hero-event-blueprint.md`
-- `contexts/spatial/scene-kit-brief.md`
-- `contexts/spatial/depth-map.md`
-- `contexts/spatial/material-script.md`
-- `contexts/spatial/motion-board.md`
-- `contexts/spatial/asset-boundary.md`
+- `.agents/contexts/spatial/visual-thesis.md`
+- `.agents/contexts/spatial/anti-template-preflight.md`
+- `.agents/contexts/spatial/room-sequence.md`
+- `.agents/contexts/spatial/audit-adaptation-map.md`
+- `.agents/contexts/spatial/beloved-asset-directive.md`
+- `.agents/contexts/spatial/hero-event-blueprint.md`
+- `.agents/contexts/spatial/scene-kit-brief.md`
+- `.agents/contexts/spatial/depth-map.md`
+- `.agents/contexts/spatial/material-script.md`
+- `.agents/contexts/spatial/motion-board.md`
+- `.agents/contexts/spatial/asset-boundary.md`
 
 If any are missing, run `workflow-spatial-concept.md` first.
 
@@ -83,7 +100,7 @@ For each option, state:
 
 Record the chosen direction by updating or creating:
 
-- `contexts/spatial/selected-direction.md`
+- `.agents/contexts/spatial/selected-direction.md`
 - updates to scene kit, depth map, material script, and motion board if the selected direction changes them.
 
 ## QUALITY GATE CHECKLIST

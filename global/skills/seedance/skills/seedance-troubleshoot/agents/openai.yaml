@@ -1,0 +1,4 @@
+interface:
+  display_name: "Seedance Troubleshoot"
+  short_description: "Guidance for seedance troubleshoot tasks"
+  default_prompt: "Use $seedance-troubleshoot to help complete this task with its domain workflow."

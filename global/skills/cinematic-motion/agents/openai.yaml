@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cinematic Motion"
+  short_description: "Guidance for cinematic motion tasks"
+  default_prompt: "Use $cinematic-motion to help complete this task with its domain workflow."

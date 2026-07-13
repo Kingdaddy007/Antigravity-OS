@@ -1,0 +1,4 @@
+interface:
+  display_name: "Video Generation"
+  short_description: "Route and draft provider-aware AI video work safely"
+  default_prompt: "Use $video-generation to plan or prompt this AI video request, identifying the provider, current model, shot plan, and approval gates."

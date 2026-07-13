@@ -45,7 +45,7 @@
 Comparing the StringTune site to our active skills reveals the following gaps:
 
 #### Gap A: Lack of "Object-Authored Reveal" Pattern
-* **The Gap:** [cinematic-motion/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/cinematic-motion/SKILL.md) documents standard masking, but does not define **object-driven dynamic masking** where a 3D asset's path writes to a stencil buffer/dynamic canvas texture to reveal layers.
+* **The Gap:** [cinematic-motion/SKILL.md](../skills/cinematic-motion/SKILL.md) documents standard masking, but does not define **object-driven dynamic masking** where a 3D asset's path writes to a stencil buffer/dynamic canvas texture to reveal layers.
 * **Why it matters:** AI models treat 3D objects as passive decorations rather than active narrative tools.
 
 #### Gap B: No Layer-Governance or Interaction Hand-Off Guidelines

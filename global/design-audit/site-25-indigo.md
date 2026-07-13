@@ -58,7 +58,7 @@ Comparing the INDIGO+ site to our active skills reveals the following gaps:
 * **Why it matters:** The model generates generic dashboard grids and SaaS boxes, losing unique brand identities.
 
 #### Gap B: Lack of Playful Group Choreography Patterns
-* **The Gap:** [cinematic-motion/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/cinematic-motion/SKILL.md) covers generic scroll moves but lacks code templates for **circular spreads, cascades, radial blooms, and card fans**.
+* **The Gap:** [cinematic-motion/SKILL.md](../skills/cinematic-motion/SKILL.md) covers generic scroll moves but lacks code templates for **circular spreads, cascades, radial blooms, and card fans**.
 * **Why it matters:** The model struggles to write the mathematical rotations and offsets needed for grouped asset layouts.
 
 #### Gap C: Missing "Playful Proof Presentation" Rules

@@ -209,6 +209,10 @@ def print_results(all_issues: List[Dict], file_count: int) -> None:
 
 
 def main():
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    if hasattr(sys.stderr, "reconfigure"):
+        sys.stderr.reconfigure(encoding="utf-8", errors="replace")
     if len(sys.argv) < 2:
         print("Usage: python accessibility_audit.py <project_path>")
         sys.exit(1)

@@ -1,5 +1,16 @@
 # Psychological Levers
 
+## Contents
+
+- [INFORMATION ASYMMETRY](#information-asymmetry)
+- [CURIOSITY GAP](#curiosity-gap)
+- [PATTERN VIOLATION](#pattern-violation)
+- [STATUS THREAT](#status-threat)
+- [DREAD ANTICIPATION](#dread-anticipation)
+- [LOSS AVERSION](#loss-aversion)
+- [PATTERN-MATCHING COMPULSION](#pattern-matching-compulsion)
+- [SOCIAL PROOF](#social-proof)
+
 The mental mechanisms that make storytelling work. Each lever is a tool
 for capturing and holding attention.
 

@@ -1,145 +1,93 @@
 ---
-name: UI/UX & DESIGN THINKING
-description: >
-  Use this skill when designing, auditing, or implementing frontend UX for
-  high-end interior decorator, spatial design, gallery, showroom, furniture,
-  decor, architecture, or luxury home websites. Activated by UI/page/component
-  work where navigation, project indexes, inquiry forms, material swatches,
-  portfolio browsing, captions, responsive behavior, accessibility, typography,
-  layout, or interaction states must support a premium spatial brand. Do NOT
-  use for backend/API/security/database/DevOps work or for generic SaaS
-  dashboards unless the surface is explicitly a product UI.
+name: ui-ux
+description: 'Design, audit, or implement usable frontend experiences for applications, SaaS products, dashboards, marketing sites, and optional spatial-brand surfaces. Use when a task involves user flows, information architecture, components, interaction states, forms, navigation, responsive behavior, accessibility, UX writing, visual hierarchy, or interface verification. Load spatial references only when the active profile or request is explicitly interior, showroom, gallery, furniture, decor, staging, luxury-home, or architecture-adjacent. Do not use for backend-only, API-only, database-only, or infrastructure-only work.'
 ---
 
-# UI/UX & Design Thinking
+# UI/UX and Design Thinking
 
-## WHEN TO USE THIS
+## Operating Contract
 
-- Load for spatial brand UI: decorator portfolios, project galleries, service/inquiry paths, material libraries, showrooms, and editorial interior pages.
-- Load after `spatial-experience-design` when turning the visual thesis into usable navigation, states, forms, and responsive behavior.
-- Load when checking whether premium atmosphere still lets visitors understand proof, process, and inquiry.
+Design for the user's task before choosing visual treatment. Detect the interface register first:
 
-## NEVER DO
+- `product`: applications, SaaS, dashboards, tools, settings, and transactional flows.
+- `brand`: marketing, editorial, campaign, and conversion surfaces.
+- `spatial`: interior, showroom, gallery, furniture, decor, staging, luxury-home, and architecture-adjacent experiences.
 
-- Never convert a spatial brand into a SaaS landing page.
-- Never make buttons louder than the rooms, objects, materials, or transformation proof.
-- Never start with generic cards, icon grids, or centered service blocks.
-- Never hide essential inquiry, accessibility, or navigation under spectacle.
-- Never use visual restraint as an excuse for unclear labels, invisible focus, or broken mobile flow.
-- Never let project indexes, galleries, or forms feel like unstyled afterthoughts after a cinematic hero.
+The spatial register extends this general contract; it does not replace usability, accessibility, responsive behavior, or state coverage.
 
-## PRIMARY UX MODEL
+## Never Do
 
-Use this journey for high-end interior and spatial sites:
+- Start from a component trend before identifying the user goal and information hierarchy.
+- Design only the happy path; include empty, loading, error, success, disabled, permission, offline, and destructive states when relevant.
+- Hide required actions behind spectacle, hover-only controls, ambiguous icons, or low-contrast text.
+- Treat a desktop screenshot as a responsive specification.
+- Add motion without purpose, reduced-motion behavior, and performance consideration.
+- Assume a spatial or luxury visual register for a generic product interface.
+- Change backend contracts, authorization, or business rules from a UI task without the corresponding authority and domain skill.
 
-`Atmosphere -> Taste -> Transformation -> Proof -> Method -> Inquiry`
+## Workflow
 
-Map UI responsibilities to the journey:
+### 1. Ground the interface
 
-| Stage | Visitor Need | UI Behavior |
-| --- | --- | --- |
-| Atmosphere | Feel the world immediately | Quiet nav, full-bleed scene, minimal text |
-| Taste | Understand the aesthetic standard | Curated projects, room captions, material cues |
-| Transformation | See capability | Before/after, staging logic, design decisions |
-| Proof | Trust the designer | Press, testimonials, project facts, client context |
-| Method | Know how work happens | Process timeline, scope, fit, expectations |
-| Inquiry | Take the next step | Calm form, concierge CTA, next-step clarity |
+- Identify the users, jobs, frequency, environment, constraints, and success signal.
+- Read active project context, `PRODUCT.md`, and `DESIGN.md` when they exist.
+- Name the register: product, brand, or spatial.
 
-## SPATIAL UI PATTERNS
+### 2. Map structure and flow
 
-### Navigation
+- Define entry points, navigation, information hierarchy, primary action, secondary actions, and exit/recovery paths.
+- Trace the critical journey from intent through confirmation.
+- Reduce steps only when clarity, safety, and reversibility remain intact.
 
-- Use quiet, persistent navigation with clear text labels.
-- Keep nav at edges during cinematic sections; avoid floating center nav unless the visual thesis requires it.
-- Use project index, studio, method, and inquiry as plain language labels.
-- Keep inquiry reachable without shouting.
+### 3. Specify the state matrix
 
-### CTAs
+For every interactive component or screen, cover the observable states that can occur. Include validation timing, retry behavior, permissions, destructive confirmation, and recovery.
 
-- Use concierge language: "Begin an inquiry", "Discuss a residence", "Request a consultation", "View private portfolio".
-- Avoid SaaS urgency: "Get started", "Start free", "Try now", "Book instantly" unless the brand truly operates that way.
-- Make one primary action visible per major view.
+### 4. Establish interaction and visual rules
 
-### Project Galleries
+- Reuse the active design system before introducing new tokens or components.
+- Make focus, hover, pressed, selected, disabled, busy, and error states distinguishable.
+- Use typography, spacing, color, and motion to clarify hierarchy rather than decorate uncertainty.
 
-- Present projects as curated rooms or chapters before broad grids.
-- Use gallery labels: location, room type, material focus, design move, year, role.
-- Let one project breathe before showing many.
-- Use indexes for scanning only after the visitor has seen atmosphere and proof.
+### 5. Design responsively and accessibly
 
-### Material and Swatch UI
+- Define reflow, content priority, touch targets, keyboard order, focus management, labels, landmarks, contrast, zoom behavior, and reduced motion.
+- Verify that truncation, localization, long content, and narrow viewports do not hide meaning or actions.
 
-- Treat material swatches as tactile evidence, not color dots.
-- Pair swatches with material names, source, finish, and room use when relevant.
-- Use hover/tap previews carefully; every hover path needs a keyboard/touch equivalent.
+### 6. Verify observable behavior
 
-### Inquiry Forms
+- Inspect the interface in a browser when implementation exists.
+- Capture viewport evidence, keyboard traversal, reduced-motion behavior, console/network errors, and applicable accessibility results.
+- Record anything that remains unverified.
 
-- Keep forms calm and selective.
-- Ask for project type, location, timeline, scope, budget posture if needed, and what the visitor wants changed.
-- Explain what happens next.
-- Preserve typed values on errors.
-- Show success as a refined confirmation, not a generic toast.
+## Conditional Reference Loading
 
-## VISUAL CRAFT RULES
+- Load [product.md](reference/product.md) for applications, SaaS, dashboards, and product workflows.
+- Load [brand.md](reference/brand.md) for brand, editorial, campaign, or conversion surfaces.
+- Load [interaction-design.md](reference/interaction-design.md) for complex controls, feedback, or state transitions.
+- Load [cognitive-load.md](reference/cognitive-load.md) when density, decisions, or progressive disclosure are difficult.
+- Load [heuristics-scoring.md](reference/heuristics-scoring.md) and [personas.md](reference/personas.md) for structured audits.
+- Load [responsive-design.md](reference/responsive-design.md) for layout adaptation and breakpoint behavior.
+- Load [color-and-contrast.md](reference/color-and-contrast.md), [typography.md](reference/typography.md), and [ux-writing.md](reference/ux-writing.md) only for those concerns.
+- Load [motion-design.md](reference/motion-design.md) when motion materially supports feedback, continuity, or hierarchy.
+- For the spatial profile, load [spatial-ui-system.md](reference/spatial-ui-system.md), [spatial-design.md](reference/spatial-design.md), [spatial-ui-patterns.md](reference/spatial-ui-patterns.md), and [inquiry-and-gallery-states.md](reference/inquiry-and-gallery-states.md).
+- Load [design-bans.md](reference/design-bans.md) during critique to detect generic AI-pattern output without turning its examples into rigid universal law.
 
-- Consult [hero-layout-blueprints.md](file:///c:/Users/godsw/ANTIGRAVITY%20%20WORKSPACE/inyenbong/codex/reference/hero-layout-blueprints.md) for structural layouts, aesthetic palettes, and typography hierarchy models to inspire custom designs.
-- Use typography as gallery hierarchy: large atmospheric display, tiny metadata, readable body.
-- Use line length caps; interior captions should be short and precise.
-- Use whitespace as architecture: walls, corridors, pauses, clearings.
-- Use cards only when they are true artifacts: project plates, material samples, process notes, press clippings.
-- Do not nest cards.
-- Do not make every section the same width, rhythm, or grid.
-- Use image crops deliberately; mobile crops must preserve room subject and lighting.
-- Use OKLCH or a consistent token system for implementation, but choose colors from material/light behavior first.
-- For color palette selection, functional color mapping, and color psychology, load the `color-system` skill.
+## Output Contract
 
-## ACCESSIBILITY AND STATE COVERAGE
+Provide:
 
-Premium still needs complete UX:
+1. Interface register and user goal.
+2. Information architecture or flow.
+3. Component and state inventory.
+4. Interaction, accessibility, and responsive requirements.
+5. Implementation or design changes within authorized scope.
+6. Verification evidence and remaining risks.
 
-- Keyboard access for navigation, galleries, accordions, sliders, forms, and project filters.
-- Visible focus states that fit the visual system.
-- Text alternatives for room images that describe information, not mood fluff.
-- Reduced-motion alternatives for all travel, parallax, canvas, and reveal effects.
-- Loading states for media-heavy pages.
-- Empty states for filtered project indexes.
-- Error and success states for inquiry forms.
-- Mobile touch targets at least 44px.
+## Completion Gate
 
-## RESPONSIVE RULES
-
-- Mobile must remain spatial, not collapse into raw content blocks.
-- Replace pinned scenes with chaptered stills or reveal cascades on small screens.
-- Preserve room order, visual thesis, and inquiry path.
-- Use mobile-specific crops for room imagery and before/after comparisons.
-- Keep captions near their images; do not force visitors to remember what a caption describes.
-
-## ANTI-PATTERNS
-
-| Anti-Pattern | What It Looks Like | Fix |
-| --- | --- | --- |
-| SaaS Skin | Hero headline, feature cards, bright CTA, logos, stats | Use spatial journey and concierge inquiry |
-| Grid Dump | 12 projects shown before atmosphere | Lead with curated project sequence |
-| Invisible Luxury | Pretty but unusable nav/forms/focus | Keep quiet UI, not hidden UI |
-| Beige Template | Warm neutral, serif, stock room, fade-up | Require visual thesis and scene kit |
-| Ghost CTA Failure | Low-contrast outline button | Use refined but legible action treatment |
-| Captions as Decoration | Tiny labels with no useful information | Write project/material-specific metadata |
-
-## OUTPUT SHAPE
-
-**UX plan:** Journey stage -> primary action -> navigation/inquiry model -> key states -> responsive behavior.
-
-**UI audit:** Generic-template risks -> clarity risks -> accessibility/state gaps -> spatial fixes.
-
-**Implementation handoff:** Components/patterns -> states -> mobile/reduced-motion -> verification checklist.
-
-## NON-NEGOTIABLE CHECKLIST
-
-1. UI follows Atmosphere -> Taste -> Transformation -> Proof -> Method -> Inquiry.
-2. Inquiry path is visible, calm, and specific.
-3. Project/gallery UI supports curation before scanning.
-4. Material and room captions provide real information.
-5. Navigation, focus, forms, and state coverage are complete.
-6. Mobile preserves the spatial story.
-7. No default SaaS card grid or universal fade-up pattern remains.
+- The primary user journey is understandable and recoverable.
+- Important states and failure paths are specified or implemented.
+- Keyboard, focus, labels, contrast, reduced motion, and responsive behavior are verified proportionately.
+- Visual treatment matches the detected register and active profile.
+- No unverified claim is presented as tested behavior.

@@ -1,5 +1,17 @@
 # prompt-examples · Seedance 2.0
 
+## Contents
+
+- [Level 1 · Minimal Intent · T2V](#level-1-minimal-intent-t2v)
+- [Level 2 · Directed · I2V](#level-2-directed-i2v)
+- [Level 3 · Time-Segmented · I2V](#level-3-time-segmented-i2v)
+- [Level 4 · Full Choreography · R2V](#level-4-full-choreography-r2v)
+- [Chinese Level 2 · I2V](#chinese-level-2-i2v)
+- [Chinese Level 3 · Segmented](#chinese-level-3-segmented)
+- [Product Ad · T2V](#product-ad-t2v)
+- [Architecture Walkthrough · I2V](#architecture-walkthrough-i2v)
+- [One-Take Chain · Clip 1 of 4](#one-take-chain-clip-1-of-4)
+
 Compiled plain-text prompts ready for direct use. Each example shows the delegation level, mode, and source JSON key values.
 
 ---

@@ -1,6 +1,23 @@
-﻿---
+---
 name: workflow-impeccable-clarify
 description: Impeccable UI/UX clarify workflow
+id: impeccable-clarify
+version: 1
+status: active
+intent: Execute impeccable clarify with explicit authority, state, outputs, and evidence.
+use_when: [the task matches impeccable clarify]
+do_not_use_when: [another workflow more precisely matches the requested outcome]
+inputs: [user objective, workspace context, constraints, requested authority mode]
+required_resources: [applicable AGENTS.md files, referenced skills and contexts]
+mutation_class: local_edit
+approval_gates: [confirm scope expansion or destructive action before mutation]
+states: [intake, assess, propose, approve-if-needed, execute-if-authorized, verify, deliver]
+outputs: [task result, changed-artifact list when applicable, evidence, residual risks]
+verification: [run proportionate checks, record raw evidence, label anything unverified]
+failure_paths: [stop on authority or contract conflict, preserve state, report blocker and safe next action]
+resume_contract: task-scoped .agents/workflows/impeccable-clarify.json using the workflows directory contract
+next_workflows: [none]
+profiles: [general]
 ---
 
 > **Additional context needed**: audience technical level and users' mental state in context.

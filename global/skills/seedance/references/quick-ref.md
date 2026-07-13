@@ -1,5 +1,26 @@
 # quick-ref · Seedance 2.0
 
+## Contents
+
+- [Modes](#modes)
+- [Delegation Levels (v5.0)](#delegation-levels-v50)
+- [Director's Formula (v5.0)](#directors-formula-v50)
+- [@Tag Roles](#tag-roles)
+- [Platform Limits (Q1 2026)](#platform-limits-q1-2026)
+- [Key Chinese Terms](#key-chinese-terms)
+- [Emergency Fixes](#emergency-fixes)
+- [Compression Order (over budget)](#compression-order-over-budget)
+- [Skill Map](#skill-map)
+- [⚠️ Feb 2026 Content Policy Quick-Check](#-feb-2026-content-policy-quick-check)
+- [v5.0 Core Rules](#v50-core-rules)
+- [Audio / Lip-Sync Quick Reference (v4.0)](#audio-lip-sync-quick-reference-v40)
+  - [Hard Constraints](#hard-constraints)
+  - [Platform Clarification](#platform-clarification)
+  - [Multi-Character Dialogue Workflow](#multi-character-dialogue-workflow)
+  - [Top Silent Failure Causes](#top-silent-failure-causes)
+  - [Timestamp Anchoring (fixes model rewriting your audio)](#timestamp-anchoring-fixes-model-rewriting-your-audio)
+  - [Suspended Features (Feb 2026)](#suspended-features-feb-2026)
+
 One-page cheat sheet. Print or keep pinned.
 
 ---

@@ -1,12 +1,6 @@
 ---
-name: TO TICKETS
-description: >
-  Break a plan, spec, or the current conversation into a set of tracer-bullet tickets,
-  each declaring its blocking edges, published to the configured tracker (e.g. tickets.md
-  or GitHub/Linear issues).
-  Signal phrases: "break into tickets", "create issues", "vertical slices", "tracer bullets",
-  "expand-contract migration", "generate tickets".
-  Always seek user verification on ticket granularity and blocking dependencies.
+name: to-tickets
+description: 'Use when the task requires to tickets guidance. Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker (e.g. tickets.md or GitHub/Linear issues). Signal phrases: "break into tickets", "create issues", "vertical slices", "tracer bullets", "expand-contract migration", "generate tickets". Always seek user verification on ticket granularity and blocking dependencies.'
 ---
 
 # TO TICKETS

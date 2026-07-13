@@ -1,6 +1,23 @@
 ---
 name: workflow-impeccable-animate
 description: Plan and implement motion for high-end interior storytelling websites
+id: impeccable-animate
+version: 1
+status: active
+intent: Execute impeccable animate with explicit authority, state, outputs, and evidence.
+use_when: [the task matches impeccable animate]
+do_not_use_when: [another workflow more precisely matches the requested outcome]
+inputs: [user objective, workspace context, constraints, requested authority mode]
+required_resources: [applicable AGENTS.md files, referenced skills and contexts]
+mutation_class: local_edit
+approval_gates: [confirm scope expansion or destructive action before mutation]
+states: [intake, assess, propose, approve-if-needed, execute-if-authorized, verify, deliver]
+outputs: [task result, changed-artifact list when applicable, evidence, residual risks]
+verification: [run proportionate checks, record raw evidence, label anything unverified]
+failure_paths: [stop on authority or contract conflict, preserve state, report blocker and safe next action]
+resume_contract: task-scoped .agents/workflows/impeccable-animate.json using the workflows directory contract
+next_workflows: [none]
+profiles: [spatial]
 ---
 
 # WORKFLOW: SPATIAL ANIMATE
@@ -35,12 +52,12 @@ Load:
 - `skills/cinematic-motion/reference/mobile-fallbacks.md`
 - `skills/cinematic-motion/reference/motion-performance.md`
 - `skills/spatial-experience-design/reference/scene-kit-and-asset-directive.md`
-- `contexts/spatial/motion-board.md`
-- `contexts/spatial/showroom-choreography.md` when media-led sections exist
-- `contexts/spatial/cinematic-prompt-pack.md` when generated media is used
-- `contexts/spatial/depth-map.md`
-- `contexts/spatial/hero-event-blueprint.md`
-- `contexts/spatial/asset-boundary.md`
+- `.agents/contexts/spatial/motion-board.md`
+- `.agents/contexts/spatial/showroom-choreography.md` when media-led sections exist
+- `.agents/contexts/spatial/cinematic-prompt-pack.md` when generated media is used
+- `.agents/contexts/spatial/depth-map.md`
+- `.agents/contexts/spatial/hero-event-blueprint.md`
+- `.agents/contexts/spatial/asset-boundary.md`
 
 ## EXECUTION SEQUENCE
 

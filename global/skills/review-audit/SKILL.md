@@ -1,15 +1,6 @@
 ---
-name: CODE REVIEW & QUALITY AUDITING
-description: >
-  Use this skill when evaluating existing code for correctness, security,
-  maintainability, or architectural alignment. Activated when the user asks
-  for a code review, a pull request (PR) review, asks "Is this code good?",
-  "What's wrong with this?", or needs an audit of a legacy codebase for
-  technical debt or modernization. Also activated at the self-review phase
-  (Phase 7: Critique) of any significant implementation. Examples: "review
-  this PR", "audit this module", "what issues do you see in this code?",
-  "check this before I merge". Do NOT use for implementation work (use
-  coding skill). Always apply security lens during every review.
+name: review-audit
+description: 'Use this skill when evaluating existing code for correctness, security, maintainability, or architectural alignment. Activated when the user asks for a code review, a pull request (PR) review, asks "Is this code good?", "What''s wrong with this?", or needs an audit of a legacy codebase for technical debt or modernization. Also activated at the self-review phase (Phase 7: Critique) of any significant implementation. Examples: "review this PR", "audit this module", "what issues do you see in this code?", "check this before I merge". Do NOT use for implementation work (use coding skill). Always apply security lens during every review.'
 ---
 
 # CODE REVIEW & QUALITY AUDITING

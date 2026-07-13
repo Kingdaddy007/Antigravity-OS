@@ -1,17 +1,6 @@
 ---
 name: deep-think
-description: >
-  Use this skill when the user wants to activate full deep-thinking mode before
-  receiving an answer. Forces reading and applying all three core reasoning files:
-  system-thinking.md, expert-cognitive-patterns.md, and first-principles.md.
-  Activated when the user says "deep think", "think deeply about this",
-  "/deep-think", "apply deep thinking", "reason through this carefully",
-  "full cognitive analysis", "think hard about this", "I need you to really think",
-  "first principles analysis", "challenge my assumptions", "don't give me a quick answer",
-  or any request that demands visible, structured, rigorous reasoning before a response.
-  Do NOT use for simple questions, quick lookups, or tasks where the answer is obvious.
-  Do NOT confuse with the always-on light thinking minimum — this is the FULL protocol,
-  loaded on demand.
+description: 'Use this skill when the user wants to activate full deep-thinking mode before receiving an answer. Forces reading and applying all three core reasoning files: system-thinking.md, expert-cognitive-patterns.md, and first-principles.md. Activated when the user says "deep think", "think deeply about this", "/deep-think", "apply deep thinking", "reason through this carefully", "full cognitive analysis", "think hard about this", "I need you to really think", "first principles analysis", "challenge my assumptions", "don''t give me a quick answer", or any request that demands visible, structured, rigorous reasoning before a response.'
 ---
 
 # Deep Think — Full Cognitive Protocol Activation
@@ -48,11 +37,11 @@ When this skill triggers, execute these phases in order:
 
 ### Phase 1 — Load Core Protocols
 
-Read all three core files in full using `view_file`:
+Read all three core files in full using the available file-reading capability:
 
-1. `C:\Users\godsw\.gemini\config\core\system-thinking.md`
-2. `C:\Users\godsw\.gemini\config\core\expert-cognitive-patterns.md`
-3. `C:\Users\godsw\.gemini\config\core\first-principles.md`
+1. `../../core/system-thinking.md`
+2. `../../core/expert-cognitive-patterns.md`
+3. `../../core/first-principles.md`
 
 Do NOT skip any file. Do NOT rely on the compressed summaries in GEMINI.md. Read the full files.
 

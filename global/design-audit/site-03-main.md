@@ -54,7 +54,7 @@
 Comparing the MAIN site to our active skills reveals the following gaps:
 
 #### Gap A: "Product Viewer" vs. "Narrative Scene" Logic
-* **The Gap:** [cinematic-motion/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/cinematic-motion/SKILL.md) deals with 3D as an interactive inspection tool ( OrbitControls, Swatches, PresentationControls). It lacks guidance for **camera-path choreography** and **directed storytelling** where the user controls a timeline, not the camera directly.
+* **The Gap:** [cinematic-motion/SKILL.md](../skills/cinematic-motion/SKILL.md) deals with 3D as an interactive inspection tool ( OrbitControls, Swatches, PresentationControls). It lacks guidance for **camera-path choreography** and **directed storytelling** where the user controls a timeline, not the camera directly.
 * **Why it matters:** The model defaults to static canvas zones rather than continuous scroll-films.
 
 #### Gap B: No Scene Graph / Scroll-Board Template

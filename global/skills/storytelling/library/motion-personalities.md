@@ -1,5 +1,15 @@
 # Motion Personalities
 
+## Contents
+
+- [1. BRUTAL](#1-brutal)
+- [2. GLACIAL](#2-glacial)
+- [3. MECHANICAL](#3-mechanical)
+- [4. STUTTERED](#4-stuttered)
+- [5. LIQUID](#5-liquid)
+- [6. SURGICAL](#6-surgical)
+- [7. JITTERY](#7-jittery)
+
 Seven distinct approaches to how things move on screen. Each personality
 is a complete motion strategy — not just easing curves, but a philosophy
 of movement.

@@ -48,7 +48,7 @@
 Comparing the NomadaToast site to our active skills reveals the following gaps:
 
 #### Gap A: Absence of the "Surreal Mutation Hook" Pattern
-* **The Gap:** [cinematic-motion/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/cinematic-motion/SKILL.md) covers standard 3D displays but lacks guidelines for **Surreal Mutation Hooks** (using a recognizable object that shatters into abstraction as a psychological bait-and-switch).
+* **The Gap:** [cinematic-motion/SKILL.md](../skills/cinematic-motion/SKILL.md) covers standard 3D displays but lacks guidelines for **Surreal Mutation Hooks** (using a recognizable object that shatters into abstraction as a psychological bait-and-switch).
 * **Why it matters:** The model defaults to decorative 3D scenes that lack narrative force and surprise.
 
 #### Gap B: No "Shock-to-Proof" Narrative Layout Spec

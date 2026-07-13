@@ -1,0 +1,4 @@
+interface:
+  display_name: "Security"
+  short_description: "Guidance for security tasks"
+  default_prompt: "Use $security to help complete this task with its domain workflow."

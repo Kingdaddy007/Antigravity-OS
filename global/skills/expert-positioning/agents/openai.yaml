@@ -1,0 +1,4 @@
+interface:
+  display_name: "Expert Positioning"
+  short_description: "Guidance for expert positioning tasks"
+  default_prompt: "Use $expert-positioning to help complete this task with its domain workflow."

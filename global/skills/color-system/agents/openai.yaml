@@ -1,0 +1,4 @@
+interface:
+  display_name: "Color System"
+  short_description: "Guidance for color system tasks"
+  default_prompt: "Use $color-system to help complete this task with its domain workflow."

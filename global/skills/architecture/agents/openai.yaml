@@ -1,0 +1,4 @@
+interface:
+  display_name: "Architecture"
+  short_description: "Guidance for architecture tasks"
+  default_prompt: "Use $architecture to help complete this task with its domain workflow."

@@ -1,0 +1,81 @@
+name: Anti-Gravity OS validation
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Unit and integration tests
+        run: python -m unittest discover -s tests -p "test_*.py"
+
+      - name: Validate canonical source
+        run: python global/scripts/os.py validate
+
+      - name: Build all host adapters
+        shell: bash
+        run: |
+          for host in gemini codex cursor windsurf opencode; do
+            python global/scripts/os.py build --host "$host"
+          done
+          python global/scripts/os.py build --host gemini --profile spatial --output dist-spatial
+
+      - name: Verify shell installer syntax
+        if: runner.os != 'Windows'
+        run: bash -n install.sh
+
+      - name: Verify PowerShell installer syntax
+        shell: pwsh
+        run: |
+          $tokens = $null
+          $errors = $null
+          [System.Management.Automation.Language.Parser]::ParseFile(
+            (Resolve-Path install.ps1),
+            [ref]$tokens,
+            [ref]$errors
+          ) | Out-Null
+          if ($errors.Count -gt 0) {
+            $errors | Format-List
+            exit 1
+          }
+
+      - name: Verify generated payload inventory
+        shell: bash
+        run: |
+          test -f dist/gemini/adapter.json
+          test -f dist/codex/adapter.json
+          test -f dist/cursor/adapter.json
+          test -f dist/windsurf/adapter.json
+          test -f dist/opencode/adapter.json
+          test -f dist-spatial/gemini/profile.json
+          if find dist dist-spatial -type f -name '*.bak' | grep -q .; then
+            echo "Generated payload contains a forbidden backup file"
+            exit 1
+          fi
+
+      - name: Package validated host payloads
+        uses: actions/upload-artifact@v4
+        with:
+          name: antigravity-payloads-${{ matrix.os }}
+          path: |
+            dist/
+            dist-spatial/
+          if-no-files-found: error

@@ -1,5 +1,15 @@
 # Material Recipes
 
+## Contents
+
+- [Gallery Label](#gallery-label)
+- [Quiet Concierge CTA](#quiet-concierge-cta)
+- [Plaster Surface](#plaster-surface)
+- [Glass Caption Panel](#glass-caption-panel)
+- [Textile Edge Mask](#textile-edge-mask)
+- [Stacked Room Panel](#stacked-room-panel)
+- [Reduced Motion Baseline](#reduced-motion-baseline)
+
 Use these as implementation recipes only after the material script and scene kit exist. Do not let CSS material effects replace required real assets.
 
 ## Gallery Label

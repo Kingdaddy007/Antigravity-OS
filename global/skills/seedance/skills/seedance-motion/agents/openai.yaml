@@ -1,0 +1,4 @@
+interface:
+  display_name: "Seedance Motion"
+  short_description: "Guidance for seedance motion tasks"
+  default_prompt: "Use $seedance-motion to help complete this task with its domain workflow."

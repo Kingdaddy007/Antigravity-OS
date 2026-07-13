@@ -53,7 +53,7 @@
 Comparing the Hool Labs site to our active skills reveals the following gaps:
 
 #### Gap A: Absence of the "Governing Physics System" Concept
-* **The Gap:** [cinematic-motion/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/cinematic-motion/SKILL.md) describes motion styles, but does not enforce declaring a single physical world law (e.g. zero-gravity, drag, magnetism) to unify animations.
+* **The Gap:** [cinematic-motion/SKILL.md](../skills/cinematic-motion/SKILL.md) describes motion styles, but does not enforce declaring a single physical world law (e.g. zero-gravity, drag, magnetism) to unify animations.
 * **Why it matters:** The model mixes unrelated CSS transitions, creating visual chaos.
 
 #### Gap B: No Category Split for Motion Types

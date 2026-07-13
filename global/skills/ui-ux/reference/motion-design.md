@@ -1,4 +1,14 @@
-﻿# Motion Design
+# Motion Design
+
+## Contents
+
+- [Duration: The 100/300/500 Rule](#duration-the-100300500-rule)
+- [Easing: Pick the Right Curve](#easing-pick-the-right-curve)
+- [Premium Motion Materials](#premium-motion-materials)
+- [Staggered Animations](#staggered-animations)
+- [Reduced Motion](#reduced-motion)
+- [Perceived Performance](#perceived-performance)
+- [Performance](#performance)
 
 ## Duration: The 100/300/500 Rule
 

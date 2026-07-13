@@ -1,8 +1,6 @@
 ---
 name: sales-enablement
-description: "When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts. Also use when the user mentions 'sales deck,' 'pitch deck,' 'one-pager,' 'leave-behind,' 'objection handling,' 'deal-specific ROI analysis,' 'demo script,' 'talk track,' 'sales playbook,' 'proposal template,' 'buyer persona card,' 'help my sales team,' 'sales materials,' or 'what should I give my sales reps.' Use this for any document or asset that helps a sales team close deals. For competitor comparison pages and battle cards, see competitor-alternatives. For marketing website copy, see copywriting. For cold outreach emails, see cold-email."
-metadata:
-  version: 1.1.0
+description: 'When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts. Also use when the user mentions ''sales deck,'' ''pitch deck,'' ''one-pager,'' ''leave-behind,'' ''objection handling,'' ''deal-specific ROI analysis,'' ''demo script,'' ''talk track,'' ''sales playbook,'' ''proposal template,'' ''buyer persona card,'' ''help my sales team,'' ''sales materials,'' or ''what should I give my sales reps.'' Use this for any document or asset that helps a sales team close deals.'
 ---
 
 # Sales Enablement
@@ -310,6 +308,10 @@ Playbooks die when they're not updated. Review quarterly, get input from top rep
 
 ---
 
+
+## REFERENCE LOADING RULES
+
+Load `references/resource-index.md` when the task needs examples, specialist criteria, implementation details, or domain-specific diagnostics beyond this core workflow. Select only the references whose indexed purpose matches the task; do not load the package wholesale.
 ## Output Format
 
 Deliver the right format for each asset type:
@@ -339,21 +341,9 @@ If context is missing, ask:
 
 ---
 
-## Tool Integrations
-
-For partner sales enablement, see the [tools registry](../../tools/REGISTRY.md):
-
-| Tool | What It Does | Guide |
-|------|-------------|-------|
-| **Introw** | Partner engagement tracking, deal registration, mutual action plans | [introw.md](../../tools/integrations/introw.md) |
-
----
-
 ## Related Skills
 
-- **competitor-alternatives**: For public-facing comparison and alternative pages
-- **copywriting**: For marketing website copy
-- **cold-email**: For outbound prospecting emails
-- **revops**: For lead lifecycle, scoring, routing, and pipeline management
-- **pricing-strategy**: For pricing decisions and packaging
-- **product-marketing-context**: For foundational positioning and messaging
+- **competitor-profiling** + **copywriting**: For public comparison pages
+- **copywriting**: For marketing pages and outbound prospecting messages
+- **product-thinking**: For lifecycle, pipeline, pricing, and packaging decisions
+- Read `.agents/product-marketing-context.md` when it exists for foundational positioning and messaging.

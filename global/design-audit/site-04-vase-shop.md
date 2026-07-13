@@ -47,7 +47,7 @@
 ### 4. Gaps in Current System
 
 #### Gap A: No Horizontal Scroll-Catalog Template
-* **The Gap:** [cinematic-motion/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/cinematic-motion/SKILL.md) documents infinite sliders with modulo, but does **not provide a layout or GSAP blueprint for vertical-to-horizontal pinning tracks**.
+* **The Gap:** [cinematic-motion/SKILL.md](../skills/cinematic-motion/SKILL.md) documents infinite sliders with modulo, but does **not provide a layout or GSAP blueprint for vertical-to-horizontal pinning tracks**.
 * **Why it matters:** The model struggles to calculate the width/scroll-bounds of horizontal tracks, leading to broken responsive grids or scroll-jacking bugs.
 
 #### Gap B: Lack of Organic/Textured Masking Patterns
@@ -58,7 +58,7 @@
 * **The Gap:** We lack a structural styling guide for a symmetrical "curtain pull" intro (elements sliding horizontally to reveal centered background visual anchors on scroll).
 
 #### Gap D: Missing Headless Storytelling E-commerce Architecture
-* **The Gap:** [ui-ux/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/ui-ux/SKILL.md) treats e-commerce as standard UI (grids, listings). It lacks rules on how to blend product data with narrative acts, resulting in typical retail templates instead of museum-like portfolios.
+* **The Gap:** [ui-ux/SKILL.md](../skills/ui-ux/SKILL.md) treats e-commerce as standard UI (grids, listings). It lacks rules on how to blend product data with narrative acts, resulting in typical retail templates instead of museum-like portfolios.
 
 ---
 

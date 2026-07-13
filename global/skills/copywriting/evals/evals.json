@@ -84,11 +84,11 @@
     {
       "id": 6,
       "prompt": "Write me a 5-email welcome sequence for new trial users of our project management tool.",
-      "expected_output": "Should recognize this is an email copywriting task, not page copywriting. Should defer to or cross-reference the email-sequence skill, which specifically handles email sequences, drip campaigns, and lifecycle emails. May provide brief general guidance but should make clear that email-sequence is the right skill for this task.",
+      "expected_output": "Should recognize this as an email copywriting task and adapt the skill's audience, value, proof, and CTA principles to a five-message sequence. Should clarify any missing lifecycle goal or trial context, then provide a coherent sequence rather than applying a website page template verbatim.",
       "assertions": [
         "Recognizes this as email sequence work",
-        "References or defers to email-sequence skill",
-        "Does not attempt to write a full email sequence using page copywriting patterns"
+        "Adapts copywriting principles to email sequence structure",
+        "Does not force a website page template onto the sequence"
       ],
       "files": []
     },

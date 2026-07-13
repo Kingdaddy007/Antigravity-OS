@@ -1,5 +1,23 @@
 # Scroll-Driven 3D Cube
 
+## Contents
+
+- [Concept](#concept)
+- [Spatial Use Cases](#spatial-use-cases)
+  - [Architectural Room Box](#architectural-room-box)
+  - [Material Plinth](#material-plinth)
+- [Required Context Before Implementation](#required-context-before-implementation)
+- [Prompt Inheritance Rules](#prompt-inheritance-rules)
+- [HTML](#html)
+- [CSS](#css)
+- [GSAP ScrollTrigger](#gsap-scrolltrigger)
+- [Six-Sided Material Plinth Timeline](#six-sided-material-plinth-timeline)
+- [Webflow Extraction Notes](#webflow-extraction-notes)
+- [Composition Rules](#composition-rules)
+- [Mobile And Reduced Motion](#mobile-and-reduced-motion)
+- [Quality Gate](#quality-gate)
+- [Anti-Patterns](#anti-patterns)
+
 ## Concept
 
 **Name:** The Architectural Room Box or Material Plinth
@@ -9,7 +27,7 @@ Use this reference when a high-end interior, architecture, furniture, decor, or 
 This mechanic was extracted from the local Codrops/Webflow cube gallery extraction:
 
 ```text
-C:\Users\godsw\.gemini\antigravity\brain\1c35b62f-eae0-4e6d-9fb0-b42ecd141926\cube-gallery-extraction\
+<project-artifacts>/cube-gallery-extraction/
 ```
 
 The useful Webflow mechanic is:

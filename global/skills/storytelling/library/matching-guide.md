@@ -1,5 +1,19 @@
 # Matching Guide
 
+## Contents
+
+- [LUXURY / EDITORIAL](#luxury-editorial)
+- [TECH / STARTUP](#tech-startup)
+- [RESTAURANT / HOSPITALITY](#restaurant-hospitality)
+- [CONSULTANT / PROFESSIONAL SERVICES](#consultant-professional-services)
+- [CREATIVE / AGENCY](#creative-agency)
+- [WELLNESS / COACHING](#wellness-coaching)
+- [FASHION / LIFESTYLE](#fashion-lifestyle)
+- [GAMING / ENTERTAINMENT](#gaming-entertainment)
+- [DATA / ANALYTICS](#data-analytics)
+- [HORROR / PSYCHOLOGICAL](#horror-psychological)
+- [HOW TO USE THIS GUIDE](#how-to-use-this-guide)
+
 Brand archetype → relevant mechanics. Use this during the Research phase
 to find storytelling mechanics that fit the brand.
 

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "general",
+  "description": "Default engineering, product, security, operations, and general interface work.",
+  "always_active": true,
+  "extends": null,
+  "activation": ["All tasks unless a more specific optional profile is selected."],
+  "exclusions": []
+}
+

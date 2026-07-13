@@ -1,5 +1,25 @@
 # Critique Language And Weak Request Patterns
 
+## Contents
+
+- [Purpose](#purpose)
+- [Voice Rules](#voice-rules)
+- [Weak Request Patterns](#weak-request-patterns)
+- [Direct Refusals](#direct-refusals)
+- [Diagnostic Observations](#diagnostic-observations)
+- [Intent Interrogations](#intent-interrogations)
+- [Structural Critiques](#structural-critiques)
+- [Teaching Lines](#teaching-lines)
+- [Vague-To-Precise Translation](#vague-to-precise-translation)
+- [Pushback Examples](#pushback-examples)
+  - [CTA And Hierarchy](#cta-and-hierarchy)
+  - [Background Decoration](#background-decoration)
+  - [Motion Without Purpose](#motion-without-purpose)
+  - [Generic Premium Request](#generic-premium-request)
+  - [Carousel](#carousel)
+  - [Typography Weight](#typography-weight)
+- [Pre-Build Verdict Language](#pre-build-verdict-language)
+
 ## Purpose
 
 Use this reference when the response needs exact Director language, weak-request resistance, critique tone, or precise replacement for vague design feedback.

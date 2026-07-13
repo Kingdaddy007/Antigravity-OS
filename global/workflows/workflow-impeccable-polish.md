@@ -1,6 +1,23 @@
-﻿---
+---
 name: workflow-impeccable-polish
 description: Impeccable UI/UX polish workflow
+id: impeccable-polish
+version: 1
+status: active
+intent: Execute impeccable polish with explicit authority, state, outputs, and evidence.
+use_when: [the task matches impeccable polish]
+do_not_use_when: [another workflow more precisely matches the requested outcome]
+inputs: [user objective, workspace context, constraints, requested authority mode]
+required_resources: [applicable AGENTS.md files, referenced skills and contexts]
+mutation_class: local_edit
+approval_gates: [confirm scope expansion or destructive action before mutation]
+states: [intake, assess, propose, approve-if-needed, execute-if-authorized, verify, deliver]
+outputs: [task result, changed-artifact list when applicable, evidence, residual risks]
+verification: [run proportionate checks, record raw evidence, label anything unverified]
+failure_paths: [stop on authority or contract conflict, preserve state, report blocker and safe next action]
+resume_contract: task-scoped .agents/workflows/impeccable-polish.json using the workflows directory contract
+next_workflows: [none]
+profiles: [general]
 ---
 
 > **Additional context needed**: quality bar (MVP vs flagship).
@@ -11,9 +28,9 @@ Perform a meticulous final pass to catch all the small details that separate goo
 
 **Before running any polish checklist:**
 
-1. Check if `contexts/critique-issues.md` exists
-2. If yes → work through P0 issues first, then P1, P2, P3. These are the specific issues identified by `/impeccable-critique` and must be addressed before the standard polish checklist.
-3. Check if `contexts/audit-issues.md` exists
+1. Check if `.agents/contexts/critique-issues.md` exists
+2. If yes → work through critical issues first, then high, medium, and low. These are the specific issues identified by `/impeccable-critique` and must be addressed before the standard polish checklist.
+3. Check if `.agents/contexts/audit-issues.md` exists
 4. If yes → merge these issues with critique issues. Deduplicate any overlapping findings. Work through the combined list by severity.
 5. If neither exists → run the standard polish checklist and note that critique and audit should be run first.
 

@@ -1,5 +1,16 @@
 # GSAP Cookbook
 
+## Contents
+
+- [Registration](#registration)
+- [Scoped React Pattern](#scoped-react-pattern)
+- [ScrollTrigger Scrub](#scrolltrigger-scrub)
+- [Stacked Room Panels](#stacked-room-panels)
+- [Curtain Split Arrival](#curtain-split-arrival)
+- [Zero-Safe Modulo Carousel](#zero-safe-modulo-carousel)
+- [Living Mockup Ticker](#living-mockup-ticker)
+- [Ambient Loop](#ambient-loop)
+
 Use these templates for spatial storytelling implementation. Keep GSAP scoped, disposable, and tied to the motion board.
 
 ## Registration

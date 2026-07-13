@@ -1,0 +1,4 @@
+interface:
+  display_name: "Motion Library"
+  short_description: "Guidance for motion library tasks"
+  default_prompt: "Use $motion-library to help complete this task with its domain workflow."

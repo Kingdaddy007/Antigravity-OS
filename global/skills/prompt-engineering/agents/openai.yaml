@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prompt Engineering"
+  short_description: "Guidance for prompt engineering tasks"
+  default_prompt: "Use $prompt-engineering to help complete this task with its domain workflow."

@@ -1,6 +1,23 @@
-﻿---
+---
 name: workflow-impeccable-colorize
 description: Impeccable UI/UX colorize workflow
+id: impeccable-colorize
+version: 1
+status: active
+intent: Execute impeccable colorize with explicit authority, state, outputs, and evidence.
+use_when: [the task matches impeccable colorize]
+do_not_use_when: [another workflow more precisely matches the requested outcome]
+inputs: [user objective, workspace context, constraints, requested authority mode]
+required_resources: [applicable AGENTS.md files, referenced skills and contexts]
+mutation_class: local_edit
+approval_gates: [confirm scope expansion or destructive action before mutation]
+states: [intake, assess, propose, approve-if-needed, execute-if-authorized, verify, deliver]
+outputs: [task result, changed-artifact list when applicable, evidence, residual risks]
+verification: [run proportionate checks, record raw evidence, label anything unverified]
+failure_paths: [stop on authority or contract conflict, preserve state, report blocker and safe next action]
+resume_contract: task-scoped .agents/workflows/impeccable-colorize.json using the workflows directory contract
+next_workflows: [none]
+profiles: [general]
 ---
 
 > **Additional context needed**: existing brand colors.
@@ -35,7 +52,7 @@ Analyze the current state and identify opportunities:
    - **Wayfinding**: Helping users navigate and understand structure
    - **Delight**: Moments of visual interest and personality
 
-If any of these are unclear from the codebase, {{ask_instruction}}
+If any of these are unclear from the codebase, ask the user a concise blocking question
 
 **CRITICAL**: More color ≠ better. Strategic color beats rainbow vomit every time. Every color should have a purpose.
 

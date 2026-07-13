@@ -1,0 +1,4 @@
+interface:
+  display_name: "Refactoring"
+  short_description: "Guidance for refactoring tasks"
+  default_prompt: "Use $refactoring to help complete this task with its domain workflow."

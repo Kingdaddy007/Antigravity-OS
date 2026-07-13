@@ -1,4 +1,20 @@
-﻿# Spatial Design
+# Spatial Design
+
+## Contents
+
+- [Spacing Systems](#spacing-systems)
+  - [Use 4pt Base, Not 8pt](#use-4pt-base-not-8pt)
+  - [Name Tokens Semantically](#name-tokens-semantically)
+- [Grid Systems](#grid-systems)
+  - [The Self-Adjusting Grid](#the-self-adjusting-grid)
+- [Visual Hierarchy](#visual-hierarchy)
+  - [The Squint Test](#the-squint-test)
+  - [Hierarchy Through Multiple Dimensions](#hierarchy-through-multiple-dimensions)
+  - [Cards Are Not Required](#cards-are-not-required)
+- [Container Queries](#container-queries)
+- [Optical Adjustments](#optical-adjustments)
+  - [Touch Targets vs Visual Size](#touch-targets-vs-visual-size)
+- [Depth & Elevation](#depth-elevation)
 
 ## Spacing Systems
 

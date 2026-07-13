@@ -1,0 +1,4 @@
+interface:
+  display_name: "Seedance Vfx"
+  short_description: "Guidance for seedance vfx tasks"
+  default_prompt: "Use $seedance-vfx to help complete this task with its domain workflow."

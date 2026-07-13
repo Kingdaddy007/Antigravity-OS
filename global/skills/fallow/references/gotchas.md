@@ -1,5 +1,40 @@
 # Fallow: Critical Gotchas
 
+## Contents
+
+- [`fix` Requires `--yes` in Non-TTY Environments](#fix-requires---yes-in-non-tty-environments)
+- [Don't Create Config Unless Needed](#dont-create-config-unless-needed)
+- [Use `--format json` for Agent Consumption](#use---format-json-for-agent-consumption)
+- [`--changed-since` Shows Only New Issues](#--changed-since-shows-only-new-issues)
+- [Filter Flags Are Additive](#filter-flags-are-additive)
+- [Syntactic Analysis: No TypeScript Compiler](#syntactic-analysis-no-typescript-compiler)
+- [Re-Export Chains Are Resolved](#re-export-chains-are-resolved)
+- [Exit Code 1 vs 2](#exit-code-1-vs-2)
+- [`--fail-on-issues` Promotes Warn to Error](#--fail-on-issues-promotes-warn-to-error)
+- [Baseline Comparison Tracks Issue Identity](#baseline-comparison-tracks-issue-identity)
+- [Duplication Modes Affect What's Detected](#duplication-modes-affect-whats-detected)
+- [Workspace Flag Scopes Output, Not Analysis](#workspace-flag-scopes-output-not-analysis)
+- [Production Mode Excludes Test Files](#production-mode-excludes-test-files)
+- [Watch Mode Is Not for Agents](#watch-mode-is-not-for-agents)
+- [Suppressing Duplication False Positives](#suppressing-duplication-false-positives)
+- [Decorated Members Are Skipped By Default](#decorated-members-are-skipped-by-default)
+  - [Opt specific decorators out via `ignoreDecorators`](#opt-specific-decorators-out-via-ignoredecorators)
+- [JSDoc Visibility Tags Keep Exports Alive](#jsdoc-visibility-tags-keep-exports-alive)
+- [`@expected-unused` JSDoc Tag for Intentional Dead Code](#expected-unused-jsdoc-tag-for-intentional-dead-code)
+- [Stale Suppression Detection](#stale-suppression-detection)
+- [JSDoc `import()` Types Count as References](#jsdoc-import-types-count-as-references)
+- [JSX `<script src>` and `<link href>` Are Asset References](#jsx-script-src-and-link-href-are-asset-references)
+- [GraphQL `#import` Documents Are Tracked](#graphql-import-documents-are-tracked)
+- [Library Packages: Use `publicPackages` Instead of Visibility Tags](#library-packages-use-publicpackages-instead-of-visibility-tags)
+- [Dynamically Loaded Files: Use `dynamicallyLoaded`](#dynamically-loaded-files-use-dynamicallyloaded)
+- [Class Instance Members Are Tracked](#class-instance-members-are-tracked)
+- [Type-Only Dependencies Should Be devDependencies](#type-only-dependencies-should-be-devdependencies)
+- [Test-Only Dependencies Should Be devDependencies](#test-only-dependencies-should-be-devdependencies)
+- [GitLab CI: `FALLOW_COMMENT` vs `FALLOW_REVIEW`](#gitlab-ci-fallowcomment-vs-fallowreview)
+- [License Errors Include a Machine-Readable Code Suffix](#license-errors-include-a-machine-readable-code-suffix)
+- [GitLab CI: Auto `--changed-since` in MR Pipelines](#gitlab-ci-auto---changed-since-in-mr-pipelines)
+- [GitLab CI: Package Manager Detection](#gitlab-ci-package-manager-detection)
+
 Common pitfalls and their correct solutions when working with fallow.
 
 ---

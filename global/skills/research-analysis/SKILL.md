@@ -1,16 +1,6 @@
 ---
-name: RESEARCH & TECHNICAL ANALYSIS
-description: >
-  Use this skill when comparing tools, technologies, frameworks, or approaches,
-  or when conducting technical feasibility analysis. Activated when the user
-  asks "Should I use X or Y?", requests pros and cons, needs a build vs. buy
-  evaluation, asks "What is the best way to..." where the answer depends on
-  context, or needs research into industry norms, standards, or technical
-  alternatives. Examples: "compare Redis and Memcached", "should we build this
-  or use a SaaS?", "what are the tradeoffs of GraphQL vs REST for our case?",
-  "research options for background job processing". Do NOT use for pure
-  implementation work (use coding skill) or for architecture decisions already
-  made (use architecture skill).
+name: research-analysis
+description: 'Use this skill when comparing tools, technologies, frameworks, or approaches, or when conducting technical feasibility analysis. Activated when the user asks "Should I use X or Y?", requests pros and cons, needs a build vs. buy evaluation, asks "What is the best way to..." where the answer depends on context, or needs research into industry norms, standards, or technical alternatives. Examples: "compare Redis and Memcached", "should we build this or use a SaaS?", "what are the tradeoffs of GraphQL vs REST for our case?", "research options for background job processing".'
 ---
 
 # RESEARCH & TECHNICAL ANALYSIS

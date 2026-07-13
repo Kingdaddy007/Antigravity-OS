@@ -1,5 +1,39 @@
 # Demo Script Templates
 
+## Contents
+
+- [Discovery Call Script](#discovery-call-script)
+  - [Scene 1: Opening (3 min)](#scene-1-opening-3-min)
+  - [Scene 2: Situation Questions (7 min)](#scene-2-situation-questions-7-min)
+  - [Scene 3: Pain Identification (10 min)](#scene-3-pain-identification-10-min)
+  - [Scene 4: Impact & Priority (5 min)](#scene-4-impact-priority-5-min)
+  - [Scene 5: Buying Process (3 min)](#scene-5-buying-process-3-min)
+  - [Scene 6: Close (2 min)](#scene-6-close-2-min)
+- [First Demo Script](#first-demo-script)
+  - [Scene 1: Opening & Recap (5 min)](#scene-1-opening-recap-5-min)
+  - [Scene 2: Workflow 1 — Primary Pain Point (10 min)](#scene-2-workflow-1-primary-pain-point-10-min)
+  - [Scene 3: Workflow 2 — Secondary Pain Point (8 min)](#scene-3-workflow-2-secondary-pain-point-8-min)
+  - [Scene 4: Workflow 3 — Differentiator (7 min)](#scene-4-workflow-3-differentiator-7-min)
+  - [Scene 5: Proof Point (3 min)](#scene-5-proof-point-3-min)
+  - [Scene 6: Close (5 min)](#scene-6-close-5-min)
+- [Technical Deep-Dive Script](#technical-deep-dive-script)
+  - [Scene 1: Opening (3 min)](#scene-1-opening-3-min)
+  - [Scene 2: Architecture Overview (10 min)](#scene-2-architecture-overview-10-min)
+  - [Scene 3: Security & Compliance (10 min)](#scene-3-security-compliance-10-min)
+  - [Scene 4: Integrations & API (15 min)](#scene-4-integrations-api-15-min)
+  - [Scene 5: Implementation & Migration (5 min)](#scene-5-implementation-migration-5-min)
+  - [Scene 6: Q&A and Close (10 min)](#scene-6-qa-and-close-10-min)
+- [Executive Overview Script](#executive-overview-script)
+  - [Scene 1: Opening (2 min)](#scene-1-opening-2-min)
+  - [Scene 2: The Problem & Cost (5 min)](#scene-2-the-problem-cost-5-min)
+  - [Scene 3: The Solution & Differentiation (5 min)](#scene-3-the-solution-differentiation-5-min)
+  - [Scene 4: ROI & Business Case (5 min)](#scene-4-roi-business-case-5-min)
+  - [Scene 5: Q&A and Decision (5-10 min)](#scene-5-qa-and-decision-5-10-min)
+- [Interaction Point Guidance](#interaction-point-guidance)
+  - [When to Ask Questions During Demos](#when-to-ask-questions-during-demos)
+  - [Questions NOT to Ask During Demos](#questions-not-to-ask-during-demos)
+  - [How to Handle "Can You Show Me X?"](#how-to-handle-can-you-show-me-x)
+
 Scene-by-scene templates for different call types, with timing, talk tracks, and interaction guidance.
 
 ## Discovery Call Script

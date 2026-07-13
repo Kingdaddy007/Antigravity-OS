@@ -6,6 +6,13 @@
 GEMINI-PERSONAL.md
 MASTER-PROMPT-PERSONAL.md
 
+# Runtime project registrations are local state, never distributable source.
+global/projects/
+
+# Installer staging and retained backups.
+.antigravity-stage-*/
+.antigravity-backups/
+
 # Personal memory files (your project-specific learnings — keep local)
 # Uncomment these if you want memory to stay private:
 # global/memory/decisions-log.md

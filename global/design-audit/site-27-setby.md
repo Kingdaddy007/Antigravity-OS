@@ -51,7 +51,7 @@
 Comparing the Setby site to our active skills reveals the following gaps:
 
 #### Gap A: Absence of the "Technical Annotation Scene" Pattern
-* **The Gap:** [cinematic-motion/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/cinematic-motion/SKILL.md) covers standard 3D viewers but lacks the projection scripts and collision constraints required to anchor HTML cards to rotating WebGL vertices.
+* **The Gap:** [cinematic-motion/SKILL.md](../skills/cinematic-motion/SKILL.md) covers standard 3D viewers but lacks the projection scripts and collision constraints required to anchor HTML cards to rotating WebGL vertices.
 * **Why it matters:** The model cannot link DOM text to 3D models, causing coordinate drifting.
 
 #### Gap B: No "Object Role Inventory" Requirement

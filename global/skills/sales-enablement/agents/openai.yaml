@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sales Enablement"
+  short_description: "Guidance for sales enablement tasks"
+  default_prompt: "Use $sales-enablement to help complete this task with its domain workflow."

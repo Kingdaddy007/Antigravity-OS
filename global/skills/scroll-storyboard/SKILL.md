@@ -1,15 +1,6 @@
 ---
 name: scroll-storyboard
-description: >
-  Use this skill when translating an approved brand narrative and visual thesis
-  into a scroll-choreography blueprint before any section-level code or design
-  begins. Activated by "storyboard the scroll", "map the sections", "what should
-  each section do", "how should the scroll feel", "before we build the page", or
-  any moment where the narrative is approved but the viewport-by-viewport
-  experience is still undefined. Also activate when a site feels disconnected,
-  abrupt, or like sections were designed independently. Do NOT use this as a
-  copywriting tool or a layout tool — it only defines what the user experiences
-  at each scroll depth and why.
+description: 'Use this skill when translating an approved brand narrative and visual thesis into a scroll-choreography blueprint before any section-level code or design begins. Activated by "storyboard the scroll", "map the sections", "what should each section do", "how should the scroll feel", "before we build the page", or any moment where the narrative is approved but the viewport-by-viewport experience is still undefined. Also activate when a site feels disconnected, abrupt, or like sections were designed independently. Do NOT use this as a copywriting tool or a layout tool — it only defines what the user experiences at each scroll depth and why.'
 ---
 
 # Scroll Storyboard
@@ -30,7 +21,7 @@ Without it, each section gets designed in isolation. With it, every section is a
 >
 > The scroll is the sentence structure. The user's hand is the pacing.
 
-This principle applies to ALL Beloved's websites — interior design, brand, product, portfolio, or agency. Every site tells a story or it tells nothing.
+This principle applies to ALL the user's websites — interior design, brand, product, portfolio, or agency. Every site tells a story or it tells nothing.
 
 ## WHEN TO ACTIVATE
 

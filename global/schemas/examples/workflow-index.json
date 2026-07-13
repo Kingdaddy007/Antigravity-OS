@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-13T00:00:00Z",
+  "tasks": {
+    "example-task": "example-task.json"
+  }
+}

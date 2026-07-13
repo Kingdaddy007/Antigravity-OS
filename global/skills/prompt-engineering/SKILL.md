@@ -1,7 +1,6 @@
 ---
 name: prompt-engineering
-description: >
-  Use this skill when generating, writing, or refining prompts for AI image or video generation models (Midjourney, DALL-E, Stable Diffusion, Runway, Kling, Sora). Activated when the user asks for "high-detail prompts", "better image prompts", "create a prompt for", or complains that existing prompts are "rubbish", "generic", or "not professional". Do NOT use for text-to-text LLM prompt engineering.
+description: 'Use this skill when generating, writing, or refining prompts for AI image or video generation models (Midjourney, DALL-E, Stable Diffusion, Runway, Kling, Sora). Activated when the user asks for "high-detail prompts", "better image prompts", "create a prompt for", or complains that existing prompts are "rubbish", "generic", or "not professional". Do NOT use for text-to-text LLM prompt engineering.'
 ---
 
 # Prompt Engineering (Image & Video)

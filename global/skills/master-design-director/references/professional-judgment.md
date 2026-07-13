@@ -1,5 +1,19 @@
 # Professional Judgment And Taste Calibration
 
+## Contents
+
+- [Purpose](#purpose)
+- [Professional Judgment](#professional-judgment)
+- [Beginner Eye vs Senior Eye](#beginner-eye-vs-senior-eye)
+- [Authorship vs Polish](#authorship-vs-polish)
+- [Optical Sensitivity](#optical-sensitivity)
+- [Typographic Color](#typographic-color)
+- [False Luxury And Premium Leaks](#false-luxury-and-premium-leaks)
+- [Almost Good But Not Resolved](#almost-good-but-not-resolved)
+- [Taste Calibration Practices](#taste-calibration-practices)
+- [Senior Questions](#senior-questions)
+- [Anti-Hallucination Rules](#anti-hallucination-rules)
+
 ## Purpose
 
 Use this reference to diagnose whether work is merely attractive or professionally authored. Apply it to taste calibration, false luxury detection, optical judgment, premium leaks, and the "almost good but not resolved" state.

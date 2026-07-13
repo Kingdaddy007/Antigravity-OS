@@ -1,5 +1,13 @@
 # Scroll-Driven Cylinder Cards
 
+## Contents
+
+- [Core Mechanic](#core-mechanic)
+- [HTML Structure](#html-structure)
+- [CSS Contract](#css-contract)
+- [GSAP & TS Implementation](#gsap-ts-implementation)
+- [Notes & Limitations](#notes-limitations)
+
 Use this when you want a sequence of vertical sections to feel like cards rolling over a massive 3D cylinder. Unlike true overlapping parallax, these cards stack normally but use `rotateX` and 3D perspective to simulate depth.
 
 ## Core Mechanic

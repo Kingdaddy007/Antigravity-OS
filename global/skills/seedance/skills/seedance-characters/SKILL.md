@@ -2,11 +2,10 @@
 name: seedance-characters
 description: 'Lock character identity, assign @Tag references, and maintain face and hand consistency across multi-character scenes in Seedance 2.0. Covers 360-degree consistency testing and first-frame art direction for image-to-video. Use when a character changes appearance between shots, when building multi-person scenes, or when hands or faces are distorting.'
 license: MIT
-user-invocable: true
-user-invokable: true
-tags: ["characters", "identity-lock", "multi-character", "openclaw", "antigravity", "gemini-cli", "codex", "cursor"]
-metadata: {"version": "5.0.0", "updated": "2026-03-03", "openclaw": {"emoji": "🎭", "homepage": "https://github.com/Emily2040/seedance-2.0"}, "parent": "seedance-20", "antigravity": {"emoji": "🎭", "homepage": "https://github.com/Emily2040/seedance-2.0"}, "gemini-cli": {"emoji": "🎭", "homepage": "https://github.com/Emily2040/seedance-2.0"}, "author": "Emily (@iamemily2050)", "repository": "https://github.com/Emily2040/seedance-2.0"}
 ---
+## STATUS VERIFICATION GATE
+
+Treat platform availability, model limits, filter behavior, enforcement actions, and API status dated February-March 2026 as historical snapshots. Before relying on them, verify current official ByteDance/Seedance documentation. If verification is unavailable, label the claim unverified and avoid presenting it as current fact.
 
 # seedance-characters
 

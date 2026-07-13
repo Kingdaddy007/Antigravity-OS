@@ -56,11 +56,11 @@
 Comparing the Lounge Coffee site to our active skills reveals the following gaps:
 
 #### Gap A: Absence of the "Hero Event" Concept
-* **The Gap:** [cinematic-motion/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/cinematic-motion/SKILL.md) describes entrance animations but does not require defining a **Hero Event**—a single physical reveal, split, spill, peel, cut, burst, pour, or transformation that anchors the site's identity.
+* **The Gap:** [cinematic-motion/SKILL.md](../skills/cinematic-motion/SKILL.md) describes entrance animations but does not require defining a **Hero Event**—a single physical reveal, split, spill, peel, cut, burst, pour, or transformation that anchors the site's identity.
 * **Why it matters:** Entry sequences default to generic fade-ups or slide-ins, losing brand theater.
 
 #### Gap B: No "Experience-then-Store" Pattern
-* **.The Gap:** [ui-ux/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/ui-ux/SKILL.md) does not specify that food, beverage, and luxury product sites must establish sensory appetite and brand mood before presenting commerce modules.
+* **.The Gap:** [ui-ux/SKILL.md](../skills/ui-ux/SKILL.md) does not specify that food, beverage, and luxury product sites must establish sensory appetite and brand mood before presenting commerce modules.
 * **Why it matters:** The model immediately builds functional Shopify-like storefront grids, bypassing the appetite hook.
 
 #### Gap C: Lack of "Palette Cleanser" Spacing Guidelines

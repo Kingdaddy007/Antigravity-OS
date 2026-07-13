@@ -1,6 +1,23 @@
-﻿---
+---
 name: workflow-impeccable-extract
 description: Impeccable UI/UX extract workflow
+id: impeccable-extract
+version: 1
+status: active
+intent: Execute impeccable extract with explicit authority, state, outputs, and evidence.
+use_when: [the task matches impeccable extract]
+do_not_use_when: [another workflow more precisely matches the requested outcome]
+inputs: [user objective, workspace context, constraints, requested authority mode]
+required_resources: [applicable AGENTS.md files, referenced skills and contexts]
+mutation_class: local_edit
+approval_gates: [confirm scope expansion or destructive action before mutation]
+states: [intake, assess, propose, approve-if-needed, execute-if-authorized, verify, deliver]
+outputs: [task result, changed-artifact list when applicable, evidence, residual risks]
+verification: [run proportionate checks, record raw evidence, label anything unverified]
+failure_paths: [stop on authority or contract conflict, preserve state, report blocker and safe next action]
+resume_contract: task-scoped .agents/workflows/impeccable-extract.json using the workflows directory contract
+next_workflows: [none]
+profiles: [general]
 ---
 
 # Extract Flow
@@ -11,7 +28,7 @@ Identify reusable patterns, components, and design tokens, then extract and cons
 
 Find the design system, component library, or shared UI directory. Understand its structure: component organization, naming conventions, design token structure, import/export conventions.
 
-**CRITICAL**: If no design system exists, {{ask_instruction}} before creating one. Understand the preferred location and structure first.
+**CRITICAL**: If no design system exists, ask the user a concise blocking question before creating one. Understand the preferred location and structure first.
 
 ## Step 2: Identify Patterns
 

@@ -1,17 +1,6 @@
 ---
 name: color-system
-description: >
-  Use this skill when selecting, auditing, or implementing color palettes for
-  any brand, website, app, marketing asset, or design project. Activated by
-  "choose a color palette", "color scheme", "brand colors", "color psychology",
-  "what color should I use", "color harmony", "complementary colors", "color
-  contrast", "accessible colors", "color roles", "functional color", "action
-  color", "CTA color", "color for this brand", "color audit", "palette
-  generation", "monochromatic", "analogous", "triadic", "tetradic", "split
-  complementary", "color meaning", "what does this color convey", or any task
-  where color decisions affect brand perception, usability, or emotional
-  response. Do NOT use for typography decisions (use ui-ux), brand positioning
-  without color focus (use brand-strategy), or backend/API/security work.
+description: 'Use this skill when selecting, auditing, or implementing color palettes for any brand, website, app, marketing asset, or design project. Activated by "choose a color palette", "color scheme", "brand colors", "color psychology", "what color should I use", "color harmony", "complementary colors", "color contrast", "accessible colors", "color roles", "functional color", "action color", "CTA color", "color for this brand", "color audit", "palette generation", "monochromatic", "analogous", "triadic", "tetradic", "split complementary", "color meaning", "what does this color convey", or any task where color decisions affect brand perception, usability, or emotional response.'
 ---
 
 # Color System

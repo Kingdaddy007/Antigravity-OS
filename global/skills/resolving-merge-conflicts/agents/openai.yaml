@@ -1,0 +1,4 @@
+interface:
+  display_name: "Resolving Merge Conflicts"
+  short_description: "Guidance for resolving merge conflicts tasks"
+  default_prompt: "Use $resolving-merge-conflicts to help complete this task with its domain workflow."

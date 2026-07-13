@@ -1,8 +1,6 @@
 ---
 name: page-cro
-description: When the user wants to optimize, improve, or increase conversions on any marketing page — including homepage, landing pages, pricing pages, feature pages, or blog posts. Also use when the user says "CRO," "conversion rate optimization," "this page isn't converting," "improve conversions," "why isn't this page working," "my landing page sucks," "nobody's converting," "low conversion rate," "bounce rate is too high," "people leave without signing up," or "this page needs work." Use this even if the user just shares a URL and asks for feedback — they probably want conversion help. For signup/registration flows, see signup-flow-cro. For post-signup activation, see onboarding-cro. For forms outside of signup, see form-cro. For popups/modals, see popup-cro.
-metadata:
-  version: 1.1.0
+description: 'Use when diagnosing or improving conversion performance on marketing pages, signup flows, forms, onboarding steps, popups, or modals. Trigger on CRO, low conversion rate, high bounce or abandonment, unclear CTAs, signup friction, or a shared URL requesting conversion feedback. Use copywriting when the primary request is a fresh copy draft rather than conversion diagnosis.'
 ---
 
 # Page Conversion Rate Optimization (CRO)
@@ -106,6 +104,10 @@ Analyze the page across these dimensions, in order of impact:
 
 ---
 
+
+## REFERENCE LOADING RULES
+
+Load `references/resource-index.md` when the task needs examples, specialist criteria, implementation details, or domain-specific diagnostics beyond this core workflow. Select only the references whose indexed purpose matches the task; do not load the package wholesale.
 ## Output Format
 
 Structure your recommendations as:
@@ -177,9 +179,7 @@ When recommending experiments, consider tests for:
 
 ## Related Skills
 
-- **signup-flow-cro**: If the issue is in the signup process itself
-- **form-cro**: If forms on the page need optimization
-- **popup-cro**: If considering popups as part of the strategy
+- Handle signup, form, onboarding, popup, and modal friction directly using the relevant stage of this CRO framework.
 - **copywriting**: If the page needs a complete copy rewrite
-- **ab-test-setup**: To properly test recommended changes
+- **testing**: To properly test recommended changes
 - **expert-positioning**: To ensure CTAs and inquiry flows act as diagnostic qualification gates instead of low-value commodities (WWP)

@@ -1,15 +1,6 @@
 ---
 name: cinematic-motion
-description: >
-  Use this skill when planning or implementing cinematic motion for high-end
-  interior decorator, spatial design, architecture, gallery, showroom,
-  furniture, decor, or luxury home websites. Activated by "add GSAP",
-  "scroll animation", "make this cinematic", "room walkthrough", "parallax
-  interior scene", "before/after reveal", "object spine", "curtain reveal",
-  "image sequence", "WebGL", "canvas", "gallery procession", or any spatial
-  storytelling motion task. Do NOT use for generic product dashboards,
-  backend/API/security/database work, or decorative motion that is not tied to
-  a room, material, threshold, object, proof, or inquiry moment.
+description: 'Use this skill when planning or implementing cinematic motion for high-end interior decorator, spatial design, architecture, gallery, showroom, furniture, decor, or luxury home websites. Activated by "add GSAP", "scroll animation", "make this cinematic", "room walkthrough", "parallax interior scene", "before/after reveal", "object spine", "curtain reveal", "image sequence", "WebGL", "canvas", "gallery procession", or any spatial storytelling motion task. Do NOT use for generic product dashboards, backend/API/security/database work, or decorative motion that is not tied to a room, material, threshold, object, proof, or inquiry moment.'
 ---
 
 # Cinematic Motion
@@ -144,7 +135,7 @@ If it does none of these, use a still or remove it.
 - Use `motion`/Framer only for product-like microstates and small UI transitions.
 - Use CSS transitions for simple hover/focus states.
 - Use canvas image sequences for pre-rendered room/object/camera films that must scrub frame-accurately; load `reference/canvas-frame-scroll-implementation.md`.
-- Use R3F/WebGL only when depth, camera path, object inspection, or material behavior cannot be achieved with DOM/image layers; load `reference/webgl-cylindrical-gallery.md` or `reference/scroll-mapped-3d-camera-scenes.md` when relevant.
+- Use R3F/WebGL only when depth, camera path, object inspection, or material behavior cannot be achieved with DOM/image layers; load `reference/codrops-canvas-cylinder-gallery.md` or `reference/scroll-mapped-3d-camera-scenes.md` when relevant.
 - Use CSS 3D + GSAP when a scroll-controlled cube can tell the spatial story without WebGL; load `reference/scroll-driven-3d-cube.md`.
 - Use dynamic grid assembly, dual-axis window reveals, or Y-axis swing cabinets when scroll layouts must transition dynamically; load `reference/on-scroll-layout-formations.md`.
 - Use IntersectionObserver or ScrollTrigger lifecycle hooks to pause ambient loops offscreen.
@@ -200,6 +191,10 @@ Performance rules:
 | Impossible Reverse | Scrubbed liquid/gravity looks absurd backwards | Use event-triggered clips or non-reversible transitions |
 | Background Video Wallpaper | Video loops behind normal sections without narrative responsibility | Define section job, text zone, scroll behavior, and fallback or remove video |
 
+
+## REFERENCE LOADING RULES
+
+Load `references/resource-index.md` when the task needs examples, specialist criteria, implementation details, or domain-specific diagnostics beyond this core workflow. Select only the references whose indexed purpose matches the task; do not load the package wholesale.
 ## OUTPUT SHAPE
 
 **Motion plan:** Physical law -> four motion tracks -> archetype -> showroom choreography -> artifacts -> fallback -> implementation notes.

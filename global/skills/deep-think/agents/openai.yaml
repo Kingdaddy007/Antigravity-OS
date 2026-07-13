@@ -1,0 +1,4 @@
+interface:
+  display_name: "Deep Think"
+  short_description: "Guidance for deep think tasks"
+  default_prompt: "Use $deep-think to help complete this task with its domain workflow."

@@ -1,68 +1,46 @@
 ---
 name: deriv-bot-engineering
-description: >
-  Use this skill when designing, writing, or troubleshooting Deriv Bot (DBot) XML strategies, 
-  Blockly configurations, or trading algorithms for the Deriv platform. Activated when the user 
-  mentions "Deriv bot", "DBot", "XML5 format", "Accumulator strategy", "trade_definition", 
-  or asks to build/fix a trading bot file. Do NOT use for standard web or backend development 
-  (use coding skill) or generic Python/JS trading algorithms outside the DBot ecosystem.
+description: Design, inspect, or troubleshoot Deriv Bot XML and block-based trading strategies. Use for DBot imports, exported XML, block logic, demo validation, or migration errors; do not use for unrelated trading software.
 ---
 
-# Deriv Bot (DBot) Engineering
+# Deriv Bot Engineering
 
-## WHEN TO USE THIS
+## Verified Baseline
 
-- Generating new `.xml` bot strategies for the Deriv Bot platform.
-- Debugging "Unsupported elements" or "XML5 Format" import errors on Deriv.
-- Designing block logic for DBot options like Accumulators, Rise/Fall, or Martingale.
+Rechecked 2026-07-13:
 
-## NEVER DO
+- Deriv's Help Centre describes Deriv Bot as a block-based strategy builder and confirms that strategies are saved and imported as XML.
+- A first-party Deriv administrator notice states that the Blockly V10 update made variable names case-insensitive and can cause unsupported-element errors in older XML.
 
-- Never generate flat `<block type="trade">` structures. They are deprecated and will crash the V10 parser.
-- Never use generic XML namespaces (e.g., W3 XHTML) in the root tag.
-- Never define duplicate variables with different casing (e.g., `Stake` vs `STAKE`).
-- Never guess custom block names. Only use verified Deriv Blockly structural tags.
-- Never write raw Javascript inside the XML; DBot XML is pure serialized Blockly logic.
+See [the source verification baseline](../../baselines/source-verification.md).
 
-## V10 ARCHITECTURE REQUIREMENTS
+Exact block IDs, nesting, parser versions, field names, ordering, and contract mappings are not a stable public contract. Never infer them from memory or community examples.
 
-Every bot file MUST wrap its setup inside a deeply nested `trade_definition` chain.
+## Workflow
 
-The root tags MUST be: 
-`<xml xmlns="https://developers.google.com/blockly/xml" is_dbot="true" collection="false">`
+1. Ask whether the request is diagnosis, proposal, implementation, or incident mitigation. Diagnosis remains read-only.
+2. Obtain a fresh XML export created by the active Deriv Bot surface for the target trade type.
+3. Preserve its root namespace, metadata, block IDs, field names, and structural ordering unless the active surface proves a change is required.
+4. Compare the failing strategy with the fresh export and isolate the smallest structural difference.
+5. Reject duplicate variable names that differ only by case.
+6. Make the smallest authorized local edit; never upload, run, fund, or trade without separate explicit approval.
+7. Import into a demo account, inspect the reconstructed blocks, and execute only with virtual funds under explicit limits.
+8. Record the export date, active surface, observed parser behavior, and test evidence.
 
-Inside the `TRADE_OPTIONS` statement, you MUST chain blocks sequentially using the `<next>` tag in this exact order:
-1. `trade_definition_market`
-2. `trade_definition_tradetype`
-3. `trade_definition_contracttype`
-4. `trade_definition_candleinterval`
-5. `trade_definition_restartbuysell`
-6. `trade_definition_restartonerror`
+## Safety
 
-## ACCUMULATOR CONFIGURATION
+- Generated XML is code-like trading logic, not financial advice.
+- Never embed credentials, API tokens, account identifiers, or secrets.
+- Default to a demo account and bounded virtual stake.
+- Stop on unsupported elements, missing blocks, changed contract fields, or unexplained behavior.
+- Live-account execution is an `external_or_production` mutation and requires just-in-time approval.
 
-Accumulator logic MUST reside inside the `SUBMARKET` statement of the main definition block.
-Use the `<block type="trade_definition_tradeoptions">` tag.
-Set the Barrier value via the `BARRIER` value block. Barrier values directly map to growth rates: `<field name="NUM">1</field>` = 1% growth rate.
+## Output Contract
 
-## ANTI-PATTERNS
+Return the XML or diagnostic diff together with:
 
-| Anti-Pattern | What It Is | Fix |
-| --- | --- | --- |
-| The HTML Trap | Using `xmlns="http://www.w3.org/1999/xhtml"` in the root XML tag. | Use `xmlns="https://developers.google.com/blockly/xml"`. |
-| The Flat Trade Block | Using `<block type="trade">` to define the strategy setup. | Use the deeply nested `trade_definition` chain. |
-| Case Conflicts | Defining `Win` and `win` as separate variables. | Blockly V10 is case-insensitive. Consolidate to one casing. |
-
-## OUTPUT SHAPE
-
-**When generating a bot:** Explanation of the strategy logic (1-2 sentences) → The V10-compliant XML code block → Instructions to import via the Deriv folder icon.
-**When fixing a bot:** Identification of the broken block or namespace (1 sentence) → Corrected XML code → Brief explanation of why the V10 parser rejected the old structure.
-
-## NON-NEGOTIABLE CHECKLIST
-
-- [ ] Root tag contains the exact Google developers Blockly XML namespace.
-- [ ] Root tag contains `is_dbot="true"`.
-- [ ] Setup logic is properly nested inside the `trade_definition` chain using `<next>` tags.
-- [ ] Accumulator specific logic is correctly mapped to `SUBMARKET` -> `trade_definition_tradeoptions`.
-- [ ] Variable casing is strictly uniform throughout the entire file.
-- [ ] No generic/legacy `<block type="trade">` blocks exist in the output.
+- source export and verification date;
+- assumptions and unverified fields;
+- risk limits;
+- demo import result;
+- remaining blockers before any live use.

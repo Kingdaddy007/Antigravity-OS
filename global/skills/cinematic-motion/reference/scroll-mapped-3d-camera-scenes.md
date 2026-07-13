@@ -1,5 +1,17 @@
 # Scroll-Mapped 3D Camera Scenes
 
+## Contents
+
+- [When To Use](#when-to-use)
+- [Never Use](#never-use)
+- [Core Mechanic](#core-mechanic)
+- [Required Context](#required-context)
+- [Camera Path Rules](#camera-path-rules)
+- [Implementation Notes](#implementation-notes)
+- [Interior Adaptation](#interior-adaptation)
+- [Mobile And Fallback](#mobile-and-fallback)
+- [Quality Gate](#quality-gate)
+
 Use this when a spatial website needs a 3D walkthrough, object inspection, architectural model, room world, or cinematic camera path controlled by scroll. Adapted from the Codrops `codrops-cinematic-scroll-animations` 3D scene showcase.
 
 Source:

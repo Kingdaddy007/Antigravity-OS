@@ -1,6 +1,23 @@
 ---
 name: workflow-impeccable-craft
 description: Build high-end interior storytelling websites from the approved spatial concept contract
+id: impeccable-craft
+version: 1
+status: active
+intent: Execute impeccable craft with explicit authority, state, outputs, and evidence.
+use_when: [the task matches impeccable craft]
+do_not_use_when: [another workflow more precisely matches the requested outcome]
+inputs: [user objective, workspace context, constraints, requested authority mode]
+required_resources: [applicable AGENTS.md files, referenced skills and contexts]
+mutation_class: local_edit
+approval_gates: [confirm scope expansion or destructive action before mutation]
+states: [intake, assess, propose, approve-if-needed, execute-if-authorized, verify, deliver]
+outputs: [task result, changed-artifact list when applicable, evidence, residual risks]
+verification: [run proportionate checks, record raw evidence, label anything unverified]
+failure_paths: [stop on authority or contract conflict, preserve state, report blocker and safe next action]
+resume_contract: task-scoped .agents/workflows/impeccable-craft.json using the workflows directory contract
+next_workflows: [none]
+profiles: [spatial]
 ---
 
 # WORKFLOW: SPATIAL CRAFT
@@ -35,7 +52,7 @@ Load:
 - `skills/spatial-experience-design/reference/material-recipes.md`
 - `skills/spatial-experience-design/reference/audit-mechanics-map.md`
 - `skills/ui-ux/reference/spatial-ui-patterns.md`
-- all files under `contexts/spatial/`
+- all files under `.agents/contexts/spatial/`
 
 ## BUILD GATE
 
@@ -59,7 +76,7 @@ Do not implement until these exist:
 
 If any are missing, stop and run `workflow-spatial-concept.md`.
 
-If `beloved-asset-directive.md` marks an asset as blocking and the file does not exist, pause and ask Beloved to place the asset or explicitly approve a temporary stand-in. Do not fake the asset with CSS.
+If `beloved-asset-directive.md` marks an asset as blocking and the file does not exist, pause and ask the user to place the asset or explicitly approve a temporary stand-in. Do not fake the asset with CSS.
 
 ## EXECUTION SEQUENCE
 

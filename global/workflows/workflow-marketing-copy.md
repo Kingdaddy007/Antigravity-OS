@@ -1,3 +1,23 @@
+---
+id: marketing-copy
+version: 1
+status: active
+intent: Execute marketing copy with explicit authority, state, outputs, and evidence.
+use_when: [the task matches marketing copy]
+do_not_use_when: [another workflow more precisely matches the requested outcome]
+inputs: [user objective, workspace context, constraints, requested authority mode]
+required_resources: [applicable AGENTS.md files, referenced skills and contexts]
+mutation_class: local_edit
+approval_gates: [confirm scope expansion or destructive action before mutation]
+states: [intake, assess, propose, approve-if-needed, execute-if-authorized, verify, deliver]
+outputs: [task result, changed-artifact list when applicable, evidence, residual risks]
+verification: [run proportionate checks, record raw evidence, label anything unverified]
+failure_paths: [stop on authority or contract conflict, preserve state, report blocker and safe next action]
+resume_contract: task-scoped .agents/workflows/marketing-copy.json using the workflows directory contract
+next_workflows: [none]
+profiles: [general]
+---
+
 # WORKFLOW: MARKETING COPY & STRATEGY (FULL SOURCE)
 
 **Version:** Gold v1.0
@@ -48,7 +68,7 @@
 Before writing a single word, establish:
 - What type of page or asset is this?
 - What is the ONE primary action the visitor must take?
-- Do we have the `product-marketing-context.md` available? (If not, switch to Phase 1A of `workflow-project-inception.md` to define it first).
+- Do we have `.agents/contexts/product-marketing-context.md` available? If not, run **Phase 1A: Market Positioning** in the general `workflow-project-inception.md`. Spatial projects may instead derive it from their approved brand diagnostics, but must still write the same runtime context before copy begins.
 
 ---
 

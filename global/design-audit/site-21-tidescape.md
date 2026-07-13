@@ -45,7 +45,7 @@
 Comparing the Tidescape site to our active skills reveals the following gaps:
 
 #### Gap A: Absence of the "Universal Fade-Up Syndrome" Anti-Pattern
-* **The Gap:** [cinematic-motion/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/cinematic-motion/SKILL.md) warns against excessive decoration, but does not formally name or prohibit the overuse of uniform viewport-triggered animation presets.
+* **The Gap:** [cinematic-motion/SKILL.md](../skills/cinematic-motion/SKILL.md) warns against excessive decoration, but does not formally name or prohibit the overuse of uniform viewport-triggered animation presets.
 * **Why it matters:** The model applies identical fade-up reveals to every section, making pages feel cheap and robotic.
 
 #### Gap B: Lack of a "Template Luxury Smell Test"

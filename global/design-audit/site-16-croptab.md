@@ -57,7 +57,7 @@
 Comparing the CropTab site to our active skills reveals the following gaps:
 
 #### Gap A: Omission of the "AgTech/EcoTech" Brand Archetype
-* **The Gap:** [cinematic-motion/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/cinematic-motion/SKILL.md)'s brand-to-motion matrix misses this hybrid category. AgTech combines industrial precision with organic warmth, demanding natural tones, linear physics, and heavy tactile surfaces.
+* **The Gap:** [cinematic-motion/SKILL.md](../skills/cinematic-motion/SKILL.md)'s brand-to-motion matrix misses this hybrid category. AgTech combines industrial precision with organic warmth, demanding natural tones, linear physics, and heavy tactile surfaces.
 * **Why it matters:** The model defaults to cold "tech blue" layouts and bouncy startup eases.
 
 #### Gap B: No "Object-Wipe" Transition Pattern

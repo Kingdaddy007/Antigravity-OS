@@ -2,11 +2,10 @@
 name: seedance-style
 description: 'Control visual style, render-engine tokens, animation registers, period aesthetics, CGI material contracts, and style transfer via reference for Seedance 2.0. Use when setting a specific look — cinematic, anime, 3D, vintage, photorealistic — or when style is inconsistent across a shot chain.'
 license: MIT
-user-invocable: true
-user-invokable: true
-tags: ["style", "aesthetic", "transfer", "openclaw", "antigravity", "gemini-cli", "codex", "cursor"]
-metadata: {"version": "5.0.0", "updated": "2026-03-03", "openclaw": {"emoji": "🎨", "homepage": "https://github.com/Emily2040/seedance-2.0"}, "parent": "seedance-20", "antigravity": {"emoji": "🎨", "homepage": "https://github.com/Emily2040/seedance-2.0"}, "gemini-cli": {"emoji": "🎨", "homepage": "https://github.com/Emily2040/seedance-2.0"}, "author": "Emily (@iamemily2050)", "repository": "https://github.com/Emily2040/seedance-2.0"}
 ---
+## STATUS VERIFICATION GATE
+
+Treat platform availability, model limits, filter behavior, enforcement actions, and API status dated February-March 2026 as historical snapshots. Before relying on them, verify current official ByteDance/Seedance documentation. If verification is unavailable, label the claim unverified and avoid presenting it as current fact.
 
 # seedance-style
 

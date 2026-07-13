@@ -1,5 +1,17 @@
 # WebGL Cylindrical Gallery (Codrops Canvas Method)
 
+## Contents
+
+- [When To Use](#when-to-use)
+- [Never Use](#never-use)
+- [Core Mechanic](#core-mechanic)
+- [Required Context](#required-context)
+- [Image Requirements](#image-requirements)
+- [Implementation Notes](#implementation-notes)
+- [Interior Adaptation](#interior-adaptation)
+- [Mobile And Fallback](#mobile-and-fallback)
+- [Quality Gate](#quality-gate)
+
 Use this when a portfolio or material archive should feel like a rotating private gallery, panoramic room wall, or immersive showroom object. Adapted from the Codrops `codrops-cinematic-scroll-animations` cylinder carousel.
 
 Source:

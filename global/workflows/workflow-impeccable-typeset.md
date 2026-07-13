@@ -1,6 +1,23 @@
-﻿---
+---
 name: workflow-impeccable-typeset
 description: Impeccable UI/UX typeset workflow
+id: impeccable-typeset
+version: 1
+status: active
+intent: Execute impeccable typeset with explicit authority, state, outputs, and evidence.
+use_when: [the task matches impeccable typeset]
+do_not_use_when: [another workflow more precisely matches the requested outcome]
+inputs: [user objective, workspace context, constraints, requested authority mode]
+required_resources: [applicable AGENTS.md files, referenced skills and contexts]
+mutation_class: local_edit
+approval_gates: [confirm scope expansion or destructive action before mutation]
+states: [intake, assess, propose, approve-if-needed, execute-if-authorized, verify, deliver]
+outputs: [task result, changed-artifact list when applicable, evidence, residual risks]
+verification: [run proportionate checks, record raw evidence, label anything unverified]
+failure_paths: [stop on authority or contract conflict, preserve state, report blocker and safe next action]
+resume_contract: task-scoped .agents/workflows/impeccable-typeset.json using the workflows directory contract
+next_workflows: [none]
+profiles: [general]
 ---
 
 Assess and improve typography that feels generic, inconsistent, or poorly structured — turning default-looking text into intentional, well-crafted type.

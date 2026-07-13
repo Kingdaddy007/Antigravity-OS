@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Creator"
+  short_description: "Guidance for skill creator tasks"
+  default_prompt: "Use $skill-creator to help complete this task with its domain workflow."

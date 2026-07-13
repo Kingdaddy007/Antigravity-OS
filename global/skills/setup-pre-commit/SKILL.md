@@ -1,9 +1,6 @@
 ---
-name: SETUP PRE-COMMIT
-description: >
-  Set up Husky pre-commit hooks with lint-staged (Prettier), type checking, and tests in the current repo.
-  Signal phrases: "setup pre-commit", "add husky", "setup lint-staged", "git commit hooks", "configure prettier".
-  Always detect the local package manager first and check for existing scripts before configuration.
+name: setup-pre-commit
+description: 'Use when the task requires setup pre commit guidance. Set up Husky pre-commit hooks with lint-staged (Prettier), type checking, and tests in the current repo. Signal phrases: "setup pre-commit", "add husky", "setup lint-staged", "git commit hooks", "configure prettier". Always detect the local package manager first and check for existing scripts before configuration.'
 ---
 
 # SETUP PRE-COMMIT

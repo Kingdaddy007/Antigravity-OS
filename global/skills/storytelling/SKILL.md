@@ -1,16 +1,6 @@
 ---
 name: storytelling
-description: >
-  Use this skill when creating the narrative, emotional journey, copy
-  direction, visual direction, or section sequence for high-end interior
-  decorator, interior design, spatial design, architecture, staging, furniture,
-  decor, showroom, gallery, or luxury home websites. Activated by "story",
-  "position this interior brand", "portfolio narrative", "make it feel
-  seductive", "spatial storytelling", "copy direction", "visual thesis", or
-  any task where rooms, materials, transformations, proof, and inquiry must
-  become a coherent website experience. Do NOT use for backend/API/security
-  work or for writing final long-form copy without first defining the spatial
-  narrative.
+description: 'Use this skill when creating the narrative, emotional journey, copy direction, visual direction, or section sequence for high-end interior decorator, interior design, spatial design, architecture, staging, furniture, decor, showroom, gallery, or luxury home websites. Activated by "story", "position this interior brand", "portfolio narrative", "make it feel seductive", "spatial storytelling", "copy direction", "visual thesis", or any task where rooms, materials, transformations, proof, and inquiry must become a coherent website experience. Do NOT use for backend/API/security work or for writing final long-form copy without first defining the spatial narrative.'
 ---
 
 # Storytelling
@@ -127,6 +117,10 @@ Choose proof based on the brand:
 | Generic Luxury Copy | "Elevated, bespoke, timeless" | Use material, room, decision, client tension |
 | Portfolio Dump | Grid of projects with no pacing | Use gallery procession then index |
 
+
+## REFERENCE LOADING RULES
+
+Load `references/resource-index.md` when the task needs examples, specialist criteria, implementation details, or domain-specific diagnostics beyond this core workflow. Select only the references whose indexed purpose matches the task; do not load the package wholesale.
 ## OUTPUT SHAPE
 
 **Narrative direction:** One feeling -> visual thesis -> room sequence -> proof choreography -> inquiry posture.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI/UX Design"
+  short_description: "Design and verify usable, accessible interfaces"
+  default_prompt: "Use $ui-ux to design or audit this interface, selecting product, brand, or spatial guidance from the active context."

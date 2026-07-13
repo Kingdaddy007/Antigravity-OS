@@ -1,9 +1,28 @@
+---
+id: debug-issue
+version: 1
+status: active
+intent: Execute debug issue with explicit authority, state, outputs, and evidence.
+use_when: [the task matches debug issue]
+do_not_use_when: [another workflow more precisely matches the requested outcome]
+inputs: [user objective, workspace context, constraints, requested authority mode]
+required_resources: [applicable AGENTS.md files, referenced skills and contexts]
+mutation_class: local_edit
+approval_gates: [confirm diagnose or propose versus implement, require explicit approval for external mutation]
+states: [intake, assess, propose, approve-if-needed, execute-if-authorized, verify, deliver]
+outputs: [task result, changed-artifact list when applicable, evidence, residual risks]
+verification: [run proportionate checks, record raw evidence, label anything unverified]
+failure_paths: [stop on authority or contract conflict, preserve state, report blocker and safe next action]
+resume_contract: task-scoped .agents/workflows/debug-issue.json using the workflows directory contract
+next_workflows: [none]
+profiles: [general]
+---
+
 # WORKFLOW: DEBUG ISSUE (FULL SOURCE)
 
 **Version:** Gold v1.1 (Master Merge)
 **Layer:** 8 — Execution Workflow
 **Tier:** 2 — Loaded by task
-**File:** workflows/workflow-debug-issue-SOURCE.md
 **Primary Mode:** Debugger
 **Secondary Modes:** Reviewer, Builder, Security, Testing
 **Purpose:** The systematic sequence for diagnosing and fixing bugs — from symptom observation through root cause identification to verified fix with regression prevention. Prevents the most common debugging mistake: guessing at the cause and changing code before understanding the problem.
@@ -21,6 +40,17 @@ Without this workflow, debugging degenerates into shotgun debugging — random c
 ---
 
 ## ACTIVATION
+
+### Authority Mode (Required)
+
+Classify the request before changing anything:
+
+- **diagnose** — gather evidence, isolate root cause, and stop with findings.
+- **propose** — diagnose and present fix or mitigation options without mutation.
+- **implement** — diagnose, edit the workspace, and verify because the user requested a fix.
+- **incident-mitigate** — coordinate production containment through `workflow-incident-response.md`; external mutation requires its just-in-time approval gate.
+
+Requests such as "Why is this happening?" default to **diagnose**. Never infer implement or incident-mitigate authority from urgency alone.
 
 ### Use When
 
@@ -114,10 +144,10 @@ Do NOT jump straight to a fix. Instead:
 
 | Severity | Definition | Process Modification |
 | :--- | :--- | :--- |
-| P1 — Critical | Service down or data integrity at risk | Steps 1 and 2 compressed. Rollback immediately if possible. Apply full process after mitigation. |
-| P2 — Major | Major feature broken, many users affected | Full process but expedited. Skip extensive hypothesis ranking if cause is already obvious from evidence. |
-| P3 — Minor | Minor bug, workaround exists | Full process. No shortcuts. |
-| P4 — Cosmetic | Visual issue, no functional impact | Simplified: identify → fix → verify. Full hypothesis formation not required. |
+| SEV-1 — Critical | Service down or data integrity at risk | Compress evidence intake, route to `workflow-incident-response.md`, and execute mitigation only after its authority gate. Apply full diagnosis after stabilization. |
+| SEV-2 — Major | Major feature broken, many users affected | Full process but expedited. Skip extensive hypothesis ranking if cause is already obvious from evidence. |
+| SEV-3 — Minor | Minor bug, workaround exists | Full process. No shortcuts. |
+| SEV-4 — Cosmetic | Visual issue, no functional impact | Simplified: identify → fix → verify. Full hypothesis formation not required. |
 
 ---
 
@@ -172,7 +202,7 @@ Do NOT jump straight to a fix. Instead:
 Symptom: [observed behavior] when [conditions]
 Expected: [correct behavior]
 Reproducible: [yes / no / intermittent]
-Severity: [P1 / P2 / P3 / P4]
+Severity: [SEV-1 / SEV-2 / SEV-3 / SEV-4]
 Immediate mitigation needed: [yes / no]
 ```
 
@@ -343,10 +373,12 @@ Do not call a hypothesis confirmed because it sounds coherent. Tie confirmation 
 
 ---
 
-### STEP 5 — FIX
+### STEP 5 — FIX (IMPLEMENT MODE ONLY)
 
 **Mode:** Builder
 **Goal:** Implement a targeted fix that addresses the root cause, not the symptom.
+
+**Authority gate:** In diagnose mode, stop after Step 4 and deliver the evidence-backed root cause. In propose mode, describe the smallest fix and verification plan, but do not edit. Proceed below only in implement mode.
 
 **CRITICAL RULE:** A fix without a regression test is a temporary patch, not a solution.
 
@@ -444,14 +476,14 @@ Do not treat "it stopped happening once" as sufficient proof for meaningful issu
 
 #### Load Template (Step 7)
 
-- [REQUIRED] Load [debug-report.md](file:///C:/Users/godsw/.gemini/config/global_templates/debug-report.md)
+- [REQUIRED] Load [debug-report.md](../global_templates/debug-report.md)
 - Follow the structure and guidance in the template exactly to record the bug investigation.
 
 ---
 
 ### STEP 8 — POST-FIX & MEMORY CAPTURE (MANDATORY FOR SIGNIFICANT BUGS)
 
-1. If the bug was P1 or P2: conduct a post-mortem within 48 hours
+1. If the bug was SEV-1 or SEV-2: conduct a post-mortem within 48 hours
 2. Post-mortem format: Timeline, Impact, Root Cause using Five Whys, Contributing Factors, Action Items with owners and deadlines
 3. Blameless culture — focus on systems, not individuals
 
@@ -459,7 +491,7 @@ Do not treat "it stopped happening once" as sufficient proof for meaningful issu
 
 - [ ] **Mistakes:** Log to `.agents/memory/mistakes-to-avoid.md` if this bug class could recur
 - [ ] **Patterns:** Log to `.agents/memory/common-patterns.md` if the fix reveals a reusable pattern
-- [ ] **Postmortem:** Log to `.agents/memory/postmortems.md` if P1/P2 severity
+- [ ] **Postmortem:** Log to `.agents/memory/postmortems.md` if SEV-1/SEV-2 severity
 - [ ] **Contexts:** Update relevant context files if the bug reveals a gap in documented conventions
 - [ ] **Directory Contracts:** Did the fix require changing a directory's exported interface or adding a new external dependency? → Update the local `AGENTS.md` file.
 
@@ -584,9 +616,9 @@ Before marking a bug fix as complete:
 
 ```
 
-1. Read task.md for current phase and completed steps
+1. Read .agents/workflows/<task-id>.json for current phase and completed steps
 2. Announce: "Resuming debug workflow from Phase [N]"
-3. Re-read the symptom statement and evidence gathered so far from task.md notes
+3. Re-read the symptom statement and evidence gathered so far from .agents/workflows/<task-id>.json notes
 4. Check if new evidence appeared since last session (logs, user reports)
 5. Resume from current phase — do NOT restart from symptom observation
 ```
@@ -595,7 +627,7 @@ Before marking a bug fix as complete:
 
 ```
 
-1. If P1/P2: ship a MITIGATION (feature flag, rollback) immediately
+1. If SEV-1/SEV-2: route to `workflow-incident-response.md`, propose the smallest reversible mitigation, and obtain just-in-time external-mutation approval
 2. Label it clearly: "This is mitigation, not a fix"
 3. Keep the debug workflow OPEN — do not close the investigation
 4. Schedule the root-cause fix for the next available slot
@@ -606,11 +638,11 @@ Before marking a bug fix as complete:
 
 ## WORKFLOW STATE TRACKING
 
-This workflow integrates with `task.md`.
+This workflow integrates with `.agents/workflows/<task-id>.json`.
 
-**On activation:** Check `task.md` for existing state or create a new checklist.
-**After each step:** Update `task.md` with current phase, status, and notes.
-**On interruption:** task.md preserves progress for next session.
+**On activation:** Check `.agents/workflows/<task-id>.json` for existing state or create a new checklist.
+**After each step:** Update `.agents/workflows/<task-id>.json` with current phase, status, and notes.
+**On interruption:** .agents/workflows/<task-id>.json preserves progress for next session.
 
 Phase map for state tracking:
 

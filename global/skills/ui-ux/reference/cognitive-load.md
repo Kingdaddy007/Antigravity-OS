@@ -1,4 +1,22 @@
-﻿# Cognitive Load Assessment
+# Cognitive Load Assessment
+
+## Contents
+
+- [Three Types of Cognitive Load](#three-types-of-cognitive-load)
+  - [Intrinsic Load: The Task Itself](#intrinsic-load-the-task-itself)
+  - [Extraneous Load: Bad Design](#extraneous-load-bad-design)
+  - [Germane Load: Learning Effort](#germane-load-learning-effort)
+- [Cognitive Load Checklist](#cognitive-load-checklist)
+- [The Working Memory Rule](#the-working-memory-rule)
+- [Common Cognitive Load Violations](#common-cognitive-load-violations)
+  - [1. The Wall of Options](#1-the-wall-of-options)
+  - [2. The Memory Bridge](#2-the-memory-bridge)
+  - [3. The Hidden Navigation](#3-the-hidden-navigation)
+  - [4. The Jargon Barrier](#4-the-jargon-barrier)
+  - [5. The Visual Noise Floor](#5-the-visual-noise-floor)
+  - [6. The Inconsistent Pattern](#6-the-inconsistent-pattern)
+  - [7. The Multi-Task Demand](#7-the-multi-task-demand)
+  - [8. The Context Switch](#8-the-context-switch)
 
 Cognitive load is the total mental effort required to use an interface. Overloaded users make mistakes, get frustrated, and leave. This reference helps identify and fix cognitive overload.
 

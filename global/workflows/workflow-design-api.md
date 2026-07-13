@@ -1,9 +1,28 @@
+---
+id: design-api
+version: 1
+status: active
+intent: Execute design api with explicit authority, state, outputs, and evidence.
+use_when: [the task matches design api]
+do_not_use_when: [another workflow more precisely matches the requested outcome]
+inputs: [user objective, workspace context, constraints, requested authority mode]
+required_resources: [applicable AGENTS.md files, referenced skills and contexts]
+mutation_class: local_edit
+approval_gates: [confirm diagnose or propose versus implement, require explicit approval for external mutation]
+states: [intake, assess, propose, approve-if-needed, execute-if-authorized, verify, deliver]
+outputs: [task result, changed-artifact list when applicable, evidence, residual risks]
+verification: [run proportionate checks, record raw evidence, label anything unverified]
+failure_paths: [stop on authority or contract conflict, preserve state, report blocker and safe next action]
+resume_contract: task-scoped .agents/workflows/design-api.json using the workflows directory contract
+next_workflows: [none]
+profiles: [general]
+---
+
 # WORKFLOW: DESIGN API (FULL SOURCE)
 
 **Version:** Gold v1.1 (Master Merge)
 **Layer:** 8 — Execution Workflow
 **Tier:** 2 — Loaded by task
-**File:** workflows/workflow-design-api-SOURCE.md
 **Primary Mode:** Architect
 **Secondary Modes:** Security, Builder, Reviewer, Research
 **Purpose:** The systematic sequence for designing API endpoints and contracts — from understanding the consumer's needs through contract definition to implementation with proper error handling, security, and documentation. Ensures APIs are designed from the consumer's perspective, not the database schema's perspective.
@@ -21,6 +40,13 @@ Without this workflow, APIs tend to leak internal implementation details, use in
 ---
 
 ## ACTIVATION
+
+### Authority Mode (Required)
+
+- **propose** produces a contract, trade-offs, and verification plan without changing implementation.
+- **implement** may edit endpoint, schema, tests, and documentation because the user requested implementation.
+
+If the request says only "design" or asks for options, default to propose. Step 6 runs only in implement mode.
 
 ### Use When
 
@@ -311,7 +337,7 @@ Compatibility strategy: [additive / versioned]
 
 ---
 
-### STEP 6 — IMPLEMENT
+### STEP 6 — IMPLEMENT (IMPLEMENT MODE ONLY)
 
 **Mode:** Builder
 **Goal:** Build the endpoint following the defined contract exactly.

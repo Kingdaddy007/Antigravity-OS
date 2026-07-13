@@ -1,5 +1,22 @@
 ---
 description: The systematic sequence for running automated project verification checks — security scan, code quality, accessibility, and performance profiling before deployment.
+id: verify-project
+version: 1
+status: active
+intent: Execute verify project with explicit authority, state, outputs, and evidence.
+use_when: [the task matches verify project]
+do_not_use_when: [another workflow more precisely matches the requested outcome]
+inputs: [user objective, workspace context, constraints, requested authority mode]
+required_resources: [applicable AGENTS.md files, referenced skills and contexts]
+mutation_class: read_only
+approval_gates: [confirm scope expansion or destructive action before mutation]
+states: [intake, assess, propose, approve-if-needed, execute-if-authorized, verify, deliver]
+outputs: [task result, changed-artifact list when applicable, evidence, residual risks]
+verification: [run proportionate checks, record raw evidence, label anything unverified]
+failure_paths: [stop on authority or contract conflict, preserve state, report blocker and safe next action]
+resume_contract: task-scoped .agents/workflows/verify-project.json using the workflows directory contract
+next_workflows: [none]
+profiles: [general]
 ---
 
 # WORKFLOW: VERIFY PROJECT (MASTER)
@@ -8,7 +25,7 @@ description: The systematic sequence for running automated project verification 
 > YOU MUST USE TOOL CALLS TO READ THE FULL SOURCE FILE AND THE REQUIRED SKILLS/CONTEXTS BEFORE EXECUTING THIS.
 > Verify silently in your internal reasoning that you have done this.
 
-> **IMPORTANT [REQUIRED]:** This workflow runs the Antigravity Gold verification scripts against the current project. The scripts are located in `file:///C:/Users/godsw/.gemini/config\scripts\`.
+> **IMPORTANT [REQUIRED]:** Resolve `ANTIGRAVITY_HOME` through the installed-tool registry or environment, verify the selected Python interpreter and script exist, then run the baseline scanners. If discovery fails, report the check as unavailable rather than guessing a path.
 
 ## WHAT THIS WORKFLOW DOES
 
@@ -36,29 +53,29 @@ Runs automated quality checks against the project to catch security issues, code
 ### Quick Check (Most Common)
 
 ```bash
-python file:///C:/Users/godsw/.gemini/config\scripts\verify.py <project_path>
+python "$ANTIGRAVITY_HOME/scripts/verify.py" <project_path>
 ```
 
 This runs all 4 checks in priority order:
 
-1. **P0: Security Scan** — Hardcoded secrets, dangerous code, env exposure
-2. **P1: Code Quality** — Console.log, empty catch, unhandled fetch
-3. **P2: Accessibility** — WCAG basics on HTML files
-4. **P3: Performance** — File sizes, bundle analysis
+1. **Order 1: Security Scan** — Hardcoded secrets, dangerous code, env exposure
+2. **Order 2: Code Quality** — Console.log, empty catch, unhandled fetch
+3. **Order 3: Accessibility** — WCAG basics on HTML files
+4. **Order 4: Performance** — File sizes, bundle analysis
 
 ### Targeted Check
 
 ```bash
-python file:///C:/Users/godsw/.gemini/config\scripts\verify.py <project_path> --only security
-python file:///C:/Users/godsw/.gemini/config\scripts\verify.py <project_path> --only quality
-python file:///C:/Users/godsw/.gemini/config\scripts\verify.py <project_path> --only accessibility
-python file:///C:/Users/godsw/.gemini/config\scripts\verify.py <project_path> --only performance
+python "$ANTIGRAVITY_HOME/scripts/verify.py" <project_path> --only security
+python "$ANTIGRAVITY_HOME/scripts/verify.py" <project_path> --only quality
+python "$ANTIGRAVITY_HOME/scripts/verify.py" <project_path> --only accessibility
+python "$ANTIGRAVITY_HOME/scripts/verify.py" <project_path> --only performance
 ```
 
 ### Skip Specific Checks
 
 ```bash
-python file:///C:/Users/godsw/.gemini/config\scripts\verify.py <project_path> --skip performance
+python "$ANTIGRAVITY_HOME/scripts/verify.py" <project_path> --skip performance
 ```
 
 ---
@@ -67,7 +84,7 @@ python file:///C:/Users/godsw/.gemini/config\scripts\verify.py <project_path> --
 
 | Exit Code | Meaning | Action |
 | :--- | :--- | :--- |
-| 0 | All checks passed | Ready to deploy |
+| 0 | Configured baseline scans passed | Continue with project-native tests, typecheck, build, CI, and the production-readiness workflow |
 | 1 | Issues found | Review output, fix critical/high issues before deployment |
 
 ### Severity Levels

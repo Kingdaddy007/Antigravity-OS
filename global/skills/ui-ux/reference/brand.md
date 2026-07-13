@@ -1,4 +1,20 @@
-﻿# Brand register
+# Brand register
+
+## Contents
+
+- [The brand slop test](#the-brand-slop-test)
+- [Typography](#typography)
+  - [Font selection procedure](#font-selection-procedure)
+  - [Reflex-reject list](#reflex-reject-list)
+  - [Reflex-reject aesthetic lanes](#reflex-reject-aesthetic-lanes)
+  - [Pairing and voice](#pairing-and-voice)
+  - [Scale](#scale)
+- [Color](#color)
+- [Layout](#layout)
+- [Imagery](#imagery)
+- [Motion](#motion)
+- [Brand bans (on top of the shared absolute bans)](#brand-bans-on-top-of-the-shared-absolute-bans)
+- [Brand permissions](#brand-permissions)
 
 When design IS the product: brand sites, landing pages, marketing surfaces, campaign pages, portfolios, long-form content, about pages. The deliverable is the design itself; a visitor's impression is the thing being made.
 
@@ -37,7 +53,7 @@ Parallel to the font list. Currently saturated aesthetic families that have floo
 
 (More entries land here on the same cadence the font list updates. Brutalist-utility and acid-maximalism may join when they saturate. Removing entries when they fall back below saturation is also fine.)
 
-The reflex-reject lists apply to **new design choices**. When the existing brand has already committed to a font or a lane as part of its identity, identity-preservation wins; variants on an existing surface don't second-guess what's already shipping. The reflex-reject lists are for greenfield decisions and for departure-mode variants in [live.md](live.md).
+The reflex-reject lists apply to **new design choices**. When the existing brand has already committed to a font or a lane as part of its identity, identity-preservation wins; variants on an existing surface don't second-guess what's already shipping. Apply the reflex-reject lists to greenfield decisions and explicitly approved departure-mode variants.
 
 ### Pairing and voice
 
@@ -112,4 +128,3 @@ Brand can afford things product can't. Take them.
 - Typographic risk. Enormous display type, unexpected italic cuts, mixed cases, hand-drawn headlines, a single oversize word as a hero.
 - Unexpected color strategies. Palette IS voice; a calm brand and a restless brand should not share palette mechanics.
 - Art direction per section. Different sections can have different visual worlds if the narrative demands it. Consistency of voice beats consistency of treatment.
-

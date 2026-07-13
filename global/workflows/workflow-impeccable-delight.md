@@ -1,6 +1,23 @@
-﻿---
+---
 name: workflow-impeccable-delight
 description: Impeccable UI/UX delight workflow
+id: impeccable-delight
+version: 1
+status: active
+intent: Execute impeccable delight with explicit authority, state, outputs, and evidence.
+use_when: [the task matches impeccable delight]
+do_not_use_when: [another workflow more precisely matches the requested outcome]
+inputs: [user objective, workspace context, constraints, requested authority mode]
+required_resources: [applicable AGENTS.md files, referenced skills and contexts]
+mutation_class: local_edit
+approval_gates: [confirm scope expansion or destructive action before mutation]
+states: [intake, assess, propose, approve-if-needed, execute-if-authorized, verify, deliver]
+outputs: [task result, changed-artifact list when applicable, evidence, residual risks]
+verification: [run proportionate checks, record raw evidence, label anything unverified]
+failure_paths: [stop on authority or contract conflict, preserve state, report blocker and safe next action]
+resume_contract: task-scoped .agents/workflows/impeccable-delight.json using the workflows directory contract
+next_workflows: [none]
+profiles: [general]
 ---
 
 > **Additional context needed**: what's appropriate for the domain (playful vs professional vs quirky vs elegant).
@@ -42,7 +59,7 @@ Identify where delight would enhance (not distract from) the experience:
    - **Helpful surprises**: Anticipating needs before users ask (productivity tools)
    - **Sensory richness**: Satisfying sounds, smooth animations (creative tools)
 
-If any of these are unclear from the codebase, {{ask_instruction}}
+If any of these are unclear from the codebase, ask the user a concise blocking question
 
 **CRITICAL**: Delight should enhance usability, never obscure it. If users notice the delight more than accomplishing their goal, you've gone too far.
 

@@ -1,6 +1,23 @@
-﻿---
+---
 name: workflow-impeccable-live
 description: Impeccable UI/UX live workflow
+id: impeccable-live
+version: 1
+status: active
+intent: Execute impeccable live with explicit authority, state, outputs, and evidence.
+use_when: [the task matches impeccable live]
+do_not_use_when: [another workflow more precisely matches the requested outcome]
+inputs: [user objective, workspace context, constraints, requested authority mode]
+required_resources: [applicable AGENTS.md files, referenced skills and contexts]
+mutation_class: local_edit
+approval_gates: [confirm diagnose or propose versus implement, require explicit approval for external mutation]
+states: [intake, assess, propose, approve-if-needed, execute-if-authorized, verify, deliver]
+outputs: [task result, changed-artifact list when applicable, evidence, residual risks]
+verification: [run proportionate checks, record raw evidence, label anything unverified]
+failure_paths: [stop on authority or contract conflict, preserve state, report blocker and safe next action]
+resume_contract: task-scoped .agents/workflows/impeccable-live.json using the workflows directory contract
+next_workflows: [none]
+profiles: [general]
 ---
 
 Interactive live variant mode: select elements in the browser, pick a design action, and get AI-generated HTML+CSS variants hot-swapped via the dev server's HMR.
@@ -31,7 +48,7 @@ Chat is overhead. No recap, no tutorial output, no pasting PRODUCT / DESIGN bodi
 ## Start
 
 ```bash
-node {{scripts_path}}/live.mjs
+node "$IMPECCABLE_SCRIPTS/live.mjs"
 ```
 
 Output JSON: `{ ok, serverPort, serverToken, pageFiles, hasProduct, product, productPath, hasDesign, design, designPath, migrated }`. `pageFiles` is the list of HTML entries the live script was injected into. Keep PRODUCT.md and DESIGN.md in mind for variant generation — **DESIGN.md wins on visual decisions; PRODUCT.md wins on strategic/voice decisions.** If `migrated: true`, the loader auto-renamed legacy `.impeccable.md` to `PRODUCT.md`; mention this once and suggest `/impeccable document` for the matching DESIGN.md.
@@ -44,7 +61,7 @@ If output is `{ ok: false, error: "config_missing" | "config_invalid", path }`, 
 
 ```
 LOOP:
-  node {{scripts_path}}/live-poll.mjs   # default long timeout; no --timeout=
+  node "$IMPECCABLE_SCRIPTS/live-poll.mjs"   # default long timeout; no --timeout=
   Read JSON; dispatch on "type"
 
   "generate"  → Handle Generate; reply done; LOOP
@@ -79,7 +96,7 @@ Reading annotations precisely:
 ### 2. Wrap the element
 
 ```bash
-node {{scripts_path}}/live-wrap.mjs --id EVENT_ID --count EVENT_COUNT --element-id "ELEMENT_ID" --classes "class1,class2" --tag "div"
+node "$IMPECCABLE_SCRIPTS/live-wrap.mjs" --id EVENT_ID --count EVENT_COUNT --element-id "ELEMENT_ID" --classes "class1,class2" --tag "div"
 ```
 
 Flag mapping — keep them separate, don't collapse into `--query`:
@@ -244,7 +261,7 @@ The carbonize cleanup step (see below) reads that comment and bakes the chosen v
 ### 8. Signal done
 
 ```bash
-node {{scripts_path}}/live-poll.mjs --reply EVENT_ID done --file RELATIVE_PATH
+node "$IMPECCABLE_SCRIPTS/live-poll.mjs" --reply EVENT_ID done --file RELATIVE_PATH
 ```
 
 `RELATIVE_PATH` is relative to project root (`public/index.html`, `src/App.tsx`, etc.) — the browser fetches source directly if the dev server lacks HMR.
@@ -345,7 +362,7 @@ When the poll returns `exit`, proceed to cleanup. If the poll is still running a
 ## Cleanup
 
 ```bash
-node {{scripts_path}}/live-server.mjs stop
+node "$IMPECCABLE_SCRIPTS/live-server.mjs" stop
 ```
 
 Stops the HTTP server and runs `live-inject.mjs --remove` to strip `localhost:…/live.js` from the HTML entry. To stop the server but keep the inject tag (for a quick restart), use `stop --keep-inject`. `config.json` persists for future sessions.
@@ -431,7 +448,7 @@ If `config.cspChecked === true`, skip this entire section. You already asked thi
 Otherwise, run the detection helper:
 
 ```bash
-node {{scripts_path}}/detect-csp.mjs
+node "$IMPECCABLE_SCRIPTS/detect-csp.mjs"
 ```
 
 Output: `{ shape, signals }` where `shape` is one of `append-arrays`, `append-string`, `middleware`, `meta-tag`, or `null`. The shape is named by *patch mechanism*, so one template covers many frameworks.

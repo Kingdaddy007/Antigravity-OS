@@ -52,7 +52,7 @@ Comparing the Obsidian Assembly to our active skills reveals the following gaps:
 * **Why it matters:** The model hides the list and mounts a new component, causing a visual flash instead of a continuous layout morph.
 
 #### Gap B: No "Curated Archive Luxury" Design Mode
-* **The Gap:** [ui-ux/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/ui-ux/SKILL.md) lacks an "Archive Mode" (evidence catalogs, metadata tables, museum labels, parchment-obsidian resets).
+* **The Gap:** [ui-ux/SKILL.md](../skills/ui-ux/SKILL.md) lacks an "Archive Mode" (evidence catalogs, metadata tables, museum labels, parchment-obsidian resets).
 * **Why it matters:** The model defaults to clean corporate luxury, losing the academic, mysterious tone.
 
 #### Gap C: Missing "Material Script" in Planning

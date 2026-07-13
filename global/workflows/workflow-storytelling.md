@@ -1,15 +1,35 @@
+---
+id: storytelling
+version: 1
+status: active
+intent: Execute storytelling with explicit authority, state, outputs, and evidence.
+use_when: [the task matches storytelling]
+do_not_use_when: [another workflow more precisely matches the requested outcome]
+inputs: [user objective, workspace context, constraints, requested authority mode]
+required_resources: [applicable AGENTS.md files, referenced skills and contexts]
+mutation_class: local_edit
+approval_gates: [confirm scope expansion or destructive action before mutation]
+states: [intake, assess, propose, approve-if-needed, execute-if-authorized, verify, deliver]
+outputs: [task result, changed-artifact list when applicable, evidence, residual risks]
+verification: [run proportionate checks, record raw evidence, label anything unverified]
+failure_paths: [stop on authority or contract conflict, preserve state, report blocker and safe next action]
+resume_contract: task-scoped .agents/workflows/storytelling.json using the workflows directory contract
+next_workflows: [none]
+profiles: [spatial]
+---
+
 # WORKFLOW: STORYTELLING
 
 **Version:** Gold v1.0
 **Layer:** Execution workflow
 **Tier:** 2 — loaded by task
-**Purpose:** Formal workflow for the storytelling process. Defines entry gates, session approval points, iteration contracts, and exit criteria for creating `contexts/story.md` — the master narrative document that drives all subsequent design and animation decisions.
+**Purpose:** Formal workflow for the storytelling process. Defines entry gates, session approval points, iteration contracts, and exit criteria for creating `.agents/contexts/story.md` — the master narrative document that drives all subsequent design and animation decisions.
 
 ---
 
 ## WHAT THIS WORKFLOW DOES
 
-This workflow governs the creation of `contexts/story.md`. It provides:
+This workflow governs the creation of `.agents/contexts/story.md`. It provides:
 - Entry criteria (what must exist before storytelling begins)
 - Session gates (when to pause and get approval)
 - Iteration contract (how many rounds, what triggers a lock)
@@ -41,7 +61,7 @@ Do not use it when:
 
 ### Context Files Required (Entry Gate)
 - `PRODUCT.md` — must exist (register, personality, audience)
-- `contexts/research-brief.md` — must exist (do not proceed without it)
+- `.agents/contexts/research-brief.md` — must exist (do not proceed without it)
 
 ---
 
@@ -52,12 +72,12 @@ Do not use it when:
 **Mode:** Designer (Discovery)
 
 1. **Read PRODUCT.md** — extract register, brand personality, audience, anti-references
-2. **Read `contexts/research-brief.md`** — extract brand summary, audience summary, competition summary, key insights
-3. **Read `contexts/brand-diagnostics.md`** (if it exists) — extract perception gap, founder lore, brand world pillars, enemy, signature language, behavioral persuasion rules, and visual direction constraints. This is the output of `skill-brand-strategy` and provides the deepest strategic foundation for the story.
+2. **Read `.agents/contexts/research-brief.md`** — extract brand summary, audience summary, competition summary, key insights
+3. **Read `.agents/contexts/brand-diagnostics.md`** (if it exists) — extract perception gap, founder lore, brand world pillars, enemy, signature language, behavioral persuasion rules, and visual direction constraints. This is the output of `skill-brand-strategy` and provides the deepest strategic foundation for the story.
 4. **Load `skill-storytelling`** — Sections 1-6
 5. **Load `skills/storytelling/library/matching-guide.md`** — find mechanics that fit the brand archetype
 
-**Gate:** Do NOT proceed if `PRODUCT.md` or `contexts/research-brief.md` does not exist.
+**Gate:** Do NOT proceed if `PRODUCT.md` or `.agents/contexts/research-brief.md` does not exist.
 If research-brief.md is missing, run skill-storytelling Section 1 (Research) first.
 
 ---
@@ -156,7 +176,7 @@ Show the complete story document structure:
 
 ## Motion Direction
 [Hero animation, scroll behavior, climax pattern, resolve pattern, easing personality]
-→ See contexts/motion-direction.md for implementation details.
+→ See .agents/contexts/motion-direction.md for implementation details.
 
 ## Brand Archetype
 [Which archetype, storytelling style]
@@ -175,12 +195,12 @@ Wait for explicit approval. Do NOT write story.md without user saying yes.
 
 **Mode:** Builder (Delivery)
 
-1. **Write `contexts/story.md`** — the full story document as approved in Phase 4
+1. **Write `.agents/contexts/story.md`** — the full story document as approved in Phase 4
 2. **Confirm lock** — state clearly: "Story locked. This is now the source of truth for all subsequent design and animation decisions."
 3. **Handoff** — "Next: Run `/impeccable-document` to build DESIGN.md from this story."
 
 **Exit criteria:**
-- [ ] `contexts/story.md` exists and is written
+- [ ] `.agents/contexts/story.md` exists and is written
 - [ ] User has explicitly approved the story
 - [ ] Controlling idea is defined
 - [ ] Section breakdown covers all page sections

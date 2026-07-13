@@ -54,7 +54,7 @@
 Comparing the Goldhive site to our active skills reveals the following gaps:
 
 #### Gap A: Absence of the "Narrative Object Overlay" Pattern
-* **The Gap:** [cinematic-motion/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/cinematic-motion/SKILL.md) covers section-confined 3D viewers but lacks instructions for **viewport-fixed 3D overlays** that swim across vertical boundaries to carry continuity.
+* **The Gap:** [cinematic-motion/SKILL.md](../skills/cinematic-motion/SKILL.md) covers section-confined 3D viewers but lacks instructions for **viewport-fixed 3D overlays** that swim across vertical boundaries to carry continuity.
 * **Why it matters:** The model isolates 3D objects inside standalone cards, missing the seamless overlay flow.
 
 #### Gap B: No Requirement for an "Object Blocking Map"

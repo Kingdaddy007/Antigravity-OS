@@ -47,7 +47,7 @@
 Comparing the Springs site to our active skills reveals the following gaps:
 
 #### Gap A: Lack of "Editorial Card Overlap" Styling Guide
-* **The Gap:** [ui-ux/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/ui-ux/SKILL.md) lacks guidelines for **asymmetric overlapping layouts**. It defaults to standard columns, flexboxes, or grids, which makes layouts look templated.
+* **The Gap:** [ui-ux/SKILL.md](../skills/ui-ux/SKILL.md) lacks guidelines for **asymmetric overlapping layouts**. It defaults to standard columns, flexboxes, or grids, which makes layouts look templated.
 * **Why it matters:** The model struggles to write overlapping cards that scale responsively without clipping text or breaking alignment.
 
 #### Gap B: No "Layer Map" Workflow Step
@@ -55,7 +55,7 @@ Comparing the Springs site to our active skills reveals the following gaps:
 * **Why it matters:** The AI writes trial-and-error parallax code that often miscalculates layer priority, causing background cards to block click actions or float in front of text.
 
 #### Gap C: "Peak Climax" vs. "Sustained Momentum" Pacing
-* **The Gap:** [cinematic-motion/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/cinematic-motion/SKILL.md) teaches a 4-act structure culminating in a single visual climax. It lacks a pacing model for **Sustained Editorial Momentum** where sections are balanced equally as magazine chapters.
+* **The Gap:** [cinematic-motion/SKILL.md](../skills/cinematic-motion/SKILL.md) teaches a 4-act structure culminating in a single visual climax. It lacks a pacing model for **Sustained Editorial Momentum** where sections are balanced equally as magazine chapters.
 
 #### Gap D: Missing Practical Data Styling Rules
 * **The Gap:** We don't define how to integrate practical database specs (amenity lists, location maps, distance tables) into an editorial aesthetic, causing these sections to drop back into standard, boring corporate layouts.

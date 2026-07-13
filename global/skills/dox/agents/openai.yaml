@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dox"
+  short_description: "Guidance for dox tasks and decisions"
+  default_prompt: "Use $dox to help complete this task with its domain workflow."

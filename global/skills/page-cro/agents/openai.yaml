@@ -1,0 +1,4 @@
+interface:
+  display_name: "Page Cro"
+  short_description: "Guidance for page cro tasks"
+  default_prompt: "Use $page-cro to help complete this task with its domain workflow."

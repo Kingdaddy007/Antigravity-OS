@@ -1,6 +1,6 @@
 ---
-name: CONTEXT FORMATTING & LINTING
-description: Specialized rules for repairing Markdown lint errors in Gold Context files (MD025, MD060, MD024).
+name: context-formatting
+description: 'Use when the task requires context formatting guidance. Specialized rules for repairing Markdown lint errors in Gold Context files (MD025, MD060, MD024).'
 ---
 
 # SKILL: CONTEXT FORMATTING & LINTING
@@ -40,7 +40,7 @@ description: Specialized rules for repairing Markdown lint errors in Gold Contex
 
 ## BEHAVIORAL WORKFLOW: THE 3-STEP CONTEXT FORMAT
 
-When instructed to format a new context file, immediately apply these three transformations using the `multi_replace_file_content` tool.
+When instructed to format a new context file, immediately apply these three transformations using the `apply_patch` editing capability.
 
 ### 1. Fix Top-Level Metadata (MD025)
 
@@ -122,5 +122,5 @@ Context templates strategically repeat section headings like `### Guidance for A
 
 | 1. **Do not alter the primary content.** Only touch the formatting tags (`#`, `|---`, and heading names). |
 
-2. **Execute in one pass.** Group all replacements into a single `multi_replace_file_content` tool call containing multiple `ReplacementChunks` whenever possible to save time.
+2. **Execute in one pass.** Group all replacements into a single `apply_patch` editing capability call containing multiple `ReplacementChunks` whenever possible to save time.
 3. **Double-check uniqueness.** Before suffixing, ensure the new chosen heading name is globally unique in the file to properly satisfy MD024.

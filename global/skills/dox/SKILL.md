@@ -1,6 +1,6 @@
 ---
-name: DOX Framework & Directory Contracts
-description: Evaluates and updates hierarchical AGENTS.md documentation to enforce folder-level contracts and prevent cascade effects during modifications.
+name: dox
+description: 'Use when the task requires dox guidance. Evaluates and updates hierarchical AGENTS.md documentation to enforce folder-level contracts and prevent cascade effects during modifications.'
 ---
 
 # DOX Framework & Directory Contracts

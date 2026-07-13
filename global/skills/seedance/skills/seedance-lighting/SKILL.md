@@ -2,11 +2,10 @@
 name: seedance-lighting
 description: 'Specify lighting, atmosphere, and light transitions for Seedance 2.0 prompts using named light sources, core parameters, and atmosphere contracts. Use when the scene needs a specific mood, time of day, or lighting style, or when lighting is flat, inconsistent across shots, or clipping.'
 license: MIT
-user-invocable: true
-user-invokable: true
-tags: ["lighting", "atmosphere", "color-grade", "openclaw", "antigravity", "gemini-cli", "codex", "cursor"]
-metadata: {"version": "5.0.0", "updated": "2026-03-03", "openclaw": {"emoji": "💡", "homepage": "https://github.com/Emily2040/seedance-2.0"}, "parent": "seedance-20", "antigravity": {"emoji": "💡", "homepage": "https://github.com/Emily2040/seedance-2.0"}, "gemini-cli": {"emoji": "💡", "homepage": "https://github.com/Emily2040/seedance-2.0"}, "author": "Emily (@iamemily2050)", "repository": "https://github.com/Emily2040/seedance-2.0"}
 ---
+## STATUS VERIFICATION GATE
+
+Treat platform availability, model limits, filter behavior, enforcement actions, and API status dated February-March 2026 as historical snapshots. Before relying on them, verify current official ByteDance/Seedance documentation. If verification is unavailable, label the claim unverified and avoid presenting it as current fact.
 
 # seedance-lighting
 

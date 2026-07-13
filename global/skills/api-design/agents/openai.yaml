@@ -1,0 +1,4 @@
+interface:
+  display_name: "Api Design"
+  short_description: "Guidance for api design tasks"
+  default_prompt: "Use $api-design to help complete this task with its domain workflow."

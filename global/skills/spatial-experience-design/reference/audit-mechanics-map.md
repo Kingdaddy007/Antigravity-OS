@@ -4,12 +4,7 @@ Use the 30 local audit reports in `design-audit/` as the living reference librar
 
 ## Design Audit Directory Paths
 
-To inspect the raw reports for any of the 30 websites, load the corresponding `.md` file from these directories:
-- **Local Workspace Path:** `design-audit/` (e.g., `design-audit/site-01-oryzo.md`)
-- **Global Configuration Paths:**
-  - For Gemini: `C:/Users/godsw/.gemini/config/design-audit/`
-  - For OpenClaude: `C:/Users/godsw/.openclaude/design-audit/`
-  - For Codex: `C:/Users/godsw/.codex/design-audit/`
+To inspect the raw reports, load the corresponding `.md` file from the canonical `design-audit/` resource directory (for example, `design-audit/site-01-oryzo.md`). In an installed payload, discover the directory through the active adapter's content root; canonical skill guidance must not assume a host-specific home-directory layout.
 
 ## Core Adaptation Map
 

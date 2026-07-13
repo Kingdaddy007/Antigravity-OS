@@ -1,0 +1,4 @@
+interface:
+  display_name: "Context Formatting"
+  short_description: "Guidance for context formatting tasks"
+  default_prompt: "Use $context-formatting to help complete this task with its domain workflow."

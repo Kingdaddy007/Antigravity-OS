@@ -1,5 +1,14 @@
 # Planetary Orbit Masking (Cinematic Radial Layout)
 
+## Contents
+
+- [Concept](#concept)
+  - [The Spatial Metaphor](#the-spatial-metaphor)
+- [1. Radial Layout CSS & Text Anti-Overlap](#1-radial-layout-css-text-anti-overlap)
+  - [React / TSX Implementation (Math)](#react-tsx-implementation-math)
+- [2. GSAP Choreography Timeline](#2-gsap-choreography-timeline)
+- [3. Reverse Parallax (Background Depth)](#3-reverse-parallax-background-depth)
+
 ## Concept
 
 **Name:** Planetary Orbit Masking

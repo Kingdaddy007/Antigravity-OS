@@ -49,7 +49,7 @@
 Comparing the Terminal site to our active skills reveals the following gaps:
 
 #### Gap A: Absence of "Sequence-Scrub Brand Film" Subtype
-* **The Gap:** [cinematic-motion/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/cinematic-motion/SKILL.md) describes real-time 3D, video scrubs, and parallax, but completely lacks instructions for **Canvas Image Sequence Scrubbing** (managing frame preloading, memory disposal, and canvas redraw throttling).
+* **The Gap:** [cinematic-motion/SKILL.md](../skills/cinematic-motion/SKILL.md) describes real-time 3D, video scrubs, and parallax, but completely lacks instructions for **Canvas Image Sequence Scrubbing** (managing frame preloading, memory disposal, and canvas redraw throttling).
 * **Why it matters:** The model attempts to load large, un-scrubable raw `.mp4` video files directly, causing buffering stutters on scroll.
 
 #### Gap B: Missing Frame-Range Storyboard Spec

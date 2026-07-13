@@ -1,0 +1,4 @@
+interface:
+  display_name: "Competitor Profiling"
+  short_description: "Guidance for competitor profiling tasks"
+  default_prompt: "Use $competitor-profiling to help complete this task with its domain workflow."

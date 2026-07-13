@@ -51,7 +51,7 @@
 Comparing the Cartier site to our active skills reveals the following gaps:
 
 #### Gap A: Absence of the "Diorama Procession" Pattern
-* **The Gap:** [cinematic-motion/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/cinematic-motion/SKILL.md) covers 3D displays but lacks guidelines for **Diorama Processions** (using a continuous camera path to travel through staged symbolic value rooms).
+* **The Gap:** [cinematic-motion/SKILL.md](../skills/cinematic-motion/SKILL.md) covers 3D displays but lacks guidelines for **Diorama Processions** (using a continuous camera path to travel through staged symbolic value rooms).
 * **Why it matters:** The model defaults to building separate sections, destroying the museum ceremony.
 
 #### Gap B: Lack of "Monumentalization" Guidelines

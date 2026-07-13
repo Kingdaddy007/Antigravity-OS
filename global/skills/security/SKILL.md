@@ -1,17 +1,6 @@
 ---
-name: APPLICATION SECURITY & THREAT MODELING
-description: >
-  Use this skill when the work involves authentication, authorization, trust
-  boundaries, sensitive data, input validation, or vulnerability assessment.
-  Activated when designing or modifying AuthN/AuthZ flows; handling or storing
-  PII, financial, or health data; processing user input or file uploads;
-  integrating with third-party APIs; designing system boundaries; reviewing
-  pull requests (implicitly always active); or when the user mentions security
-  concerns, vulnerabilities, or asks for a security audit. Examples: "is this
-  secure?", "audit this for vulnerabilities", "how should I handle auth?",
-  "is this input validation sufficient?", "what are the security risks here?",
-  mentions of XSS, CSRF, SQLi, IDOR. Security is ALWAYS active as a secondary
-  lens during code review and architecture design — never skip it.
+name: security
+description: 'Use this skill when the work involves authentication, authorization, trust boundaries, sensitive data, input validation, or vulnerability assessment. Activated when designing or modifying AuthN/AuthZ flows; handling or storing PII, financial, or health data; processing user input or file uploads; integrating with third-party APIs; designing system boundaries; reviewing pull requests (implicitly always active); or when the user mentions security concerns, vulnerabilities, or asks for a security audit.'
 ---
 
 # APPLICATION SECURITY & THREAT MODELING

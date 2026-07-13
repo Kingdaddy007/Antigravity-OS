@@ -1,13 +1,11 @@
 ---
 name: seedance-interview
-description: 'Guide users through a multi-stage creative journey to craft cinematic stories and single clips for Seedance 2.0. Use when a user has a vague idea, needs a script, or wants to elevate a simple prompt into a professional production brief. Follow the "Director\\'s Journey" workflow: Vision → Narrative → Visuals → Technical → Final Brief.'
+description: 'Guide users through a multi-stage creative journey to craft cinematic stories and single clips for Seedance 2.0. Use when a user has a vague idea, needs a script, or wants to elevate a simple prompt into a professional production brief. Follow the "Director\\''s Journey" workflow: Vision → Narrative → Visuals → Technical → Final Brief.'
 license: MIT
-user-invocable: true
-user-invokable: true
-tags: ["storytelling", "creative-writing", "directing", "pre-production", "scriptwriting", "narrative-design", "cinematography", "seedance-20"]
-metadata: {"version": "5.0.0", "updated": "2026-03-03", "openclaw": {"emoji": "🎭", "homepage": "https://github.com/Emily2040/seedance-2.0"}, "antigravity": {"emoji": "🎭", "homepage": "https://github.com/Emily2040/seedance-2.0"}, "gemini-cli": {"emoji": "🎭", "homepage": "https://github.com/Emily2040/seedance-2.0"}, "author": "Emily (@iamemily2050)", "repository": "https://github.com/Emily2040/seedance-2.0"}
-  "parent": "seedance-20",
 ---
+## STATUS VERIFICATION GATE
+
+Treat platform availability, model limits, filter behavior, enforcement actions, and API status dated February-March 2026 as historical snapshots. Before relying on them, verify current official ByteDance/Seedance documentation. If verification is unavailable, label the claim unverified and avoid presenting it as current fact.
 
 # seedance-interview · The Director\'s Journey (v5.0)
 

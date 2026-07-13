@@ -1,5 +1,16 @@
 # Objection Library
 
+## Contents
+
+- [Quick-Reference Table](#quick-reference-table)
+- [Detailed Objection Responses](#detailed-objection-responses)
+  - [Price Objections](#price-objections)
+  - [Timing Objections](#timing-objections)
+  - [Competition Objections](#competition-objections)
+  - [Authority Objections](#authority-objections)
+  - [Status Quo Objections](#status-quo-objections)
+  - [Technical Objections](#technical-objections)
+
 Common B2B SaaS objections with response frameworks. Organized by category for quick reference.
 
 ## Quick-Reference Table

@@ -1,5 +1,21 @@
 # Video To Website Choreography
 
+## Contents
+
+- [Core Rule](#core-rule)
+- [Section Choreography Schema](#section-choreography-schema)
+- [Text And Layout](#text-and-layout)
+- [Scroll Rhythm](#scroll-rhythm)
+- [Media Types](#media-types)
+- [Lenis Scroll Foundation](#lenis-scroll-foundation)
+- [Infinite Parallax Gallery Loop](#infinite-parallax-gallery-loop)
+- [Canvas Frame Scroll Implementation](#canvas-frame-scroll-implementation)
+- [WebGL Cinematic Mechanics](#webgl-cinematic-mechanics)
+- [CSS 3D Room Box](#css-3d-room-box)
+- [Loading And Fallback](#loading-and-fallback)
+- [Anti-Patterns](#anti-patterns)
+- [Output](#output)
+
 Use this when a spatial website depends on video, canvas frames, image sequences, scroll-driven media, or full-bleed room films. The goal is not video wallpaper; the goal is a readable website whose media performs spatial proof.
 
 ## Core Rule
@@ -107,7 +123,7 @@ Required context fields:
 
 ## WebGL Cinematic Mechanics
 
-Load `reference/webgl-cylindrical-gallery.md` when project, material, or room images should wrap into a rotating 3D gallery.
+Load `reference/codrops-canvas-cylinder-gallery.md` when project, material, or room images should wrap into a rotating 3D gallery.
 
 Load `reference/scroll-mapped-3d-camera-scenes.md` when a GLB/model/3D world needs a scroll-controlled camera path with text positions and progress ranges.
 

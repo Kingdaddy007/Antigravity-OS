@@ -93,6 +93,12 @@ DEBUG_PATTERNS = [
 
 def should_scan_file(filepath: Path) -> bool:
     """Check if file should be scanned based on extension and directory."""
+    checker_directory = Path(__file__).resolve().parent
+    try:
+        filepath.resolve().relative_to(checker_directory)
+        return False
+    except ValueError:
+        pass
     if filepath.suffix.lower() not in SCAN_EXTENSIONS:
         return False
     for skip in SKIP_DIRS:
@@ -193,6 +199,10 @@ def print_findings(findings: List[Dict]) -> None:
 
 
 def main():
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    if hasattr(sys.stderr, "reconfigure"):
+        sys.stderr.reconfigure(encoding="utf-8", errors="replace")
     if len(sys.argv) < 2:
         print("Usage: python security_scan.py <project_path>")
         sys.exit(1)

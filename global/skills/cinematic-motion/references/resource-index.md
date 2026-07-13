@@ -1,0 +1,70 @@
+# Resource Index
+
+Use this index to select only the reference needed for the current task.
+
+## Resources
+
+- [reference/canvas-frame-scroll-implementation.md](../reference/canvas-frame-scroll-implementation.md): Canvas Frame Scroll Implementation
+- [reference/codrops-canvas-cylinder-gallery.md](../reference/codrops-canvas-cylinder-gallery.md): WebGL Cylindrical Gallery (Codrops Canvas Method)
+- [reference/flat-overlapping-parallax-deck.md](../reference/flat-overlapping-parallax-deck.md): Flat Overlapping Parallax Deck
+- [reference/gsap-cookbook.md](../reference/gsap-cookbook.md): GSAP Cookbook
+- [reference/infinite-parallax-gallery-loop.md](../reference/infinite-parallax-gallery-loop.md): Infinite Parallax Gallery Loop
+- [reference/lenis-gsap-scroll-foundation.md](../reference/lenis-gsap-scroll-foundation.md): Lenis GSAP Scroll Foundation
+- [reference/loading-io-transitions.md](../reference/loading-io-transitions.md): Transition.css (Loading.io) Integration
+- [reference/mobile-fallbacks.md](../reference/mobile-fallbacks.md): Mobile Fallbacks
+- [reference/motion-library/Micro-Interactions and Hover States/crosshair-webgl-distortion-hover.md](../reference/motion-library/Micro-Interactions and Hover States/crosshair-webgl-distortion-hover.md): Crosshair WebGL Distortion Hover
+- [reference/motion-library/Micro-Interactions and Hover States/elastic-magnetic-button-with-inertial-text.md](../reference/motion-library/Micro-Interactions and Hover States/elastic-magnetic-button-with-inertial-text.md): Elastic Magnetic Button with Inertial Text
+- [reference/motion-library/Micro-Interactions and Hover States/room-to-room-spatial-navigation-3d-perspective-shift.md](../reference/motion-library/Micro-Interactions and Hover States/room-to-room-spatial-navigation-3d-perspective-shift.md): Room-to-Room Spatial Navigation (3D Perspective Shift)
+- [reference/motion-library/Micro-Interactions and Hover States/sticky-exclusion-blend-cursor.md](../reference/motion-library/Micro-Interactions and Hover States/sticky-exclusion-blend-cursor.md): Sticky Exclusion Blend Cursor
+- [reference/motion-library/Micro-Interactions and Hover States/svg-filter-distorted-link-hover.md](../reference/motion-library/Micro-Interactions and Hover States/svg-filter-distorted-link-hover.md): SVG Filter Distorted Link Hover
+- [reference/motion-library/Micro-Interactions and Hover States/thumbnail-svg-filter-displacement-hover.md](../reference/motion-library/Micro-Interactions and Hover States/thumbnail-svg-filter-displacement-hover.md): Thumbnail SVG Filter Displacement Hover
+- [reference/motion-library/Scroll Choreography and Timeline Architecture/assembly-layout-construction-pinning.md](../reference/motion-library/Scroll Choreography and Timeline Architecture/assembly-layout-construction-pinning.md): Assembly Layout Construction Pinning
+- [reference/motion-library/Scroll Choreography and Timeline Architecture/flip-layout-scroll-orchestration.md](../reference/motion-library/Scroll Choreography and Timeline Architecture/flip-layout-scroll-orchestration.md): FLIP Layout Scroll Orchestration
+- [reference/motion-library/Scroll Choreography and Timeline Architecture/observer-api-unified-hijack.md](../reference/motion-library/Scroll Choreography and Timeline Architecture/observer-api-unified-hijack.md): Observer API Unified Hijack
+- [reference/motion-library/Scroll Choreography and Timeline Architecture/synchronized-dynamic-scroll-list-pinning.md](../reference/motion-library/Scroll Choreography and Timeline Architecture/synchronized-dynamic-scroll-list-pinning.md): Synchronized Dynamic Scroll List Pinning
+- [reference/motion-library/Typography and Text Animation/blotterjs-scroll-volatility-distortion.md](../reference/motion-library/Typography and Text Animation/blotterjs-scroll-volatility-distortion.md): Blotter.js Scroll Volatility Distortion
+- [reference/motion-library/Typography and Text Animation/depth-axis-scroll-rotated-css-3d-tube-tunnel.md](../reference/motion-library/Typography and Text Animation/depth-axis-scroll-rotated-css-3d-tube-tunnel.md): Depth-Axis Scroll-Rotated CSS 3D Tube Tunnel
+- [reference/motion-library/Typography and Text Animation/dotted-keyword-scatter-wipe.md](../reference/motion-library/Typography and Text Animation/dotted-keyword-scatter-wipe.md): Dotted Keyword Scatter Wipe
+- [reference/motion-library/Typography and Text Animation/kinetic-typography-recursive-subdivision.md](../reference/motion-library/Typography and Text Animation/kinetic-typography-recursive-subdivision.md): Kinetic Typography Recursive Subdivision
+- [reference/motion-library/Typography and Text Animation/kinetic-webgl-render-target-text-projection.md](../reference/motion-library/Typography and Text Animation/kinetic-webgl-render-target-text-projection.md): Kinetic WebGL Render-Target Text Projection
+- [reference/motion-library/Typography and Text Animation/organic-sinecosine-scroll-displacement.md](../reference/motion-library/Typography and Text Animation/organic-sinecosine-scroll-displacement.md): Organic Sine/Cosine Scroll Displacement
+- [reference/motion-library/Typography and Text Animation/scroll-based-svg-filter-distortion-blur.md](../reference/motion-library/Typography and Text Animation/scroll-based-svg-filter-distortion-blur.md): Scroll-Based SVG Filter Distortion Blur
+- [reference/motion-library/Typography and Text Animation/scroll-driven-css-3d-cylinder-text-projection.md](../reference/motion-library/Typography and Text Animation/scroll-driven-css-3d-cylinder-text-projection.md): Scroll-Driven CSS 3D Cylinder Text Projection
+- [reference/motion-library/Typography and Text Animation/split-flap-mechanical-counter.md](../reference/motion-library/Typography and Text Animation/split-flap-mechanical-counter.md): Split Flap / Mechanical Counter
+- [reference/motion-library/Typography and Text Animation/splittext-premium-b2b-stagger.md](../reference/motion-library/Typography and Text Animation/splittext-premium-b2b-stagger.md): SplitText Premium B2B Stagger
+- [reference/motion-library/Typography and Text Animation/text-path-morphing-svg-text-distortion.md](../reference/motion-library/Typography and Text Animation/text-path-morphing-svg-text-distortion.md): Text Path Morphing (SVG Text Distortion)
+- [reference/motion-library/Typography and Text Animation/tsl-webgpu-explosive-text-dissolve.md](../reference/motion-library/Typography and Text Animation/tsl-webgpu-explosive-text-dissolve.md): TSL WebGPU Explosive Text Dissolve
+- [reference/motion-library/Typography and Text Animation/velocity-driven-elastic-webgl-text-distortion.md](../reference/motion-library/Typography and Text Animation/velocity-driven-elastic-webgl-text-distortion.md): Velocity-Driven Elastic WebGL Text Distortion
+- [reference/motion-library/Typography and Text Animation/webgl-3d-text-with-vertex-displacement.md](../reference/motion-library/Typography and Text Animation/webgl-3d-text-with-vertex-displacement.md): WebGL 3D Text with Vertex Displacement
+- [reference/motion-library/Typography and Text Animation/webgl-typography-motion-trail.md](../reference/motion-library/Typography and Text Animation/webgl-typography-motion-trail.md): WebGL Typography Motion Trail
+- [reference/motion-library/Viewport and Spatial Transitions/architectural-text-mask-reveal.md](../reference/motion-library/Viewport and Spatial Transitions/architectural-text-mask-reveal.md): Architectural Text Mask Reveal
+- [reference/motion-library/Viewport and Spatial Transitions/clip-path-cinematic-squeeze.md](../reference/motion-library/Viewport and Spatial Transitions/clip-path-cinematic-squeeze.md): Spatial Re-framing: Cinematic Aspect Ratio Squeeze
+- [reference/motion-library/Viewport and Spatial Transitions/dolly-in-spatial-room-transition.md](../reference/motion-library/Viewport and Spatial Transitions/dolly-in-spatial-room-transition.md): Dolly-In Spatial Room Transition
+- [reference/motion-library/Viewport and Spatial Transitions/dual-scene-fluid-x-ray-transition.md](../reference/motion-library/Viewport and Spatial Transitions/dual-scene-fluid-x-ray-transition.md): Dual-Scene Fluid X-Ray Transition
+- [reference/motion-library/Viewport and Spatial Transitions/kinetic-depth-typographic-push.md](../reference/motion-library/Viewport and Spatial Transitions/kinetic-depth-typographic-push.md): Kinetic Depth Typographic Push
+- [reference/motion-library/Viewport and Spatial Transitions/layered-z-axis-depth-zoom-telescope-scroll.md](../reference/motion-library/Viewport and Spatial Transitions/layered-z-axis-depth-zoom-telescope-scroll.md): Layered Z-Axis Depth Zoom (Telescope Scroll)
+- [reference/motion-library/Viewport and Spatial Transitions/magnetic-3d-grid-page-transition.md](../reference/motion-library/Viewport and Spatial Transitions/magnetic-3d-grid-page-transition.md): Magnetic 3D Grid Page Transition
+- [reference/motion-library/Viewport and Spatial Transitions/svg-mask-column-random-grid-wipe.md](../reference/motion-library/Viewport and Spatial Transitions/svg-mask-column-random-grid-wipe.md): SVG Mask Column Random Grid Wipe
+- [reference/motion-library/Viewport and Spatial Transitions/svg-mask-horizontal-blinds.md](../reference/motion-library/Viewport and Spatial Transitions/svg-mask-horizontal-blinds.md): SVG Mask Horizontal Blinds
+- [reference/motion-library/WebGL, Shaders and Post-Processing/audio-reactive-volumetric-displacement.md](../reference/motion-library/WebGL, Shaders and Post-Processing/audio-reactive-volumetric-displacement.md): Audio-Reactive Volumetric Displacement
+- [reference/motion-library/WebGL, Shaders and Post-Processing/fbo-ping-pong-fluid-displacement-simulation.md](../reference/motion-library/WebGL, Shaders and Post-Processing/fbo-ping-pong-fluid-displacement-simulation.md): FBO Ping-Pong Fluid Displacement Simulation
+- [reference/motion-library/WebGL, Shaders and Post-Processing/fluid-simulation-background-navier-stokes.md](../reference/motion-library/WebGL, Shaders and Post-Processing/fluid-simulation-background-navier-stokes.md): Fluid Simulation Background (Navier-Stokes)
+- [reference/motion-library/WebGL, Shaders and Post-Processing/gpgpu-grid-displacement-rgb-shift.md](../reference/motion-library/WebGL, Shaders and Post-Processing/gpgpu-grid-displacement-rgb-shift.md): GPGPU Grid Displacement RGB Shift
+- [reference/motion-library/WebGL, Shaders and Post-Processing/infinite-auto-scrolling-spatial-cylinder.md](../reference/motion-library/WebGL, Shaders and Post-Processing/infinite-auto-scrolling-spatial-cylinder.md): Infinite Auto-Scrolling Spatial Cylinder
+- [reference/motion-library/WebGL, Shaders and Post-Processing/multi-render-target-mrt-selective-bloom.md](../reference/motion-library/WebGL, Shaders and Post-Processing/multi-render-target-mrt-selective-bloom.md): Multi-Render-Target (MRT) Selective Bloom
+- [reference/motion-library/WebGL, Shaders and Post-Processing/refraction-glass-distortion.md](../reference/motion-library/WebGL, Shaders and Post-Processing/refraction-glass-distortion.md): Refraction / Glass Distortion
+- [reference/motion-library/WebGL, Shaders and Post-Processing/twisted-colorful-spheres.md](../reference/motion-library/WebGL, Shaders and Post-Processing/twisted-colorful-spheres.md): Twisted Colorful Spheres
+- [reference/motion-library/WebGL, Shaders and Post-Processing/velocity-driven-chromatic-aberration-wave-distortion.md](../reference/motion-library/WebGL, Shaders and Post-Processing/velocity-driven-chromatic-aberration-wave-distortion.md): Velocity-Driven Chromatic Aberration & Wave Distortion
+- [reference/motion-library/WebGL, Shaders and Post-Processing/volumetric-fog-depth-of-field-post-processing.md](../reference/motion-library/WebGL, Shaders and Post-Processing/volumetric-fog-depth-of-field-post-processing.md): Volumetric Fog & Depth-of-Field Post-Processing
+- [reference/motion-library/WebGL, Shaders and Post-Processing/webgl-bulge-distortion.md](../reference/motion-library/WebGL, Shaders and Post-Processing/webgl-bulge-distortion.md): WebGL Bulge Distortion
+- [reference/motion-library/WebGL, Shaders and Post-Processing/webgl-heat-haze-fragment-overlay.md](../reference/motion-library/WebGL, Shaders and Post-Processing/webgl-heat-haze-fragment-overlay.md): WebGL Heat Haze Fragment Overlay
+- [reference/motion-performance.md](../reference/motion-performance.md): Motion Performance
+- [reference/on-scroll-layout-formations.md](../reference/on-scroll-layout-formations.md): On-Scroll Layout Formations
+- [reference/planetary-orbit-masking.md](../reference/planetary-orbit-masking.md): Planetary Orbit Masking (Cinematic Radial Layout)
+- [reference/r3f-curved-cinema-gallery.md](../reference/r3f-curved-cinema-gallery.md): WebGL Curved Cinema Gallery (R3F)
+- [reference/scroll-driven-3d-cube.md](../reference/scroll-driven-3d-cube.md): Scroll-Driven 3D Cube
+- [reference/scroll-driven-cylinder-cards.md](../reference/scroll-driven-cylinder-cards.md): Scroll-Driven Cylinder Cards
+- [reference/scroll-mapped-3d-camera-scenes.md](../reference/scroll-mapped-3d-camera-scenes.md): Scroll-Mapped 3D Camera Scenes
+- [reference/staggered-structural-columns.md](../reference/staggered-structural-columns.md): Staggered Structural Columns (Vertical Blinds)
+- [reference/transition-library.md](../reference/transition-library.md): Transition Library
+- [reference/video-to-website-choreography.md](../reference/video-to-website-choreography.md): Video To Website Choreography

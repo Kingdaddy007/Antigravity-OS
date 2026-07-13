@@ -1,6 +1,6 @@
 # Concept Forge Questions
 
-Use these questions to make Beloved a creative collaborator, not a passive approver. Ask only the questions that materially sharpen the concept.
+Use these questions to make the user a creative collaborator, not a passive approver. Ask only the questions that materially sharpen the concept.
 
 ## Round 1: Sensation
 
@@ -30,13 +30,13 @@ Ask:
 
 Ask:
 
-- Which assets can Beloved realistically create now: still images, transparent cutouts, videos, SVG masks, 3D objects, frame sequences?
-- Can Beloved create a source image first, then turn it into video?
+- Which assets can the user realistically create now: still images, transparent cutouts, videos, SVG masks, 3D objects, frame sequences?
+- Can the user create a source image first, then turn it into video?
 - Which chapter can use a temporary stand-in, and which chapter must wait for real assets?
 
 ## Concept Mixing Prompt
 
-When Beloved is unsure, propose three mixed concepts:
+When the user is unsure, propose three mixed concepts:
 
 1. Safe-but-premium: strong, feasible, less risky.
 2. Strange-and-memorable: one wild mechanic with realistic asset needs.

@@ -22,6 +22,7 @@ All scripts are located in: scripts/checks/
 """
 
 import sys
+import os
 import subprocess
 import argparse
 from pathlib import Path
@@ -90,6 +91,9 @@ def run_check(name: str, script_path: Path, project_path: str) -> dict:
             [sys.executable, str(script_path), project_path],
             capture_output=True,
             text=True,
+            encoding="utf-8",
+            errors="replace",
+            env={**os.environ, "PYTHONUTF8": "1"},
             timeout=300,  # 5 minute timeout
         )
 
@@ -167,11 +171,15 @@ def print_summary(results: List[dict], start_time: datetime) -> bool:
 
         return False
     else:
-        print_success("All checks passed ✨")
+        print_success("Baseline checks passed. Deployment readiness requires project-native verification and approval.")
         return True
 
 
 def main():
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    if hasattr(sys.stderr, "reconfigure"):
+        sys.stderr.reconfigure(encoding="utf-8", errors="replace")
     parser = argparse.ArgumentParser(
         description="Antigravity Gold — Project Verification System",
         formatter_class=argparse.RawDescriptionHelpFormatter,

@@ -66,7 +66,7 @@
 Comparing the CALMM site to our active skills reveals the following gaps:
 
 #### Gap A: Absence of the "Diorama Hero" Pattern
-* **The Gap:** [ui-ux/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/ui-ux/SKILL.md) and [cinematic-motion/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/cinematic-motion/SKILL.md) lack instructions for building layered Z-axis scenes where scale, foreground obstruction, and relative depth replace grid sections.
+* **The Gap:** [ui-ux/SKILL.md](../skills/ui-ux/SKILL.md) and [cinematic-motion/SKILL.md](../skills/cinematic-motion/SKILL.md) lack instructions for building layered Z-axis scenes where scale, foreground obstruction, and relative depth replace grid sections.
 * **Why it matters:** The model defaults to standard modular layouts and box grids, failing to achieve cinematic diorama depth.
 
 #### Gap B: No Requirement for "Asset Family Coherence"

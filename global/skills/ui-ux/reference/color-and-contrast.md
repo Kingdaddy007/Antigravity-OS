@@ -1,4 +1,21 @@
-﻿# Color & Contrast
+# Color & Contrast
+
+## Contents
+
+- [Color Spaces: Use OKLCH](#color-spaces-use-oklch)
+- [Building Functional Palettes](#building-functional-palettes)
+  - [Tinted Neutrals](#tinted-neutrals)
+  - [Palette Structure](#palette-structure)
+  - [The 60-30-10 Rule (Applied Correctly)](#the-60-30-10-rule-applied-correctly)
+- [Contrast & Accessibility](#contrast-accessibility)
+  - [WCAG Requirements](#wcag-requirements)
+  - [Dangerous Color Combinations](#dangerous-color-combinations)
+  - [Never Use Pure Gray or Pure Black](#never-use-pure-gray-or-pure-black)
+  - [Testing](#testing)
+- [Theming: Light & Dark Mode](#theming-light-dark-mode)
+  - [Dark Mode Is Not Inverted Light Mode](#dark-mode-is-not-inverted-light-mode)
+  - [Token Hierarchy](#token-hierarchy)
+- [Alpha Is A Design Smell](#alpha-is-a-design-smell)
 
 ## Color Spaces: Use OKLCH
 

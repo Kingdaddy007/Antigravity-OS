@@ -1,0 +1,4 @@
+interface:
+  display_name: "Seedance Antislop"
+  short_description: "Guidance for seedance antislop tasks"
+  default_prompt: "Use $seedance-antislop to help complete this task with its domain workflow."

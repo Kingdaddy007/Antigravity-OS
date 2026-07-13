@@ -1,5 +1,17 @@
 # Lenis GSAP Scroll Foundation
 
+## Contents
+
+- [When To Use](#when-to-use)
+- [Core Rule](#core-rule)
+- [Vanilla GSAP Pattern](#vanilla-gsap-pattern)
+- [React / Next.js Pattern](#react-nextjs-pattern)
+- [Parallax QuickSetter Pattern](#parallax-quicksetter-pattern)
+- [Snap](#snap)
+- [Nested Scroll And Modals](#nested-scroll-and-modals)
+- [Infinite Scroll](#infinite-scroll)
+- [Quality Gate](#quality-gate)
+
 Use this when a spatial website needs smooth scroll that drives GSAP ScrollTrigger, parallax, frame sequences, infinite galleries, or WebGL camera choreography.
 
 Sources:

@@ -1,14 +1,6 @@
 ---
 name: skill-creator
-description: >
-  Use this skill when you need to CREATE or REFACTOR a skill file for the
-  Anti-Gravity OS. Activated when the user asks to "build a new skill",
-  "reformat a skill", "compress a skill", "apply the skill creator", or
-  "update [skill name] to the new format". Also activated at the start of
-  Phase 6 (skill refactoring) of the OS optimization plan. Produces lean,
-  token-efficient SKILL.md files and multi-file skill packages using the 
-  high-density truth-document format.
-  Do NOT use for general file editing, writing documentation, or formatting arbitrary markdown.
+description: 'Use this skill when you need to CREATE or REFACTOR a skill file for the Anti-Gravity OS. Activated when the user asks to "build a new skill", "reformat a skill", "compress a skill", "apply the skill creator", or "update [skill name] to the new format". Also activated at the start of Phase 6 (skill refactoring) of the OS optimization plan. Produces lean, token-efficient SKILL.md files and multi-file skill packages using the high-density truth-document format. Do NOT use for general file editing, writing documentation, or formatting arbitrary markdown.'
 ---
 
 # Skill Creator — Anti-Gravity OS

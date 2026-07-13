@@ -44,7 +44,7 @@
 Comparing the Poly site to our active skills reveals the following gaps:
 
 #### Gap A: Omission of "Spatial Skeuomorphism" Subtype
-* **The Gap:** [cinematic-motion/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/cinematic-motion/SKILL.md) focuses on product viewers or scrolling panels. It lacks rules for **embedding product UI inside physical, skeuomorphic environments**.
+* **The Gap:** [cinematic-motion/SKILL.md](../skills/cinematic-motion/SKILL.md) focuses on product viewers or scrolling panels. It lacks rules for **embedding product UI inside physical, skeuomorphic environments**.
 * **Why it matters:** The model isolates models on simple screens rather than creating interactive workspace ecologies.
 
 #### Gap B: No "Dimensional Translation" Motion Formula

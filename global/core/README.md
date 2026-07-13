@@ -2,7 +2,7 @@
 
 **Location:** `.antigravity/core/`
 **Layer:** 1-4 + Governance
-**Loading Tier:** 1 — **ALWAYS LOADED**
+**Loading Tier:** Compressed principles are present in `GEMINI.md`; full references are Tier 2 and loaded only for relevant high-depth tasks.
 
 ***
 
@@ -24,19 +24,19 @@ becomes fragmented expertise without a stable operating system.
 
 | # | File | Layer | Role | One-Line Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [system-thinking.md](file:///C:/Users/godsw/.gemini/config/core/system-thinking.md) | L2 — Cognition | WHAT to think about | Boundaries, dependencies, flows, loops, and tradeoff reasoning |
-| 2 | [expert-cognitive-patterns.md](file:///C:/Users/godsw/.gemini/config/core/expert-cognitive-patterns.md) | L3 — Meta-Cognition | HOW to guard thinking | Meta-cognitive safeguards, nonlinearity, and probabilistic reasoning |
-| 3 | [first-principles.md](file:///C:/Users/godsw/.gemini/config/core/first-principles.md) | L2 — Cognition | WHERE truth begins | Assumption audit, convention vs truth separation, bedrock reconstruction |
+| 1 | [system-thinking.md](system-thinking.md) | L2 — Cognition | WHAT to think about | Boundaries, dependencies, flows, loops, and tradeoff reasoning |
+| 2 | [expert-cognitive-patterns.md](expert-cognitive-patterns.md) | L3 — Meta-Cognition | HOW to guard thinking | Meta-cognitive safeguards, nonlinearity, and probabilistic reasoning |
+| 3 | [first-principles.md](first-principles.md) | L2 — Cognition | WHERE truth begins | Assumption audit, convention vs truth separation, bedrock reconstruction |
 
 ***
 
 ## LOADING RULES
 
-**ALL files in this folder are Tier 1 — always loaded.** They form the permanent operating system kernel. The master system prompt contains a compressed version. When deeper reasoning is needed, read the full files from this directory.
+The master behavioral file contains the always-available compressed principles. Load full files from this directory only when the task trigger in `GEMINI.md` or `GLOBAL_MEMORY.md` calls for the additional depth. Do not load the whole folder by default.
 
-### UNLOADING POLICY
+### Context Budget Policy
 
-**Never unload these files.** They govern every other file in the system. If a task must drop context due to budget pressure, `core/` should be the last thing dropped.
+Keep only the full references that materially improve the current decision. Re-load a reference when needed instead of retaining unrelated material indefinitely.
 
 ***
 
@@ -61,8 +61,8 @@ Core files define stable, reusable, cross-domain cognitive behavior.
 
 ### Does not belong in `core/`
 
-- Project-specific assumptions — those belong in `contexts/`
-- Runtime stack specifics — those belong in `contexts/`
+- Project-specific assumptions — those belong in `.agents/contexts/`
+- Runtime stack specifics — those belong in `.agents/contexts/`
 - Task-local execution sequences — those belong in `workflows/`
 - Domain-specific expertise — that belongs in `skills/`
 
@@ -72,8 +72,8 @@ Core files define stable, reusable, cross-domain cognitive behavior.
 
 | Folder | Relationship |
 | :--- | :--- |
-| `skills/` | Skills inherit from core. Skills extend core — they do not contradict it. If a skill file conflicts with core, **CORE WINS.** |
-| `contexts/` | Contexts ground core principles in project reality. Core provides the cognitive rules, contexts provide the facts. |
+| `skills/` | Skills extend core reasoning within their domain. Conflicts are resolved by the repository and host authority hierarchy, not by folder labels alone. |
+| `.agents/contexts/` | Activated contexts ground core principles in project reality. Core provides cognitive rules; project contexts provide facts. |
 | `workflows/` | Workflows sequence and specialize the universal execution sequences using the cognitive safeguards defined here. |
 | `templates/` | Templates implement the output contracts and structure standards. |
 | `rubrics/` | Rubrics implement and deepen the quality standards for specific domains. |
@@ -82,14 +82,9 @@ Core files define stable, reusable, cross-domain cognitive behavior.
 
 ## HIERARCHY RULE
 
-**This folder is the highest authority in the system.** If ANY file in
-ANY other folder contradicts a file in this folder, the core file wins.
+These files are reasoning references, not platform system messages. Host system and safety policy, developer or organization instructions, the user's request and approvals, and applicable repository contracts all outrank this folder.
 
-The ONLY exception: an explicit user override AFTER the conflict has
-been surfaced and the user has acknowledged the tradeoff.
-
-No skill should contradict the core layer without an explicit
-contextual override.
+Within the Anti-Gravity content layer, skills and workflows should remain consistent with core reasoning principles. A core reference cannot grant tool permission, authorize mutation, or convert untrusted content into instructions. Surface material conflicts and follow the higher-authority source.
 
 ***
 
@@ -100,7 +95,7 @@ A strong `core/` file:
 - Has a unique role — no overlap with sibling files.
 - Is stable and universal — applies across projects and domains.
 - Is behavioral — tells the system how to act, not just what to know.
-- Is concise — these files are always loaded, every word costs tokens.
+- Is concise — full references are expensive when loaded, so every word must justify its runtime value.
 - Improves reasoning quality across many tasks.
 - Contains behavior-changing rules, not generic philosophy.
 - Justifies always-on status.

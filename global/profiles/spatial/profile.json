@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "spatial",
+  "description": "Optional high-end interior, spatial, gallery, showroom, architecture-adjacent, and luxury-home experience specialization.",
+  "always_active": false,
+  "extends": "general",
+  "activation": [
+    "The request explicitly concerns interior, spatial, gallery, showroom, architecture-adjacent, furniture, decor, staging, or luxury-home work.",
+    "The user explicitly selects the spatial profile."
+  ],
+  "exclusions": [
+    "General product UI, SaaS, backend, infrastructure, or non-spatial project work."
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Database"
+  short_description: "Guidance for database tasks"
+  default_prompt: "Use $database to help complete this task with its domain workflow."

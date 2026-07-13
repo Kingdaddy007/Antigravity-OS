@@ -1,13 +1,11 @@
 ---
 name: seedance-prompt
-description: 'Construct a production-ready prompt for Seedance 2.0 using the Director\'s Formula. Use when a user has a clear vision and needs to translate it into a genre-aware, intent-driven prompt. Covers genre routing, I2V gate, 30-100 word target, physics language, and anti-slop check.'
+description: 'Construct a production-ready prompt for Seedance 2.0 using the Director\''s Formula. Use when a user has a clear vision and needs to translate it into a genre-aware, intent-driven prompt. Covers genre routing, I2V gate, 30-100 word target, physics language, and anti-slop check.'
 license: MIT
-user-invocable: true
-user-invokable: true
-tags: ["prompt-engineering", "cinematography", "technical-writing", "pre-production", "visual-design", "seedance-20"]
-metadata: {"version": "5.0.0", "updated": "2026-03-03", "openclaw": {"emoji": "✍️", "homepage": "https://github.com/Emily2040/seedance-2.0"}, "antigravity": {"emoji": "✍️", "homepage": "https://github.com/Emily2040/seedance-2.0"}, "gemini-cli": {"emoji": "✍️", "homepage": "https://github.com/Emily2040/seedance-2.0"}, "author": "Emily (@iamemily2050)", "repository": "https://github.com/Emily2040/seedance-2.0"}
-  "parent": "seedance-20",
 ---
+## STATUS VERIFICATION GATE
+
+Treat platform availability, model limits, filter behavior, enforcement actions, and API status dated February-March 2026 as historical snapshots. Before relying on them, verify current official ByteDance/Seedance documentation. If verification is unavailable, label the claim unverified and avoid presenting it as current fact.
 
 # seedance-prompt · The Director\'s Formula (v5.0)
 

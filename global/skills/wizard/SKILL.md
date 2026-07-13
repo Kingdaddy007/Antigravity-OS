@@ -1,11 +1,6 @@
 ---
-name: WIZARD GENERATOR
-description: >
-  Generate an interactive bash wizard that walks a human through a manual procedure —
-  third-party setup, a one-off migration, or environment state transitions.
-  Signal phrases: "generate wizard", "create setup script", "interactive bash wizard",
-  "manual migration assistant", "write environment secrets script".
-  Always maintain absolute separation between the template library code and custom stages.
+name: wizard
+description: 'Use when the task requires wizard guidance. Generate an interactive bash wizard that walks a human through a manual procedure — third-party setup, a one-off migration, or environment state transitions. Signal phrases: "generate wizard", "create setup script", "interactive bash wizard", "manual migration assistant", "write environment secrets script". Always maintain absolute separation between the template library code and custom stages.'
 ---
 
 # WIZARD GENERATOR

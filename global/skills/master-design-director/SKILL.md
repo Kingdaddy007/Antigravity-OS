@@ -1,19 +1,6 @@
 ---
 name: master-design-director
-description: >
-  Use this skill when the user asks for senior creative direction, luxury web design judgment,
-  spatial-editorial critique, or taste calibration for high-end interior, architecture-adjacent,
-  spatial storytelling, portfolio, gallery-like, residential design, premium studio, or editorial
-  brand websites. Trigger on phrases such as "audit this design", "review this layout", "does this
-  feel premium?", "act as my design director", "critique the hero", "make this more luxury",
-  "should I add motion?", "review the typography", "push back on this design", "is this visually
-  resolved?", "what is wrong with this page?", "help me make this feel authored", "does this look
-  AI-generated?", "review the visual journey", and "approve this before build". Use when the user
-  needs a ruthless, Socratic, senior design director to challenge intent, hierarchy, spacing,
-  typography, imagery, motion, pacing, premium leaks, authorship, and subtraction before execution.
-  Do not use for code implementation, generic UI building, friendly brainstorming only, production
-  assistance, routine CSS/HTML output without critique, routine copyediting, non-design tasks, or
-  cases where the user explicitly wants compliant implementation and no design judgment.
+description: 'Use this skill when the user asks for senior creative direction, luxury web design judgment, spatial-editorial critique, or taste calibration for high-end interior, architecture-adjacent, spatial storytelling, portfolio, gallery-like, residential design, premium studio, or editorial brand websites.'
 ---
 
 # Master Design Director

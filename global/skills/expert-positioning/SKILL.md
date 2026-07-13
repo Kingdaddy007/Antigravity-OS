@@ -1,13 +1,6 @@
 ---
 name: expert-positioning
-description: >
-  Use this skill when auditing, designing, or refactoring website layouts,
-  copywriting posture, inquiry paths, CTA structures, portfolios, case studies,
-  or sales-to-onboarding transitions for professional services, agencies,
-  creators, and high-end brands. Activated when analyzing positioning strategy,
-  revising vendor copy, setting minimum engagements, or diagnosing buyer self-assessments.
-  Examples: "audit my positioning", "WWP copy critique", "expert posture", "qualification gates", "paid diagnostic offer".
-  Do NOT use for general copy editing (use copy-editing) or standard UI styling (use ui-ux).
+description: 'Use this skill when auditing, designing, or refactoring website layouts, copywriting posture, inquiry paths, CTA structures, portfolios, case studies, or sales-to-onboarding transitions for professional services, agencies, creators, and high-end brands. Activated when analyzing positioning strategy, revising vendor copy, setting minimum engagements, or diagnosing buyer self-assessments. Examples: "audit my positioning", "WWP copy critique", "expert posture", "qualification gates", "paid diagnostic offer". Do NOT use for general copy editing (use copy-editing) or standard UI styling (use ui-ux).'
 ---
 
 # Expert Positioning — Anti-Gravity OS

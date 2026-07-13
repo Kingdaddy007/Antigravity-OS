@@ -1,0 +1,4 @@
+interface:
+  display_name: "Seedance Vocab Ja"
+  short_description: "Guidance for seedance vocab ja tasks"
+  default_prompt: "Use $seedance-vocab-ja to help complete this task with its domain workflow."

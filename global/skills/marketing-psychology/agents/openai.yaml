@@ -1,0 +1,4 @@
+interface:
+  display_name: "Marketing Psychology"
+  short_description: "Guidance for marketing psychology tasks"
+  default_prompt: "Use $marketing-psychology to help complete this task with its domain workflow."

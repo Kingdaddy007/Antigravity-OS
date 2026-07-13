@@ -1,3 +1,23 @@
+---
+id: task-dispatch
+version: 1
+status: active
+intent: Execute task dispatch with explicit authority, state, outputs, and evidence.
+use_when: [the task matches task dispatch]
+do_not_use_when: [another workflow more precisely matches the requested outcome]
+inputs: [user objective, workspace context, constraints, requested authority mode]
+required_resources: [applicable AGENTS.md files, referenced skills and contexts]
+mutation_class: local_edit
+approval_gates: [confirm scope expansion or destructive action before mutation]
+states: [intake, assess, propose, approve-if-needed, execute-if-authorized, verify, deliver]
+outputs: [task result, changed-artifact list when applicable, evidence, residual risks]
+verification: [run proportionate checks, record raw evidence, label anything unverified]
+failure_paths: [stop on authority or contract conflict, preserve state, report blocker and safe next action]
+resume_contract: task-scoped .agents/workflows/task-dispatch.json using the workflows directory contract
+next_workflows: [none]
+profiles: [general]
+---
+
 # WORKFLOW: TASK DISPATCH (ORCHESTRATION)
 
 **Version:** Gold v1.2
@@ -21,10 +41,12 @@ A task is dispatchable if:
 - It is highly isolated (e.g., writing tests for a pure function, styling a simple component, writing documentation).
 - It does not require deep knowledge of the entire system architecture.
 - Its inputs and expected outputs are clear.
+- Its blocking edges are known and it does not overlap another worker's file ownership.
+- It can return useful evidence independently. Task count alone is never a reason to dispatch.
 
 ### 2. Prepare the Task Brief
 
-For each task you intend to dispatch, generate a clear, self-contained brief for the user to hand to a new agent session.
+For each task, create a task ID and self-contained brief. Use available subagent tooling directly when authorized and available; otherwise present the brief for a separate session.
 
 ### Format
 
@@ -38,21 +60,25 @@ For each task you intend to dispatch, generate a clear, self-contained brief for
 **Constraints:** [Formatting rules, performance needs, etc.]
 **Verification:** [How the new agent should prove it works]
 **Context Needed:** [A 1-2 sentence summary of what the agent needs to know]
+**Blocked By / Blocks:** [Task IDs]
+**Owned Files:** [Exclusive write scope; overlaps are forbidden]
+**Authority Mode:** [diagnose / propose / implement]
+**Return Contract:** [Touched files, commands, raw evidence, assumptions, residual risks]
 ```
 
 ### 3. Handoff
 
-Present the brief(s) to the user. Say:
-"Here are the tasks that can be dispatched to separate sessions. Copy each brief into a new chat window. I will wait here for you to bring back the results or confirm completion."
+Dispatch only tasks whose dependencies are satisfied. Record task ID, worker ID, status, ownership, and expected evidence in the task-scoped workflow state. Limit concurrency to the available platform slots and useful independent work; never create workers merely to appear parallel.
 
 ### 4. Re-integration
 
-When the user returns from a sub-session:
+When a worker or sub-session returns:
 
 1. Review the changes made (using git status/diff or by reading the touched files).
 2. Verify the subagent followed the brief and didn't break adjacent behavior.
 3. Mark the task as complete in your master checklist.
 4. Proceed to the next task.
+5. On failure or timeout, preserve evidence, release ownership, and either retry with a narrower brief or return the task to the orchestrator.
 
 ## WHY WE DO THIS
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Wizard"
+  short_description: "Guidance for wizard tasks"
+  default_prompt: "Use $wizard to help complete this task with its domain workflow."

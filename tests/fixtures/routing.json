@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "scenarios": [
+    {
+      "id": "diagnosis-only",
+      "request": "Why is this failing? Diagnose it but do not change files.",
+      "workflow": "debug-issue",
+      "profile": "general",
+      "mode": "diagnose",
+      "maximum_mutation_class": "read_only",
+      "approval_required": false
+    },
+    {
+      "id": "implementation",
+      "request": "Implement this approved local feature.",
+      "workflow": "build-feature",
+      "profile": "general",
+      "mode": "implement",
+      "maximum_mutation_class": "local_edit",
+      "approval_required": false
+    },
+    {
+      "id": "production-deployment",
+      "request": "Deploy this release to production.",
+      "workflow": "ship-to-production",
+      "profile": "general",
+      "mode": "implement",
+      "maximum_mutation_class": "external_or_production",
+      "approval_required": true
+    },
+    {
+      "id": "security-review",
+      "request": "Audit this authentication flow without editing it.",
+      "workflow": "security-audit",
+      "profile": "general",
+      "mode": "diagnose",
+      "maximum_mutation_class": "read_only",
+      "approval_required": false
+    },
+    {
+      "id": "general-saas-inception",
+      "request": "Plan a new multi-tenant SaaS product.",
+      "workflow": "project-inception",
+      "profile": "general",
+      "mode": "propose",
+      "maximum_mutation_class": "read_only",
+      "approval_required": false
+    },
+    {
+      "id": "spatial-portfolio-inception",
+      "request": "Create the concept for a luxury interior design portfolio.",
+      "workflow": "spatial-project-inception",
+      "profile": "spatial",
+      "mode": "propose",
+      "maximum_mutation_class": "read_only",
+      "approval_required": false
+    },
+    {
+      "id": "concurrent-agent-dispatch",
+      "request": "Split these independent tasks across subagents.",
+      "workflow": "task-dispatch",
+      "profile": "general",
+      "mode": "implement",
+      "maximum_mutation_class": "local_edit",
+      "approval_required": false
+    }
+  ]
+}

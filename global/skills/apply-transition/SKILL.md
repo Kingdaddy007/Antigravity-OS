@@ -1,10 +1,6 @@
 ---
 name: apply-transition
-description: >
-  Use this skill when the user wants to apply a pre-built CSS transition or animation
-  from the loading.io transition.css library to a specific element. Activated by 
-  "/apply-transition", "apply ripple", "apply loading.io transition", or when the user 
-  asks to animate an element using a CSS class effect.
+description: 'Use this skill when the user wants to apply a pre-built CSS transition or animation from the loading.io transition.css library to a specific element. Activated by "/apply-transition", "apply ripple", "apply loading.io transition", or when the user asks to animate an element using a CSS class effect.'
 ---
 
 # Transition.css Integration & Application

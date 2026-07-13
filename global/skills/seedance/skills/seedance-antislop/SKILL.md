@@ -2,11 +2,10 @@
 name: seedance-antislop
 description: 'Detect and remove hollow AI filler language, empty superlatives, and vague boosters that degrade Seedance 2.0 prompt quality. Use when a prompt feels generic, over-written, or ''AI-sounding'', or when generation output looks bland and needs a quality pass.'
 license: MIT
-user-invocable: true
-user-invokable: true
-tags: ["writing", "quality", "slop-filter", "openclaw", "antigravity", "gemini-cli", "codex", "cursor"]
-metadata: {"version": "5.0.0", "updated": "2026-03-03", "openclaw": {"emoji": "🚫", "homepage": "https://github.com/Emily2040/seedance-2.0"}, "parent": "seedance-20", "antigravity": {"emoji": "🚫", "homepage": "https://github.com/Emily2040/seedance-2.0"}, "gemini-cli": {"emoji": "🚫", "homepage": "https://github.com/Emily2040/seedance-2.0"}, "author": "Emily (@iamemily2050)", "repository": "https://github.com/Emily2040/seedance-2.0"}
 ---
+## STATUS VERIFICATION GATE
+
+Treat platform availability, model limits, filter behavior, enforcement actions, and API status dated February-March 2026 as historical snapshots. Before relying on them, verify current official ByteDance/Seedance documentation. If verification is unavailable, label the claim unverified and avoid presenting it as current fact.
 
 # seedance-antislop
 

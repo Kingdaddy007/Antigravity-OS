@@ -1,4 +1,20 @@
-﻿# Heuristics Scoring Guide
+# Heuristics Scoring Guide
+
+## Contents
+
+- [Nielsen's 10 Heuristics](#nielsens-10-heuristics)
+  - [1. Visibility of System Status](#1-visibility-of-system-status)
+  - [2. Match Between System and Real World](#2-match-between-system-and-real-world)
+  - [3. User Control and Freedom](#3-user-control-and-freedom)
+  - [4. Consistency and Standards](#4-consistency-and-standards)
+  - [5. Error Prevention](#5-error-prevention)
+  - [6. Recognition Rather Than Recall](#6-recognition-rather-than-recall)
+  - [7. Flexibility and Efficiency of Use](#7-flexibility-and-efficiency-of-use)
+  - [8. Aesthetic and Minimalist Design](#8-aesthetic-and-minimalist-design)
+  - [9. Help Users Recognize, Diagnose, and Recover from Errors](#9-help-users-recognize-diagnose-and-recover-from-errors)
+  - [10. Help and Documentation](#10-help-and-documentation)
+- [Score Summary](#score-summary)
+- [Issue Severity (P0–P3)](#issue-severity-p0p3)
 
 Score each of Nielsen's 10 Usability Heuristics on a 0–4 scale. Be honest: a 4 means genuinely excellent, not "good enough."
 

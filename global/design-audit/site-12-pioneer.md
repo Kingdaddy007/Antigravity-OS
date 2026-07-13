@@ -47,7 +47,7 @@
 Comparing the Pioneer site to our active skills reveals the following gaps:
 
 #### Gap A: Omission of "Continuous Morph Narrative" Subtype
-* **The Gap:** [cinematic-motion/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/cinematic-motion/SKILL.md) assumes mixed media sections (scatters, parallax, video scrub). It has no guidelines for **single-material continuous morphing** where the entire page is one evolving canvas.
+* **The Gap:** [cinematic-motion/SKILL.md](../skills/cinematic-motion/SKILL.md) assumes mixed media sections (scatters, parallax, video scrub). It has no guidelines for **single-material continuous morphing** where the entire page is one evolving canvas.
 * **Why it matters:** The model defaults to switching assets rather than maintaining material continuity.
 
 #### Gap B: No Shader-Territory Detection Gate

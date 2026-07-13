@@ -51,7 +51,7 @@
 Comparing the Igloo/Penguin site to our active skills reveals the following gaps:
 
 #### Gap A: Absence of "Single-Canvas Narrative World" Pattern
-* **The Gap:** [cinematic-motion/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/cinematic-motion/SKILL.md) assumes pages are built of stacked sections. It has no branch for pages where the entire interface is a single canvas and the DOM serves purely as instrumentation.
+* **The Gap:** [cinematic-motion/SKILL.md](../skills/cinematic-motion/SKILL.md) assumes pages are built of stacked sections. It has no branch for pages where the entire interface is a single canvas and the DOM serves purely as instrumentation.
 * **Why it matters:** The model defaults to building standard layouts with sections, breaking the continuous cinematic illusion.
 
 #### Gap B: No HUD Overlay Grammar Rules

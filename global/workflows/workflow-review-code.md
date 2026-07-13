@@ -1,9 +1,28 @@
+---
+id: review-code
+version: 1
+status: active
+intent: Execute review code with explicit authority, state, outputs, and evidence.
+use_when: [the task matches review code]
+do_not_use_when: [another workflow more precisely matches the requested outcome]
+inputs: [user objective, workspace context, constraints, requested authority mode]
+required_resources: [applicable AGENTS.md files, referenced skills and contexts]
+mutation_class: read_only
+approval_gates: [confirm implement mode before any mutation]
+states: [intake, assess, propose, approve-if-needed, execute-if-authorized, verify, deliver]
+outputs: [task result, changed-artifact list when applicable, evidence, residual risks]
+verification: [run proportionate checks, record raw evidence, label anything unverified]
+failure_paths: [stop on authority or contract conflict, preserve state, report blocker and safe next action]
+resume_contract: task-scoped .agents/workflows/review-code.json using the workflows directory contract
+next_workflows: [none]
+profiles: [general]
+---
+
 # WORKFLOW: REVIEW CODE (FULL SOURCE)
 
 **Version:** Gold v1.1 (Master Merge)
 **Layer:** 8 — Execution Workflow
 **Tier:** 2 — Loaded by task
-**File:** workflows/workflow-review-code-SOURCE.md
 **Primary Mode:** Reviewer
 **Secondary Modes:** Security, Architect, Performance, Builder
 **Purpose:** The systematic sequence for reviewing code — evaluating correctness, security, maintainability, and quality against project standards. Transforms code review from subjective "looks good to me" into structured evaluation with prioritized findings.
@@ -386,7 +405,7 @@ State the minimum changes needed for approval when not ready. Do not leave the a
 
 #### Load Template (Step 8)
 
-- [REQUIRED] Load [code-review-report.md](file:///C:/Users/godsw/.gemini/config/global_templates/code-review-report.md)
+- [REQUIRED] Load [code-review-report.md](../global_templates/code-review-report.md)
 - Follow the structure and guidance in the template exactly to deliver the code review findings.
 
 #### Tone Rules (Step 8)

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://antigravity-os.dev/schemas/adapter.schema.json",
+  "title": "Anti-Gravity host adapter",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "host",
+    "namespace",
+    "content_root",
+    "instruction_target",
+    "skills_target",
+    "workflows_target",
+    "supports_slash_commands",
+    "approval_model",
+    "capabilities"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "host": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "namespace": { "const": "antigravity" },
+    "content_root": { "type": "string" },
+    "instruction_target": { "type": "string", "minLength": 1 },
+    "skills_target": { "type": "string", "minLength": 1 },
+    "workflows_target": { "type": "string", "minLength": 1 },
+    "supports_slash_commands": { "type": "boolean" },
+    "approval_model": {
+      "enum": ["host-enforced", "instruction-enforced", "mixed"]
+    },
+    "capabilities": {
+      "type": "object",
+      "additionalProperties": { "type": "string", "minLength": 1 },
+      "required": [
+        "read_file",
+        "list_files",
+        "search_text",
+        "edit_file",
+        "run_command",
+        "request_approval"
+      ]
+    }
+  }
+}

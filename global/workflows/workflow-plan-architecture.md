@@ -1,9 +1,28 @@
+---
+id: plan-architecture
+version: 1
+status: active
+intent: Execute plan architecture with explicit authority, state, outputs, and evidence.
+use_when: [the task matches plan architecture]
+do_not_use_when: [another workflow more precisely matches the requested outcome]
+inputs: [user objective, workspace context, constraints, requested authority mode]
+required_resources: [applicable AGENTS.md files, referenced skills and contexts]
+mutation_class: read_only
+approval_gates: [confirm implement mode before any mutation]
+states: [intake, assess, propose, approve-if-needed, execute-if-authorized, verify, deliver]
+outputs: [task result, changed-artifact list when applicable, evidence, residual risks]
+verification: [run proportionate checks, record raw evidence, label anything unverified]
+failure_paths: [stop on authority or contract conflict, preserve state, report blocker and safe next action]
+resume_contract: task-scoped .agents/workflows/plan-architecture.json using the workflows directory contract
+next_workflows: [none]
+profiles: [general]
+---
+
 # WORKFLOW: PLAN ARCHITECTURE (FULL SOURCE)
 
 **Version:** Gold v1.1 (Master Merge)
 **Layer:** 8 — Execution Workflow
 **Tier:** 2 — Loaded by task
-**File:** workflows/workflow-plan-architecture-SOURCE.md
 **Primary Mode:** Architect
 **Secondary Modes:** Research, Security, Performance, Product Thinking
 **Purpose:** The systematic sequence for making architectural decisions — from understanding requirements through evaluating options to documenting the decision with tradeoffs and implementation guidance. Ensures architectural decisions are made deliberately rather than defaulting to whatever pattern is most familiar.
@@ -382,7 +401,7 @@ If boundaries are still fuzzy after this step, implementation will invent the re
 
 #### Load Template (Step 6)
 
-- [REQUIRED] Load [architecture-decision-record.md](file:///C:/Users/godsw/.gemini/config/global_templates/architecture-decision-record.md)
+- [REQUIRED] Load [architecture-decision-record.md](../global_templates/architecture-decision-record.md)
 - Follow the structure and guidance in the template exactly to record the decision.
 
 #### Post-ADR Actions (Step 6)

@@ -1,4 +1,14 @@
-# Scene Kit And Beloved's Asset Directive
+# Scene Kit And the user's Asset Directive
+
+## Contents
+
+- [Build Gate](#build-gate)
+- [Asset Directive Checklist](#asset-directive-checklist)
+- [Image Generation Prompt Template](#image-generation-prompt-template)
+- [Video Source Image Rule](#video-source-image-rule)
+- [Video Prompt Template](#video-prompt-template)
+- [Prompt Pack Gate](#prompt-pack-gate)
+- [Asset Path Defaults](#asset-path-defaults)
 
 Use this when a spatial concept depends on imagery, generated pictures, video, rendered objects, SVG masks, or WebGL/canvas scenes. The assistant must create this directive after `room-sequence.md` and before layout styling.
 
@@ -6,7 +16,7 @@ Use this when a spatial concept depends on imagery, generated pictures, video, r
 
 Pause after writing the directive.
 
-Do not write final layout styling for image-native scenes until Beloved has placed the required assets in the specified folders, or explicitly approves temporary stand-ins.
+Do not write final layout styling for image-native scenes until the user has placed the required assets in the specified folders, or explicitly approves temporary stand-ins.
 
 ## Asset Directive Checklist
 
@@ -48,7 +58,7 @@ Blocking before build: yes | no
 
 ## Image Generation Prompt Template
 
-Use when Beloved needs a still image or source image for later video.
+Use when the user needs a still image or source image for later video.
 
 ```text
 Create a high-end editorial interior design image.

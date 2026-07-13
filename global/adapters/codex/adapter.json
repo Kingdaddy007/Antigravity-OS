@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "host": "codex",
+  "namespace": "antigravity",
+  "content_root": ".agents",
+  "instruction_target": "AGENTS.md",
+  "skills_target": "skills",
+  "workflows_target": "workflows",
+  "supports_slash_commands": false,
+  "approval_model": "host-enforced",
+  "capabilities": {
+    "read_file": "filesystem read capability",
+    "list_files": "filesystem listing capability",
+    "search_text": "repository text search capability",
+    "edit_file": "patch-based editing capability",
+    "run_command": "sandboxed terminal capability",
+    "request_approval": "host escalation or user confirmation"
+  }
+}

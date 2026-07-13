@@ -1,14 +1,6 @@
 ---
-name: DEBUGGING & SYSTEMATIC TROUBLESHOOTING
-description: >
-  Use this skill when investigating errors, crashes, unexpected behavior, or
-  system failures. Activated when the user reports a bug, shares a stack trace
-  or error message, describes tests failing unexpectedly, notices a regression
-  (a feature that used to work no longer does), or when production telemetry
-  alerts have fired. Examples: "this is broken", "I'm getting an error",
-  "the tests are failing", "this stopped working after my last change",
-  "the system is down". Do NOT use for general implementation work (use
-  coding skill) or architecture decisions (use architecture skill).
+name: debugging
+description: 'Use this skill when investigating errors, crashes, unexpected behavior, or system failures. Activated when the user reports a bug, shares a stack trace or error message, describes tests failing unexpectedly, notices a regression (a feature that used to work no longer does), or when production telemetry alerts have fired. Examples: "this is broken", "I''m getting an error", "the tests are failing", "this stopped working after my last change", "the system is down". Do NOT use for general implementation work (use coding skill) or architecture decisions (use architecture skill).'
 ---
 
 # DEBUGGING & SYSTEMATIC TROUBLESHOOTING

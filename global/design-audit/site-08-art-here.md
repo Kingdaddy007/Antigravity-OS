@@ -44,7 +44,7 @@
 Comparing the Art Here site to our active skills reveals the following gaps:
 
 #### Gap A: Lack of "Portal Exhibition Architecture" subtype
-* **The Gap:** [cinematic-motion/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/cinematic-motion/SKILL.md) lacks patterns for **threshold transitions** and **multi-world sequences**. 3D is treated as a single product viewer or single camera track.
+* **The Gap:** [cinematic-motion/SKILL.md](../skills/cinematic-motion/SKILL.md) lacks patterns for **threshold transitions** and **multi-world sequences**. 3D is treated as a single product viewer or single camera track.
 * **Why it matters:** The model cannot build multi-scene exhibitions because it does not know how to link separate 3D scenes.
 
 #### Gap B: No Active 3D Lifecycle Management (GPU Disposal)

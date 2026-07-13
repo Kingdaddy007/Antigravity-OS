@@ -1,6 +1,23 @@
-﻿---
+---
 name: workflow-impeccable-overdrive
 description: Impeccable UI/UX overdrive workflow
+id: impeccable-overdrive
+version: 1
+status: active
+intent: Execute impeccable overdrive with explicit authority, state, outputs, and evidence.
+use_when: [the task matches impeccable overdrive]
+do_not_use_when: [another workflow more precisely matches the requested outcome]
+inputs: [user objective, workspace context, constraints, requested authority mode]
+required_resources: [applicable AGENTS.md files, referenced skills and contexts]
+mutation_class: local_edit
+approval_gates: [confirm scope expansion or destructive action before mutation]
+states: [intake, assess, propose, approve-if-needed, execute-if-authorized, verify, deliver]
+outputs: [task result, changed-artifact list when applicable, evidence, residual risks]
+verification: [run proportionate checks, record raw evidence, label anything unverified]
+failure_paths: [stop on authority or contract conflict, preserve state, report blocker and safe next action]
+resume_contract: task-scoped .agents/workflows/impeccable-overdrive.json using the workflows directory contract
+next_workflows: [none]
+profiles: [general]
 ---
 
 Start your response with:
@@ -19,7 +36,7 @@ Push an interface past conventional limits. This isn't just about visual effects
 This command has the highest potential to misfire. Do NOT jump straight into implementation. You MUST:
 
 1. **Think through 2-3 different directions**: consider different techniques, levels of ambition, and aesthetic approaches. For each direction, briefly describe what the result would look and feel like.
-2. **{{ask_instruction}}** to present these directions and get the user's pick before writing any code. Explain trade-offs (browser support, performance cost, complexity).
+2. **ask the user a concise blocking question** to present these directions and get the user's pick before writing any code. Explain trade-offs (browser support, performance cost, complexity).
 3. Only proceed with the direction the user confirms.
 
 Skipping this step risks building something embarrassing that needs to be thrown away.

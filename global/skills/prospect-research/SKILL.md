@@ -1,16 +1,6 @@
 ---
 name: prospect-research
-description: >
-  Use this skill when finding, scoring, or profiling prospects for the
-  Cinematic Digital Showroom offer targeting luxury residential interior
-  designers and boutique interior design studios. Activated by "find
-  prospects", "research interior designers", "find Lagos prospects", "find
-  Dubai prospects", "who should I target this week", "score this designer",
-  "prospect research", "find designers with weak websites", or any task
-  that involves identifying, qualifying, or prioritizing outreach targets
-  for the BEVAMPED studio offer. Do NOT use for general web research,
-  competitor profiling, or sales outreach copy (use sales-enablement or
-  copywriting skills for those).
+description: 'Use this skill when finding, scoring, or profiling prospects for the Cinematic Digital Showroom offer targeting luxury residential interior designers and boutique interior design studios. Activated by "find prospects", "research interior designers", "find Lagos prospects", "find Dubai prospects", "who should I target this week", "score this designer", "prospect research", "find designers with weak websites", or any task that involves identifying, qualifying, or prioritizing outreach targets for the BEVAMPED studio offer. Do NOT use for general web research, competitor profiling, or sales outreach copy (use sales-enablement or copywriting skills for those).'
 ---
 
 # Prospect Research

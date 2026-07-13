@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://antigravity-os.dev/schemas/workflow-index.schema.json",
+  "title": "Anti-Gravity workflow state index",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "updated_at", "tasks"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "updated_at": { "type": "string", "format": "date-time" },
+    "tasks": {
+      "type": "object",
+      "propertyNames": { "pattern": "^[a-zA-Z0-9._-]+$" },
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^[a-zA-Z0-9._-]+\\.json$"
+      }
+    }
+  }
+}
+

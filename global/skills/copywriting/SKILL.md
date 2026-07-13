@@ -1,8 +1,6 @@
 ---
 name: copywriting
-description: When the user wants to write, rewrite, or improve marketing copy for any page — including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. Also use when the user says "write copy for," "improve this copy," "rewrite this page," "marketing copy," "headline help," "CTA copy," "value proposition," "tagline," "subheadline," "hero section copy," "above the fold," "this copy is weak," "make this more compelling," or "help me describe my product." Use this whenever someone is working on website text that needs to persuade or convert. For email copy, see email-sequence. For popup copy, see popup-cro. For editing existing copy, see copy-editing.
-metadata:
-  version: 1.1.0
+description: 'Use when writing or rewriting persuasive marketing copy for websites, landing pages, pricing pages, product pages, email, or modal messages. Trigger on requests for headlines, CTAs, value propositions, page copy, email copy, or stronger messaging. Use copy-editing when the task is primarily polishing existing prose, and page-cro when structure or conversion diagnosis is the main problem.'
 ---
 
 # Copywriting
@@ -234,6 +232,10 @@ Maintain consistency, but adjust intensity:
 
 ---
 
+
+## REFERENCE LOADING RULES
+
+Load `references/resource-index.md` when the task needs examples, specialist criteria, implementation details, or domain-specific diagnostics beyond this core workflow. Select only the references whose indexed purpose matches the task; do not load the package wholesale.
 ## Output Format
 
 When writing copy, provide:
@@ -265,6 +267,6 @@ For headlines and CTAs, provide 2-3 options:
 - **copy-editing**: For polishing existing copy (use after your draft)
 - **page-cro**: If page structure/strategy needs work, not just copy
 - **expert-positioning**: For auditing positioning strategy and refactoring submissive/vendor language (WWP)
-- **email-sequence**: For email copywriting
-- **popup-cro**: For popup and modal copy
-- **ab-test-setup**: To test copy variations
+- Handle email copy directly with the same audience, value, proof, and CTA principles; adapt the structure to the requested sequence.
+- **page-cro**: For popup and modal copy
+- **testing**: To test copy variations

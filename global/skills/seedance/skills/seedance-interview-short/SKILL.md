@@ -1,19 +1,11 @@
 ---
 name: seedance-interview-short
-description: 'A guided creative journey to craft a production-ready prompt under the hard 2000-character limit. Follow the "Director\\'s Journey" workflow: Vision → Narrative → Visuals → Technical → Final Compressed Brief.'
+description: 'Use when the task requires seedance interview short guidance. A guided creative journey to craft a production-ready prompt under the hard 2000-character limit. Follow the "Director\\''s Journey" workflow: Vision → Narrative → Visuals → Technical → Final Compressed Brief.'
 license: MIT
-user-invocable: true
-user-invokable: true
-tags: [storytelling, creative-writing, directing, pre-production, scriptwriting, prompt-compression, character-limit, seedance-20]
-metadata: {
-  "version": "5.0.0",
-  "updated": "2026-03-03",
-  "openclaw": {"emoji": "🎙️", "homepage": "https://github.com/Emily2040/seedance-2.0"},
-  "parent": "seedance-20",
-  "author": "Emily (@iamemily2050)",
-  "repository": "https://github.com/Emily2040/seedance-2.0"
-}
 ---
+## STATUS VERIFICATION GATE
+
+Treat platform availability, model limits, filter behavior, enforcement actions, and API status dated February-March 2026 as historical snapshots. Before relying on them, verify current official ByteDance/Seedance documentation. If verification is unavailable, label the claim unverified and avoid presenting it as current fact.
 
 # seedance-interview-short (v5.0)
 

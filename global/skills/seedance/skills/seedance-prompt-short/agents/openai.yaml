@@ -1,0 +1,4 @@
+interface:
+  display_name: "Seedance Prompt Short"
+  short_description: "Guidance for seedance prompt short tasks"
+  default_prompt: "Use $seedance-prompt-short to help complete this task with its domain workflow."

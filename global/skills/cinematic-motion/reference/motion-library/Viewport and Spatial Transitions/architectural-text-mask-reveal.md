@@ -1,5 +1,14 @@
 # Architectural Text Mask Reveal
 
+## Contents
+
+- [Concept](#concept)
+- [Best Used For](#best-used-for)
+- [HTML / SVG Structure](#html-svg-structure)
+- [CSS](#css)
+- [GSAP Implementation (ScrollTrigger)](#gsap-implementation-scrolltrigger)
+- [Anti-Patterns and Gotchas](#anti-patterns-and-gotchas)
+
 ## Concept
 The "Text Mask Video Reveal" (or "Architectural Threshold") is an elite Awwwards-tier spatial transition where typography acts as a physical window into a background video/scene. Instead of overlaying text on a video, the screen is covered by a solid editorial color (e.g., Ivory or Charcoal), and the brand typography is literally "punched out" as a transparent hole. The video plays exclusively *through* the letters.
 

@@ -1,12 +1,11 @@
 ---
 name: seedance-examples-zh
-description: 'Browse 16+ battle-tested, production-ready Chinese prompt examples for Seedance 2.0 across 8 genres: drama, action, advertising, animation, product, one-take, VFX, and music sync. Use to learn advanced prompt structure, copy-paste working examples, or find inspiration for new scenes.'
+description: 'Use when the task requires seedance examples zh guidance. Browse 16+ battle-tested, production-ready Chinese prompt examples for Seedance 2.0 across 8 genres: drama, action, advertising, animation, product, one-take, VFX, and music sync. Use to learn advanced prompt structure, copy-paste working examples, or find inspiration for new scenes.'
 license: MIT
-user-invocable: true
-user-invokable: true
-tags: ["examples", "prompts", "chinese", "i18n", "openclaw", "antigravity", "gemini-cli"]
-metadata: {"version": "5.0.0", "updated": "2026-03-03", "openclaw": {"emoji": "🇨🇳", "homepage": "https://github.com/Emily2040/seedance-2.0"}, "parent": "seedance-20", "antigravity": {"emoji": "🇨🇳", "homepage": "https://github.com/Emily2040/seedance-2.0"}, "gemini-cli": {"emoji": "🇨🇳", "homepage": "https://github.com/Emily2040/seedance-2.0"}, "author": "Emily (@iamemily2050)", "repository": "https://github.com/Emily2040/seedance-2.0"}
 ---
+## STATUS VERIFICATION GATE
+
+Treat platform availability, model limits, filter behavior, enforcement actions, and API status dated February-March 2026 as historical snapshots. Before relying on them, verify current official ByteDance/Seedance documentation. If verification is unavailable, label the claim unverified and avoid presenting it as current fact.
 
 # seedance-examples-zh · 中文实战案例库
 

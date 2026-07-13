@@ -1,0 +1,4 @@
+interface:
+  display_name: "Seedance Interview"
+  short_description: "Guidance for seedance interview tasks"
+  default_prompt: "Use $seedance-interview to help complete this task with its domain workflow."

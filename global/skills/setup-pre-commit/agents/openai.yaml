@@ -1,0 +1,4 @@
+interface:
+  display_name: "Setup Pre Commit"
+  short_description: "Guidance for setup pre commit tasks"
+  default_prompt: "Use $setup-pre-commit to help complete this task with its domain workflow."

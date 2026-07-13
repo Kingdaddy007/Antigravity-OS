@@ -1,4 +1,24 @@
-﻿# Interaction Design
+# Interaction Design
+
+## Contents
+
+- [The Eight Interactive States](#the-eight-interactive-states)
+- [Focus Rings: Do Them Right](#focus-rings-do-them-right)
+- [Form Design: The Non-Obvious](#form-design-the-non-obvious)
+- [Loading States](#loading-states)
+- [Modals: The Inert Approach](#modals-the-inert-approach)
+- [The Popover API](#the-popover-api)
+- [Dropdown & Overlay Positioning](#dropdown-overlay-positioning)
+  - [CSS Anchor Positioning](#css-anchor-positioning)
+  - [Popover + Anchor Combo](#popover-anchor-combo)
+  - [Portal / Teleport Pattern](#portal-teleport-pattern)
+  - [Fixed Positioning Fallback](#fixed-positioning-fallback)
+  - [Anti-Patterns](#anti-patterns)
+- [Destructive Actions: Undo > Confirm](#destructive-actions-undo-confirm)
+- [Keyboard Navigation Patterns](#keyboard-navigation-patterns)
+  - [Roving Tabindex](#roving-tabindex)
+  - [Skip Links](#skip-links)
+- [Gesture Discoverability](#gesture-discoverability)
 
 ## The Eight Interactive States
 

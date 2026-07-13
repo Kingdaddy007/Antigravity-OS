@@ -1,0 +1,4 @@
+interface:
+  display_name: "Seedance Lighting"
+  short_description: "Guidance for seedance lighting tasks"
+  default_prompt: "Use $seedance-lighting to help complete this task with its domain workflow."

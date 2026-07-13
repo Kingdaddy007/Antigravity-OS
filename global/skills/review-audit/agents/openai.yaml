@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review Audit"
+  short_description: "Guidance for review audit tasks"
+  default_prompt: "Use $review-audit to help complete this task with its domain workflow."

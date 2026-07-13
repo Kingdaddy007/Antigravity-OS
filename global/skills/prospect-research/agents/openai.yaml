@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prospect Research"
+  short_description: "Guidance for prospect research tasks"
+  default_prompt: "Use $prospect-research to help complete this task with its domain workflow."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Master Design Director"
+  short_description: "Guidance for master design director tasks"
+  default_prompt: "Use $master-design-director to help complete this task with its domain workflow."

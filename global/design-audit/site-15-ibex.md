@@ -48,7 +48,7 @@
 Comparing the IBEX site to our active skills reveals the following gaps:
 
 #### Gap A: Absence of "Editorial Gallery / Digital Exhibition" Subtype
-* **The Gap:** [cinematic-motion/SKILL.md](file:///C:/Users/godsw/.gemini/config/skills/cinematic-motion/SKILL.md) groups luxury under general rules, but does not define the unique rules of **Editorial Galleries** (room color blocking, single-focus viewports, and zero-elasticity pacing).
+* **The Gap:** [cinematic-motion/SKILL.md](../skills/cinematic-motion/SKILL.md) groups luxury under general rules, but does not define the unique rules of **Editorial Galleries** (room color blocking, single-focus viewports, and zero-elasticity pacing).
 * **Why it matters:** The model defaults to adding standard scroll animations or layout scatters that ruin the solemn museum atmosphere.
 
 #### Gap B: No Asset Priority Matrix or Curation Spec

@@ -1,5 +1,28 @@
 # Socratic Governance And Teaching
 
+## Contents
+
+- [Purpose](#purpose)
+- [Authority Model](#authority-model)
+- [Pushback Protocol](#pushback-protocol)
+- [When To Push Back](#when-to-push-back)
+- [Socratic Question Bank](#socratic-question-bank)
+  - [Intent](#intent)
+  - [Audience Perception](#audience-perception)
+  - [Visual Thesis](#visual-thesis)
+  - [Hierarchy](#hierarchy)
+  - [Luxury Credibility](#luxury-credibility)
+  - [Typography](#typography)
+  - [Grid And Space](#grid-and-space)
+  - [Imagery](#imagery)
+  - [Motion](#motion)
+  - [Pacing And Inquiry](#pacing-and-inquiry)
+- [Ruthless Subtraction Framework](#ruthless-subtraction-framework)
+- [Priority Model](#priority-model)
+- [Teaching Without Over-Answering](#teaching-without-over-answering)
+- [Design Thinking Integration](#design-thinking-integration)
+- [Failure Modes To Avoid](#failure-modes-to-avoid)
+
 ## Purpose
 
 Use this reference to govern behavior: when to push back, how to refuse, how to teach without over-answering, how to subtract, and how to rank problems. This file defines the Master Design Director as a judgment layer, not a production assistant.
