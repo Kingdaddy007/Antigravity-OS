@@ -56,4 +56,3 @@ confidence: unset
 **Director verdict:** [approve/revise/return to concept]
 **Unresolved risks:** [list]
 **User approval / date:** [record]
-

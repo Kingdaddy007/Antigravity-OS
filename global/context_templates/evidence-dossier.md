@@ -56,4 +56,3 @@ confidence: unset
 **Coverage confirmed by:** [name]
 **Diagnosis approved / revised:** [status]
 **Date:** [date]
-

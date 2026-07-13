@@ -59,4 +59,3 @@ confidence: unset
 **Verdict:** [approve/revise]
 **Reason:** [brief diagnosis]
 **Approval:** [user/date]
-

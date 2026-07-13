@@ -72,4 +72,3 @@ confidence: unset
 **Hybrid conflict resolution, if applicable:** [primary premise, borrowed element, conflict, resolution]
 **Risks and return conditions:** [what would reopen selection]
 **User approval / date:** [record]
-

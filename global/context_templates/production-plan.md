@@ -65,4 +65,3 @@ confidence: unset
 
 **Production contract:** [user/director/date]
 **Full production authorized:** [yes/no/date]
-
