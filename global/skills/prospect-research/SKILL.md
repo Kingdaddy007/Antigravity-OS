@@ -11,6 +11,12 @@ description: 'Use this skill when finding, scoring, or profiling prospects for t
 - Scoring and ranking a list of interior designers by ICP fit.
 - Auditing a specific designer's Instagram and website to decide on action.
 
+## REFERENCE LOADING RULES
+
+- Load `references/prospect-dossier-template.md` whenever creating, reviewing, or handing off a prospect dossier.
+- Load `scripts/dossier_helper.py` only when the user requests a machine-readable dossier, batch scoring, validation, or a repeatable export. The script is a local helper; it does not browse, contact, or upload anything.
+- Do not load either resource for general market research that is not qualifying an outreach prospect.
+
 ## NEVER DO
 
 - Target budget decorators, home staging businesses, or Airbnb/short-let stylists.
@@ -119,6 +125,8 @@ Scores by category → Total ICP score + tier → Main website gap → Suggested
 **Prospect profile fields (required):**
 Studio name · Country · City · Segment · Website URL · Instagram URL · Founder name · Contact method · Website status · All 6 category scores · Total score · Main gap · Hero concept angle · Outreach hook · Recommended action
 
+For repeatable work, store one JSON dossier per prospect using the template and run `python scripts/dossier_helper.py validate <dossier.json>` before delivery. Use `score` only after both Instagram and website evidence has been recorded.
+
 ---
 
 ## NON-NEGOTIABLE CHECKLIST
@@ -131,4 +139,3 @@ Studio name · Country · City · Segment · Website URL · Instagram URL · Fou
 6. Recommended action is one of: Create concept immediately / Verify manually / Send light outreach / Add to nurture / Do not target.
 7. No concept created for Growth Tier without prior prospect engagement.
 8. Confirm studio team size is under 20 staff and no dedicated marketing/PR department is evident before finalising score.
-
