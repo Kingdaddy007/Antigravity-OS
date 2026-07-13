@@ -1011,7 +1011,6 @@ def install_codex_global(
     namespace_source = stage_root / "namespace"
     activated: list[tuple[Path, Path]] = []
     try:
-        namespace_source.mkdir(parents=True)
         shutil.copytree(payload, namespace_source)
         for source, target_path in mapping.items():
             staged = stage_root / "direct" / target_path.relative_to(codex_home)
@@ -1114,6 +1113,8 @@ def main(argv: list[str] | None = None) -> int:
             print(json.dumps({"status": "built", "payload": str(payload)}, indent=2))
             return 0
         if args.command == "install":
+            if args.codex_global and args.host != "codex":
+                raise InstallationRefused("--codex-global is only valid with --host codex")
             if args.dry_run:
                 with tempfile.TemporaryDirectory(prefix="antigravity-dry-run-") as directory:
                     payload = build_payload(
