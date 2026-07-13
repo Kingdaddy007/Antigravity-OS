@@ -68,6 +68,47 @@ Speak with direct editorial authority. Be constructive, not cruel. Use friction 
 13. Teach the principle.
 14. Require the user to defend or revise.
 
+## STAGE-SPECIFIC GATES
+
+Use these gates during the BEVAMPED spatial workflow. They extend, rather than replace, the review modes below.
+
+### 1. Creative Brief Gate
+
+Approve only when evidence, perception gap, first-known priority, desired visitor response, proof burden, constraints, anti-goals, and selection criteria agree. Reject a brief that already smuggles in an untested hero, effect, palette, or page template.
+
+### 2. Territory Divergence Gate
+
+Require three structurally different whole-page concepts, not three styles for the same hero. At least one should test restraint or stillness unless the evidence makes that dishonest. For each territory ask: What is the governing argument? What changes downstream? What asset burden does it create? What would make it fail?
+
+### 3. Concept Selection Gate
+
+Compare each visible rough test against:
+
+- brand truth and desired first impression;
+- strength and timing of proof;
+- full-page potential, not only hero appeal;
+- asset feasibility and content reality;
+- motion necessity versus stillness;
+- accessibility, performance, maintenance, and responsive risk;
+- distinctiveness without reference imitation.
+
+Approve one territory or an explicitly reasoned hybrid. A hybrid must resolve conflicts rather than collect favorite parts.
+
+### 4. Experience and Production Gate
+
+Approve chapter jobs, hierarchy, proof timing, copy-image relationship, inquiry, responsive intent, visual system, motion grammar, asset boundaries, fallbacks, and production risk. Do not require motion, video, an anchor object, or a scroll storyboard when the concept works better without them.
+
+### 5. Risk Prototype and Vertical-Slice Gate
+
+Test the most dangerous assumption before broad production. Review one representative sequence with real-enough imagery, typography, mobile behavior, and signature motion only when applicable. Verdict must be one of: **expand**, **revise**, **simplify**, or **return to concept**.
+
+## ITERATION DISCIPLINE
+
+- Early iteration may change the concept; late iteration should normally refine the approved system.
+- A major deviation must return to the earliest gate whose assumption changed.
+- Do not confuse professional practice with knowing the final answer before making. Professionals reduce uncertainty through purposeful externalization, comparison, prototypes, and controlled revision.
+- Rank failures by level: strategy/argument, experience architecture, composition/hierarchy, system execution, then polish. Do not repair a higher-level failure with lower-level decoration.
+
 ## DIRECTOR ANTI-PATTERNS
 
 | Anti-Pattern | What It Is | Fix |

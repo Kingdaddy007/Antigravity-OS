@@ -1,190 +1,95 @@
 ---
 name: workflow-impeccable-craft
-description: Build high-end interior storytelling websites from the approved spatial concept contract
+description: Build an approved interior or spatial website in coherent, verifiable slices
 id: impeccable-craft
-version: 1
+version: 2
 status: active
-intent: Execute impeccable craft with explicit authority, state, outputs, and evidence.
-use_when: [the task matches impeccable craft]
-do_not_use_when: [another workflow more precisely matches the requested outcome]
-inputs: [user objective, workspace context, constraints, requested authority mode]
-required_resources: [applicable AGENTS.md files, referenced skills and contexts]
+intent: Expand a passed vertical slice into full production without losing concept continuity, proof, usability, or restraint.
+use_when: [a spatial vertical slice has an expand verdict and full production is authorized]
+do_not_use_when: [concept discovery, missing production contract, failed vertical slice, general product UI, or backend-only work]
+inputs: [five core artifacts or approved equivalents, expand verdict, implementation stack, real or realistic assets]
+required_resources: [applicable AGENTS.md files, spatial-experience-design, ui-ux, coding guidance, exact specialist references needed by the build]
 mutation_class: local_edit
-approval_gates: [confirm scope expansion or destructive action before mutation]
-states: [intake, assess, propose, approve-if-needed, execute-if-authorized, verify, deliver]
-outputs: [task result, changed-artifact list when applicable, evidence, residual risks]
-verification: [run proportionate checks, record raw evidence, label anything unverified]
-failure_paths: [stop on authority or contract conflict, preserve state, report blocker and safe next action]
+approval_gates: [expand verdict, scope changes, new heavy dependencies, slice critique, final Director and user approval]
+states: [contract-check, slice-plan, static-build, assets, systems, interactions, critique, verify, deliver]
+outputs: [implementation, per-slice evidence, verification report, changed-artifact list, residual risks]
+verification: [browser and automated checks proportionate to risk, accessibility, responsive composition, performance, fallbacks, proof, inquiry, concept continuity]
+failure_paths: [stop the affected slice, return to the earliest invalidated contract, preserve working state, report safe next action]
 resume_contract: task-scoped .agents/workflows/impeccable-craft.json using the workflows directory contract
-next_workflows: [none]
+next_workflows: [impeccable-animate, verify-project]
 profiles: [spatial]
 ---
 
 # WORKFLOW: SPATIAL CRAFT
 
-## WHAT THIS WORKFLOW DOES
+## ENTRY GATE
 
-Build high-end interior storytelling websites from the approved spatial concept contract. Preserve atmosphere, scene kit, depth, material behavior, transformation proof, and quiet inquiry during implementation.
+Do not begin broad production until:
 
-## ACTIVATION
+- the five core contracts or approved equivalents exist;
+- the selected concept and production contract are approved;
+- the risk prototype is resolved;
+- the representative vertical slice has an `expand` verdict;
+- implementation authority is explicit.
 
-Use when:
+Legacy context sets are valid when mapped to these logical contracts. Conditional files are required only when their corresponding feature exists.
 
-- Implementing a spatial/interior/decorator/studio/showroom/gallery frontend.
-- Turning an approved spatial concept, mock, or design direction into code.
-- Revising a spatial brand site so it no longer feels generic.
+## LOAD PURPOSEFULLY
 
-Do NOT use when:
+Always load `spatial-experience-design` and `ui-ux`. Load cinematic motion, showroom strategy, scroll storyboard, prompt guidance, portfolio proof, material recipes, scene-kit guidance, or advanced rendering references only when the approved plan requires them. Do not load every spatial reference by default.
 
-- Spatial concept artifacts are missing.
-- The task is backend/API/security/database/DevOps.
+## BUILD IN COHERENT SLICES
 
-## REQUIRED FILES
+Plan slices around complete visitor responsibilities rather than technical layers. A slice should connect semantic structure, content, image, proof, responsive behavior, accessibility, and applicable interaction.
 
-Load:
+Examples: opening plus first argument; representative project proof; material/process chapter; method and fit; selective inquiry. The actual order follows `experience-blueprint.md`.
 
-- `skills/spatial-experience-design/SKILL.md`
-- `skills/ui-ux/SKILL.md`
-- `skills/cinematic-motion/SKILL.md` when motion is present
-- `skills/spatial-experience-design/reference/scene-kit-and-asset-directive.md`
-- `skills/spatial-experience-design/reference/portfolio-proof-chapters.md` when portfolio is central
-- `skills/cinematic-motion/reference/video-to-website-choreography.md` when media-led sections exist
-- `skills/spatial-experience-design/reference/material-recipes.md`
-- `skills/spatial-experience-design/reference/audit-mechanics-map.md`
-- `skills/ui-ux/reference/spatial-ui-patterns.md`
-- all files under `.agents/contexts/spatial/`
+For each slice:
 
-## BUILD GATE
+1. Restate its chapter job and acceptance evidence.
+2. Build semantic static structure first.
+3. Integrate real or realistic-enough content and assets.
+4. Apply type, color, crop, material, density, and layout rules.
+5. Add interaction and approved motion only after the still composition works.
+6. Verify desktop, tablet, mobile, keyboard, focus, loading, errors, and fallbacks.
+7. Run a focused Director critique and resolve higher-level failures before polish.
 
-Do not implement until these exist:
+## ASSET BOUNDARIES
 
-- `visual-thesis.md`
-- `anti-template-preflight.md`
-- `room-sequence.md`
-- `brand-to-scene-translation.md`
-- `showroom-choreography.md` when media-led sections exist
-- `portfolio-proof-chapters.md` when portfolio is central
-- `cinematic-prompt-pack.md` when generated media is used
-- `audit-adaptation-map.md`
-- `beloved-asset-directive.md`
-- `hero-event-blueprint.md`
-- `scene-kit-brief.md`
-- `depth-map.md`
-- `material-script.md`
-- `motion-board.md`
-- `asset-boundary.md`
+- **Image-native:** use real, rendered, or approved generated imagery with crop and alt-text rules; do not replace rooms or materials with CSS shapes.
+- **CSS-native:** use semantic, responsive layout and material treatments.
+- **SVG-native:** keep editable geometry and accessible labels where needed.
+- **Canvas/WebGL-native:** require approved prototype evidence, loading budget, lifecycle, mobile fallback, and reduced-motion equivalent.
 
-If any are missing, stop and run `workflow-spatial-concept.md`.
+If a blocking asset is missing, use only an explicitly approved stand-in that tests the same composition and clearly record replacement work.
 
-If `beloved-asset-directive.md` marks an asset as blocking and the file does not exist, pause and ask the user to place the asset or explicitly approve a temporary stand-in. Do not fake the asset with CSS.
+## CONCEPT CONTINUITY AUDIT
 
-## EXECUTION SEQUENCE
+After each slice verify:
 
-### STEP 1: Convert Contract To DOM Plan
+- the controlling argument is still legible;
+- adjacent chapters have intentional relationships;
+- proof is specific and not buried by atmosphere;
+- visual decisions trace to the selected territory;
+- motion has a named job or is removed;
+- inquiry remains visible, selective, and usable;
+- the implementation has not drifted toward a generic decorator template.
 
-Plan the page around:
+Major drift returns to the earliest gate whose assumption changed. Do not silently redesign during production.
 
-- room sequence
-- brand-to-scene translation
-- showroom choreography
-- scene kit layers
-- semantic sections
-- media-led section text zones
-- inquiry path
-- gallery/project proof chapters
-- mobile simplification
-- reduced-motion behavior
+## FINAL VERIFICATION
 
-Gate: DOM structure must support the depth map and motion board before styling starts.
+Verify semantic structure, accessibility, responsive composition, crop integrity, contrast, keyboard/focus states, media controls, reduced motion, loading/failure states, performance budgets, navigation, proof comprehension, inquiry completion, and concept continuity. Record raw evidence and anything not verified.
 
-### STEP 2: Build The Static Spatial Structure
+Use `master-design-director` for the final audit. Resolve strategy and experience failures before composition, system, and polish issues.
 
-Implement:
+## QUALITY GATE
 
-- semantic landmarks and headings
-- quiet navigation
-- scene containers and named Z layers
-- project/gallery captions
-- portfolio proof interactions
-- proof and method sections
-- inquiry form and confirmation states
-
-Use real or realistic content. Do not leave dead placeholders.
-
-### STEP 3: Integrate Assets According To Boundary
-
-For each major visual:
-
-- image-native: use provided/generated/realistic imagery with correct crop and alt text
-- CSS-native: keep semantic and responsive
-- SVG-native: use editable paths/masks
-- canvas/WebGL-native: implement only with storyboard, preload, and fallback
-
-Gate: Do not replace image-native scene requirements with CSS shapes.
-
-### STEP 4: Apply Material, Light, And Typography
-
-Use material script to drive:
-
-- color tokens
-- shadows
-- overlays
-- borders
-- grain/noise
-- text contrast
-- caption treatment
-
-Use typography as gallery hierarchy: atmospheric display, tiny metadata, readable body.
-
-### STEP 5: Add Motion By Track
-
-Use `workflow-impeccable-animate.md` if motion is non-trivial.
-
-Implement arrival, ambient, scroll-bound, and interaction motion separately.
-
-### STEP 6: Verify In Browser
-
-Check desktop, tablet, and mobile.
-
-Look for:
-
-- broken crops
-- text over imagery
-- weak hierarchy
-- generic card grids
-- repeated fade-ups
-- decorative video wallpaper
-- missing inquiry
-- inaccessible focus
-- reduced-motion failure
-- mobile collapse into raw stack
-
-### STEP 7: Socratic Audit & Critique
-
-Invoke the **Master Design Director** (load `skills/master-design-director/SKILL.md`) to perform a Socratic Audit of the built layout.
-- The Director will evaluate the composition against the **Socratic Audit Engine** (hierarchy, grid rhythm, negative space, and image perspective).
-- Enforce the **Problem-Priority Framework** (Level 1 to Level 5). Resolve Level 1 and 2 issues before addressing lower-level polish.
-- Apply the **Ruthless Subtraction Framework** to strip away any decorative clutter.
-
-The result fails if:
-
-- it can be swapped to another industry without structural change
-- the visual thesis is not visible
-- the scene kit feels mismatched
-- the first viewport looks like a generic decorator template
-- proof and inquiry feel bolted on
-- cinematic videos behave as decorative backgrounds rather than section-specific proof, atmosphere, transformation, method, or inquiry moments
-
-## QUALITY GATE CHECKLIST
-
-- [ ] All spatial concept artifacts exist.
-- [ ] DOM structure follows room sequence.
-- [ ] DOM structure follows showroom choreography where media-led sections exist.
-- [ ] Portfolio sections prove decisions before broad grids.
-- [ ] Scene kit assets are respected.
-- [ ] Image-native elements are not fake CSS placeholders.
-- [ ] Material/light script drives visual system.
-- [ ] Inquiry is visible and quiet.
-- [ ] Browser checks pass at desktop, tablet, and mobile.
-- [ ] Reduced-motion behavior exists.
-- [ ] Anti-template smell tests pass.
+- [ ] Vertical slice had an `expand` verdict.
+- [ ] Work was built and critiqued in coherent slices.
+- [ ] Still composition works before motion.
+- [ ] Assets respect their implementation boundaries.
+- [ ] Proof and inquiry remain clear and accessible.
+- [ ] Desktop, tablet, mobile, and reduced-motion behavior are verified.
+- [ ] No major deviation bypassed its originating gate.
+- [ ] Final Director and user approval remain pending until evidence is presented.

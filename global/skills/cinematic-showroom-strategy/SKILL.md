@@ -7,8 +7,8 @@ description: 'Use this skill when planning cinematic interior designer websites,
 
 ## WHEN TO USE THIS
 
-- Load after brand, story, and spatial context exist and before writing final image/video prompts.
-- Load when a website must become a full cinematic digital showroom, not only a cinematic hero.
+- Load only after a territory is selected and evidence supports a genuinely media-heavy, video-led, generated-media, or tightly choreographed showroom experience.
+- Load when multiple scenes, room films, media states, text-safe zones, prompt inheritance, and portfolio proof must operate as one system.
 - Load when portfolio, proof, AI video, scroll choreography, and text overlays must work as one experience.
 
 ## NEVER DO
@@ -19,12 +19,14 @@ description: 'Use this skill when planning cinematic interior designer websites,
 - Never let spectacle replace proof, inquiry clarity, or designer authority.
 - Never approve prompts that lack belief, taste world, light, camera, depth, text-safe zone, and rejected cliche.
 - Never turn portfolio work into generic cards before showing judgment, transformation, or material decisions.
+- Never activate this specialist merely because the brand is an interior studio or the user wants a premium result.
+- Never make a cinematic showroom the default answer when still imagery, editorial pacing, or ordinary document flow serves the brief better.
 
 ## CORE MODEL
 
 Translate strategy into cinema:
 
-`Brand diagnosis -> Perception gap -> Taste world -> Story -> Room sequence -> Visual thesis -> Showroom choreography -> Asset directive -> Cinematic prompt pack -> Build`
+`Evidence dossier -> Creative brief -> Selected concept -> Experience blueprint -> Media choreography -> Asset directive -> Cinematic prompt pack when needed -> Risk prototype -> Build`
 
 Every scene must answer:
 
@@ -37,7 +39,7 @@ Every scene must answer:
 
 ## BRAND-TO-SCENE TRANSLATION
 
-Create `contexts/spatial/brand-to-scene-translation.md`.
+Add a brand-to-scene translation section to `experience-blueprint.md` or an approved equivalent. Legacy projects may keep `brand-to-scene-translation.md`.
 
 Include:
 
@@ -56,7 +58,7 @@ Reject translations that only describe style. The translation must explain why t
 
 ## SHOWROOM CHOREOGRAPHY
 
-Create `contexts/spatial/showroom-choreography.md`.
+Add showroom choreography to `production-plan.md` or an approved equivalent. Legacy projects may keep `showroom-choreography.md`.
 
 For each section define:
 
@@ -79,25 +81,20 @@ Use video only when it performs a spatial job: threshold, reveal, light movement
 
 ## CINEMATIC PROMPT PACK
 
-Create `contexts/spatial/cinematic-prompt-pack.md` only after approved context files exist.
+Create `cinematic-prompt-pack.md` only when approved generated media is required and the upstream contracts exist.
 
 The prompt pack is not a prompt dump. It is the final cinematic translation of the approved brand, story, spatial, material, motion, and choreography contexts.
 
-Start with `Context Inheritance`:
+Start with `Context Inheritance`; use the project's actual approved files, for example:
 
 ```text
 Derived from:
-- contexts/brand-diagnostics.md
-- contexts/spatial/spatial-story.md
-- contexts/spatial/visual-thesis.md
-- contexts/spatial/room-sequence.md
-- contexts/spatial/brand-to-scene-translation.md
-- contexts/spatial/showroom-choreography.md
-- contexts/spatial/portfolio-proof-chapters.md
-- contexts/spatial/material-script.md
-- contexts/spatial/depth-map.md
-- contexts/spatial/motion-board.md
-- contexts/spatial/asset-boundary.md
+- evidence-dossier.md
+- creative-brief.md
+- concept-directions.md selection record
+- experience-blueprint.md
+- production-plan.md
+- portfolio-proof-chapters.md when present
 ```
 
 Every image/video prompt must include `Strategic Source`:
@@ -119,7 +116,7 @@ If a prompt cannot trace its choices back to approved context files, reject and 
 
 ## PORTFOLIO PROOF
 
-Create `contexts/spatial/portfolio-proof-chapters.md` for portfolio-led sites.
+Create `portfolio-proof-chapters.md` only when detailed project decision narratives are required beyond the experience blueprint.
 
 For each project chapter define:
 
@@ -147,10 +144,11 @@ Use broad grids only after at least one curated project chapter has proven the d
 ## NON-NEGOTIABLE CHECKLIST
 
 1. Desired visitor belief is named before visuals.
-2. `brand-to-scene-translation.md` exists before prompts.
-3. `showroom-choreography.md` maps media, text, scroll, proof, and fallback.
-4. `cinematic-prompt-pack.md` has Context Inheritance.
+2. The selected concept and brand-to-scene logic exist before prompts.
+3. The production plan maps media, text, scroll, proof, and fallback.
+4. `cinematic-prompt-pack.md`, when required, has Context Inheritance.
 5. Every prompt has a Strategic Source block.
 6. No generic luxury-room prompt survives.
 7. Portfolio proves decisions before becoming a grid.
 8. Video is section-specific proof, atmosphere, transformation, or inquiry, not wallpaper.
+9. This specialist is inactive when the approved concept is still-led or does not need media choreography.

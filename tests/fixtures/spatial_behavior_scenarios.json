@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "scenarios": [
+    {
+      "id": "quiet-still-image-studio",
+      "request": "Develop a refined website for a quiet interior studio with excellent still photography and no useful video.",
+      "workflow": "spatial-project-inception",
+      "selected_skills": ["brand-strategy", "storytelling", "spatial-experience-design", "master-design-director"],
+      "files_loaded": ["evidence-dossier.md", "creative-brief.md", "concept-directions.md"],
+      "conversation_sequence": ["catalog evidence", "approve diagnosis", "approve creative brief", "compare three rough-tested territories", "select concept", "approve experience", "test vertical slice"],
+      "artifacts": ["evidence-dossier.md", "creative-brief.md", "concept-directions.md", "experience-blueprint.md", "production-plan.md"],
+      "approval_gates": ["evidence", "diagnosis", "creative brief", "territory divergence", "concept selection", "experience", "production", "vertical slice"],
+      "optional_complexity": {"cinematic-showroom-strategy": "rejected", "cinematic-motion": "rejected", "scroll-storyboard.md": "rejected", "reason": "still composition and ordinary document flow communicate the brief with lower cost"},
+      "expected_handoff": "slice-based static production after an expand verdict"
+    },
+    {
+      "id": "video-rich-studio",
+      "request": "Develop a spatial website for a studio with consistent room films, strong stills, and evidence that movement expresses its atmospheric point of view.",
+      "workflow": "spatial-project-inception",
+      "selected_skills": ["brand-strategy", "storytelling", "spatial-experience-design", "master-design-director", "cinematic-showroom-strategy", "cinematic-motion", "scroll-storyboard"],
+      "files_loaded": ["evidence-dossier.md", "creative-brief.md", "concept-directions.md", "experience-blueprint.md", "production-plan.md"],
+      "conversation_sequence": ["catalog media evidence", "approve diagnosis", "compare still-led and media-led territories", "select media-led concept", "map section-specific media jobs", "prototype choreography", "approve vertical slice"],
+      "artifacts": ["evidence-dossier.md", "creative-brief.md", "concept-directions.md", "experience-blueprint.md", "production-plan.md", "scroll-storyboard.md"],
+      "approval_gates": ["evidence", "diagnosis", "creative brief", "territory divergence", "concept selection", "experience", "production", "vertical slice"],
+      "optional_complexity": {"cinematic-showroom-strategy": "accepted", "cinematic-motion": "accepted", "scroll-storyboard.md": "accepted", "reason": "multiple films require authored timing, text-safe states, loading, and fallbacks"},
+      "expected_handoff": "media-aware slices with reduced-motion and poster-frame equivalents"
+    },
+    {
+      "id": "transformation-led-decorator",
+      "request": "Develop a site for a decorator whose strongest evidence is dramatic before-and-after work and decision captions.",
+      "workflow": "spatial-project-inception",
+      "selected_skills": ["brand-strategy", "storytelling", "spatial-experience-design", "master-design-director"],
+      "files_loaded": ["evidence-dossier.md", "creative-brief.md", "concept-directions.md"],
+      "conversation_sequence": ["verify paired proof", "diagnose transformation authority", "set transformation as first-known priority", "compare transformation-led territories", "prototype comparison usability", "select and architect"],
+      "artifacts": ["evidence-dossier.md", "creative-brief.md", "concept-directions.md", "experience-blueprint.md", "production-plan.md"],
+      "approval_gates": ["evidence", "diagnosis", "creative brief", "territory divergence", "concept selection", "experience", "vertical slice"],
+      "optional_complexity": {"cinematic-motion": "conditional", "portfolio-proof-chapters.md": "accepted", "scroll-storyboard.md": "rejected", "reason": "project decisions need detail; comparison can remain user-controlled without authored scroll"},
+      "expected_handoff": "transformation and project-proof slices before broader portfolio production"
+    },
+    {
+      "id": "material-process-led-studio",
+      "request": "Develop a site for a studio distinguished by sourcing, craft, material decisions, and process documentation.",
+      "workflow": "spatial-project-inception",
+      "selected_skills": ["brand-strategy", "storytelling", "spatial-experience-design", "master-design-director"],
+      "files_loaded": ["evidence-dossier.md", "creative-brief.md", "concept-directions.md"],
+      "conversation_sequence": ["catalog material/process proof", "approve diagnosis", "set design intelligence first", "compare material-led, project-led, and restrained editorial territories", "test captions and macro crops", "select concept"],
+      "artifacts": ["evidence-dossier.md", "creative-brief.md", "concept-directions.md", "experience-blueprint.md", "production-plan.md"],
+      "approval_gates": ["evidence", "diagnosis", "creative brief", "territory divergence", "concept selection", "experience", "vertical slice"],
+      "optional_complexity": {"cinematic-showroom-strategy": "rejected", "cinematic-motion": "rejected", "reason": "material evidence, captions, crop, and sequence carry the argument"},
+      "expected_handoff": "material/process vertical slice followed by coherent proof and inquiry slices"
+    },
+    {
+      "id": "architecture-adjacent-proof-first",
+      "request": "Develop a website for an architecture-adjacent practice whose clients need rigor, credentials, and project facts before atmosphere.",
+      "workflow": "spatial-project-inception",
+      "selected_skills": ["brand-strategy", "storytelling", "spatial-experience-design", "master-design-director"],
+      "files_loaded": ["evidence-dossier.md", "creative-brief.md", "concept-directions.md"],
+      "conversation_sequence": ["verify authority evidence", "diagnose trust burden", "set rigor first", "compare proof-first territories", "test hierarchy and comprehension", "select and architect"],
+      "artifacts": ["evidence-dossier.md", "creative-brief.md", "concept-directions.md", "experience-blueprint.md", "production-plan.md"],
+      "approval_gates": ["evidence", "diagnosis", "creative brief", "territory divergence", "concept selection", "experience", "vertical slice"],
+      "optional_complexity": {"cinematic-motion": "rejected", "scroll-storyboard.md": "rejected", "reason": "authority and comprehension lead; atmosphere supports rather than precedes proof"},
+      "expected_handoff": "proof-first slice that validates authority, readability, and selective inquiry"
+    },
+    {
+      "id": "general-saas-unaffected",
+      "request": "Plan and design a multi-tenant SaaS dashboard and onboarding flow.",
+      "workflow": "project-inception",
+      "selected_skills": ["product-thinking", "ui-ux"],
+      "files_loaded": ["project-context.md", "stack-context.md"],
+      "conversation_sequence": ["general inception", "product requirements", "general UI workflow"],
+      "artifacts": ["project-context.md"],
+      "approval_gates": ["general workflow gates only"],
+      "optional_complexity": {"spatial-profile": "rejected", "reason": "the request is product UI, not an interior or spatial brand experience"},
+      "expected_handoff": "workflow-design-ui and general UI craft; no spatial files, skills, or gates"
+    }
+  ]
+}

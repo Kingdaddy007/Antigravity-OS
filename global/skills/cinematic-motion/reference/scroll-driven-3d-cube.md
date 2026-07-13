@@ -70,7 +70,7 @@ The visitor should feel like the material is being turned under controlled studi
 
 ## Required Context Before Implementation
 
-Create or update `contexts/spatial/showroom-choreography.md` before building this section.
+Create or update the choreography section of `production-plan.md` or a legacy equivalent before building this section.
 
 Required fields:
 

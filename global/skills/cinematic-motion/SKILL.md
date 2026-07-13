@@ -7,8 +7,8 @@ description: 'Use this skill when planning or implementing cinematic motion for 
 
 ## WHEN TO USE THIS
 
-- Load after `spatial-experience-design` has named the visual thesis, room sequence, scene kit, depth map, material script, and asset boundary.
-- **CRITICAL**: When planning or implementing any high-end spatial motion task, you MUST first consult the Global Motion Library at `reference/motion-library/`. Do not invent generic motion; select an elite effect from this library.
+- Load after a territory is selected and `experience-blueprint.md` plus `production-plan.md` (or approved equivalents) define the communication job, assets, constraints, and fallbacks.
+- Consult the motion library only after naming the motion job. Library effects are candidates to adapt, not a compulsory source or a substitute for concept reasoning.
 - Load when motion must express interior atmosphere, spatial transformation, material behavior, gallery pacing, or object-led scrollytelling.
 - Load before writing GSAP, ScrollTrigger, canvas, R3F, image sequence, parallax, mask, or before/after reveal code.
 - Load `reference/lenis-gsap-scroll-foundation.md` when Lenis is used as scroll infrastructure.
@@ -27,7 +27,7 @@ description: 'Use this skill when planning or implementing cinematic motion for 
 
 ## MOTION CONTRACT
 
-Motion must answer one of these spatial jobs:
+Stillness is an explicit valid decision. Add motion only when it answers one of these spatial jobs better than a still composition:
 
 1. Open a threshold.
 2. Reveal a room.
@@ -40,9 +40,11 @@ Motion must answer one of these spatial jobs:
 
 If the motion does none of these, remove it.
 
+For every proposed motion, record: communication job, triggering evidence, why stillness is insufficient, affected content, interaction model, reduced-motion equivalent, mobile simplification, performance cost, and maintenance burden.
+
 ## FOUR MOTION TRACKS
 
-Plan all motion in four separate tracks:
+When motion exists, classify applicable behavior into four separate tracks. A project does not need motion in every track:
 
 | Track | Purpose | Examples | Guardrail |
 | --- | --- | --- | --- |
@@ -52,6 +54,8 @@ Plan all motion in four separate tracks:
 | Interaction | User feedback | material swatch hover, project index preview, concierge form focus | Subtle, direct, accessible |
 
 ## SPATIAL MOTION ARCHETYPES
+
+These are candidate grammars. Select only what the approved concept and constraints justify; selecting no cinematic archetype is acceptable.
 
 ### Gallery Procession
 
@@ -101,7 +105,7 @@ Use for method/process credibility. Animate project index states, press/proof ri
 
 Load `reference/video-to-website-choreography.md` when video, canvas, frame sequence, or scroll-led media is involved.
 
-Create or require `contexts/spatial/showroom-choreography.md` before implementation.
+For a media-heavy experience, create or require a choreography section in `production-plan.md` or an approved equivalent before implementation. A legacy `showroom-choreography.md` remains valid.
 
 For each media-led section define:
 
@@ -130,7 +134,7 @@ If it does none of these, use a still or remove it.
 
 ## IMPLEMENTATION RULES
 
-- Use GSAP + ScrollTrigger for brand scroll choreography.
+- Use GSAP + ScrollTrigger when approved scroll choreography needs timeline control, pinning, or scrubbed sequencing; do not add it for simple transitions.
 - Use Lenis only as scroll infrastructure; it must serve the showroom choreography.
 - Use `motion`/Framer only for product-like microstates and small UI transitions.
 - Use CSS transitions for simple hover/focus states.
@@ -146,7 +150,7 @@ If it does none of these, use a still or remove it.
 
 Before implementation, classify the motion:
 
-| Motion Type | Required Artifact | Fallback |
+| Motion Type | Required Production Evidence | Fallback |
 | --- | --- | --- |
 | Image sequence | frame map, preload plan, mobile frame tier | poster image or compressed video |
 | R3F object | 3D spec sheet, material budget, collision zones | transparent PNG or short video loop |
@@ -197,7 +201,7 @@ Performance rules:
 Load `references/resource-index.md` when the task needs examples, specialist criteria, implementation details, or domain-specific diagnostics beyond this core workflow. Select only the references whose indexed purpose matches the task; do not load the package wholesale.
 ## OUTPUT SHAPE
 
-**Motion plan:** Physical law -> four motion tracks -> archetype -> showroom choreography -> artifacts -> fallback -> implementation notes.
+**Motion plan:** Communication job -> stillness comparison -> applicable tracks -> candidate grammar -> production evidence -> fallback -> implementation notes.
 
 **Implementation guidance:** DOM/canvas/WebGL structure -> timeline responsibilities -> asset loading -> reduced-motion -> verification.
 
@@ -205,12 +209,12 @@ Load `references/resource-index.md` when the task needs examples, specialist cri
 
 ## NON-NEGOTIABLE CHECKLIST
 
-1. Physical law is named.
-2. Four motion tracks are separated.
-3. Primary motion archetype is selected.
-4. Required artifacts exist before code.
+1. The communication job and stillness alternative are evaluated.
+2. Applicable motion tracks are separated; unused tracks are explicitly omitted.
+3. Any selected archetype is justified by the approved concept.
+4. Production evidence exists before code.
 5. Video/canvas scenes have choreography maps, not only motion descriptions.
-6. Scene-native transitions replace generic wipes.
+6. Scene-native transitions replace generic wipes when transitions are needed.
 7. Scroll-bound motion stops when scroll stops unless intentionally ambient.
 8. Reduced-motion and mobile fallbacks exist.
 9. Inquiry and navigation remain reachable.

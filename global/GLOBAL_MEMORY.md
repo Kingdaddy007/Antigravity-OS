@@ -58,7 +58,7 @@ This file routes. `GEMINI.md` governs. Neither overrides the other's job.
 
 **Quick reference:**
 - General product UI: `/impeccable-teach` → `/impeccable-document` → `/ui-craft`
-- Spatial profile: `/spatial-concept` → `/impeccable-craft`
+- Spatial profile: evidence dossier → creative brief → three visible concept territories → `/spatial-concept` selection → experience blueprint → production plan → risk prototype/vertical slice → `/impeccable-craft`
 - Brand build: Add storytelling + visual brainstorm before `/impeccable-document`
 - Review: `/impeccable-critique` (design) | `/impeccable-audit` (technical)
 - Polish: `/impeccable-polish` (after critique + audit)
@@ -73,6 +73,8 @@ This file routes. `GEMINI.md` governs. Neither overrides the other's job.
 
 **skill-brand-strategy** is the brand diagnostics authority. Runs a 12-layer diagnostic model: perception gap → founder lore → brand world → enemy/counter-movement → signature language → behavioral persuasion → copy system → visual direction → cinematic motion → UX/conversion → content engine → scorecard. Produces structured audit output (`.agents/contexts/brand-diagnostics.md`) that feeds directly into `skill-storytelling` and `skill-copywriting`.
 
+**Spatial profile boundary:** Brand diagnosis contributes evidence, perception gap, proof burden, premium leaks, and creative-brief constraints to `evidence-dossier.md` and `creative-brief.md`. It does not select a hero, palette, motion system, or page sequence.
+
 ### Cinematic Motion Mode
 
 **Trigger words:** "animate", "scroll animation", "3D", "parallax", "video scrub", "GSAP", "R3F", "cinematic", "motion", "make it come alive", "make it less static"
@@ -80,6 +82,8 @@ This file routes. `GEMINI.md` governs. Neither overrides the other's job.
 | **Load:** `skills/cinematic-motion/SKILL.md` | workflow: `/impeccable-animate` | contexts: `motion-direction.md`, `story.md`, `PRODUCT.md`, `DESIGN.md` |
 
 **skill-cinematic-motion** is the animation authority. Register-aware (brand vs product). Contains: creative direction (diagnostic walkthrough, brand-to-motion matrix, hybrid archetypes, worked examples), GSAP patterns, R3F patterns, Framer Motion patterns, asset planning (image briefs for Figma AI, video prompts, 3D requirements), performance budgets, animation sequencing.
+
+**Spatial profile activation:** Stillness is valid. Load cinematic motion only after the selected concept names a motion job and the experience/production contracts define assets, accessibility, performance, mobile, and fallback constraints. The motion library supplies candidates after the job is named; it never forces an effect.
 
 > [!IMPORTANT]
 > **The Motion-Direction Authority Rule:**
@@ -94,6 +98,8 @@ This file routes. `GEMINI.md` governs. Neither overrides the other's job.
 | **Load:** `skills/storytelling/SKILL.md` + `skills/storytelling/library/matching-guide.md` | workflow: `workflow-storytelling.md` | contexts: `story.md`, `research-brief.md`, `PRODUCT.md` |
 
 **skill-storytelling** is the narrative authority. Creates `story.md` — the master document that drives copy, visuals, animation, and layout. Contains: research framework, 6 narrative arcs, emotional journey mapping, copy-visual-animation integration, brand archetype storytelling patterns, iteration process.
+
+**Spatial profile artifact boundary:** Storytelling contributes the controlling argument, compared narrative forms, chapter jobs, proof timing, and inquiry posture to `experience-blueprint.md` or an approved equivalent. `story.md` and `spatial-story.md` remain valid legacy equivalents. `Atmosphere → Taste → Transformation → Proof → Method → Inquiry` is one candidate form, not a mandatory order.
 
 **Storytelling Library** (`skills/storytelling/library/`) — 24 mechanics + support files:
 - `index.md` — overview, quick reference, 24-mechanic index
@@ -231,12 +237,19 @@ Files in `context_templates/` are **project-specific scaffolds**. They are blank
 | `security-baselines.md` | Security, auth, review |
 | `infra-context.md` | DevOps, performance, deployment |
 | `project-context.md` | Project inception, new feature scoping |
+| `evidence-dossier.md` (`.agents/contexts/`) | Spatial inception phases 1–2 — source catalog, provenance, facts, inferences, unknowns, asset reality, and approved diagnosis. |
+| `creative-brief.md` (`.agents/contexts/`) | Spatial inception phase 3 — desired visitor response, first-known priority, proof burden, constraints, anti-goals, and selection criteria. |
+| `concept-directions.md` (`.agents/contexts/`) | Spatial inception phases 4–6 — three whole-page territories, purposeful references, visible rough tests, comparison, and selection record. |
+| `experience-blueprint.md` (`.agents/contexts/`) | Spatial inception phases 7–8 — controlling argument, narrative form, chapter jobs, hierarchy, proof, inquiry, responsive intent, and visual/motion system. |
+| `production-plan.md` (`.agents/contexts/`) | Spatial inception phases 8–10 — assets, boundaries, conditional media, fallbacks, risk prototype, vertical slice, build slices, and verification. |
 | `product-marketing-context.md` | Copywriting, marketing, sales strategy |
 | `domain-rules.md` | Business logic tasks |
 | `database-context.md` | Database design, query optimization |
 | `story.md` (`.agents/contexts/`) | Storytelling — narrative arc, emotional journey, copy/visual/motion direction. Created by skill-storytelling. Drives all design and animation decisions. |
 | `research-brief.md` (`.agents/contexts/`) | Research — brand, audience, competition, context. Created during inception Phase 3A Step 3. |
 | `motion-direction.md` (`.agents/contexts/`) | **Scroll & cinematic motion only** — emotion diagnosis, archetype, motion vocabulary, scroll narrative (hook→build→climax→resolve), GSAP ScrollTrigger pattern selection per section, asset requirements. Created by visual brainstorm Phase 3C. Consumed by /impeccable-animate. Does NOT hold micro-interaction tokens (those belong in DESIGN.json). |
+
+For spatial work, `scroll-storyboard.md`, `cinematic-prompt-pack.md`, `portfolio-proof-chapters.md`, and `DESIGN.md` / `DESIGN.json` are conditional. Create them only when authored scroll choreography, generated media, detailed project narratives, or implementation tokens respectively require them. Legacy multi-file spatial contexts remain valid when they provide equivalent approved coverage.
 
 > **Motion boundary rule:** If both `DESIGN.json` and `motion-direction.md` are loaded, `motion-direction.md` is authoritative for all scroll-driven, narrative, and cinematic animation. `DESIGN.json` extensions.motion is authoritative only for state-change micro-interactions (hover, focus, open/close, toggle). Neither file may define tokens in the other's domain.
 

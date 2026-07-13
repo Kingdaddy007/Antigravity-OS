@@ -41,7 +41,7 @@ Source:
 7. Resize carefully for mobile to prevent stretched imagery.
 
 ## Required Context
-Add this mechanic to `contexts/spatial/showroom-choreography.md`:
+Add this mechanic to the choreography section of `production-plan.md` or a legacy equivalent:
 
 ```text
 Mechanic: WebGL Cylindrical Gallery

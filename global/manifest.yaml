@@ -213,14 +213,13 @@
                                         "spatial"
                                     ]
                    },
-                   {
-                       "id":  "motion-library",
-                       "path":  "global/skills/motion-library",
-                       "profiles":  [
-                                        "general",
-                                        "spatial"
-                                    ]
-                   },
+                      {
+                          "id":  "motion-library",
+                          "path":  "global/skills/motion-library",
+                          "profiles":  [
+                                           "spatial"
+                                       ]
+                      },
                    {
                        "id":  "page-cro",
                        "path":  "global/skills/page-cro",
@@ -981,6 +980,20 @@
                                                ]
                               },
                               {
+                                  "id":  "concept-directions",
+                                  "path":  "global/context_templates/concept-directions.md",
+                                  "profiles":  [
+                                                   "spatial"
+                                               ]
+                              },
+                              {
+                                  "id":  "creative-brief",
+                                  "path":  "global/context_templates/creative-brief.md",
+                                  "profiles":  [
+                                                   "spatial"
+                                               ]
+                              },
+                              {
                                   "id":  "database-context",
                                   "path":  "global/context_templates/database-context.md",
                                   "profiles":  [
@@ -997,10 +1010,31 @@
                                                ]
                               },
                               {
+                                  "id":  "evidence-dossier",
+                                  "path":  "global/context_templates/evidence-dossier.md",
+                                  "profiles":  [
+                                                   "spatial"
+                                               ]
+                              },
+                              {
+                                  "id":  "experience-blueprint",
+                                  "path":  "global/context_templates/experience-blueprint.md",
+                                  "profiles":  [
+                                                   "spatial"
+                                               ]
+                              },
+                              {
                                   "id":  "infra-context",
                                   "path":  "global/context_templates/infra-context.md",
                                   "profiles":  [
                                                    "general",
+                                                   "spatial"
+                                               ]
+                              },
+                              {
+                                  "id":  "production-plan",
+                                  "path":  "global/context_templates/production-plan.md",
+                                  "profiles":  [
                                                    "spatial"
                                                ]
                               },

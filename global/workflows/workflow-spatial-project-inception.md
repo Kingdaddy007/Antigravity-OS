@@ -1,206 +1,126 @@
 ---
 name: workflow-spatial-project-inception
-description: Turn a new high-end interior storytelling website idea into buildable spatial context
+description: Discover, select, prototype, and produce a brand-specific interior or spatial website experience
 id: spatial-project-inception
-version: 1
+version: 2
 status: active
-intent: Execute spatial project inception with explicit authority, state, outputs, and evidence.
-use_when: [the task matches spatial project inception]
-do_not_use_when: [another workflow more precisely matches the requested outcome]
-inputs: [user objective, workspace context, constraints, requested authority mode]
-required_resources: [applicable AGENTS.md files, referenced skills and contexts]
+intent: Execute the ten-phase BEVAMPED spatial project workflow with evidence discipline, visible concept divergence, approval gates, and conditional complexity.
+use_when: [starting or substantially redesigning an interior, spatial, decor, showroom, gallery, furniture, staging, luxury-home, or architecture-adjacent brand website]
+do_not_use_when: [general product or SaaS UI, a small implementation task with approved context, backend-only work, or Project 003 before separate authorization]
+inputs: [user objective, available brand evidence, workspace context, constraints, requested authority mode]
+required_resources: [applicable AGENTS.md files, brand-strategy, storytelling, spatial-experience-design, master-design-director]
 mutation_class: local_edit
-approval_gates: [confirm scope expansion or destructive action before mutation]
-states: [intake, assess, propose, approve-if-needed, execute-if-authorized, verify, deliver]
-outputs: [task result, changed-artifact list when applicable, evidence, residual risks]
-verification: [run proportionate checks, record raw evidence, label anything unverified]
-failure_paths: [stop on authority or contract conflict, preserve state, report blocker and safe next action]
+approval_gates: [evidence coverage, diagnosis, creative brief, territory divergence, concept selection, experience architecture, production contract, risk prototype, final approval]
+states: [evidence, diagnose, brief, diverge, externalize, select, architect, systemize, prototype, produce, verify, deliver]
+outputs: [five core artifact contracts or approved equivalents, conditional artifacts when justified, implementation when separately authorized, verification evidence, residual risks]
+verification: [trace evidence to decisions and downstream consumers, run spatial consistency checks, record raw evidence, label anything unverified]
+failure_paths: [return to the earliest invalidated gate, stop on authority or contract conflict, preserve state, report blocker and safe next action]
 resume_contract: task-scoped .agents/workflows/spatial-project-inception.json using the workflows directory contract
-next_workflows: [none]
+next_workflows: [visual-brainstorm, spatial-concept, spatial-design-ui, impeccable-craft, impeccable-animate]
 profiles: [spatial]
 ---
 
-# WORKFLOW: PROJECT INCEPTION
+# WORKFLOW: BEVAMPED SPATIAL PROJECT INCEPTION
 
-## WHAT THIS WORKFLOW DOES
+## PURPOSE
 
-Turn a new high-end interior storytelling website idea into buildable spatial context. For interior decorators, spatial studios, furniture/decor showrooms, galleries, architecture-adjacent studios, and luxury home brands, route visual planning through the spatial experience system before technical build work.
+Turn evidence about one interior or spatial brand into a distinct, testable website concept and then into controlled production. The workflow discovers the concept; it does not assume a cinematic hero, fixed story sequence, video, motion, anchor object, or effect library choice.
 
-Default journey:
+## ARTIFACT CONTRACT
 
-`Atmosphere -> Taste -> Transformation -> Proof -> Method -> Inquiry`
+Maintain five logical contracts in `.agents/contexts/` or an approved equivalent location:
 
-## ACTIVATION
+1. `evidence-dossier.md`
+2. `creative-brief.md`
+3. `concept-directions.md`
+4. `experience-blueprint.md`
+5. `production-plan.md`
 
-Use when:
+They are contracts, not a file-count ritual. Existing approved documents may satisfy them. Legacy spatial projects may retain fourteen-file context sets; map their content, identify genuine gaps, and consolidate only with user approval.
 
-- Starting a new interior decorator, interior design, spatial studio, staging, furniture, decor, gallery, architecture-adjacent, or luxury home website.
-- Turning a rough premium website idea into a build plan.
-- Creating first project contexts for a visual/spatial brand.
+Conditional outputs:
 
-Do NOT use when:
+- `scroll-storyboard.md` for authored scroll timing, pinning, continuity, or media choreography;
+- `cinematic-prompt-pack.md` for approved generated imagery/video;
+- `portfolio-proof-chapters.md` for detailed project decision narratives;
+- `DESIGN.md` / `DESIGN.json` for implementation tokens and component rules.
 
-- Adding a small feature to an already-planned project.
-- Debugging an existing implementation.
-- Doing backend/API/security/database/DevOps-only work.
+## TEN PHASES
 
-## REQUIRED FILES
+### 1. Evidence Intake
 
-Load:
+Use `brand-strategy`. Catalog website, social, projects, assets, communications, proof, constraints, dates, and unknowns. Separate facts, reported claims, inferences, and unknowns. Write `evidence-dossier.md`.
 
-- `skills/brand-strategy/SKILL.md`
-- `skills/storytelling/SKILL.md`
-- `skills/spatial-experience-design/SKILL.md`
-- `skills/cinematic-showroom-strategy/SKILL.md`
-- `skills/ui-ux/SKILL.md`
-- `workflows/workflow-spatial-concept.md`
-- `skills/spatial-experience-design/reference/audit-mechanics-map.md`
-- `skills/spatial-experience-design/reference/scene-kit-and-asset-directive.md`
-- `skills/spatial-experience-design/reference/cinematic-room-grammar.md` when image/video prompts are needed
-- `skills/spatial-experience-design/reference/portfolio-proof-chapters.md` when portfolio is central
-- `skills/cinematic-motion/reference/video-to-website-choreography.md` when scroll-led media is involved
-- `design-audit/` when premium inspiration is needed
+**Gate:** User confirms coverage and unresolved gaps. Missing evidence may remain, but it must be visible.
 
-## EXECUTION SEQUENCE
+### 2. Brand Diagnosis
 
-### PHASE 1: DEFINE THE SPATIAL BUSINESS PROBLEM
+Inside the dossier, diagnose perception gap, desired authority, audience, taste patterns, founder authority, proof burden, premium leaks, category conventions, wrong-fit audience, and inquiry posture. Do not prescribe visuals.
 
-Capture:
+**Cognitive Engine checkpoint — Type 1.5 creative decision:** Load `core/system-thinking.md`, `core/expert-cognitive-patterns.md`, and `core/first-principles.md`. Decompose current perception, desired authority, evidence gap, real constraints, and unknowns. Reframe the diagnosis from the visitor's likely misunderstanding as well as the studio's self-description. Challenge any conclusion that relies on an attractive inference rather than observed proof, and record second-order implications for asset reality, proof burden, and inquiry posture.
 
-- brand/studio type
-- audience and desired client
-- price/perception goal
-- current or intended taste world
-- existing assets and missing assets
-- inquiry goal
-- wrong-fit clients
+**Gate:** User approves or revises diagnosis.
 
-Output:
+### 3. Creative Brief
 
-- `.agents/contexts/project-context.md`
-- `.agents/contexts/brand-diagnostics.md` when positioning is unclear
+Write `creative-brief.md`: what visitors should feel, understand, believe, and do; what must be known first; controlling problem; proof requirements; constraints; anti-goals; and territory-selection criteria.
 
-Gate: Do not discuss features before the brand perception and inquiry goal are clear.
+**Gate:** `master-design-director` runs the Creative Brief Gate.
 
-### PHASE 2: DIAGNOSE POSITIONING AND STORY
+### 4. Concept Territories
 
-> **⚙ Cognitive Engine checkpoint — load `core/system-thinking.md` + `core/expert-cognitive-patterns.md`.**
-> This phase contains the highest-stakes creative and strategic decisions. Apply system decomposition to diagnose current brand state vs desired positioning. Apply gray thinking and framing bias safeguards when evaluating brand tension and audience self-image. Generate 3+ positioning directions with explicit tradeoffs before selecting. Classify each major decision as Type 1, 1.5, or 2 and invest the appropriate depth.
-Use `brand-strategy` and `storytelling`.
+Run `workflow-visual-brainstorm.md`. Generate three structurally different directions for the whole page, not hero, palette, or animation variations. Include one restrained or still-led option unless the evidence rules it out.
 
-Create:
+### 5. References and Rough Externalization
 
-- `.agents/contexts/spatial/spatial-story.md`
-- `.agents/contexts/spatial/brand-to-scene-translation.md` when the project is cinematic, video-led, or portfolio-led
+Gather references only for named design questions. For every territory, produce a mini reference board and a visible rough styleframe, sequence sketch, or prototype with realistic-enough assets. Record rationale and provenance in `concept-directions.md`.
 
-It must include:
+**Gate:** The Director confirms genuine divergence. No territory advances without a visible rough test.
 
-- visual thesis input
-- audience self-image
-- brand tension
-- entry room
-- threshold event
-- signature object/material
-- room sequence
-- transformation proof
-- method reveal
-- inquiry posture
+### 6. Concept Selection
 
-`brand-to-scene-translation.md` must include:
+Run `workflow-spatial-concept.md`. Compare territories on brand truth, first impression, proof, full-page potential, asset feasibility, motion necessity, accessibility, performance, responsiveness, and maintenance. Record the decision.
 
-- perception gap
-- desired visitor belief
-- taste world
-- enemy/cliche to reject
-- spatial metaphor
-- first scene
-- whole-site scene sequence
-- prompt implications
-- portfolio/proof implications
-- inquiry implication
+**Gate:** User selects one territory or an explicitly reasoned hybrid.
 
-Gate: Do not create DESIGN tokens before the spatial story exists.
+### 7. Experience Architecture
 
-### PHASE 3: RUN SPATIAL CONCEPT
+Use `storytelling` and `spatial-experience-design`. Decide controlling argument, narrative form, chapter jobs, hierarchy, proof timing, copy-visual relationship, inquiry, navigation, and responsive intent. Write `experience-blueprint.md`.
 
-Run `workflow-spatial-concept.md`.
+**Gate:** Director runs the Experience Gate.
 
-Required outputs:
+### 8. Visual, Motion, and Asset Systems
 
-- `.agents/contexts/spatial/anti-template-preflight.md`
-- `.agents/contexts/spatial/visual-thesis.md`
-- `.agents/contexts/spatial/room-sequence.md`
-- `.agents/contexts/spatial/brand-to-scene-translation.md`
-- `.agents/contexts/spatial/audit-adaptation-map.md`
-- `.agents/contexts/spatial/showroom-choreography.md`
-- `.agents/contexts/spatial/portfolio-proof-chapters.md` when portfolio is central
-- `.agents/contexts/spatial/cinematic-prompt-pack.md` when image/video prompts are needed
-- `.agents/contexts/spatial/beloved-asset-directive.md`
-- `.agents/contexts/spatial/hero-event-blueprint.md`
-- `.agents/contexts/spatial/scene-kit-brief.md`
-- `.agents/contexts/spatial/depth-map.md`
-- `.agents/contexts/spatial/material-script.md`
-- `.agents/contexts/spatial/motion-board.md`
-- `.agents/contexts/spatial/asset-boundary.md`
+Complete the blueprint and `production-plan.md`: type, color, composition, crop, material, density, stillness, motion grammar when justified, asset boundary, generated-media needs, performance, accessibility, fallbacks, and build slices. Activate `cinematic-showroom-strategy`, `cinematic-motion`, `scroll-storyboard`, and conditional artifacts only when their activation tests pass.
 
-Gate: Invoke the **Master Design Director** to audit the Creative Contract. Build is BLOCKED until the Pre-Build Gate checklist returns "Build allowed: Yes".
-Gate: No mockup, design system, or implementation until these exist.
+**Gate:** User and Director approve the production contract.
 
-### PHASE 4: DEFINE THE VISUAL SYSTEM
+### 9. Risk Prototype and Vertical Slice
 
-Create or update:
+Prototype the most dangerous assumption first. Then create one representative sequence using real-enough imagery, typography, mobile behavior, and signature motion only when applicable. Store evidence and findings in `production-plan.md`.
 
-- `DESIGN.md`
-- `DESIGN.json`
+**Gate:** Director verdict is `expand`, `revise`, `simplify`, or `return to concept`.
 
-Tokens must derive from:
+### 10. Full Production and Verification
 
-- material script
-- light behavior
-- room sequence
-- typography posture
-- UI/inquiry model
+After implementation authority, run `workflow-spatial-design-ui.md` and `workflow-impeccable-craft.md`; use `workflow-impeccable-animate.md` only when motion is approved. Build coherent slices and critique each slice. Verify accessibility, performance, responsive composition, reduced-motion/fallback behavior, proof, inquiry, and concept continuity.
 
-Do not derive the palette from generic color preference.
+**Gate:** Final Director and user approval.
 
-### PHASE 5: PLAN BUILD ORDER
+## STABLE NICHE JOBS, VARIABLE DESIGN
 
-Build order:
+Interior brands commonly need atmosphere/point of view, curated work/taste, transformation or design intelligence, authority/proof, process/fit, and selective inquiry. These are reusable communication jobs, not required sections or a fixed order.
 
-1. Project setup and asset folders.
-2. Scene choreography and prompt pack.
-3. Video/still asset generation or sourcing.
-4. Static semantic room sequence.
-5. Scene kit integration and responsive crops.
-6. Material/light styling.
-7. Gallery/project/proof sections.
-8. Inquiry path and states.
-9. Motion tracks via `workflow-impeccable-animate.md`.
-10. Browser verification and anti-template critique.
+Every project independently decides what is known first, emotional register, controlling argument, narrative form, opening form, typography, color, crop, material, density, motion amount, proof strategy, and inquiry posture.
 
-### PHASE 6: PACKAGE THE NORTH STAR
+## QUALITY GATE
 
-Deliver:
-
-- spatial story summary
-- visual thesis
-- room sequence
-- brand-to-scene translation
-- showroom choreography
-- cinematic prompt pack when media is generated
-- portfolio proof chapters when portfolio is central
-- scene kit requirements
-- asset boundary
-- build order
-- verification checklist
-
-## QUALITY GATE CHECKLIST
-
-- [ ] Brand perception and inquiry goal are clear.
-- [ ] `spatial-story.md` exists.
-- [ ] Cinematic/video-led projects include brand-to-scene translation, showroom choreography, and prompt pack.
-- [ ] Prompt pack derives from approved context files, not standalone inspiration.
-- [ ] All spatial concept artifacts exist.
-- [ ] DESIGN files derive from material/light/room sequence.
-- [ ] Build order uses spatial craft and animate workflows.
-- [ ] Backend/API/security/database concerns are not mixed into visual planning.
+- [ ] Evidence and inference are visibly separated.
+- [ ] Diagnosis precedes visual prescription.
+- [ ] Three whole-page territories diverge structurally and have visible rough tests.
+- [ ] References answer named questions and are not copied as architecture.
+- [ ] Selection rationale traces to brief criteria.
+- [ ] Five contracts or approved equivalents cover the work.
+- [ ] Optional complexity is explicitly accepted or rejected.
+- [ ] A risk prototype and vertical slice precede broad production.
+- [ ] The general project/UI workflow remains untouched.

@@ -13,7 +13,7 @@
 
 ## CINEMATIC PROMPT PACK RULES
 
-`cinematic-prompt-pack.md` must be downstream of approved context, not a separate creative exercise.
+Create `cinematic-prompt-pack.md` only when generated media is approved. It must be downstream of the five core contracts or approved equivalents, not a separate creative exercise.
 
 It must begin with `Context Inheritance` and list the source context files used.
 
@@ -48,18 +48,18 @@ Use `reference/portfolio-proof-chapters.md` to define:
 
 ## COMPOSITION RULES
 
-- Treat each fold as a room or threshold, not a content block.
-- Use one dominant spatial event per viewport.
+- Let each chapter behave as a coherent spatial, editorial, project, material, or proof composition—not a generic content block.
+- Prefer one dominant idea per viewport when the selected concept benefits from it.
 - Use tiny metadata and captions as gallery labels; do not over-explain.
-- Let atmosphere carry the first impression before presenting service detail.
-- Keep project proof inside a curated sequence before any broad index grid.
-- Place inquiry after the visitor has felt taste, transformation, and trust.
-- Use hard palette/light changes only as room thresholds, not random variety.
+- Let the approved first-known priority determine whether atmosphere, proof, transformation, process, or point of view leads.
+- Keep project proof curated before any broad index grid when curation is part of the proof strategy.
+- Place inquiry when the narrative has earned readiness; do not impose one universal prerequisite order.
+- Use hard palette/light changes only for a named narrative or compositional reason.
 - Let whitespace behave like architecture: corridors, pauses, walls, and clearings.
 
 ## MOTION DIRECTION
 
-**CRITICAL:** When prescribing motion for a spatial concept, you MUST select an elite effect from the Global Motion Library located at `../cinematic-motion/reference/motion-library/`. Do not invent generic animations; prescribe an established premium effect from this library.
+Start by asking whether motion improves communication more than stillness. When motion is approved, name its semantic job and then use the motion library as a source of candidates—not as a compulsory gate.
 
 Define a physical law before motion:
 
@@ -70,7 +70,7 @@ Define a physical law before motion:
 - Mural/art wall: mask reveal, brush edge, camera move across detail.
 - Furniture/object: rotate, inspect, annotate, or guide the scroll.
 
-Separate four tracks:
+Separate the applicable tracks; unused tracks may remain `none`:
 
 1. Arrival - one-time first impression.
 2. Ambient - continuous low-attention life.
@@ -83,13 +83,13 @@ Separate four tracks:
 | --- | --- | --- |
 | Template Luxury | Beige background, serif headline, stock room, centered CTA | Create a visual thesis and room sequence |
 | Universal Fade-Up | Every block fades and rises the same way | Use static holds, scrubbed physical events, or distinct thresholds |
-| Portfolio Grid First | Projects appear before atmosphere or transformation | Lead with a spatial scene and proof journey |
+| Uncurated Portfolio Dump | Projects appear without context, judgment, or hierarchy | Lead with the evidence form selected by the concept |
 | Generic Prompt Pack | Prompts could fit any designer | Add Context Inheritance and Strategic Source blocks |
 | Video Wallpaper | Room film loops behind normal content | Map media, text, scroll, proof, and fallback in showroom choreography |
 | Decorative Scatter | Tilted polaroids/cards without alignment or meaning | Use power lines, gallery walls, or motif-driven placement |
 | Div Diorama | CSS shapes pretend to be furniture, plants, rooms, or murals | Require a scene kit or simplify concept |
 | Loud SaaS CTA | Big pill buttons and product-marketing urgency | Use concierge invitation language and quiet placement |
-| Moodboard Soup | Nice images with no sequence or argument | Build taste -> transformation -> proof -> method |
+| Moodboard Soup | Nice images with no sequence or argument | Build a brand-specific controlling argument and chapter logic |
 
 
 ## REFERENCE LOADING RULES
@@ -97,25 +97,24 @@ Separate four tracks:
 Load [resource-index.md](resource-index.md) when the task needs examples, specialist criteria, implementation details, or domain-specific diagnostics beyond this core workflow. Select only the references whose indexed purpose matches the task; do not load the package wholesale.
 ## OUTPUT SHAPE
 
-**Concept audit:** Visual thesis status -> missing artifacts -> anti-template risks -> next required artifact.
+**Concept audit:** Brief status -> territory divergence -> visible-test evidence -> anti-template risks -> next decision gate.
 
-**New spatial concept:** Visual thesis -> primary archetype -> room sequence -> brand-to-scene translation -> showroom choreography -> hero event -> scene kit -> depth map -> motion board -> asset boundary.
+**New spatial concept:** Evidence -> creative brief -> three territories -> purposeful references -> visible rough tests -> selection record -> experience blueprint -> production plan.
 
-**Concept options:** 3 mixed directions -> audit mechanics cited -> asset directives -> risk/feasibility notes -> recommended direction.
+**Concept options:** 3 structurally different whole-page territories -> reference questions -> visible rough tests -> asset directives -> risk/feasibility notes.
 
-**Implementation handoff:** Required contexts -> prompt inheritance -> active skill/workflow chain -> build gates -> verification criteria.
+**Implementation handoff:** Five contracts or equivalents -> conditional artifacts -> risk prototype -> vertical-slice verdict -> build slices -> verification criteria.
 
 ## NON-NEGOTIABLE CHECKLIST
 
-1. Visual thesis exists and names a physical spatial idea.
-2. Anti-template preflight bans the lazy hero/services/grid/contact path.
-3. Primary archetype is selected and section sequence follows it.
-4. Brand-to-scene translation exists before generated prompts.
-5. Showroom choreography maps media, text, scroll, proof, and fallback.
-6. Cinematic prompt pack includes Context Inheritance and Strategic Source blocks when prompts are needed.
-7. Scene kit identifies image-native assets and forbids CSS placeholders for them.
-8. Depth map defines foreground, midground, background, and overlap rules.
-9. Material script defines light, texture, surface, and shadow behavior.
-10. Motion board separates arrival, ambient, scroll-bound, and interaction tracks.
-11. Inquiry posture is quiet, selective, and high-trust.
-12. The result would not survive as the same layout after swapping interiors for another industry.
+1. Diagnosis and creative brief exist before visual prescription.
+2. Three structurally different territories have visible rough tests.
+3. References answer named questions and remain adapted candidates.
+4. Selection traces to brief criteria and full-page logic.
+5. The five logical contracts or approved equivalents cover production.
+6. Brand-to-scene and prompt inheritance exist before generated prompts when generated media is needed.
+7. Media choreography maps text, scroll, proof, loading, and fallback when the project is media-heavy.
+8. Scene-kit and asset boundaries protect image-native requirements.
+9. Applicable motion tracks are separated; stillness and unused tracks are valid.
+10. Inquiry posture is quiet, selective, and high-trust.
+11. The result would not survive as the same layout after swapping interiors for another industry.

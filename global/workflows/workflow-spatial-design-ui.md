@@ -1,138 +1,88 @@
 ---
 name: workflow-spatial-design-ui
-description: Route frontend design work for high-end interior storytelling websites
+description: Convert an approved spatial experience blueprint into responsive UI systems, a risk prototype, and a representative vertical slice
 id: spatial-design-ui
-version: 1
+version: 2
 status: active
-intent: Execute spatial design ui with explicit authority, state, outputs, and evidence.
-use_when: [the task matches spatial design ui]
-do_not_use_when: [another workflow more precisely matches the requested outcome]
-inputs: [user objective, workspace context, constraints, requested authority mode]
-required_resources: [applicable AGENTS.md files, referenced skills and contexts]
+intent: Resolve spatial website structure and UI behavior before broad production while preserving usability, proof, and inquiry.
+use_when: [a spatial concept is selected and an approved experience blueprint needs production-ready UI architecture or prototyping]
+do_not_use_when: [concept discovery, general product UI, backend-only work, or broad production before the vertical-slice gate]
+inputs: [five core artifacts or approved equivalents, selected concept, asset constraints, implementation authority]
+required_resources: [applicable AGENTS.md files, spatial-experience-design, ui-ux, master-design-director]
 mutation_class: local_edit
-approval_gates: [confirm scope expansion or destructive action before mutation]
-states: [intake, assess, propose, approve-if-needed, execute-if-authorized, verify, deliver]
-outputs: [task result, changed-artifact list when applicable, evidence, residual risks]
-verification: [run proportionate checks, record raw evidence, label anything unverified]
-failure_paths: [stop on authority or contract conflict, preserve state, report blocker and safe next action]
+approval_gates: [experience blueprint approved, production contract approved, vertical-slice verdict]
+states: [contract-check, ui-map, systemize, risk-prototype, vertical-slice, audit, handoff]
+outputs: [UI architecture in experience-blueprint.md, production-plan.md, optional DESIGN files, prototype evidence, vertical slice, residual risks]
+verification: [desktop and mobile composition, accessibility, proof and inquiry usability, concept continuity, prototype verdict]
+failure_paths: [return to experience architecture or concept selection at the earliest invalid assumption]
 resume_contract: task-scoped .agents/workflows/spatial-design-ui.json using the workflows directory contract
-next_workflows: [none]
+next_workflows: [impeccable-craft, impeccable-animate]
 profiles: [spatial]
 ---
 
-# WORKFLOW: DESIGN UI
+# WORKFLOW: SPATIAL DESIGN UI
 
-## WHAT THIS WORKFLOW DOES
+## PURPOSE
 
-Route frontend design work for high-end interior storytelling websites. Use the spatial system for brand/portfolio/showroom pages and use UI/UX rules to keep navigation, galleries, proof, inquiry, accessibility, and responsive behavior usable.
+Translate approved experience architecture into a usable, responsive interface and test the riskiest assumption before full production. Spatial character and cinematic ambition never override navigation, evidence, accessibility, performance, or inquiry.
 
-## ACTIVATION
+## ENTRY GATE
 
-Use when:
+Confirm the five core contracts or approved equivalents exist and the concept-selection plus experience gates are approved. Conditional artifacts are required only when their feature is present.
 
-- Designing or implementing pages, components, galleries, inquiry forms, navigation, project indexes, material swatches, or responsive UI for interior/spatial websites.
-- Improving a decorator or spatial design site that feels generic, unclear, inaccessible, or template-like.
+Load:
 
-Do NOT use when:
+- `skills/spatial-experience-design/SKILL.md`;
+- `skills/ui-ux/SKILL.md`;
+- `skills/master-design-director/SKILL.md`;
+- `skills/cinematic-motion/SKILL.md` only when approved motion is non-trivial;
+- exact spatial/UI references that answer current implementation questions.
 
-- The task is backend/API/security/database/DevOps-only.
-- The task is pure copywriting without layout or UX impact.
+## COGNITIVE ENGINE CHECKPOINT
 
-## REQUIRED FILES
+UI architecture and the vertical-slice decision are Type 1.5. Load `core/system-thinking.md`, `core/expert-cognitive-patterns.md`, and `core/first-principles.md` before expanding production. Map the dependency chain between navigation, proof, inquiry, media, mobile composition, accessibility, performance, and maintenance. Distinguish a real visitor requirement from a familiar UI convention. Challenge the riskiest assumption with the smallest reversible prototype, and document the second-order cost if that assumption fails after several slices are built.
 
-For spatial brand pages, load:
+## EXECUTION
 
-- `skills/spatial-experience-design/SKILL.md`
-- `skills/ui-ux/SKILL.md`
-- `skills/cinematic-motion/SKILL.md` when motion is present
-- `workflows/workflow-spatial-concept.md`
-- `workflows/workflow-impeccable-craft.md`
-- `skills/spatial-experience-design/reference/audit-mechanics-map.md`
-- `skills/spatial-experience-design/reference/scene-kit-and-asset-directive.md`
-- `.agents/contexts/spatial/` artifacts
+### 1. Map UI Responsibilities
 
-## ROUTING
+Define semantic chapter structure, navigation, project/gallery browsing, proof presentation, inquiry path, forms and states, errors, responsive intent, keyboard behavior, focus, media controls, loading states, and reduced-motion behavior.
 
-### Spatial Brand Surface
+### 2. Define Visual and Asset Systems
 
-Interior decorator portfolio, spatial studio, gallery, showroom, furniture/decor brand, architecture-adjacent website, luxury home brand.
+Record type, color, composition, crop, material, density, image hierarchy, text-safe zones, asset boundaries, placeholders, and fallback rules in `experience-blueprint.md` and `production-plan.md`. Create `DESIGN.md` / `DESIGN.json` only when implementation needs token and component contracts.
 
-Route:
+### 3. Identify the Riskiest Assumption
 
-1. `workflow-spatial-concept.md` if artifacts are missing.
-2. `workflow-visual-brainstorm.md` if exploring direction.
-3. `workflow-impeccable-craft.md` for implementation.
-4. `workflow-impeccable-animate.md` for non-trivial motion.
+Examples: unusual opening comprehension, before/after interaction, responsive crop, pinned proof sequence, generated-media continuity, type over imagery, WebGL performance, or an inquiry transition. Prototype the smallest test that can invalidate it.
 
-### Product-Like UI Inside Spatial Site
+### 4. Build a Representative Vertical Slice
 
-Project filter, material selector, inquiry form, private portfolio gate, booking/request flow.
+With implementation authority, create one coherent sequence that includes:
 
-Route:
+- real or realistic-enough imagery and copy;
+- actual typography hierarchy;
+- desktop and mobile behavior;
+- proof or inquiry responsibility;
+- signature motion only when approved;
+- reduced-motion and fallback behavior where relevant.
 
-1. Use `skills/ui-ux/SKILL.md`.
-2. Preserve spatial tone.
-3. Design all states.
-4. Verify accessibility and mobile behavior.
+Do not build the entire site to discover that its governing system fails.
 
-## EXECUTION SEQUENCE
+### 5. Director Verdict
 
-### STEP 1: Confirm Context
+Use the Risk Prototype and Vertical-Slice Gate. Record one verdict in `production-plan.md`: `expand`, `revise`, `simplify`, or `return to concept`. State evidence, affected assumptions, and required changes.
 
-Identify:
+### 6. Handoff
 
-- site type
-- visitor goal
-- inquiry goal
-- active spatial artifacts
-- current stage in Atmosphere -> Taste -> Transformation -> Proof -> Method -> Inquiry
+Only `expand` permits broad production. `Revise` repeats the slice; `simplify` updates the system and retests material risk; `return to concept` returns to the selection record without concealing sunk cost.
 
-Gate: If spatial artifacts are missing for a brand page, run `workflow-spatial-concept.md`.
+## QUALITY GATE
 
-### STEP 2: Map UI Responsibilities
-
-> **⚙ Cognitive Engine checkpoint — apply system thinking.**
-> Map the dependency chain between navigation model, gallery presentation, proof sections, inquiry path, and mobile behavior. Each structural decision here constrains all downstream craft and animation work. Check reversibility — navigation and inquiry architecture are Type 1.5 decisions that become expensive to change after build begins. Apply assumption audit: are you choosing this structure because it's right for the visitor's journey, or because it's familiar?
-
-Define:
-
-- navigation model
-- project/gallery browsing
-- proof presentation
-- method/process section
-- inquiry path
-- states and errors
-- mobile behavior
-
-### STEP 3: Build Or Refine
-
-Use `workflow-impeccable-craft.md`.
-
-Preserve:
-
-- visual thesis
-- scene kit
-- depth map
-- material script
-- motion board
-- asset boundary
-
-### STEP 4: Verify & Director Audit
-
-Invoke the **Master Design Director** (load `skills/master-design-director/SKILL.md` or run `/impeccable-critique`) to verify the layout:
-
-- primary action clarity
-- quiet inquiry visibility
-- gallery/project usability
-- responsive crops
-- keyboard/focus behavior
-- reduced-motion behavior
-- anti-template smell tests
-
-## QUALITY GATE CHECKLIST
-
-- [ ] Spatial brand pages route through spatial concept first.
-- [ ] UI follows the spatial journey.
-- [ ] All forms and interactive elements include states and accessibility.
-- [ ] Project/gallery UI supports curation before scanning.
-- [ ] No SaaS hero/card-grid/default CTA pattern appears by accident.
+- [ ] UI follows the approved concept and chapter jobs, not a fixed spatial sequence.
+- [ ] Navigation, proof, inquiry, forms, and all states are usable and accessible.
+- [ ] Desktop and mobile are composed intentionally.
+- [ ] Optional media and motion have fallbacks.
+- [ ] The riskiest assumption was tested directly.
+- [ ] The vertical slice uses real-enough content.
+- [ ] Director verdict is recorded before broad production.

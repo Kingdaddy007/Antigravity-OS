@@ -257,7 +257,7 @@ Reject the mechanic if:
 
 ## Output
 
-When this mechanic is selected, add it to `contexts/spatial/showroom-choreography.md` as:
+When this mechanic is selected, add it to the choreography section of `production-plan.md` or a legacy equivalent as:
 
 ```text
 Mechanic: Infinite Parallax Gallery Loop

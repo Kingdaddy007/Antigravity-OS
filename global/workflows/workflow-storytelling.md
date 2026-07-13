@@ -1,233 +1,99 @@
 ---
 id: storytelling
-version: 1
+version: 2
 status: active
-intent: Execute storytelling with explicit authority, state, outputs, and evidence.
-use_when: [the task matches storytelling]
-do_not_use_when: [another workflow more precisely matches the requested outcome]
-inputs: [user objective, workspace context, constraints, requested authority mode]
-required_resources: [applicable AGENTS.md files, referenced skills and contexts]
+intent: Turn an approved spatial concept into a controlling argument, brand-specific narrative form, chapter jobs, proof choreography, and inquiry posture.
+use_when: [a spatial territory is selected and experience architecture must be defined]
+do_not_use_when: [concept territories are still open, final copywriting, general product UI, or implementation]
+inputs: [evidence dossier, creative brief, selected concept, approved rough test]
+required_resources: [applicable AGENTS.md files, storytelling skill, matching guide, master-design-director]
 mutation_class: local_edit
-approval_gates: [confirm scope expansion or destructive action before mutation]
-states: [intake, assess, propose, approve-if-needed, execute-if-authorized, verify, deliver]
-outputs: [task result, changed-artifact list when applicable, evidence, residual risks]
-verification: [run proportionate checks, record raw evidence, label anything unverified]
-failure_paths: [stop on authority or contract conflict, preserve state, report blocker and safe next action]
+approval_gates: [selected concept confirmed, narrative alternatives compared, experience gate approved]
+states: [context, argument, alternatives, chapters, proof, integration, approve, write]
+outputs: [narrative and content architecture inside experience-blueprint.md or approved equivalent, evidence, residual risks]
+verification: [chapter jobs prove the controlling argument, proof timing matches trust burden, selected form traces to brand evidence]
+failure_paths: [return to concept selection when narrative exposes a weak premise, return to creative brief when priorities conflict]
 resume_contract: task-scoped .agents/workflows/storytelling.json using the workflows directory contract
-next_workflows: [none]
+next_workflows: [spatial-design-ui]
 profiles: [spatial]
 ---
 
-# WORKFLOW: STORYTELLING
+# WORKFLOW: SPATIAL STORYTELLING
 
-**Version:** Gold v1.0
-**Layer:** Execution workflow
-**Tier:** 2 — loaded by task
-**Purpose:** Formal workflow for the storytelling process. Defines entry gates, session approval points, iteration contracts, and exit criteria for creating `.agents/contexts/story.md` — the master narrative document that drives all subsequent design and animation decisions.
+## PURPOSE
 
----
+Define what the selected concept argues and how the visitor moves from first impression to proof and selective inquiry. Storytelling shapes experience architecture; it does not independently lock a hero, animation system, or fixed section sequence.
 
-## WHAT THIS WORKFLOW DOES
+## ENTRY GATE
 
-This workflow governs the creation of `.agents/contexts/story.md`. It provides:
-- Entry criteria (what must exist before storytelling begins)
-- Session gates (when to pause and get approval)
-- Iteration contract (how many rounds, what triggers a lock)
-- Exit criteria (what must be true before story.md is locked)
-- Handoff (what to invoke after story.md is locked)
+Read `evidence-dossier.md`, `creative-brief.md`, and the selection record in `concept-directions.md` or approved equivalents. Do not proceed if the territory is unselected or if its first-known priority contradicts the brief.
 
----
+Load:
 
-## WHEN TO USE IT
+- `skills/storytelling/SKILL.md`;
+- `skills/storytelling/references/resource-index.md` for task-specific resources;
+- `skills/storytelling/library/matching-guide.md` when comparing mechanics or archetype fit;
+- `skills/master-design-director/SKILL.md` for the experience gate.
 
-Use this workflow when:
-- Starting a new brand or marketing project
-- Defining the narrative direction for a landing page
-- Re-positioning an existing brand
-- The project needs copy direction, visual direction, or motion direction
+References provide vocabulary and tests. They do not dictate the page order.
 
-Do not use it when:
-- Writing actual copy (use `skill-copywriting`)
-- Editing existing copy (use `skill-copy-editing`)
-- Technical research (use `skill-research-analysis`)
+## COGNITIVE ENGINE CHECKPOINT
 
----
+Experience architecture is a Type 1.5 creative decision. Load `core/system-thinking.md`, `core/expert-cognitive-patterns.md`, and `core/first-principles.md` before locking chapter order. Separate evidence from inherited category convention, compare at least two narrative forms, and challenge whether the proposed first chapter earns its priority from the brief. Map second-order effects on proof timing, comprehension, mobile behavior, motion need, and inquiry readiness. If the controlling argument cannot survive a quiet still-image version, do not use cinematic treatment to conceal the gap.
 
-## REQUIRED FILES
+## EXECUTION
 
-### Skills to Load
-- `skills/storytelling/SKILL.md` (narrative authority)
-- `skills/storytelling/library/matching-guide.md` (mechanics that fit the brand archetype)
+### 1. Name the Controlling Argument
 
-### Context Files Required (Entry Gate)
-- `PRODUCT.md` — must exist (register, personality, audience)
-- `.agents/contexts/research-brief.md` — must exist (do not proceed without it)
+State the single proposition the experience must make believable. Identify the visitor's starting belief, desired ending belief, evidence required for the shift, and what would falsify the argument.
 
----
+### 2. Compare Narrative Forms
 
-## EXECUTION SEQUENCE
+Test at least two forms compatible with the selected territory: atmosphere-led, transformation-led, point-of-view-led, material/process-led, project-led editorial, proof-first, founder-led, or another justified form.
 
-### PHASE 1: LOAD CONTEXT
+Do not treat `Atmosphere -> Taste -> Transformation -> Proof -> Method -> Inquiry` as default law; it remains one useful candidate. Choose based on what this studio must establish first and its proof burden.
 
-**Mode:** Designer (Discovery)
+### 3. Define Chapter Jobs
 
-1. **Read PRODUCT.md** — extract register, brand personality, audience, anti-references
-2. **Read `.agents/contexts/research-brief.md`** — extract brand summary, audience summary, competition summary, key insights
-3. **Read `.agents/contexts/brand-diagnostics.md`** (if it exists) — extract perception gap, founder lore, brand world pillars, enemy, signature language, behavioral persuasion rules, and visual direction constraints. This is the output of `skill-brand-strategy` and provides the deepest strategic foundation for the story.
-4. **Load `skill-storytelling`** — Sections 1-6
-5. **Load `skills/storytelling/library/matching-guide.md`** — find mechanics that fit the brand archetype
+For every chapter define:
 
-**Gate:** Do NOT proceed if `PRODUCT.md` or `.agents/contexts/research-brief.md` does not exist.
-If research-brief.md is missing, run skill-storytelling Section 1 (Research) first.
+- claim or question;
+- visitor emotion and comprehension goal;
+- primary evidence;
+- copy posture;
+- visual responsibility;
+- interaction or motion job, including `none`;
+- transition relationship to adjacent chapters;
+- responsive intent;
+- contribution to inquiry readiness.
 
----
+Chapter names may be spatial, editorial, project-based, or direct. Avoid generic service-page structure unless the evidence and user task genuinely require it.
 
-### PHASE 2: PRESENT 2-3 STORY DIRECTIONS
+### 4. Choreograph Proof and Inquiry
 
-**Mode:** Designer (Exploration)
+Decide when to reveal projects, transformations, material/process intelligence, credentials, press, client evidence, founder authority, method, fit, and exclusions. Use detailed `portfolio-proof-chapters.md` only when individual project decisions need their own narrative contract.
 
-Based on the loaded context, present 2-3 story directions:
+### 5. Integrate Copy, Visuals, and Stillness/Motion
 
-```
-Direction A: [name]
-- Approach: [Truby / McKee / Campbell / Calvino / Villeneuve / Miller / Lynch]
-- Controlling Idea: [value shift formula]
-- Emotional mode: [inner / outer / other]
-- Form: [journey / room / gallery / universe]
-- Narrative arc: [Brand Story / Product Journey / Hero's Journey / etc.]
-- Why this works: [reasoning tied to brand personality and audience]
+For each chapter record what copy says, what visuals prove, and what interaction or motion adds. Motion is not required. Do not ask animation to communicate missing copy or ask atmospheric imagery to carry unsupported proof.
 
-Direction B: [name]
-- Approach: [different approach]
-- Controlling Idea: [different value shift]
-- Emotional mode: [different mode]
-- Form: [different form]
-- Narrative arc: [different arc]
-- Why this works: [reasoning]
+### 6. Director Experience Gate
 
-Direction C: [name]
-- Approach: [another approach]
-- Controlling Idea: [another value shift]
-- Emotional mode: [another mode]
-- Form: [another form]
-- Narrative arc: [another arc]
-- Why this works: [reasoning]
-```
+Present the controlling argument, compared forms, selected narrative, chapter jobs, proof timing, inquiry posture, and unresolved risks. Use `master-design-director` to approve, revise, simplify, or return to concept.
 
-**Gate:** Wait for user approval before proceeding. User picks one direction or blends elements from multiple. Do NOT develop a direction without explicit user choice.
+### 7. Write the Blueprint Contribution
 
----
+Add the approved narrative architecture to `experience-blueprint.md`. Legacy `story.md` or `spatial-story.md` files remain valid equivalents when they contain the same approved decisions.
 
-### PHASE 3: DEVELOP APPROVED DIRECTION
+Create `scroll-storyboard.md` only if the selected experience depends on authored scroll timing, pinning, persistent continuity, or media choreography.
 
-**Mode:** Designer (Construction)
+## QUALITY GATE
 
-Work through `skill-storytelling` Sections 2-6:
-
-1. **Find the Story** (Section 2) — apply the chosen approach (Truby, McKee, Campbell, etc.)
-2. **Structure the Story** (Section 3) — choose narrative arc, form, section breakdown
-3. **Map the Emotions** (Section 4) — emotional modes, emotional arcs by archetype, pacing
-4. **Design the Experience** (Section 5) — integration matrix (copy says / visual shows / animation does), proof mechanisms, trust techniques, copy direction, visual direction, motion direction
-5. **Brand Archetype Storytelling** (Section 6) — apply the archetype-specific storytelling style
-
-**Refinement:** Use `skill-copy-editing` Seven Sweeps Framework for systematic refinement of the story's copy direction.
-
-**Gate:** Present the developed story (not yet written to file) for final approval. Show:
-- Controlling idea
-- Emotional arc
-- Section breakdown
-- Copy direction
-- Visual direction
-- Motion direction
-
-Wait for explicit user approval before locking.
-
----
-
-### PHASE 4: PRESENT STORY FOR FINAL APPROVAL
-
-**Mode:** Communicator (Review)
-
-Show the complete story document structure:
-
-```markdown
-# STORY: [BRAND NAME]
-
-## The One Thing
-[One sentence: what's the ONE message that must come through?]
-
-## The Controlling Idea
-[Value shift formula]
-
-## The Designing Principle
-[Abstract metaphor]
-
-## Who Is the Hero?
-[User as hero, brand as mentor]
-
-## Section Breakdown
-[Each section: purpose, headline direction, body direction, visual direction, layout direction, animation direction, emotion, proof mechanism]
-
-## Copy Direction
-[Headline strategy, tone, key messages, CTA strategy]
-
-## Visual Direction
-[Hero visual, image style, color mood, typography voice, layout rhythm]
-
-## Motion Direction
-[Hero animation, scroll behavior, climax pattern, resolve pattern, easing personality]
-→ See .agents/contexts/motion-direction.md for implementation details.
-
-## Brand Archetype
-[Which archetype, storytelling style]
-
-## Emotional Journey
-[Section 1 emotion → Section 2 emotion → ... → Final emotion]
-```
-
-**Gate:** Ask: "Does this story feel right? Any adjustments before we lock it?"
-Invoke the **Master Design Director** (load `skills/master-design-director/SKILL.md`) to run a Socratic review on the narrative framework and proposed visual thesis before locking it.
-Wait for explicit approval. Do NOT write story.md without user saying yes.
-
----
-
-### PHASE 5: LOCK AND WRITE
-
-**Mode:** Builder (Delivery)
-
-1. **Write `.agents/contexts/story.md`** — the full story document as approved in Phase 4
-2. **Confirm lock** — state clearly: "Story locked. This is now the source of truth for all subsequent design and animation decisions."
-3. **Handoff** — "Next: Run `/impeccable-document` to build DESIGN.md from this story."
-
-**Exit criteria:**
-- [ ] `.agents/contexts/story.md` exists and is written
-- [ ] User has explicitly approved the story
-- [ ] Controlling idea is defined
-- [ ] Section breakdown covers all page sections
-- [ ] Copy direction is defined (headline strategy, tone, key messages, CTA)
-- [ ] Visual direction is defined (hero visual, image style, color mood, typography voice)
-- [ ] Motion direction is defined (hero animation, scroll behavior, climax pattern)
-- [ ] Brand archetype is identified
-
----
-
-## WHAT'S NEXT
-
-After storytelling is complete (story.md locked):
-
-1. **For visual system creation** → Run `/impeccable-document` to build DESIGN.md informed by story.md.
-2. **For visual exploration** → Run `workflow-visual-brainstorm.md` to explore visual directions and create motion-direction.md (Phase 3C).
-3. **For copywriting** → Use `skill-copywriting` — it will read story.md for copy direction constraints.
-
-Story.md is the narrative foundation. Every subsequent Impeccable workflow reads it.
-
----
-
-## QUALITY GATES
-
-| Gate | Condition | Action |
-|------|-----------|--------|
-| Gate 1 — Missing context | PRODUCT.md or research-brief.md does not exist | Do not proceed. Create missing context first. |
-| Gate 2 — No direction chosen | User has not approved a story direction | Present directions again. Do not develop without choice. |
-| Gate 3 — No final approval | User has not explicitly approved the story | Present refined story. Do not lock without yes. |
-| Gate 4 — Incomplete story | Any exit criterion is unmet | Complete missing element before writing story.md. |
+- [ ] Controlling argument traces to evidence and brief.
+- [ ] At least two compatible narrative forms were compared.
+- [ ] Selected order follows first-known priority, not a universal sequence.
+- [ ] Every chapter has a communication and evidence job.
+- [ ] Proof timing matches trust burden.
+- [ ] Copy, visual, interaction, and motion responsibilities do not duplicate or contradict one another.
+- [ ] Motion and scroll storyboarding remain conditional.
+- [ ] Director approved the experience architecture.

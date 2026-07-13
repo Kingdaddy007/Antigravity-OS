@@ -1,112 +1,117 @@
 ---
 name: workflow-visual-brainstorm
-description: Route visual exploration for high-end interior storytelling websites
+description: Generate and visibly test three brand-grounded whole-page concept territories for a spatial website
 id: visual-brainstorm
-version: 1
+version: 2
 status: active
-intent: Execute visual brainstorm with explicit authority, state, outputs, and evidence.
-use_when: [the task matches visual brainstorm]
-do_not_use_when: [another workflow more precisely matches the requested outcome]
-inputs: [user objective, workspace context, constraints, requested authority mode]
-required_resources: [applicable AGENTS.md files, referenced skills and contexts]
-mutation_class: read_only
-approval_gates: [confirm implement mode before any mutation]
-states: [intake, assess, propose, approve-if-needed, execute-if-authorized, verify, deliver]
-outputs: [task result, changed-artifact list when applicable, evidence, residual risks]
-verification: [run proportionate checks, record raw evidence, label anything unverified]
-failure_paths: [stop on authority or contract conflict, preserve state, report blocker and safe next action]
+intent: Create genuine early divergence before concept selection, using purposeful references and rough externalization.
+use_when: [an approved spatial creative brief needs distinct concept territories]
+do_not_use_when: [diagnosis or creative brief is unresolved, a concept is already selected, general product UI, or implementation]
+inputs: [evidence dossier, approved creative brief, available assets, constraints]
+required_resources: [applicable AGENTS.md files, storytelling, spatial-experience-design, master-design-director]
+mutation_class: local_edit
+approval_gates: [creative brief approved, territory divergence confirmed, visible rough tests complete]
+states: [brief-check, diverge, question-map, reference, externalize, compare, deliver]
+outputs: [concept-directions.md or approved equivalent, reference provenance, three visible rough tests, risks]
+verification: [territories differ structurally, every reference answers a named question, every territory has a visible test]
+failure_paths: [return to creative brief when territories cannot be distinguished, preserve uncertainty, report missing assets]
 resume_contract: task-scoped .agents/workflows/visual-brainstorm.json using the workflows directory contract
-next_workflows: [none]
+next_workflows: [spatial-concept]
 profiles: [spatial]
 ---
 
 # WORKFLOW: VISUAL BRAINSTORM
 
-## WHAT THIS WORKFLOW DOES
+## PURPOSE
 
-Route visual exploration for high-end interior storytelling websites through `workflow-spatial-concept.md`. Do not generate generic color, typography, or Stitch-style direction options before the spatial concept artifacts exist.
+Discover possible whole-page concepts before committing to one. This workflow exists to make thinking visible and comparable, not to decorate an already selected direction.
 
-## ACTIVATION
+## REQUIRED INPUT GATE
 
-Use when:
+Read `evidence-dossier.md` and the approved `creative-brief.md` or equivalents. Confirm:
 
-- The user asks to explore visual direction for an interior decorator, spatial studio, showroom, decor, furniture, gallery, or luxury home website.
-- The user asks for mockups, visual brainstorms, premium direction, or "make it look like a 20k site."
+- first-known priority;
+- desired visitor response;
+- proof burden;
+- asset reality;
+- anti-goals;
+- selection criteria.
 
-Do NOT use when:
+If these are unresolved, return to the relevant inception phase.
 
-- The task is backend/API/security/database/DevOps.
-- A complete spatial concept already exists and the task is implementation.
+## COGNITIVE ENGINE CHECKPOINT
 
-## REQUIRED FILES
+This is a Type 1.5 creative decision because the selected territory shapes every later asset, narrative, motion, and implementation choice. Load `core/system-thinking.md`, `core/expert-cognitive-patterns.md`, and `core/first-principles.md` before generating directions.
 
-Load:
+- Separate verified evidence, reported claims, inferences, and unknowns; do not let an attractive inference become the premise.
+- Restate the problem from the visitor's first impression and from the studio's business problem; compare both frames.
+- Apply gray thinking: create three structurally different whole-page answers, including a restrained/still-led answer unless evidence rules it out.
+- Apply anti-comfort: challenge the most obvious territory and identify the strongest reason it could fail.
+- Map second-order effects for each territory: asset burden, proof clarity, accessibility, responsive behavior, performance, maintenance, and inquiry posture.
+- Record the riskiest assumption each visible rough test must try to disprove.
 
-- `workflows/workflow-spatial-concept.md`
-- `skills/spatial-experience-design/SKILL.md`
-- `skills/storytelling/SKILL.md`
-- `skills/cinematic-motion/SKILL.md` when motion is involved
-- `skills/spatial-experience-design/reference/audit-mechanics-map.md`
-- `skills/spatial-experience-design/reference/scene-kit-and-asset-directive.md`
+## EXECUTION
 
-## EXECUTION SEQUENCE
+### 1. Generate Three Structural Territories
 
-### STEP 1: Check Spatial Artifacts
+Use different governing arguments and page logics. Differences may include transformation-led, project-led editorial, material/process-led, point-of-view-led, proof-first, atmosphere-led, founder-led, or another evidence-grounded form.
 
-Look for:
+At least one territory must test restraint or a still-led approach unless the brief explicitly rules it out. Do not submit three hero treatments, palettes, typography styles, animation systems, or versions of the same chapter order.
 
-- `.agents/contexts/spatial/visual-thesis.md`
-- `.agents/contexts/spatial/anti-template-preflight.md`
-- `.agents/contexts/spatial/room-sequence.md`
-- `.agents/contexts/spatial/audit-adaptation-map.md`
-- `.agents/contexts/spatial/beloved-asset-directive.md`
-- `.agents/contexts/spatial/hero-event-blueprint.md`
-- `.agents/contexts/spatial/scene-kit-brief.md`
-- `.agents/contexts/spatial/depth-map.md`
-- `.agents/contexts/spatial/material-script.md`
-- `.agents/contexts/spatial/motion-board.md`
-- `.agents/contexts/spatial/asset-boundary.md`
+For each territory define:
 
-If any are missing, run `workflow-spatial-concept.md` first.
+- premise and controlling argument;
+- what the visitor knows first;
+- narrative form and chapter jobs;
+- opening form;
+- proof strategy;
+- visual posture and stillness/motion posture;
+- asset requirements and missing evidence;
+- responsive, accessibility, performance, and maintenance implications;
+- reason it belongs to this brand;
+- failure condition.
 
-Gate: Do not create visual options until the spatial contract exists.
+### 2. Name Design Questions Before References
 
-### STEP 2: Generate Direction Options From The Contract
+Examples: How can the project proof lead without feeling technical? What crop behavior makes material intelligence legible? Can a still opening create enough tension? How might a transformation compare without a generic slider?
 
-> **⚙ Cognitive Engine checkpoint — apply cognitive safeguards.**
-> Gray thinking: explore genuinely different visual territories, not safe variations of one idea. Framing bias: restate the visual problem from the visitor's emotional journey, not just the brand's intent. Anti-comfort: if one direction feels obvious, that's a signal to push harder on alternatives. First principles: what is provably true about how this space should feel, stripped of convention?
-Create 2-3 options only within the approved visual thesis. Options may vary:
+Search or browse only after questions exist. Record source, observed mechanic, adapted lesson, rejected imitation, and where the reference does **not** fit. A reference can influence one decision without donating its site architecture.
 
-- archetype emphasis
-- hero event treatment
-- room sequence pacing
-- material/light emphasis
-- scene kit intensity
-- motion restraint
+### 3. Externalize Every Territory
 
-Do not present palette-only variants.
+Produce a mini reference board plus at least one visible rough test per territory:
 
-### STEP 3: Check Against Anti-Template Smells
+- styleframe;
+- low-fidelity page sequence;
+- motion study;
+- asset/crop test;
+- coded micro-prototype;
+- or another proportionate representation.
 
-For each option, state:
+Use real or realistic-enough imagery and type. The test must expose the territory's most important assumption, not merely make it attractive.
 
-- Why it cannot be mistaken for a generic decorator template.
-- Which design-audit mechanics it adapts.
-- Which image-native assets it depends on.
-- Which motion track carries the signature experience.
-- Which parts remain quiet for proof and inquiry.
+### 4. Run the Divergence Gate
 
-### STEP 4: Lock Direction
+Use `master-design-director` to ask:
 
-Record the chosen direction by updating or creating:
+- Would choosing a different territory materially change the page architecture?
+- Is each territory a complete page idea rather than a hero idea?
+- Is one option merely the safest styling of another?
+- Are references supporting questions rather than leading taste?
+- Does every visible test reveal both potential and cost?
 
-- `.agents/contexts/spatial/selected-direction.md`
-- updates to scene kit, depth map, material script, and motion board if the selected direction changes them.
+If divergence fails, revise before selection.
 
-## QUALITY GATE CHECKLIST
+### 5. Write the Comparison Contract
 
-- [ ] Spatial concept artifacts exist before visual options.
-- [ ] Options differ by spatial idea, not only color.
-- [ ] Each option names asset requirements.
-- [ ] The selected direction updates the spatial contract.
-- [ ] Template luxury patterns are rejected.
+Create or update `concept-directions.md` with the brief criteria, all three territories, reference provenance, rough-test evidence, unresolved risks, and a neutral comparison. Do not select the winner inside this workflow.
+
+## QUALITY GATE
+
+- [ ] Creative brief is approved.
+- [ ] Exactly three territories are structurally distinct.
+- [ ] A restrained/still-led option exists or its evidence-based exclusion is recorded.
+- [ ] References answer named questions.
+- [ ] Each territory has a visible rough test.
+- [ ] Full-page logic, proof, assets, motion necessity, and constraints are comparable.
+- [ ] No winner is chosen before the selection gate.

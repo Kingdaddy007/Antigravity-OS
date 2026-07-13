@@ -1,6 +1,6 @@
 # Audit Mechanics Map
 
-Use the 30 local audit reports in `design-audit/` as the living reference library. When proposing a visual or motion concept, cite at least 2 mechanics from this map and name how they are adapted for the current interior/spatial brand.
+Use the 30 local audit reports in `design-audit/` as a candidate reference library after a concept territory has named a design question. No concept is required to use or cite a mechanic. When a mechanic is useful, record what question it answers and how it is adapted for the current brand.
 
 ## Design Audit Directory Paths
 
@@ -32,12 +32,14 @@ To inspect the raw reports, load the corresponding `.md` file from the canonical
 | Site 29 Lounge Coffee | hero event, split mask, experience-then-store, palette cleanser | mural/fabric/door/light reveal before project grid or inquiry |
 | Site 30 Nauta | living mockup ticker, hard-cut segmentation, trust-preserving motion | live process/proof panel for design method, availability, project phases |
 
-## Proposal Rule
+## Adaptation Record
 
-Every serious visual direction must include:
+When a direction uses an audit mechanic, include:
 
 - `Mechanic source:` site number/name.
 - `Adaptation:` how it becomes a spatial/interior mechanic.
 - `Assets needed:` image, render, video, SVG, WebGL, or CSS-native.
-- `Motion role:` arrival, ambient, scroll-bound, or interaction.
+- `Communication role:` composition, proof, interaction, transition, motion, or another named job.
 - `Why it avoids Tidescape:` the specific template smell it rejects.
+
+Also record what is intentionally **not** copied. A direction may instead use original rough tests, still composition, client assets, or non-audit references when those answer the brief more directly.

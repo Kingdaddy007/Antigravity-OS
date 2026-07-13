@@ -32,7 +32,7 @@ Sources:
 
 ## Core Rule
 
-Lenis is the scroll foundation, not the concept. It must support the approved `showroom-choreography.md`, not become a decorative smoothness layer.
+Lenis is scroll infrastructure, not the concept. It must support approved choreography in `production-plan.md` or a legacy equivalent, not become a decorative smoothness layer.
 
 ## Vanilla GSAP Pattern
 

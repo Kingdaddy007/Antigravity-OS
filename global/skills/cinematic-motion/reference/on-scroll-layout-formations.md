@@ -43,7 +43,7 @@ We reject standard "jumping grids" or "floating cards." We map the layout calcul
 
 ## Required Context Before Implementation
 
-Add this layout formation to `contexts/spatial/showroom-choreography.md` before coding:
+Add this layout formation to the choreography section of `production-plan.md` or a legacy equivalent before coding:
 
 ```text
 Section:

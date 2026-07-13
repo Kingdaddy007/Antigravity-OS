@@ -1,178 +1,153 @@
 ---
 name: scroll-storyboard
-description: 'Use this skill when translating an approved brand narrative and visual thesis into a scroll-choreography blueprint before any section-level code or design begins. Activated by "storyboard the scroll", "map the sections", "what should each section do", "how should the scroll feel", "before we build the page", or any moment where the narrative is approved but the viewport-by-viewport experience is still undefined. Also activate when a site feels disconnected, abrupt, or like sections were designed independently. Do NOT use this as a copywriting tool or a layout tool — it only defines what the user experiences at each scroll depth and why.'
+description: 'Use this skill when an approved experience depends on authored scroll timing, pinning, transitions, persistent continuity, or media choreography, or when an existing site feels disconnected because sections were designed independently. Activated by "storyboard the scroll", "map scroll beats", "plan the pinned sequence", "how should the scroll feel", or a need to coordinate viewport-by-viewport narrative behavior. Do NOT use for ordinary page sequencing, copywriting, static editorial layouts, or as a universal precondition for design and implementation.'
 ---
 
 # Scroll Storyboard
 
-## WHAT THIS IS
+## WHEN TO USE THIS
 
-A **Scroll Storyboard Contract** is the translation layer between:
-
-- `storytelling` skill → narrative argument, room sequence, emotional arc
-- `spatial-experience-design` skill → visual system, components, motion tokens
-- `→ implementation` → `index.html` section order, `main.ts` animation choreography, `style.css` section-level styles
-
-Without it, each section gets designed in isolation. With it, every section is a sentence in one long continuous argument that the user reads by scrolling.
-
-## THE CORE PRINCIPLE
-
-> **A website is not a page. It is a directed experience with a singular controlling argument.**
->
-> The scroll is the sentence structure. The user's hand is the pacing.
-
-This principle applies to ALL the user's websites — interior design, brand, product, portfolio, or agency. Every site tells a story or it tells nothing.
-
-## WHEN TO ACTIVATE
-
-Activate at exactly one point in the build process:
-
-**After:** Brand doctrine is approved. `story.md` or equivalent narrative artifact exists.
-**Before:** Any section-level HTML, CSS, or animation work begins.
-
-If sections already exist, activate for an audit. Produce the storyboard for the existing site and identify the disconnections.
+- Load after a concept is selected and the experience architecture is approved.
+- Load when scroll depth controls narrative timing, pinning, persistent objects, register changes, or media states.
+- Load to audit an existing experience whose transitions or section continuity feel disconnected.
 
 ## NEVER DO
 
-- Never build a section before its storyboard beat exists.
-- Never add an animation before asking: "what sentence is the user reading at this scroll depth?"
-- Never let a section begin a new topic — every section must continue the same argument in a different register.
-- Never cut between scenes without a transition ritual (an anchor object, a light shift, a register change, or a hard contrast moment).
-- Never storyboard a site that has no controlling argument. Go back to `storytelling` skill first.
+- Never require a scroll storyboard for a static, lightly animated, or conventionally scrolling page.
+- Never invent scroll spectacle to justify using this skill.
+- Never add a beat or animation without asking what communication job occurs at that depth.
+- Never require an anchor object when composition, typography, color, image logic, or a deliberate hard cut already provides continuity.
+- Never let pinned choreography hide proof, navigation, inquiry, or accessible alternatives.
+- Never storyboard before the controlling argument and chapter jobs are approved.
 
-## THE STORYBOARD TABLE FORMAT
+## WHAT THIS IS
 
-Produce one row per narrative beat. A beat is defined as: *any moment where the user's emotional state, visual register, or narrative argument changes.*
+A **Scroll Storyboard Contract** is a conditional translation layer between:
 
-| Beat # | Label | Scroll Depth | Controlling Idea | What the User Sees | What the User Feels | Register | Anchor Object | Copy Mode | Transition Out |
-|--------|-------|-------------|-----------------|-------------------|--------------------|---------|--------------------|-----------|---------------|
+- `storytelling` - controlling argument, chapter jobs, emotional arc;
+- `spatial-experience-design` - approved composition, asset, and interaction system;
+- `cinematic-motion` - motion jobs, tracks, timing, fallbacks;
+- implementation - semantic sections, scroll ranges, timelines, and responsive behavior.
+
+It normally lives in `scroll-storyboard.md`. Equivalent approved choreography inside `experience-blueprint.md` or `production-plan.md` is acceptable.
+
+## ACTIVATION TEST
+
+Create the artifact only when at least one answer is yes:
+
+1. Does meaning change at authored scroll depths rather than ordinary document flow?
+2. Is content pinned, scrubbed, sequenced, or synchronized with media?
+3. Must an object, image, word, register, or material persist across multiple beats?
+4. Would independent section implementation create a continuity or timing failure?
+5. Is a complex mobile or reduced-motion translation needed?
+
+If all answers are no, record `scroll storyboard: not required` in `production-plan.md` and continue.
+
+## STORYBOARD TABLE FORMAT
+
+Produce one row per narrative beat: any moment where the visitor's emotional state, visual register, evidence, or argument changes because of scroll.
+
+| Beat # | Label | Scroll Depth | Controlling Idea | What the User Sees | What the User Feels | Register | Continuity Device | Copy Mode | Transition Out |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
 ### Column Definitions
 
-**Beat #:** Numerical sequence. Gaps allowed (1, 2, 2.5, 3) for inserted bridges.
-
-**Label:** A short poetic name for the beat. Treat it like a scene name in a screenplay (e.g., "The Dark Threshold", "The Weight of Stone").
-
-**Scroll Depth:** Relative depth (e.g., "0vh–100vh", "100vh–300vh", "pinned for 200vh").
-
-**Controlling Idea:** One sentence. The claim this beat is proving or setting up.
-
-**What the User Sees:** Concrete description of the dominant visual. Name the element — not "some animation" but "a full-bleed concrete room video zooming in from center."
-
-**What the User Feels:** One or two words. This is the emotional target. Not the design aesthetic — the felt state.
-
-**Register:** One of: `LIGHT`, `DARK`, `TRANSITION`. Defines the ambient context mode.
-
-**Anchor Object:** The persistent visual element that carries continuity into or through this beat. If nothing persists, write `NONE` — this is a risk flag.
-
-**Copy Mode:** One of: `SILENT` (no text), `ATMOSPHERIC` (mood phrase), `DECLARATIVE` (bold claim), `EDITORIAL` (quiet caption), `INVITATION` (CTA).
-
-**Transition Out:** How this beat ends. One of: `DISSOLVE`, `HARD CUT`, `PORTAL` (camera zooms through an element into the next scene), `DRIFT` (parallel elements enter while old ones exit), `ANCHOR HOLD` (anchor object stays, content scrolls past).
-
----
+- **Beat #:** Sequence; decimal inserts are allowed.
+- **Label:** Short scene name, such as “The Dark Threshold” or “The Weight of Stone.”
+- **Scroll Depth:** Relative depth, pin duration, or progress range.
+- **Controlling Idea:** The claim this beat proves or prepares.
+- **What the User Sees:** Concrete dominant visual, not “some animation.”
+- **What the User Feels:** One or two target emotions.
+- **Register:** `LIGHT`, `DARK`, `TRANSITION`, or a project-defined equivalent.
+- **Continuity Device:** Optional persistent object, material, color, crop, type treatment, sound cue, or `NONE`.
+- **Copy Mode:** `SILENT`, `ATMOSPHERIC`, `DECLARATIVE`, `EDITORIAL`, or `INVITATION`.
+- **Transition Out:** `DISSOLVE`, `HARD CUT`, `PORTAL`, `DRIFT`, `ANCHOR HOLD`, or a named project-specific transition.
 
 ## BEAT TAXONOMY
 
-Use these named beat types. A site does not need all of them. Every site needs at least: THRESHOLD → one PROOF beat → INVITATION.
+Use only the beat types the selected narrative needs.
 
-| Beat Type | Purpose | Register | When to Use |
-|-----------|---------|----------|-------------|
-| **THRESHOLD** | First 3 seconds. Establishes the world and filters attention. | LIGHT or DARK | Always first |
-| **ARGUMENT** | States the controlling idea explicitly, usually in display type | Either | After Threshold |
-| **IMMERSION** | Pulls the user inside the brand world. No selling. | DARK | After first argument |
-| **PROOF** | Shows capability, work, transformation — earns trust | Either | After immersion |
-| **PHILOSOPHY** | Explains the brand's way of seeing the world | DARK or TRANSITION | Bridges between sections |
-| **MATERIAL** | Shows the sensory raw materials the brand commands | LIGHT | Before or after proof |
-| **INTERACTION** | A section where user agency reveals something hidden | Either | Use sparingly |
-| **HARD CUT** | Intentional abrupt register shift. Resets user attention | TRANSITION | Only when mood shift is narratively justified |
-| **ANCHOR HOLD** | One object stays fixed while text scrolls past | DARK | Philosophy or method sequences |
-| **INVITATION** | Calm, selective inquiry gate | DARK | Always last |
+| Beat Type | Purpose | Typical Register | When to Use |
+| --- | --- | --- | --- |
+| **THRESHOLD** | Establishes the world and filters attention | Light or dark | When the opening needs an authored entrance |
+| **ARGUMENT** | States the controlling idea | Either | When the claim needs explicit emphasis |
+| **IMMERSION** | Pulls the visitor into the brand world without selling | Often dark | When atmosphere must precede proof |
+| **PROOF** | Shows capability, work, transformation, or rigor | Either | Wherever trust must be earned |
+| **PHILOSOPHY** | Explains the studio's way of seeing | Dark or transition | To connect work and method |
+| **MATERIAL** | Shows sensory or craft intelligence | Often light | For material/process-led arguments |
+| **INTERACTION** | Gives user agency to reveal or compare | Either | Sparingly, when agency improves understanding |
+| **HARD CUT** | Intentionally resets attention or reframes the argument | Transition | Only when the narrative earns contrast |
+| **ANCHOR HOLD** | Keeps one element while surrounding meaning changes | Often dark | When persistence clarifies continuity |
+| **INVITATION** | Creates a calm, selective inquiry gate | Either | When readiness has been earned |
 
----
+No beat type is universally required. A quiet page may use ordinary document flow and no storyboard at all.
 
-## REGISTER SWITCHING RULES
+## REGISTER SWITCHING
 
-A **register** is the ambient emotional and visual mode. There are two: **LIGHT** and **DARK**.
+- Use one primary register with only justified excursions.
+- A register change must express a narrative event, not supply arbitrary variety.
+- Treat a hard cut or portal as a designed scene when the change is consequential.
+- Do not impose a light/dark binary when the selected visual system uses another register model.
 
-- Sites should operate in **one primary register** with deliberate excursions into the other.
-- A register change must be motivated by a narrative event — not arbitrary visual variety.
-- Never switch register more than 2 times on a single page without a strong controlling argument for each switch.
-- The switch itself is a scene. It must be designed — not assumed. Call it a `HARD CUT` or a `PORTAL` in the storyboard.
+## CONTINUITY DEVICES
 
----
+An anchor object is one possible continuity device, not a universal law. Continuity may instead come from crop logic, grid, typographic cadence, repeated material, color, sound, pacing, or a deliberate break.
 
-## THE ANCHOR OBJECT PRINCIPLE
+When an anchor object is useful:
 
-> **A site without an anchor object is a series of slides. A site with an anchor object is a journey.**
+- Name its communication job before its path.
+- Map position, scale, occlusion, collision-safe text zones, and responsive behavior.
+- Keep it only while it improves orientation or argument.
+- Mark `NONE` neutrally; it is not automatically a risk.
 
-An anchor object is a persistent visual element that travels with the user across at least two consecutive beats. It provides orientation, continuity, and a sense that the site is one coherent world.
+## PRODUCTION PROCESS
 
-Rules:
-- Name the anchor object before designing any section that uses it.
-- The anchor object does not have to be the same asset — it can be a material, a color, a motion quality, or a typographic treatment.
-- Mark beats with `NONE` for anchor object as narrative risk zones. A risk zone is not banned but must be reviewed.
-- A hard cut that introduces a new anchor object is a portal, not a disconnection — name it explicitly.
+1. Read the selected territory, experience blueprint, and production constraints.
+2. Confirm the activation test and record why a storyboard is required.
+3. Name the controlling argument and the chapters affected by authored scroll.
+4. Choose registers and continuity devices only where useful.
+5. Write the beat table from narrative need, not existing effects.
+6. Map desktop, mobile, reduced-motion, loading, and failure behavior.
+7. Reconcile the table with media choreography and implementation ownership.
+8. Obtain the applicable Director and user approval before complex implementation.
 
----
+## INTEGRATION
 
-## INTEGRATION WITH OTHER FILES
+| Downstream Consumer | What It Receives |
+| --- | --- |
+| Semantic page structure | Beat order and grouping, where scroll changes structure |
+| Motion implementation | Progress ranges, pins, transitions, and timeline ownership |
+| Visual system | Register scope and continuity rules |
+| Media choreography | Cue timing, text-safe states, loading, and fallbacks |
+| Accessibility | Reduced-motion and non-scroll equivalent |
+| Responsive implementation | Mobile simplification and touch behavior |
 
-The Scroll Storyboard Contract is the **source of truth** for:
-
-| Downstream File | What It Gets From the Storyboard |
-|----------------|----------------------------------|
-| `index.html` | Section order, section count, semantic grouping |
-| `main.ts` | Scroll depth triggers, timeline sequencing, pin durations |
-| `style.css` | Register-specific token usage, light/dark section scoping |
-| `story.md` | Validated narrative sequence (storyboard should not contradict story.md) |
-| `DESIGN.md` | Confirms which design tokens belong to which register |
-| `showroom-choreography.md` | If it exists, storyboard supersedes or updates it |
-| `motion-board.md` | Scroll-bound track is directly drawn from Beat # and scroll depth columns |
-
----
-
-## THE STORYBOARD PRODUCTION PROCESS
-
-1. **Gather inputs:** Read `story.md` or narrative brief. Read brand doctrine. Read `DESIGN.md`.
-2. **Name the controlling argument:** One sentence. The entire site proves this.
-3. **Count the register shifts:** How many light-to-dark or dark-to-light transitions exist? Each shift needs a name and a justification.
-4. **Name the anchor objects:** What travels? List them before building the table.
-5. **Write the beat table:** One beat per row. Start from what the narrative requires, not from what is already coded.
-6. **Audit against existing code:** If sections already exist, map them to beats. Identify unanchored sections, missing transitions, and copy mode mismatches.
-7. **Produce the contract:** Save to `contexts/scroll-storyboard.md` in the project workspace.
-8. **Gate the build:** Do not proceed to implementation until the storyboard is approved.
-
----
+The storyboard never supersedes the approved creative brief or selected concept. If they conflict, return to the Director gate.
 
 ## ANTI-PATTERNS
 
 | Anti-Pattern | What It Looks Like | Fix |
-|--------------|--------------------|-----|
-| Section Island | Each section designed without referencing adjacent beats | Run storyboard audit. Identify anchor gaps. |
-| Motivation-Free Register Change | Dark section appears for visual variety | Require a controlling idea for every register change |
-| No Anchor Object | User loses orientation mid-scroll | Name an anchor object. Can be a color, a sound cue, a motion quality |
-| Copy Mode Collision | A PHILOSOPHY beat uses DECLARATIVE copy | Match copy mode to beat type |
-| Threshold Too Long | Site tries to communicate too much before first register shift | Threshold must complete in one viewport of scroll |
-| Missing Hard Cut | Narrative pivot moment is treated as a fade | Design the cut explicitly — it is a scene |
-| Orphan Section | A section that does not continue the controlling argument | Delete it or rewrite it to serve the argument |
-
----
+| --- | --- | --- |
+| Section Island | Adjacent beats have no argumentative relationship | Reconnect chapter jobs or use a deliberate cut |
+| Motivation-Free Register Change | Visual mode changes only for variety | Require a narrative reason or remove it |
+| Forced Anchor | An object travels because the template expects it | Replace it with the simplest useful continuity device |
+| Copy Mode Collision | Copy posture fights the beat's job | Match copy mode to evidence and emotional state |
+| Threshold Too Long | Opening delays access without earning attention | Shorten, simplify, or use ordinary flow |
+| Orphan Section | A section does not continue or qualify the argument | Delete, move, or rewrite it |
+| Desktop-Only Choreography | Mobile and reduced-motion become broken leftovers | Design equivalent experiences before implementation |
 
 ## OUTPUT SHAPE
 
-**New site:** Controlling argument → register map → anchor object list → full beat table → integration notes.
+**New storyboard:** Activation rationale -> controlling argument -> register/continuity map -> beat table -> mobile/reduced-motion translation -> implementation notes.
 
-**Audit:** Beat map of existing sections → disconnection flags → missing beats → anchor gaps → recommended insertions.
-
----
+**Audit:** Existing beat map -> disconnections -> timing and accessibility risks -> recommended repairs.
 
 ## NON-NEGOTIABLE CHECKLIST
 
-1. Controlling argument exists before the first beat is named.
-2. Every beat continues or proves the controlling argument.
-3. Every register change is motivated and named.
-4. Every beat has an anchor object or is explicitly marked as a risk zone.
-5. Copy mode matches beat type.
-6. Transition Out is specified for every beat.
-7. Storyboard is saved to `contexts/scroll-storyboard.md` before implementation begins.
-8. Storyboard does not contradict `story.md` or brand doctrine.
+1. The activation test justifies creating a storyboard.
+2. The controlling argument and chapter jobs are already approved.
+3. Every beat has a communication job.
+4. Registers and continuity devices are optional and justified.
+5. Every authored transition has desktop, mobile, and reduced-motion behavior.
+6. Proof, navigation, and inquiry remain reachable.
+7. The storyboard does not contradict the selected concept or creative brief.

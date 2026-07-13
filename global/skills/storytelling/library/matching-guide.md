@@ -14,8 +14,7 @@
 - [HORROR / PSYCHOLOGICAL](#horror-psychological)
 - [HOW TO USE THIS GUIDE](#how-to-use-this-guide)
 
-Brand archetype → relevant mechanics. Use this during the Research phase
-to find storytelling mechanics that fit the brand.
+Brand archetype → candidate mechanics. Use this only after evidence and the creative brief define a narrative question. These pairings are prompts for comparison, not prescriptions; brand-specific evidence may justify any listed exception.
 
 ---
 
@@ -30,7 +29,7 @@ to find storytelling mechanics that fit the brand.
 - Architectural Scale Implication (Piranesi) — vast scale, awe
 - First-Person Confessional (Circe) — voice-driven, intimate
 
-**What to avoid:** Brutal, Jittery, Maximalist — too aggressive for luxury
+**Risk to test:** Brutal, Jittery, or Maximalist behavior may overpower restraint unless evidence supports it.
 
 ---
 
@@ -45,7 +44,7 @@ to find storytelling mechanics that fit the brand.
 - Cognitive Dissonance via Programmed Unseeing (The City & The City) — hidden layers, stencil buffers
 - Ontological Interface Disruption (The Raw Shark Texts) — unreliable interface, glitch effects
 
-**What to avoid:** Glacial, Minimal — too slow for tech brands
+**Risk to test:** Glacial or Minimal behavior may suppress urgency unless the specific brand benefits from restraint.
 
 ---
 
@@ -60,7 +59,7 @@ to find storytelling mechanics that fit the brand.
 - Slow-Burn Atmospheric Poisoning (Mexican Gothic) — environmental storytelling
 - Second-Person Spatial Proximity (Open Water) — intimate, sensory
 
-**What to avoid:** Brutal, Jittery — too aggressive for hospitality
+**Risk to test:** Brutal or Jittery behavior may fight warmth unless the concept deliberately needs tension.
 
 ---
 
@@ -75,7 +74,7 @@ to find storytelling mechanics that fit the brand.
 - The Voided Protagonist (The Silent Patient) — central mystery, curiosity gap
 - Casual Glossary Immersion (Never Let Me Go) — expertise through implication
 
-**What to avoid:** Brutal, Jittery — too casual for professional services
+**Risk to test:** Brutal or Jittery behavior may weaken trust unless the brand evidence supports disruption.
 
 ---
 
@@ -90,7 +89,7 @@ to find storytelling mechanics that fit the brand.
 - Nested Narrative Labyrinth (Cloud Atlas) — multi-layered, complex
 - Identity Amnesia Onboarding (The 7 1/2 Deaths of Evelyn Hardcastle) — disorienting, puzzle-like
 
-**What to avoid:** Mechanical, Minimal — too safe for creative agencies
+**Risk to test:** Mechanical or Minimal behavior may feel generic unless restraint is itself the differentiator.
 
 ---
 
@@ -105,7 +104,7 @@ to find storytelling mechanics that fit the brand.
 - Intimate Confessional Voice (The Bell Jar) — sardonic, honest
 - Confessional Misdirection Loop (We Have Always Lived in the Castle) — intimate, trusting
 
-**What to avoid:** Brutal, Jittery — too aggressive for wellness
+**Risk to test:** Brutal or Jittery behavior may undermine care unless productive discomfort is part of the brief.
 
 ---
 
@@ -120,7 +119,7 @@ to find storytelling mechanics that fit the brand.
 - First-Person Confessional (Circe) — voice-driven, personal
 - Architectural Scale Implication (Piranesi) — vast scale, awe
 
-**What to avoid:** Brutal, Jittery — too aggressive for fashion
+**Risk to test:** Brutal or Jittery behavior may overpower aspiration unless the brand's point of view demands it.
 
 ---
 
@@ -135,7 +134,7 @@ to find storytelling mechanics that fit the brand.
 - Abrupt Reality Fracture (Dark Matter) — sudden shift, disorientation
 - Compression Cascade Syntax (Blindness) — accelerating panic, claustrophobia
 
-**What to avoid:** Glacial, Minimal — too slow for gaming
+**Risk to test:** Glacial or Minimal behavior may reduce energy unless deliberate tension or prestige justifies it.
 
 ---
 
@@ -150,7 +149,7 @@ to find storytelling mechanics that fit the brand.
 - Nested Narrative Layering (Trust) — structured, layered
 - Triple-Helix Temporal Fracture (The Fifth Season) — parallel timelines
 
-**What to avoid:** Brutal, Liquid — too casual for data platforms
+**Risk to test:** Brutal or Liquid behavior may obscure comprehension unless the selected interaction proves otherwise.
 
 ---
 
@@ -165,7 +164,7 @@ to find storytelling mechanics that fit the brand.
 - Ritualized Paranoid Monologue (The Wasp Factory) — unsettling voice
 - Compression Cascade Syntax (Blindness) — accelerating panic
 
-**What to avoid:** Liquid, Minimal — too calm for horror
+**Risk to test:** Liquid or Minimal behavior may release tension unless calm is being used as contrast.
 
 ---
 
@@ -173,6 +172,7 @@ to find storytelling mechanics that fit the brand.
 
 1. **Identify the brand archetype** — what type of brand is this?
 2. **Identify the emotion** — what should the user feel?
-3. **Look up the recommended mechanics** — which mechanics fit?
+3. **Name the design question** — what narrative problem must a mechanic solve?
 4. **Read the mechanic files** — get the full web translation spec
-5. **Adapt, don't copy** — use the mechanic as inspiration, not a template
+5. **Compare with stillness and simpler structure** — a mechanic is optional
+6. **Adapt, don't copy** — record what is borrowed, changed, and rejected

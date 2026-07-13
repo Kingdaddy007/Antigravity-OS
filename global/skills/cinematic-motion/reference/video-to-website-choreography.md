@@ -82,7 +82,7 @@ Prompt required:
 
 Load `reference/lenis-gsap-scroll-foundation.md` when smooth scroll drives GSAP, parallax, snap sections, canvas frames, infinite loops, or WebGL camera choreography.
 
-Use Lenis as infrastructure. The concept still comes from `visual-thesis.md` and `showroom-choreography.md`.
+Use Lenis as infrastructure. The concept still comes from the selected territory, `experience-blueprint.md`, and approved choreography in `production-plan.md` or a legacy equivalent.
 
 ## Infinite Parallax Gallery Loop
 
@@ -155,4 +155,4 @@ Use this when the website needs to rotate through four walls of a curated room o
 
 ## Output
 
-Create `contexts/spatial/showroom-choreography.md` before implementation. Use the section schema for every video-led or media-led section.
+For a video-led or media-led experience, complete the choreography section in `production-plan.md` or an approved equivalent before implementation. A legacy `showroom-choreography.md` remains valid. Use the section schema for every affected section.

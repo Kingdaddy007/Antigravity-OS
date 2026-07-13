@@ -151,6 +151,7 @@ profiles: [general]
                     "cinematic-motion",
                     "cinematic-showroom-strategy",
                     "master-design-director",
+                    "motion-library",
                     "scroll-storyboard",
                     "spatial-experience-design",
                     "storytelling",
@@ -183,6 +184,7 @@ profiles: [general]
             self.assertTrue(
                 (spatial_payload / "skills" / "spatial-experience-design").exists()
             )
+            self.assertTrue((spatial_payload / "skills" / "motion-library").exists())
             self.assertTrue(
                 (spatial_payload / "workflows" / "workflow-impeccable-craft.md").exists()
             )

@@ -43,10 +43,10 @@ Do not use this for ambient loops that can remain normal video. Use canvas frame
 
 Before extracting frames, confirm:
 
-- `contexts/spatial/showroom-choreography.md` defines the section job, scroll behavior, text zone, and fallback.
-- `contexts/spatial/cinematic-prompt-pack.md` exists if the source video was generated.
-- `contexts/spatial/asset-boundary.md` classifies the sequence as canvas/frame-native.
-- `contexts/spatial/motion-board.md` assigns the sequence to arrival, ambient, scroll-bound, or interaction.
+- The choreography section in `production-plan.md` or an approved equivalent defines the section job, scroll behavior, text zone, and fallback.
+- `cinematic-prompt-pack.md` exists if the source video was generated.
+- The production asset boundary classifies the sequence as canvas/frame-native.
+- The motion contract assigns the sequence to an applicable track.
 
 ## Video Analysis
 
@@ -356,7 +356,7 @@ Prefer scene-native masks over generic circles when the room provides a better t
 
 Reject the implementation if:
 
-- The frame sequence is not mapped in `showroom-choreography.md`.
+- The frame sequence is not mapped in the approved production choreography (a legacy `showroom-choreography.md` is valid).
 - Text zones are decided only in CSS, not in the prompt/source composition.
 - The canvas sequence acts like product-demo spectacle instead of spatial proof.
 - Mobile has no authored fallback.

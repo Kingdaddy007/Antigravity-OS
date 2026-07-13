@@ -18,36 +18,34 @@ description: 'Use this skill when designing, auditing, or planning high-end inte
 - Never treat rooms as cards, projects as a generic grid, or materials as decorative background colors.
 - Never ship beige plus serif plus stock interiors plus fade-ups and call it premium.
 - Never substitute CSS blobs, gradients, or empty rectangles for image-native spatial scenes.
-- Never add cinematic motion before naming the visual thesis, spatial metaphor, scene kit, and asset boundary.
-- Never write standalone image/video prompts that do not inherit brand diagnosis, visual thesis, room sequence, material script, depth map, motion board, and showroom choreography.
+- Never add cinematic motion before the selected concept, experience architecture, asset reality, and motion job are clear.
+- Never write standalone image/video prompts that do not inherit the approved diagnosis, brief, concept, experience blueprint, and relevant production constraints.
 - Never make CTAs behave like SaaS buttons when the brand needs a quiet concierge invitation.
 - Never use scroll effects that do not physically belong to the room, material, object, or threshold.
-- Never present a serious concept without citing adapted mechanics from `design-audit/`.
+- Never use a reference mechanic as the reason a concept exists. References answer named design questions after a territory has a brand-grounded premise.
 - Never copy the section architecture of reference sites 1:1. Always filter reference patterns through the specific scale, capacity, and niche of the target brand (Avoid the Scale Imitation Trap).
 - Never prescribe sections that defend baseline expectations (e.g., 'Render vs Reality' for a Tier 1 builder). This lowers posture from Practitioner to Performer. Replace defensive proof with Process Proof (Avoid the Defensive Vendor Trap).
 - Never prescribe motion/GSAP just because it is technically impressive. Every animation must have a semantic meaning tied directly to the visual thesis (Avoid the Gimmick Trap).
 
 ## CORE MENTAL MODEL
 
-Design the page as a staged spatial seduction:
+Design the site as a brand-specific argument experienced through space, image, type, proof, interaction, and possibly motion. Interior brands often need atmosphere, taste, transformation or design intelligence, authority, process/fit, and inquiry; these are reusable communication jobs, not a fixed section order.
 
-`Atmosphere -> Taste -> Transformation -> Proof -> Method -> Inquiry`
+Before any token, component, or animation choice, answer:
 
-Translate every surface through these questions before any token, component, or animation choice:
-
-1. What room does the visitor enter first?
-2. What physical threshold do they cross?
-3. What material carries the brand's memory?
-4. What object, fixture, mural, textile, doorway, table, chair, lamp, artwork, or architectural detail owns the playhead?
-5. What transformation proves the designer's taste and capability?
-6. Where does the visitor see proof without breaking the atmosphere?
+1. What must this studio be known for first?
+2. What should the visitor feel, understand, believe, and do?
+3. Which evidence earns that belief?
+4. Which narrative form best sequences that evidence?
+5. What should remain still, and what—if anything—must move?
+6. Which assets can honestly support the concept?
 7. How does the inquiry feel selective, calm, and high-trust?
 
 ## SPATIAL ARCHETYPES
 
-Choose one primary archetype. Borrow from one secondary archetype only when it strengthens the same visual thesis.
+Use these as candidate vocabularies, not mandatory menus. A concept may adapt one, combine compatible parts, or use none when the brief calls for a quieter editorial solution.
 
-| Archetype | Use When | Required Mechanics |
+| Archetype | Use When | Candidate Mechanics |
 | --- | --- | --- |
 | Gallery Procession | Portfolio, studio, luxury interiors, editorial projects | Room chapters, one focal image per act, quiet labels, slow plate reveals |
 | Layered Diorama | Hero scenes, object-led decor brands, immersive first folds | Z-axis depth map, foreground blur, midground object, background atmosphere |
@@ -59,37 +57,37 @@ Choose one primary archetype. Borrow from one secondary archetype only when it s
 
 For designing hero and first-fold compositions, load and consult [hero-layout-blueprints.md](../../reference/hero-layout-blueprints.md). Use its 10 custom layout formulas and aesthetic archetypes for negative space balance, typography weights, and motion behavior. Treat these layouts as structural reference benchmarks to adapt or hybridize for the brand's custom needs, never as a rigid menu.
 
-## REQUIRED ARTIFACTS
+## ARTIFACT CONTRACT
 
-Do not build a high-end spatial site until these artifacts exist in `contexts/spatial/` or equivalent project context:
+Use five logical contracts. They may be five files or equivalent approved documents:
 
-1. `visual-thesis.md` - one sentence naming the physical idea the whole site obeys.
-2. `anti-template-preflight.md` - the lazy AI/default layout and the banned moves.
-3. `room-sequence.md` - the chapter order using spaces, thresholds, light, and emotional intent.
-4. `brand-to-scene-translation.md` - perception gap, belief, taste world, spatial metaphor, prompt implications, and proof implications.
-5. `showroom-choreography.md` - section-by-section media, text zone, scroll behavior, proof role, and fallback map.
-6. `portfolio-proof-chapters.md` - project decision/proof chapters when portfolio is central.
-7. `cinematic-prompt-pack.md` - context-inherited image/video prompts when generated media is needed.
-8. `hero-event-blueprint.md` - the first physical event: curtain, light spill, mural reveal, object move, fabric pull, before/after split, or camera entrance.
-9. `scene-kit-brief.md` - required imagery/assets with perspective, crop, lighting, and role.
-10. `depth-map.md` - Z-axis layers, overlap permissions, foreground/midground/background rules.
-11. `material-script.md` - wood, stone, textile, plaster, glass, metal, shadow, daylight, lamp glow, and how each behaves.
-12. `motion-board.md` - arrival, ambient, scroll-bound, and interaction tracks.
-13. `asset-boundary.md` - image-native, CSS-native, SVG-native, canvas/WebGL-native, and accepted placeholders.
-14. `scroll-storyboard.md` - **the translation layer**. Maps every narrative beat to scroll depth, register, anchor object, copy mode, and transition type. Must exist before any section-level HTML, CSS, or animation work begins. Use `scroll-storyboard` skill to produce it. Without this, each section will be designed in isolation and the site will feel like slides, not a journey.
+1. `evidence-dossier.md` - source catalog, facts, reported claims, inferences, unknowns, diagnosis, and unresolved gaps.
+2. `creative-brief.md` - visitor response, first-known priority, proof burden, constraints, anti-goals, and selection criteria.
+3. `concept-directions.md` - three structurally distinct whole-page territories, purposeful references, visible rough tests, comparison, and selection record.
+4. `experience-blueprint.md` - controlling argument, narrative form, chapter jobs, hierarchy, proof timing, copy-image relationship, inquiry, responsive intent, and approved visual/motion system.
+5. `production-plan.md` - assets, boundaries, generated-media needs, performance/fallback contract, risk prototype, vertical slice, build slices, and verification plan.
+
+Create only when required:
+
+- `scroll-storyboard.md` for authored scroll timing, pinning, persistent continuity, or media choreography.
+- `cinematic-prompt-pack.md` for approved generated imagery or video.
+- `portfolio-proof-chapters.md` for detailed project decision narratives.
+- `DESIGN.md` / `DESIGN.json` for implementation tokens and component rules.
+
+Legacy spatial projects do not need to delete or rename their existing fourteen files. Map equivalent approved content into the five logical contracts, identify real gaps, and consolidate only with user authorization.
 
 ## VISUAL THESIS RULES
 
-Write the visual thesis before choosing typography or color. For color palette selection and functional mapping, load the `color-system` skill.
+Select the governing concept before final typography or color. A visual thesis may be spatial, editorial, typographic, material, project-led, or transformation-led; it must explain the page as a whole. For color palette selection and functional mapping, load the `color-system` skill.
 
 If the user is unsure, run the concept forge:
 
 1. Ask what sensation the first 5 seconds must create.
-2. Ask which boring/default website must be destroyed.
-3. Ask which object, material, room, or threshold could own the page.
-4. Offer three mixed concepts: safe-but-premium, strange-and-memorable, atelier masterpiece.
-5. Cite the audit mechanics each concept adapts.
-6. Identify image/video/SVG/WebGL assets each concept needs.
+2. Ask what generic category expectation must be rejected.
+3. Ask what evidence, project, material, conviction, transformation, or spatial cue could organize the page.
+4. Offer three structurally different whole-page territories, including one restrained or still-led direction unless evidence rules it out.
+5. Gather references only for named questions and explain what each reference contributes.
+6. Externalize every territory with a rough styleframe, sequence sketch, or prototype and identify its asset burden.
 
 Good visual theses:
 
@@ -98,7 +96,7 @@ Good visual theses:
 - "A single sculptural lamp guides the scroll from atmosphere to method to inquiry."
 - "Textile, stone, and daylight act as the brand system; UI stays at the edges."
 
-Reject theses that are just adjectives:
+These examples are candidates, not a requirement that every site use a room, threshold, or anchor object. Reject theses that are just adjectives:
 
 - "Modern luxury"
 - "Clean and elegant"
@@ -148,6 +146,10 @@ Deliver the requested artifact or decision, the key rationale and tradeoffs, and
 
 ## NON-NEGOTIABLE CHECKLIST
 
-1. Apply the core workflow above.
-2. Load matching extended guidance for substantive or high-risk work.
-3. Preserve user constraints and verify the result before delivery.
+1. Diagnosis and creative brief precede visual prescription.
+2. Three structurally different territories are externally tested before selection.
+3. References answer named questions; they do not dictate the concept.
+4. The five logical contracts or approved equivalents cover the work.
+5. Motion, video, anchor objects, storyboards, and generated media remain conditional.
+6. Load matching extended guidance for substantive or high-risk work.
+7. Preserve user constraints and verify the result before delivery.

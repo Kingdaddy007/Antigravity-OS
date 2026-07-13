@@ -1,30 +1,52 @@
 ---
 name: motion-library
-description: 'Use this skill when the user wants to browse, find, or apply a pre-built animation, transition, GSAP effect, or WebGL motion from the existing references. Activated by "/motion-library", "/effect", "/apply-motion", "find a transition", "show me effects", or "what animations do we have".'
+description: 'Use this skill when browsing, comparing, selecting, or applying prebuilt animation and transition references by communication job. Activated by "/motion-library", "/effect", "/apply-motion", "find a transition", "show me effects", or "what animations do we have". Do NOT use the library to force motion into a still-led concept or to choose an effect before its job and constraints are known.'
 ---
 
-# Motion Library Index & Router
-
-## PURPOSE
-This skill acts as a direct router to the vast library of cinematic motion references, transitions, and effects stored within the `cinematic-motion` reference folders. It ensures the agent knows exactly where to look for pre-built motion strategies before trying to write animations from scratch.
+# Motion Library Index and Router
 
 ## WHEN TO USE THIS
-- When the user types `/motion-library`, `/effect`, `/apply-motion`, or `/transition`.
-- When the user asks "what transitions do we have?" or "apply an effect here."
-- When you are tasked with adding motion and need to consult the reference library to see what is already available.
 
-## INSTRUCTIONS FOR THE AGENT
-When this skill is triggered, you MUST immediately execute the following steps:
+- The user explicitly asks to browse or apply an existing effect.
+- An approved motion plan names a communication job and needs candidate implementations.
+- Existing motion needs comparison against known performance, interaction, or fallback patterns.
 
-1. **Acknowledge and List**: Run the filesystem listing capability on the following two directories to see what elite effects and references are currently available:
+## NEVER DO
+
+- Never make library consultation a universal creative gate.
+- Never select an effect because it looks elite, cinematic, or popular.
+- Never let an effect rewrite the approved concept, hierarchy, proof timing, or content.
+- Never apply code before checking stack compatibility, accessibility, performance, responsive behavior, and asset requirements.
+- Never invent a library entry or claim an implementation was inspected when it was not.
+
+## SELECTION PROCESS
+
+1. Name the communication job and the stillness alternative.
+2. Record constraints: content, interaction, assets, stack, mobile, reduced motion, performance, and maintenance.
+3. Load `references/semantic-index.md` to identify relevant candidate families.
+4. Inspect only the matching files under:
    - `../cinematic-motion/reference/`
-   - `../cinematic-motion/reference/motion-library/` (and its subdirectories)
-   
-2. **Read the Reference**: Once you identify a file or effect that matches the user's request (e.g., `loading-io-transitions.md`, `scroll-driven-3d-cube.md`, `transition-library.md`), run the available file-reading capability to read the exact implementation instructions.
+   - `../cinematic-motion/reference/motion-library/`
+5. Compare candidates by semantic fit and cost, not spectacle.
+6. Recommend **adapt**, **build a simpler custom behavior**, or **use stillness**.
+7. Apply an effect only when implementation is authorized and the selected reference has been read.
 
-3. **Present Options (If Vague)**: If the user just asked "show me effects" or triggered the slash command without a specific target, present a curated, visually formatted markdown list of the best available effects found in those directories. Use bold text and short descriptions so the user can easily pick one.
+If the request is vague, present a short curated list grouped by communication job. If it is specific, explain why the candidate fits before implementation.
 
-4. **Apply (If Specific)**: If the user asked to apply a specific effect to a specific element (e.g., "apply the ripple effect to the submit button"), execute the code modification immediately using the exact code patterns defined in the reference file.
+## REFERENCE LOADING RULES
 
-## WHY WE DO THIS
-We do not write generic animations from scratch. We rely on the highly-crafted, premium motion references stored in our library to maintain the "BEVAMPED" luxury aesthetic. This skill guarantees you always consult the library first, saving time and ensuring quality.
+Load `references/semantic-index.md` for job-to-family routing. Then load only the exact cinematic-motion reference needed for the selected candidate. Directory listings are discovery evidence, not implementation instructions.
+
+## OUTPUT SHAPE
+
+**Browse:** Motion job -> constraints -> candidate families -> tradeoffs -> recommendation.
+
+**Apply:** Selected reference -> semantic fit -> implementation changes -> fallbacks -> verification.
+
+## NON-NEGOTIABLE CHECKLIST
+
+1. Communication job is named before an effect.
+2. Stillness was considered.
+3. The exact reference was inspected.
+4. Concept and content remain in control.
+5. Mobile, reduced-motion, performance, and maintenance are addressed.

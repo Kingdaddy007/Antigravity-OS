@@ -18,9 +18,12 @@ The optional spatial profile adds:
 - `cinematic-motion`
 - `cinematic-showroom-strategy`
 - `master-design-director`
+- `motion-library`
 - `scroll-storyboard`
 
 Use it for interior, showroom, gallery, furniture, decor, staging, luxury-home, or architecture-adjacent work. Do not activate it merely because a task has a frontend.
+
+Within the spatial profile, `cinematic-showroom-strategy`, `cinematic-motion`, and `scroll-storyboard` are conditional specialists. A restrained still-image experience can complete the workflow without activating them.
 
 ## Resource contract
 

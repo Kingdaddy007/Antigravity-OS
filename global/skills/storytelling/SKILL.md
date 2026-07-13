@@ -9,23 +9,19 @@ description: 'Use this skill when creating the narrative, emotional journey, cop
 
 - Load before visual concepting for interior decorators, spatial studios, showrooms, and luxury home brands.
 - Load when the site needs sensation, taste, authority, transformation proof, and inquiry sequence.
-- Load when converting brand inputs into `spatial-story.md` or the room sequence used by design and motion.
+- Load when converting diagnosis and a creative brief into candidate narrative forms, controlling arguments, proof timing, and inquiry posture.
 
 ## NEVER DO
 
 - Never structure a spatial brand as hero -> services -> portfolio -> testimonials -> contact.
-- Never write copy direction before naming the room sequence and visual thesis.
+- Never write copy direction before naming the controlling argument and the job of each chapter.
 - Never make the brand the hero; make the visitor imagine their space transformed.
 - Never flatten projects into "beautiful work" without decision, constraint, material, and result.
 - Never use generic premium adjectives without sensory or proof evidence.
 
-## SPATIAL STORY MODEL
+## STABLE COMMUNICATION JOBS
 
-Use this default narrative:
-
-`Atmosphere -> Taste -> Transformation -> Proof -> Method -> Inquiry`
-
-Each stage must answer:
+Interior and spatial brands commonly need some combination of the following jobs. They are not required sections and they do not have a fixed order.
 
 | Stage | Story Job | Spatial Translation |
 | --- | --- | --- |
@@ -36,26 +32,38 @@ Each stage must answer:
 | Method | Show control | Process, fit, collaboration, timeline, decisions |
 | Inquiry | Invite the right client | Selective next step, calm expectations, concierge tone |
 
-## REQUIRED STORY ARTIFACT
+## CANDIDATE NARRATIVE FORMS
 
-Create `contexts/spatial/spatial-story.md` with:
+Choose or combine a form only after the diagnosis and creative brief make its priority defensible:
+
+- **Atmosphere-led:** Atmosphere -> Taste -> Transformation -> Proof -> Method -> Inquiry.
+- **Transformation-led:** Weak state or tension -> decisive intervention -> reveal -> evidence -> fit -> inquiry.
+- **Point-of-view-led:** Conviction -> examples -> implications for the client -> proof -> method -> inquiry.
+- **Material/process-led:** Material or constraint -> design intelligence -> finished atmosphere -> proof -> collaboration.
+- **Project-led editorial:** One representative project opens the argument; broader work and method follow.
+- **Proof-first:** Credentials, rigor, or project facts establish trust before emotional immersion.
+- **Founder-led:** Creative authority leads only when the founder's judgment is itself demonstrated proof.
+
+The page may be quiet, still-led, editorial, cinematic, or hybrid. Narrative difference must come from what this studio needs to establish first, not from rearranging decorative sections.
+
+## CORE ARTIFACT CONTRIBUTION
+
+Contribute the following to `creative-brief.md`, `concept-directions.md`, and `experience-blueprint.md` (or approved equivalent documents):
 
 - One thing the site must make the visitor feel.
-- Visual thesis.
+- Controlling argument.
 - Audience and desired self-image.
 - Brand tension: what the client wants to escape.
-- Entry room.
-- Threshold event.
-- Signature object/material.
-- Room sequence.
+- Candidate narrative forms and why each fits.
+- Selected chapter sequence and the job of each chapter.
 - Transformation proof sequence.
 - Project proof strategy.
 - Method reveal.
 - Inquiry posture.
 - Copy rules and banned phrases.
-- Motion emotion: what should feel still, what should move, what should transform.
+- Stillness and motion posture: what should remain still, what may move, and why.
 
-**After this artifact is approved:** Immediately activate the `scroll-storyboard` skill to produce `contexts/scroll-storyboard.md`. The spatial story defines WHAT the journey is. The scroll storyboard defines HOW the body experiences it at each scroll depth. One without the other is incomplete. Do NOT begin section-level design or code until the scroll storyboard exists.
+Legacy projects may keep `spatial-story.md` or `story.md` when those files contain equivalent approved content. Create `scroll-storyboard.md` only when authored scroll timing, pinning, continuity, or media choreography makes a beat-level contract necessary.
 
 ## STORY DISCOVERY
 
@@ -69,11 +77,11 @@ Extract these before writing directions:
 - What project proof exists: before/after, process photos, floor plans, press, testimonials, budget level, location, timeline?
 - What should wrong-fit clients understand immediately?
 
-## VISUAL THESIS AND ROOM SEQUENCE
+## CONTROLLING ARGUMENT AND CHAPTER SEQUENCE
 
-Write one visual thesis. Then build 5-7 chapters as rooms or thresholds.
+Write one controlling argument. Then build only the chapters needed to prove it. Rooms and thresholds are useful spatial metaphors, not mandatory labels.
 
-Good room sequence:
+One possible atmosphere-led sequence:
 
 1. Entry threshold - atmospheric first room.
 2. Taste room - strongest finished work.
@@ -83,7 +91,7 @@ Good room sequence:
 6. Method room - how the studio thinks.
 7. Inquiry room - calm invitation.
 
-If a chapter can be renamed for a SaaS product without changing structure, rewrite it.
+If a chapter can be renamed for a SaaS product without changing its evidence or experience logic, rewrite it.
 
 ## COPY DIRECTION
 
@@ -123,17 +131,19 @@ Choose proof based on the brand:
 Load `references/resource-index.md` when the task needs examples, specialist criteria, implementation details, or domain-specific diagnostics beyond this core workflow. Select only the references whose indexed purpose matches the task; do not load the package wholesale.
 ## OUTPUT SHAPE
 
-**Narrative direction:** One feeling -> visual thesis -> room sequence -> proof choreography -> inquiry posture.
+**Narrative direction:** One feeling -> controlling argument -> candidate forms -> selected chapter jobs -> proof choreography -> inquiry posture.
 
-**Story artifact:** `spatial-story.md` structure with concrete chapter directions.
+**Artifact contribution:** Narrative sections for the creative brief, concept directions, and experience blueprint; legacy story files remain valid equivalents.
 
 **Audit:** Missing story stage -> generic copy risks -> proof gaps -> spatial rewrite direction.
 
 ## NON-NEGOTIABLE CHECKLIST
 
-1. Story follows Atmosphere -> Taste -> Transformation -> Proof -> Method -> Inquiry.
-2. Visual thesis is physical and spatial, not adjectival.
-3. Room sequence is concrete.
-4. Transformation proof appears before heavy service detail.
-5. Copy direction bans generic premium language.
-6. Inquiry posture is selective and clear.
+1. The narrative form follows brand evidence and first-known priority.
+2. The controlling argument is specific and testable.
+3. Candidate forms are structurally different, not reordered labels.
+4. Every selected chapter has a communication job.
+5. Proof timing matches the brand's trust burden.
+6. Copy direction bans generic premium language.
+7. Inquiry posture is selective and clear.
+8. Scroll storyboarding is conditional, not universal.

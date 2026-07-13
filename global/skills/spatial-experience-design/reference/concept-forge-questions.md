@@ -7,8 +7,8 @@ Use these questions to make the user a creative collaborator, not a passive appr
 Ask:
 
 - What should the visitor feel in the first 5 seconds: hush, desire, curiosity, envy, relief, intimacy, awe, or trust?
-- Should the site feel like entering a private residence, a gallery, a material studio, a cinematic renovation film, or a designer's archive?
-- What should be physically present first: a room, a doorway, a mural, a curtain, a chair, a lamp, fabric, stone, a hand, a shadow, or light?
+- Should the site feel editorial, spatial, project-led, material-led, transformation-led, cinematic, restrained, or like another world suggested by the evidence?
+- What should be understood first, and what visual evidence could make that understanding immediate?
 
 ## Round 2: Tension
 
@@ -18,13 +18,13 @@ Ask:
 - What do clients currently misunderstand about the designer's value?
 - What transformation should the site prove: sterile to warm, cluttered to composed, ordinary to collected, empty to layered, dark to luminous, chaotic to calm?
 
-## Round 3: Signature Mechanic
+## Round 3: Governing Experience
 
 Ask:
 
-- What physical event opens the site: curtain pull, door open, light spill, mural reveal, fabric sweep, before/after split, object rotation, camera walk-in?
-- What object could own the page: chair, lamp, vase, art piece, table, stone slab, fabric roll, staircase, mirror, doorway?
-- Should the motion feel gallery-slow, ritual-like, heavy and architectural, soft textile drift, or precise and technical?
+- Which evidence could organize the page: one project, a transformation, material intelligence, a conviction, a process decision, a room sequence, or another proof source?
+- Should the opening be still, typographic, editorial, project-led, comparative, object-led, room-led, or media-led?
+- What, if anything, needs to move to communicate better than stillness? What motion character would belong to the brand?
 
 ## Round 4: Asset Reality
 
@@ -36,13 +36,9 @@ Ask:
 
 ## Concept Mixing Prompt
 
-When the user is unsure, propose three mixed concepts:
+When the user is unsure, propose three structurally different whole-page territories. Include one restrained or still-led direction unless the evidence rules it out. The other territories should diverge by controlling argument, narrative form, proof strategy, and page architecture—not by escalating spectacle.
 
-1. Safe-but-premium: strong, feasible, less risky.
-2. Strange-and-memorable: one wild mechanic with realistic asset needs.
-3. Atelier masterpiece: most cinematic, most asset-dependent, highest ceiling.
-
-Each option must cite audit mechanics and include required assets.
+For each territory, identify required assets, constraints, riskiest assumption, and named design questions. Gather references only after those questions exist.
 
 ## Decision Output
 
@@ -50,8 +46,8 @@ After discussion, summarize:
 
 - chosen feeling
 - rejected boring default
-- primary audit mechanic
-- secondary audit mechanic
-- signature event
-- asset path
-- first experiment to generate
+- three governing premises
+- first-known priority for each
+- named reference questions
+- asset and feasibility burden
+- visible rough test for each territory

@@ -15,7 +15,7 @@
 ## WHEN TO USE THIS
 
 - Load for spatial brand UI: decorator portfolios, project galleries, service/inquiry paths, material libraries, showrooms, and editorial interior pages.
-- Load after `spatial-experience-design` when turning the visual thesis into usable navigation, states, forms, and responsive behavior.
+- Load after `spatial-experience-design` when turning an approved experience blueprint into usable navigation, states, forms, and responsive behavior.
 - Load when checking whether premium atmosphere still lets visitors understand proof, process, and inquiry.
 
 ## NEVER DO
@@ -27,13 +27,11 @@
 - Never use visual restraint as an excuse for unclear labels, invisible focus, or broken mobile flow.
 - Never let project indexes, galleries, or forms feel like unstyled afterthoughts after a cinematic hero.
 
-## PRIMARY UX MODEL
+## REUSABLE UX JOBS
 
-Use this journey for high-end interior and spatial sites:
+High-end interior and spatial sites commonly need the following UX jobs, but the approved experience blueprint decides their presence and order. `Atmosphere -> Taste -> Transformation -> Proof -> Method -> Inquiry` is one candidate journey, not a compulsory sequence.
 
-`Atmosphere -> Taste -> Transformation -> Proof -> Method -> Inquiry`
-
-Map UI responsibilities to the journey:
+Map UI responsibilities to whichever jobs the selected concept uses:
 
 | Stage | Visitor Need | UI Behavior |
 | --- | --- | --- |
@@ -61,10 +59,10 @@ Map UI responsibilities to the journey:
 
 ### Project Galleries
 
-- Present projects as curated rooms or chapters before broad grids.
+- Present projects as curated rooms or chapters before broad grids when the proof strategy depends on curation.
 - Use gallery labels: location, room type, material focus, design move, year, role.
 - Let one project breathe before showing many.
-- Use indexes for scanning only after the visitor has seen atmosphere and proof.
+- Use indexes for scanning when the narrative has established enough context; a proof-first concept may legitimately expose structured evidence early.
 
 ### Material and Swatch UI
 
@@ -110,7 +108,7 @@ Premium still needs complete UX:
 
 - Mobile must remain spatial, not collapse into raw content blocks.
 - Replace pinned scenes with chaptered stills or reveal cascades on small screens.
-- Preserve room order, visual thesis, and inquiry path.
+- Preserve approved chapter logic, governing concept, and inquiry path.
 - Use mobile-specific crops for room imagery and before/after comparisons.
 - Keep captions near their images; do not force visitors to remember what a caption describes.
 
@@ -118,8 +116,8 @@ Premium still needs complete UX:
 
 | Anti-Pattern | What It Looks Like | Fix |
 | --- | --- | --- |
-| SaaS Skin | Hero headline, feature cards, bright CTA, logos, stats | Use spatial journey and concierge inquiry |
-| Grid Dump | 12 projects shown before atmosphere | Lead with curated project sequence |
+| SaaS Skin | Hero headline, feature cards, bright CTA, logos, stats | Use the approved spatial argument and concierge inquiry |
+| Grid Dump | Many projects shown without context or hierarchy | Use the selected proof strategy and intentional curation |
 | Invisible Luxury | Pretty but unusable nav/forms/focus | Keep quiet UI, not hidden UI |
 | Beige Template | Warm neutral, serif, stock room, fade-up | Require visual thesis and scene kit |
 | Ghost CTA Failure | Low-contrast outline button | Use refined but legible action treatment |
@@ -139,10 +137,10 @@ Load `references/resource-index.md` when the task needs examples, specialist cri
 
 ## NON-NEGOTIABLE CHECKLIST
 
-1. UI follows Atmosphere -> Taste -> Transformation -> Proof -> Method -> Inquiry.
+1. UI follows the approved brand-specific chapter logic.
 2. Inquiry path is visible, calm, and specific.
 3. Project/gallery UI supports curation before scanning.
 4. Material and room captions provide real information.
 5. Navigation, focus, forms, and state coverage are complete.
-6. Mobile preserves the spatial story.
+6. Mobile preserves the controlling argument and proof/inquiry responsibilities.
 7. No default SaaS card grid or universal fade-up pattern remains.

@@ -27,11 +27,11 @@
 
 The spatial path is:
 
-`workflow-spatial-project-inception.md` → `workflow-spatial-concept.md` → `workflow-visual-brainstorm.md` → `workflow-spatial-design-ui.md` → `workflow-impeccable-craft.md` → `workflow-impeccable-animate.md`
+`workflow-spatial-project-inception.md` → evidence and brief → `workflow-visual-brainstorm.md` → `workflow-spatial-concept.md` → storytelling and experience architecture → `workflow-spatial-design-ui.md` → risk prototype and vertical slice → `workflow-impeccable-craft.md` → `workflow-impeccable-animate.md` only when justified
 
 General product UI uses `workflow-design-ui.md` → `workflow-ui-craft.md` → `workflow-ui-animate.md` as needed.
 
-Spatial implementation remains blocked until its required creative-contract artifacts and director gate pass. General product and UI work must not be forced through this profile.
+Spatial implementation remains blocked until the five logical contracts or approved equivalents, applicable Director gates, and vertical-slice verdict pass. Video, motion, anchor objects, generated media, and scroll storyboards are conditional. General product and UI work must not be forced through this profile.
 
 ## Authority Rule
 

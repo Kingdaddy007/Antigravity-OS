@@ -10,7 +10,7 @@
 - [Prompt Pack Gate](#prompt-pack-gate)
 - [Asset Path Defaults](#asset-path-defaults)
 
-Use this when a spatial concept depends on imagery, generated pictures, video, rendered objects, SVG masks, or WebGL/canvas scenes. The assistant must create this directive after `room-sequence.md` and before layout styling.
+Use this when an approved spatial concept depends on imagery, generated pictures, video, rendered objects, SVG masks, or WebGL/canvas scenes. Add the directive to `production-plan.md` or an approved equivalent after concept selection and before the dependent layout is finalized. A legacy `scene-kit-brief.md` remains valid.
 
 ## Build Gate
 
@@ -29,7 +29,7 @@ Purpose:
 Visitor belief this asset supports:
 Taste world:
 Enemy/cliche this asset avoids:
-Mechanic source from design-audit:
+Reference mechanic and adaptation, when used:
 Asset type: image | transparent PNG | SVG mask | video source image | WebM/MP4 | GLB | canvas frames
 Needed file path:
 Format and dimensions:
@@ -48,7 +48,7 @@ Foreground / midground / background role:
 Blur role:
 Text-safe zone:
 Text overlay / text-safe rule:
-Motion role:
+Motion role, including none:
 Website section placement:
 Scroll choreography role:
 Can be placeholdered temporarily:
@@ -65,7 +65,7 @@ Create a high-end editorial interior design image.
 Strategic Source:
 Perception goal: [what this asset must make the visitor believe]
 Taste world: [quiet collected residence / sculptural warm minimalism / layered art-led / material-led modern craft / etc.]
-Section / journey stage: [Atmosphere / Taste / Transformation / Proof / Method / Inquiry]
+Section / chapter job: [approved chapter and communication job]
 Visual thesis connection: [how this image serves the approved thesis]
 Enemy / cliche rejected: [template decor / Pinterest taste / generic showroom / overdesigned spectacle]
 Subject: [room/object/material/person/action]
@@ -110,7 +110,7 @@ Use the provided source image as the exact start frame.
 Strategic Source:
 Perception goal: [what this video must make the visitor believe]
 Taste world: [approved taste world]
-Section / journey stage: [Atmosphere / Taste / Transformation / Proof / Method / Inquiry]
+Section / chapter job: [approved chapter and communication job]
 Desired visitor belief: [belief]
 Visual thesis connection: [connection]
 Room / material / object source: [source]
@@ -134,9 +134,9 @@ Negative prompt: no fast cuts, no handheld shake, no morphing furniture, no new 
 
 ## Prompt Pack Gate
 
-`cinematic-prompt-pack.md` must include `Context Inheritance` before any prompt.
+When generated media is approved, `cinematic-prompt-pack.md` must include `Context Inheritance` before any prompt.
 
-Each prompt must trace to approved context files and include a `Strategic Source` block. If the prompt cannot explain its perception goal, taste world, section role, visual thesis connection, text-safe requirement, and rejected cliche, rewrite it before asset generation.
+Each prompt must trace to the five core contracts or approved equivalents and include a `Strategic Source` block. If the prompt cannot explain its perception goal, taste world, chapter role, concept connection, text-safe requirement, and rejected cliche, rewrite it before asset generation.
 
 ## Asset Path Defaults
 

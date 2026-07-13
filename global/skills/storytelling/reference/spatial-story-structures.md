@@ -1,8 +1,8 @@
 # Spatial Story Structures
 
-Use these when building `spatial-story.md`.
+Use these as candidate narrative forms when developing the story contribution to `experience-blueprint.md` or an approved equivalent. Select, reorder, hybridize, or reject them according to the creative brief and first-known priority.
 
-## Default Decorator Portfolio
+## Atmosphere-Led Decorator Portfolio
 
 1. Atmosphere: enter the studio's taste world.
 2. Taste: show strongest finished room.
@@ -37,6 +37,25 @@ Use these when building `spatial-story.md`.
 4. Project proof.
 5. Method.
 6. Inquiry.
+
+## Proof-First Architecture-Adjacent Practice
+
+1. Rigor, credentials, or project facts.
+2. Representative project decision.
+3. Spatial atmosphere and result.
+4. Method and constraints.
+5. Broader work.
+6. Selective inquiry.
+
+## Point-of-View-Led Studio
+
+1. Conviction or counter-standard.
+2. Work that demonstrates it.
+3. Implication for the client's space.
+4. Proof and process.
+5. Fit and inquiry.
+
+No structure is a universal default. Compare at least two plausible forms before selection.
 
 ## Copy Beat Rules
 

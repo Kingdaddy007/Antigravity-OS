@@ -62,7 +62,7 @@ Use separate text timelines for each perspective.
 
 ## Required Context
 
-Add this mechanic to `contexts/spatial/showroom-choreography.md`:
+Add this mechanic to the choreography section of `production-plan.md` or a legacy equivalent:
 
 ```text
 Mechanic: Scroll-Mapped 3D Camera Scene

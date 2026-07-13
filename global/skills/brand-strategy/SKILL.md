@@ -21,16 +21,29 @@ description: 'Use this skill when diagnosing or building positioning for interio
 
 ## DIAGNOSTIC ORDER
 
-1. Perception gap.
-2. Taste world.
-3. Audience and desired identity.
-4. Founder/creative authority.
-5. Enemy and category rejection.
-6. Signature method/language.
-7. Proof architecture.
-8. Premium signal and inquiry posture.
-9. Spatial visual direction.
-10. Motion posture.
+1. Evidence inventory and provenance.
+2. Perception gap.
+3. Taste world.
+4. Audience and desired identity.
+5. Founder/creative authority.
+6. Enemy and category rejection.
+7. Signature method/language.
+8. Proof architecture.
+9. Premium signal and inquiry posture.
+10. Creative-brief constraints and selection criteria.
+
+## EVIDENCE DISCIPLINE
+
+Before diagnosis, catalog what is actually available: current website, social presence, recent projects, photography and video, service and process language, testimonials, press, founder communication, inquiry flow, technical constraints, and missing evidence.
+
+For every important claim, label it as one of:
+
+- **Fact** - directly observed and citeable.
+- **Reported** - supplied by the studio but not independently demonstrated.
+- **Inference** - a reasoned interpretation of evidence.
+- **Unknown** - material information still missing.
+
+Record source, date or recency when known, and confidence. Do not promote an inference into brand truth simply because it sounds strategically useful.
 
 ## PERCEPTION GAP
 
@@ -110,36 +123,40 @@ Premium leaks:
 - Copy saying "bespoke/elevated/timeless" without evidence.
 - Inquiry forms that feel like lead-gen funnels.
 
-## VISUAL DIRECTION
+## CREATIVE-BRIEF HANDOFF
 
-Translate positioning into constraints:
+Translate positioning into constraints and criteria, not a selected visual concept:
 
-- Entry atmosphere.
-- Dominant material.
-- Light behavior.
-- Room sequence.
-- Signature object or threshold.
+- What visitors should feel, understand, believe, and do.
+- What the studio must be known for first.
+- Required proof and the burden it must carry.
+- Taste patterns and category conventions to use, bend, or reject.
 - Typography posture.
 - Image crop rules.
 - UI visibility level.
 - Proof format.
 - Motion restraint.
+- Asset, accessibility, performance, and maintenance constraints.
+- Anti-goals and concept-selection criteria.
 
-Do not output abstract adjectives without constraints.
+These are inputs to concept exploration. Do not select the hero, page sequence, palette, anchor object, animation, or motion archetype during diagnosis. Do not output abstract adjectives without observable constraints.
 
 For color palette selection and color psychology decisions, load the `color-system` skill.
 
 ## OUTPUT SHAPE
 
-**Brand diagnostic:** Perception gap -> taste world -> enemy -> proof architecture -> premium leaks -> spatial direction.
+**Evidence contribution:** Provenance ledger -> facts -> inferences -> unknowns -> coverage gaps.
 
-**Redesign brief:** Desired perception -> counter-standard -> visual thesis inputs -> inquiry posture -> top fixes.
+**Brand diagnostic:** Perception gap -> taste world -> enemy -> proof architecture -> premium leaks -> creative constraints.
+
+**Creative-brief handoff:** Desired perception -> visitor response -> first-known priority -> proof burden -> anti-goals -> selection criteria.
 
 ## NON-NEGOTIABLE CHECKLIST
 
-1. Perception gap is evidence-based.
-2. Taste world is concrete and spatial.
-3. Enemy is named.
-4. Premium signals and leaks are specific to interior/spatial brands.
-5. Visual direction defines materials, light, rooms, proof, and inquiry.
-6. No generic premium adjectives stand alone.
+1. Evidence is separated into fact, reported claim, inference, and unknown.
+2. Perception gap is evidence-based.
+3. Taste world is concrete and spatial.
+4. Enemy is named.
+5. Premium signals and leaks are specific to interior/spatial brands.
+6. The handoff defines constraints and selection criteria without prescribing a concept.
+7. No generic premium adjectives stand alone.
