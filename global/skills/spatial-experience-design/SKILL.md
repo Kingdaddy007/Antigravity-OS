@@ -22,7 +22,7 @@ description: 'Use this skill when designing, auditing, or planning high-end inte
 - Never write standalone image/video prompts that do not inherit the approved diagnosis, brief, concept, experience blueprint, and relevant production constraints.
 - Never make CTAs behave like SaaS buttons when the brand needs a quiet concierge invitation.
 - Never use scroll effects that do not physically belong to the room, material, object, or threshold.
-- Never use a reference mechanic as the reason a concept exists. References answer named design questions after a territory has a brand-grounded premise.
+- Never use a reference mechanic as the reason a concept exists. Use a pre-territory pass to expand vocabulary after the brief and a post-territory pass to validate precise design questions.
 - Never copy the section architecture of reference sites 1:1. Always filter reference patterns through the specific scale, capacity, and niche of the target brand (Avoid the Scale Imitation Trap).
 - Never prescribe sections that defend baseline expectations (e.g., 'Render vs Reality' for a Tier 1 builder). This lowers posture from Practitioner to Performer. Replace defensive proof with Process Proof (Avoid the Defensive Vendor Trap).
 - Never prescribe motion/GSAP just because it is technically impressive. Every animation must have a semantic meaning tied directly to the visual thesis (Avoid the Gimmick Trap).
@@ -69,6 +69,7 @@ Use five logical contracts. They may be five files or equivalent approved docume
 
 Create only when required:
 
+- a reference question brief and translation ledger; use `reference-analysis-plan.md` and `reference-synthesis.md` for large or mixed-format corpora;
 - `scroll-storyboard.md` for authored scroll timing, pinning, persistent continuity, or media choreography.
 - `cinematic-prompt-pack.md` for approved generated imagery or video.
 - `portfolio-proof-chapters.md` for detailed project decision narratives.
@@ -86,8 +87,10 @@ If the user is unsure, run the concept forge:
 2. Ask what generic category expectation must be rejected.
 3. Ask what evidence, project, material, conviction, transformation, or spatial cue could organize the page.
 4. Offer three structurally different whole-page territories, including one restrained or still-led direction unless evidence rules it out.
-5. Gather references only for named questions and explain what each reference contributes.
-6. Externalize every territory with a rough styleframe, sequence sketch, or prototype and identify its asset burden.
+5. Define reference questions from the approved brief and use proportional pre-territory research to expand vocabulary.
+6. Translate reference principles through the brand before assigning them to a territory.
+7. Externalize every territory with a rough styleframe, sequence sketch, or prototype and identify its asset burden.
+8. Run post-territory reference validation only for precise design, evidence, responsive, or feasibility questions.
 
 Good visual theses:
 
@@ -138,6 +141,8 @@ For video-native concepts:
 - Reject any prompt that cannot trace its choices back to approved context files.
 ## REFERENCE LOADING RULES
 
+Load the `reference-intelligence` skill after the creative brief when external references, award-site recordings, screenshots, transcripts, AI reports, or precedent collections must inform vocabulary or validate a territory. Use its two-pass model and Keep/Adapt/Reject/Defer ledger.
+
 Load `references/extended-guidance.md` when the task needs detailed implementation rules, examples, edge cases, diagnostics, or verification beyond the core workflow above. Inspect its Contents first and load only the matching sections.
 
 ## OUTPUT SHAPE
@@ -148,8 +153,9 @@ Deliver the requested artifact or decision, the key rationale and tradeoffs, and
 
 1. Diagnosis and creative brief precede visual prescription.
 2. Three structurally different territories are externally tested before selection.
-3. References answer named questions; they do not dictate the concept.
-4. The five logical contracts or approved equivalents cover the work.
-5. Motion, video, anchor objects, storyboards, and generated media remain conditional.
-6. Load matching extended guidance for substantive or high-risk work.
-7. Preserve user constraints and verify the result before delivery.
+3. Every full inception defines reference questions; corpus depth remains proportional.
+4. Pre-territory references expand vocabulary and post-territory references validate; neither dictates the concept.
+5. The five logical contracts or approved equivalents cover the work.
+6. Motion, video, anchor objects, storyboards, and generated media remain conditional.
+7. Load matching extended guidance for substantive or high-risk work.
+8. Preserve user constraints and verify the result before delivery.

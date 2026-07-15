@@ -1,0 +1,4 @@
+interface:
+  display_name: "Learn"
+  short_description: "Turn completed work into evidence-backed capability improvements"
+  default_prompt: "Use $learn to reconstruct what happened, extract transferable lessons, and audit which skill, workflow, reference, memory, or evaluation should change without mutating anything until approval."

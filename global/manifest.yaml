@@ -199,6 +199,14 @@
                                     ]
                    },
                    {
+                       "id":  "learn",
+                       "path":  "global/skills/learn",
+                       "profiles":  [
+                                        "general",
+                                        "spatial"
+                                    ]
+                   },
+                   {
                        "id":  "marketing-psychology",
                        "path":  "global/skills/marketing-psychology",
                        "profiles":  [
@@ -257,6 +265,13 @@
                        "path":  "global/skills/prospect-research",
                        "profiles":  [
                                         "general",
+                                        "spatial"
+                                    ]
+                   },
+                   {
+                       "id":  "reference-intelligence",
+                       "path":  "global/skills/reference-intelligence",
+                       "profiles":  [
                                         "spatial"
                                     ]
                    },
@@ -920,6 +935,13 @@
                           "path":  "global/workflows/workflow-verify-project.md",
                           "profiles":  [
                                            "general"
+                                       ]
+                      },
+                      {
+                          "id":  "reference-intelligence",
+                          "path":  "global/workflows/workflow-reference-intelligence.md",
+                          "profiles":  [
+                                           "spatial"
                                        ]
                       },
                       {

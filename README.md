@@ -12,8 +12,8 @@ Anti-Gravity OS is a portable, policy-governed skill and workflow system for AI-
 
 ## Current Inventory
 
-- 69 canonical skills with Codex UI metadata
-- 51 canonical workflows
+- 71 canonical skills with Codex UI metadata
+- 52 canonical workflows
 - 5 host adapters
 - General and spatial profiles
 - Task-scoped resumable workflow state

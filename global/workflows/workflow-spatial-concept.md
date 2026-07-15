@@ -1,20 +1,20 @@
 ---
 name: workflow-spatial-concept
-description: Compare visible spatial concept territories, record selection, and hand the chosen premise into experience architecture
+description: Compare visible spatial concept territories and translated reference evidence, record selection, and hand the chosen premise into experience architecture
 id: spatial-concept
-version: 2
+version: 3
 status: active
-intent: Select a brand-specific whole-page concept through explicit criteria rather than taste, novelty, or effect preference.
+intent: Select a brand-specific whole-page concept through explicit criteria rather than taste, novelty, reference prestige, or effect preference.
 use_when: [three spatial concept territories and rough tests are ready for comparison]
 do_not_use_when: [evidence or creative brief is unresolved, territories have not been externally tested, general product UI, or implementation]
-inputs: [evidence dossier, creative brief, concept directions, visible rough tests, constraints]
-required_resources: [applicable AGENTS.md files, spatial-experience-design, storytelling, master-design-director]
+inputs: [evidence dossier, creative brief, concept directions, visible rough tests, reference question brief and translation record, constraints]
+required_resources: [applicable AGENTS.md files, reference-intelligence, spatial-experience-design, storytelling, master-design-director]
 mutation_class: local_edit
-approval_gates: [territory completeness, Director selection review, explicit user selection or hybrid approval]
+approval_gates: [territory completeness, reference integrity, Director selection review, explicit user selection or hybrid approval]
 states: [validate, compare, challenge, recommend, approve, record, handoff]
 outputs: [selection record inside concept-directions.md, experience-architecture questions, evidence, residual risks]
-verification: [selection traces to brief criteria, hybrid conflicts are resolved, rejected options retain rationale]
-failure_paths: [return to visual-brainstorm for missing divergence or tests, return to brief for invalid criteria]
+verification: [selection traces to brief criteria, reference translations survive removability and pattern-concentration checks, hybrid conflicts are resolved, rejected options retain rationale]
+failure_paths: [return to reference-intelligence for unsupported translation or imitation risk, return to visual-brainstorm for missing divergence or tests, return to brief for invalid criteria]
 resume_contract: task-scoped .agents/workflows/spatial-concept.json using the workflows directory contract
 next_workflows: [storytelling, spatial-design-ui]
 profiles: [spatial]
@@ -24,7 +24,7 @@ profiles: [spatial]
 
 ## PURPOSE
 
-Choose the governing whole-page concept after evidence, briefing, divergence, references, and visible rough tests. Selection is a strategic decision with downstream costs; it is not a vote for the prettiest hero.
+Choose the governing whole-page concept after evidence, briefing, proportional reference intelligence, divergence, and visible rough tests. Selection is a strategic decision with downstream costs; it is not a vote for the prettiest hero or the most prestigious reference.
 
 ## ENTRY GATE
 
@@ -35,6 +35,9 @@ Confirm `concept-directions.md` or an equivalent contains for all three territor
 - opening form and proof strategy;
 - visual and stillness/motion posture;
 - reference provenance;
+- translated Keep, Adapt, Reject, and Defer decisions;
+- retained principle and exact brand-specific change for every borrowed mechanic;
+- pattern-concentration and reference-collage audit;
 - visible rough test;
 - assets, constraints, risks, and failure conditions.
 
@@ -48,7 +51,7 @@ Score and discuss—not mechanically average—each territory against:
 2. Desired first impression and first-known priority.
 3. Controlling argument and full-page potential.
 4. Proof strength, timing, and visitor comprehension.
-5. Distinctiveness without reference imitation.
+5. Distinctiveness without reference imitation, prestige transfer, or mechanic collage.
 6. Asset feasibility and content reality.
 7. Motion necessity versus stillness.
 8. Accessibility and responsive integrity.
@@ -64,6 +67,8 @@ Concept selection is a Type 1.5 decision. Load `core/system-thinking.md`, `core/
 - Re-check which criteria are supported by evidence and which are preference or inference.
 - Reframe the decision as both “Which page is most compelling?” and “Which page can this studio truthfully sustain?”
 - Challenge the polished favorite: would it still win if all three tests had equal visual finish?
+- Remove reference names and prestige: does the governing premise remain defensible from brand evidence and visitor need?
+- Check pattern concentration: is one territory accumulating conspicuous mechanics from several sources without a single governing law?
 - Run a short pre-mortem: six months after launch, how could the chosen direction have failed through assets, proof, accessibility, performance, maintenance, or weak inquiry readiness?
 - Record the reversal condition that would return the project to territory exploration.
 
@@ -76,7 +81,9 @@ Use `master-design-director` Concept Selection Gate. Actively test whether:
 - assets can actually sustain the promised experience;
 - motion is compensating for weak composition;
 - the concept remains compelling beyond the opening;
-- the page can communicate on mobile and with reduced motion.
+- the page can communicate on mobile and with reduced motion;
+- borrowed mechanics have a named communication job, exact translation, and retained rejection conditions;
+- the territory remains coherent if every reference is removed from the presentation.
 
 ## SELECTION RECORD
 
@@ -84,6 +91,7 @@ Recommend one territory with explicit tradeoffs, then wait for user selection. T
 
 - which governing premise remains primary;
 - which exact element is borrowed and why;
+- which principle is retained and what form, intensity, trigger, content, or ownership changes;
 - what conflict the combination creates;
 - how that conflict is resolved;
 - which rejected mechanics stay rejected.
@@ -98,6 +106,8 @@ Do not immediately convert the selected territory into implementation. Prepare q
 
 - [ ] All territories have comparable visible evidence.
 - [ ] Selection traces to approved brief criteria.
+- [ ] Reference provenance and translation decisions are recorded.
+- [ ] The winner survives the removability and pattern-concentration tests.
 - [ ] Full-page value outweighs hero novelty.
 - [ ] Motion and stillness were compared explicitly.
 - [ ] Asset, accessibility, performance, and maintenance costs are visible.

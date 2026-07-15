@@ -2,21 +2,21 @@
 name: workflow-spatial-project-inception
 description: Discover, select, prototype, and produce a brand-specific interior or spatial website experience
 id: spatial-project-inception
-version: 2
+version: 3
 status: active
-intent: Execute the ten-phase BEVAMPED spatial project workflow with evidence discipline, visible concept divergence, approval gates, and conditional complexity.
+intent: Execute the ten-phase BEVAMPED spatial project workflow with evidence discipline, proportional reference intelligence, visible concept divergence, approval gates, and conditional complexity.
 use_when: [starting or substantially redesigning an interior, spatial, decor, showroom, gallery, furniture, staging, luxury-home, or architecture-adjacent brand website]
 do_not_use_when: [general product or SaaS UI, a small implementation task with approved context, backend-only work, or Project 003 before separate authorization]
 inputs: [user objective, available brand evidence, workspace context, constraints, requested authority mode]
-required_resources: [applicable AGENTS.md files, brand-strategy, storytelling, spatial-experience-design, master-design-director]
+required_resources: [applicable AGENTS.md files, brand-strategy, reference-intelligence, storytelling, spatial-experience-design, master-design-director]
 mutation_class: local_edit
-approval_gates: [evidence coverage, diagnosis, creative brief, territory divergence, concept selection, experience architecture, production contract, risk prototype, final approval]
-states: [evidence, diagnose, brief, diverge, externalize, select, architect, systemize, prototype, produce, verify, deliver]
-outputs: [five core artifact contracts or approved equivalents, conditional artifacts when justified, implementation when separately authorized, verification evidence, residual risks]
+approval_gates: [evidence coverage, diagnosis, creative brief, reference scope and translation, territory divergence, concept selection, experience architecture, production contract, risk prototype, final approval]
+states: [evidence, diagnose, brief, reference, diverge, externalize, select, architect, systemize, prototype, produce, verify, deliver]
+outputs: [five core artifact contracts or approved equivalents, proportional reference-intelligence outputs, conditional artifacts when justified, implementation when separately authorized, verification evidence, residual risks]
 verification: [trace evidence to decisions and downstream consumers, run spatial consistency checks, record raw evidence, label anything unverified]
 failure_paths: [return to the earliest invalidated gate, stop on authority or contract conflict, preserve state, report blocker and safe next action]
 resume_contract: task-scoped .agents/workflows/spatial-project-inception.json using the workflows directory contract
-next_workflows: [visual-brainstorm, spatial-concept, spatial-design-ui, impeccable-craft, impeccable-animate]
+next_workflows: [reference-intelligence, visual-brainstorm, spatial-concept, spatial-design-ui, impeccable-craft, impeccable-animate]
 profiles: [spatial]
 ---
 
@@ -24,7 +24,7 @@ profiles: [spatial]
 
 ## PURPOSE
 
-Turn evidence about one interior or spatial brand into a distinct, testable website concept and then into controlled production. The workflow discovers the concept; it does not assume a cinematic hero, fixed story sequence, video, motion, anchor object, or effect library choice.
+Turn evidence about one interior or spatial brand into a distinct, testable website concept and then into controlled production. Require reference questions after the brief, but scale the corpus to the decision. The workflow discovers the concept; it does not assume a cinematic hero, fixed story sequence, video, motion, anchor object, effect library choice, or reference-derived architecture.
 
 ## ARTIFACT CONTRACT
 
@@ -40,6 +40,8 @@ They are contracts, not a file-count ritual. Existing approved documents may sat
 
 Conditional outputs:
 
+- a reference question brief and translation ledger, embedded in an approved contract or stored separately;
+- `reference-analysis-plan.md` and `reference-synthesis.md` for large, mixed-format, or implementation-oriented corpora;
 - `scroll-storyboard.md` for authored scroll timing, pinning, continuity, or media choreography;
 - `cinematic-prompt-pack.md` for approved generated imagery/video;
 - `portfolio-proof-chapters.md` for detailed project decision narratives;
@@ -67,15 +69,25 @@ Write `creative-brief.md`: what visitors should feel, understand, believe, and d
 
 **Gate:** `master-design-director` runs the Creative Brief Gate.
 
-### 4. Concept Territories
+### 4. Reference Intelligence
+
+Run `workflow-reference-intelligence.md` after the brief establishes selection criteria. Define named reference questions for every full inception. Choose proportional depth:
+
+- **Lightweight:** record the questions and why no external corpus is required.
+- **Focused:** analyze one or two references that answer bounded questions.
+- **Corpus:** analyze three or more references, mixed formats, or an explicit comparison using per-source forensics, cross-corpus synthesis, and a translation ledger.
+
+Use the pre-territory pass to expand vocabulary, identify candidate principles, expose costs, and preserve negative patterns. Do not select the concept or copy section architecture.
+
+**Gate:** `master-design-director` runs the Reference Integrity Gate. The source scope, provenance, observation/inference boundary, Keep/Adapt/Reject/Defer decisions, and unresolved gaps are explicit.
+
+### 5. Concept Territories, Rough Externalization, and Reference Validation
 
 Run `workflow-visual-brainstorm.md`. Generate three structurally different directions for the whole page, not hero, palette, or animation variations. Include one restrained or still-led option unless the evidence rules it out.
 
-### 5. References and Rough Externalization
+For every territory, produce a visible rough styleframe, sequence sketch, or prototype with realistic-enough assets. Run the second reference pass only for precise questions about continuity, hierarchy, proof, interaction, motion, responsive translation, assets, or feasibility. Record provenance, translation, rejection decisions, and pattern concentration in `concept-directions.md`.
 
-Gather references only for named design questions. For every territory, produce a mini reference board and a visible rough styleframe, sequence sketch, or prototype with realistic-enough assets. Record rationale and provenance in `concept-directions.md`.
-
-**Gate:** The Director confirms genuine divergence. No territory advances without a visible rough test.
+**Gate:** The Director confirms genuine divergence, brand-specific translation, and no reference collage. No territory advances without a visible rough test.
 
 ### 6. Concept Selection
 
@@ -117,8 +129,11 @@ Every project independently decides what is known first, emotional register, con
 
 - [ ] Evidence and inference are visibly separated.
 - [ ] Diagnosis precedes visual prescription.
+- [ ] Every full inception defines reference questions after the creative brief.
+- [ ] Reference depth is proportional, provenance is explicit, and translated principles remain subordinate to brand truth.
 - [ ] Three whole-page territories diverge structurally and have visible rough tests.
-- [ ] References answer named questions and are not copied as architecture.
+- [ ] Pre-territory references expand vocabulary; post-territory references validate named design questions.
+- [ ] Keep, Adapt, Reject, and Defer decisions prevent copied architecture and reference collage.
 - [ ] Selection rationale traces to brief criteria.
 - [ ] Five contracts or approved equivalents cover the work.
 - [ ] Optional complexity is explicitly accepted or rejected.

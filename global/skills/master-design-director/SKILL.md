@@ -80,7 +80,11 @@ Approve only when evidence, perception gap, first-known priority, desired visito
 
 Require three structurally different whole-page concepts, not three styles for the same hero. At least one should test restraint or stillness unless the evidence makes that dishonest. For each territory ask: What is the governing argument? What changes downstream? What asset burden does it create? What would make it fail?
 
-### 3. Concept Selection Gate
+### 3. Reference Integrity Gate
+
+Approve reference use only when named research questions, source diversity and provenance, observation/inference separation, and unresolved limits are visible. Require Keep, Adapt, Reject, and Defer decisions. For every adaptation, identify the retained principle and changed form, intensity, trigger, content, and ownership. Reject reference collage, prestige transfer, copied section architecture, and pattern concentration that competes with the visual thesis. Apply the removability test: the direction must remain defensible when source names, awards, and visual polish are removed.
+
+### 4. Concept Selection Gate
 
 Compare each visible rough test against:
 
@@ -94,11 +98,11 @@ Compare each visible rough test against:
 
 Approve one territory or an explicitly reasoned hybrid. A hybrid must resolve conflicts rather than collect favorite parts.
 
-### 4. Experience and Production Gate
+### 5. Experience and Production Gate
 
 Approve chapter jobs, hierarchy, proof timing, copy-image relationship, inquiry, responsive intent, visual system, motion grammar, asset boundaries, fallbacks, and production risk. Do not require motion, video, an anchor object, or a scroll storyboard when the concept works better without them.
 
-### 5. Risk Prototype and Vertical-Slice Gate
+### 6. Risk Prototype and Vertical-Slice Gate
 
 Test the most dangerous assumption before broad production. Review one representative sequence with real-enough imagery, typography, mobile behavior, and signature motion only when applicable. Verdict must be one of: **expand**, **revise**, **simplify**, or **return to concept**.
 
@@ -210,4 +214,5 @@ Use before implementation.
 10. Interventions are ranked.
 11. Weak requests are challenged.
 12. The response trains judgment, not just output.
-13. References were loaded when deeper specialist judgment was required.
+13. Reference use has provenance, translation, rejection decisions, and no prestige dependency.
+14. References were loaded when deeper specialist judgment was required.

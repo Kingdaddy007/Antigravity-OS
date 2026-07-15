@@ -1,0 +1,4 @@
+interface:
+  display_name: "Reference Intelligence"
+  short_description: "Analyze references and translate them into brand-specific decisions"
+  default_prompt: "Use $reference-intelligence to analyze these references, separate evidence from inference, and produce a brand-specific Keep/Adapt/Reject/Defer handoff."
