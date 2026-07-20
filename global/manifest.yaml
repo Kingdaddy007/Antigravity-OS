@@ -65,6 +65,14 @@
                                     ]
                    },
                    {
+                       "id":  "browser-test",
+                       "path":  "global/skills/browser-test",
+                       "profiles":  [
+                                        "general",
+                                        "spatial"
+                                    ]
+                   },
+                   {
                        "id":  "cinematic-motion",
                        "path":  "global/skills/cinematic-motion",
                        "profiles":  [

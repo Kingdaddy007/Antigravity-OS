@@ -1,0 +1,4 @@
+﻿interface:
+  display_name: "Browser Test"
+  short_description: "Playwright browser testing and DevTools verification"
+  default_prompt: "Use $browser-test to help complete this task with its domain workflow."
