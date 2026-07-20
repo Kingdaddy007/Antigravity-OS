@@ -1,75 +1,139 @@
 # Anti-Gravity OS
 
-Anti-Gravity OS is a portable, policy-governed skill and workflow system for AI-assisted engineering. Version 3 uses one canonical source and generates validated host adapters for Gemini, Codex, Cursor, Windsurf, and OpenCode.
+![Anti-Gravity OS system illustration](assets/anti-gravity-hero.png)
 
-## Design
+<div align="center">
 
-- **General by default:** engineering, product, security, operations, testing, and general interface work are always available.
-- **Spatial by choice:** high-end interior, showroom, gallery, and architecture-adjacent guidance is an optional profile.
-- **Host authority first:** Anti-Gravity never overrides platform, organization, developer, user, sandbox, or approval policy.
-- **Safe installation:** every installation is namespaced under `antigravity`, supports dry-run, and backs up an existing namespace without clearing shared configuration directories.
-- **Canonical validation:** schemas, routes, links, adapters, generated payloads, private paths, and unresolved tokens are checked before build.
+**One governed source. Five AI coding environments.**
 
-## Current Inventory
+[![CI](https://github.com/Kingdaddy007/Antigravity-OS/actions/workflows/ci.yml/badge.svg)](https://github.com/Kingdaddy007/Antigravity-OS/actions/workflows/ci.yml)
+![Release](https://img.shields.io/badge/release-3.0.0-38bdf8)
+![Skills](https://img.shields.io/badge/skills-72-22d3ee)
+![Workflows](https://img.shields.io/badge/workflows-52-8b5cf6)
+![Hosts](https://img.shields.io/badge/hosts-5-6366f1)
+![License](https://img.shields.io/badge/license-PolyForm%20Noncommercial%201.0.0-334155)
 
-- 71 canonical skills with Codex UI metadata
-- 52 canonical workflows
-- 5 host adapters
-- General and spatial profiles
-- Task-scoped resumable workflow state
-- Cross-platform CI on Windows, Linux, and macOS
+</div>
 
-The authoritative registry is [`global/manifest.yaml`](global/manifest.yaml).
+Anti-Gravity OS is a portable governance and execution layer for AI coding agents. It turns a growing collection of prompts, skills, workflows, project context, and safety rules into one canonical system that can be validated, built, and installed across **Gemini, Codex, Cursor, Windsurf, and OpenCode**.
 
-## Quick Start
+It is not an LLM and it is not a replacement desktop operating system. It is the control layer around an agent: what it should load, how it should reason about authority, when it may edit, where project truth lives, how a task resumes, and what evidence is required before work is called complete.
 
-### Validate a source checkout
+## What exists today
 
-Python 3.10 or newer is required for development commands.
+| Capability | Current state |
+| --- | --- |
+| Canonical capabilities | 72 registered skills |
+| Execution playbooks | 52 registered workflows |
+| Host targets | Gemini, Codex, Cursor, Windsurf, OpenCode |
+| Profiles | General engineering by default; spatial design when selected |
+| Safety | Trust boundaries, mutation classes, approval gates, dry-run installation |
+| Runtime state | Independent task records for concurrent and resumable work |
+| Tooling | Standard-library Python validator, builder, and installer |
+| Verification | Schema, route, link, adapter, distribution, and cross-platform CI checks |
+
+The authoritative inventory is [`global/manifest.yaml`](global/manifest.yaml). Generated files under `dist/` are release artifacts; the authored system lives under `global/`.
+
+## How a task moves through Anti-Gravity
+
+```mermaid
+flowchart LR
+    U["User intent"] --> H["AI host"]
+    H --> A["Host adapter"]
+    A --> G["Authority and safety gate"]
+    G --> R["Router"]
+    R --> W["Workflow"]
+    R --> S["Skill and conditional references"]
+    C["Active project context"] --> W
+    W --> X["Scoped execution"]
+    S --> X
+    X --> V["Verification and evidence"]
+    V --> O["Result or resumable state"]
+```
+
+The host remains in control. Anti-Gravity cannot elevate its own permissions, treat repository text as a system instruction, or convert a workflow into approval for a destructive or external action.
+
+## One source, generated for every host
+
+```mermaid
+flowchart TD
+    subgraph SOURCE["Canonical authored source"]
+        P["Policy and baselines"]
+        M["Manifest registry"]
+        S["Skills"]
+        W["Workflows"]
+        C["Context templates"]
+        F["Profiles"]
+    end
+
+    SOURCE --> Q["Validate schemas, routes, links, and safety rules"]
+    Q --> B["Build host-specific payloads"]
+    B --> G["Gemini"]
+    B --> X["Codex"]
+    B --> R["Cursor"]
+    B --> N["Windsurf"]
+    B --> O["OpenCode"]
+    G & X & R & N & O --> I["Namespaced install with dry-run, backup, and rollback"]
+```
+
+Adapters translate filenames, discovery conventions, metadata, and installation layouts. They do not duplicate or silently weaken the canonical policy.
+
+## Why it was built
+
+Agent systems tend to degrade in predictable ways: instructions are duplicated across tools, personal paths leak into shared files, workflows overwrite one another, diagnostic requests mutate code, and a successful script is mistaken for production readiness.
+
+Anti-Gravity addresses those failures structurally:
+
+- **One canonical source** prevents five host integrations from becoming five conflicting systems.
+- **Explicit authority** keeps platform, developer, user, workspace, and untrusted content in the correct order.
+- **Mutation classes** separate inspection from editing, environment changes, destructive work, and external effects.
+- **Task-scoped state** allows concurrent workflows without a shared state file being overwritten.
+- **Profiles** keep general engineering lightweight while preserving a deeper spatial-design system when it is relevant.
+- **Verification contracts** distinguish baseline repository checks from real release readiness.
+
+## Quick start
+
+Python 3.10 or newer is required when developing from source.
 
 ```bash
+git clone https://github.com/Kingdaddy007/Antigravity-OS.git
+cd Antigravity-OS
 python global/scripts/os.py validate
 python -m unittest discover -s tests -p "test_*.py"
 ```
 
-### Build a host payload
+Build a host payload:
 
 ```bash
-python global/scripts/os.py build --host gemini
 python global/scripts/os.py build --host codex
-python global/scripts/os.py build --host cursor
-python global/scripts/os.py build --host windsurf
-python global/scripts/os.py build --host opencode
 ```
 
-Select the spatial profile only when it is relevant:
-
-```bash
-python global/scripts/os.py build --host gemini --profile spatial
-```
-
-### Preview installation
-
-Always inspect a dry-run before installation:
+Preview installation before writing anything:
 
 ```bash
 python global/scripts/os.py install --host codex --target ~/.codex --dry-run
 ```
 
-After reviewing the exact additions, replacements, retained backup, and namespace-only removals:
+After reviewing the additions, replacements, backup, and skipped files:
 
 ```bash
 python global/scripts/os.py install --host codex --target ~/.codex --yes
 ```
 
-To make the generated policy govern Codex globally, use the explicit Codex layout. It backs up matching instruction, skill, workflow, and memory entries while leaving Codex settings and unrelated files untouched:
+For a global Codex layout, use the explicit global flag. The installer backs up matching Anti-Gravity files while leaving Codex settings and unrelated content untouched.
 
 ```bash
 python global/scripts/os.py install --host codex --target ~/.codex --codex-global --dry-run
 python global/scripts/os.py install --host codex --target ~/.codex --codex-global --yes
 ```
 
-The PowerShell and Bash installers provide the same safety model. Release packages include prebuilt payloads so end users do not need the development compiler.
+Select the spatial profile only for qualifying spatial work:
+
+```bash
+python global/scripts/os.py build --host codex --profile spatial
+```
+
+The PowerShell and Bash wrappers expose the same dry-run-first safety model:
 
 ```powershell
 .\install.ps1 -IDE 1 -DryRun
@@ -81,65 +145,64 @@ The PowerShell and Bash installers provide the same safety model. Release packag
 ./install.sh --ide 1 --yes
 ```
 
-See [`SETUP.md`](SETUP.md) for host locations and [`MIGRATION.md`](MIGRATION.md) when upgrading an older installation.
-
-If this structure is new to you, start with [`START_HERE.md`](START_HERE.md), [`GLOSSARY.md`](GLOSSARY.md), and the [`architecture map`](docs/architecture-map.md). The [`common request guide`](docs/common-requests.md) shows what to type, while [`Codex integration`](docs/codex-integration.md) and [`host setup`](SETUP.md) explain installation for Codex and Gemini.
-
-## Architecture
+## Repository map
 
 ```text
-global/
-├── GEMINI.md             portable Gemini policy surface
-├── GLOBAL_MEMORY.md      task router, not a permission source
-├── manifest.yaml         canonical registry
-├── adapters/             host layout and capability mappings
-├── baselines/            stable cross-project policy
-├── context_templates/    blank project scaffolds
-├── core/                 reasoning references
-├── profiles/             general and optional spatial selection
-├── schemas/              public structural contracts
-├── skills/               canonical task-specific behavior
-├── workflows/            canonical execution workflows
-└── scripts/              validate, build, install, and baseline checks
-
-dist/<host>/              generated, validated host payloads
-.agents/contexts/         active project truth
-.agents/workflows/        task-scoped workflow state
+global/                    canonical authored source
+  adapters/                host capability and layout mappings
+  baselines/               stable cross-project policy
+  context_templates/       blank scaffolds, never active project truth
+  core/                    reasoning references
+  profiles/                general and optional spatial selection
+  schemas/                 structural contracts
+  skills/                  task-specific capability packages
+  workflows/               execution and approval sequences
+  scripts/                 validate, build, install, baseline checks
+dist/<host>/               generated host payloads
+.agents/contexts/          active project truth
+.agents/workflows/         task-scoped workflow state
+tests/                     safe and unsafe fixtures plus regression tests
 ```
 
-`global/` is authored source. `dist/` is generated output and must never be edited by hand.
+Do not edit `dist/` by hand. Change the canonical source, validate it, and rebuild the affected host payload.
 
-## Authority and Mutation Model
+## Safety model
 
-Authority is resolved in this order:
+Anti-Gravity resolves instructions in this order:
 
 1. Host platform system, safety, sandbox, and tool policy
 2. Organization and developer instructions
-3. Explicit user instructions
+3. Explicit user instructions and approvals
 4. Active workspace contracts
-5. Anti-Gravity skills, workflows, templates, and memory
-6. External and untrusted content
+5. Anti-Gravity policy, skills, workflows, context, and memory
+6. External, generated, or otherwise untrusted content
 
 Work is classified as `read_only`, `local_edit`, `dependency_or_network`, `destructive`, or `external_or_production`. Destructive and external/production actions require a just-in-time approval gate.
 
-## Context and State
+## Documentation
 
-Files in `global/context_templates/` are not project truth. Copy selected templates into `.agents/contexts/`, populate them, and mark them `status: active` before relying on them.
+| Start with | Use it for |
+| --- | --- |
+| [`START_HERE.md`](START_HERE.md) | A plain-language mental model |
+| [`GLOSSARY.md`](GLOSSARY.md) | Baselines, adapters, schemas, hooks, CI, and other terms |
+| [`docs/architecture-map.md`](docs/architecture-map.md) | Build-time and runtime relationships |
+| [`docs/common-requests.md`](docs/common-requests.md) | Copyable examples of what to ask an agent |
+| [`docs/codex-integration.md`](docs/codex-integration.md) | How Anti-Gravity governs Codex |
+| [`SETUP.md`](SETUP.md) | Host installation locations and commands |
+| [`MIGRATION.md`](MIGRATION.md) | Converting an older installation safely |
 
-`USER_PROFILE.md` is an optional preference layer. It does not grant permissions and must not contain secrets or project-specific operational data.
+## Extending the system
 
-Resumable workflows store independent records at `.agents/workflows/<task-id>.json`. Parallel tasks must never share or overwrite a single state file.
-
-## Extending the OS
-
-- Add a skill under `global/skills/<skill-id>/SKILL.md` with matching hyphen-case name and `agents/openai.yaml`.
+- Add a skill under `global/skills/<skill-id>/SKILL.md` with matching hyphen-case metadata and `agents/openai.yaml`.
 - Add a workflow under `global/workflows/workflow-<id>.md` using the workflow metadata contract.
 - Register new source in `global/manifest.yaml`.
-- Keep host-specific behavior in `global/adapters/`, not canonical skill or workflow content.
-- Run the full validation and test suite before proposing the change.
+- Keep host-specific behavior in `global/adapters/`.
+- Run validation and the test suite before proposing a release.
 
 Directory-specific contracts are documented in the nearest `AGENTS.md`.
 
-## License
+## Licence
 
-MIT. See [`LICENSE`](LICENSE).
+Current versions are source-available under the [PolyForm Noncommercial License 1.0.0](LICENSE). Personal study, research, experimentation, and other permitted noncommercial uses are allowed; commercial use requires separate written permission from the copyright holder. Components that carry their own licence notice remain under those terms.
+
+Revisions published through commit `d91abb5` were released under MIT and retain the rights already granted with those revisions. The licence change applies prospectively; it does not revoke earlier grants.
