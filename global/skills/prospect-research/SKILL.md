@@ -61,10 +61,11 @@ description: 'Use this skill when finding, scoring, or profiling prospects for t
 
 ## SEARCH SOURCES
 
-Instagram · Google Search · Google Maps · Houzz · LinkedIn · Pinterest · luxury lifestyle award directories · interior design association directories · real estate/luxury home publications.
+Instagram · Google Search · Google Maps · Houzz · LinkedIn · Pinterest · `/last30days` (for recent X, Reddit, YouTube, and community signals) · luxury lifestyle award directories · interior design association directories · real estate/luxury home publications.
 
 **Instagram inspection:** bio, highlights, recent posts, project captions, follower quality, engagement quality, tagged locations, website link.
 **Website inspection:** homepage, portfolio, services, about, contact, mobile layout, CTAs, inquiry path, case studies, testimonials, technical issues.
+**Recent activity inspection (/last30days):** Run `/last30days <founder name>` or `/last30days <studio name>` to pull recent X threads, Reddit mentions, YouTube interviews, or news from the last 30 days to extract high-relevance personalization hooks.
 
 ---
 
